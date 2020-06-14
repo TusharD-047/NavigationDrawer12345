@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shivalik"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/hb"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:text="SHIVALIK BOYS HOSTEL"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:background="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="409dp"
+        android:layout_height="280dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/shivalik" />
+
+    <TextView
+        android:id="@+id/t14"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10dp"
+        android:layout_height="wrap_content"
+        android:text="Shivalik Boys(IIIT UNA) Hostel is an oldest hostel and started functioning in 1987.The hostel has 15 six seated and 10 four seated rooms to accommodate approximately 130 students. The hostel is well equipped with basic facilities like LED T.V., Music System, Geysers, Water Coolers, deep freezer etc. ."
+        android:textColor="#F0F1F6"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

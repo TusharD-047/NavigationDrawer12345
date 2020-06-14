@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".nim">
+    <ImageView
+        android:id="@+id/imag6"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/newlogo" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:text="NIMBUS is all about students from different branches coming together, forming departmental teams and societies, making technical projects and organising workshops and exhibitions. In other words, students working for Nimbus gain knowledge about all sorts of technologies around, couple it with hands on experience and spread it around the campus for all other students to learn." />
+
+    <GridView
+        android:id="@+id/myGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="145dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:verticalSpacing="20dp"
+        android:layout_marginTop="15dp"/>
+
+
+</LinearLayout>
+

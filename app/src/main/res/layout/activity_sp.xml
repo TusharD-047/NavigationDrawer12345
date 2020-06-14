@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:context=".sp">
+    <ImageView
+        android:id="@+id/imag10"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/newlogo"
+        android:paddingTop="20dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:text=" Annual Athletic Meet (Lalkaar)/Prize distribution function:Every year in even semester various track and field events are organised like 100m,200m,400m,800m, 1500m,5000m,4x100m,4x400m,long jump, triple jump, high jump, shot put, javelin throw and discuss throw."
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"/>
+
+    <GridView
+        android:id="@+id/myGrid"
+        android:layout_width="match_parent"
+        android:layout_height="481dp"
+        android:layout_marginTop="15dp"
+        android:columnWidth="145dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:verticalSpacing="10dp" />
+
+
+</LinearLayout>

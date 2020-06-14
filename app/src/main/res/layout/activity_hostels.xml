@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="HOSTELS"
+                android:textColor="#ffffff"
+                android:textColorHighlight="#F4EBEB"
+                android:textColorHint="#F8F2F2"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@android:color/black"
+            android:scaleType="fitXY"
+            android:src="@drawable/newlogo"/>
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="7">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/agh_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fadingEdge="vertical"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/ambika"/>
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Ambika Girls Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pgh_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/pgh"/>
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Parvati Girls Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/kbh_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/kbh"/>
+
+                    <TextView
+                        android:layout_width="105dp"
+                        android:layout_height="53dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Kailash Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/him_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+
+                        android:id="@+id/himgiri"/>
+
+                    <TextView
+                        android:layout_width="105dp"
+                        android:layout_height="43dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Himgiri Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hi_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/hima"
+                        />
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Himadri Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ud_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/udya"
+                        />
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Udaygiri Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ar_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/ara"
+                        />
+
+                    <TextView
+                        android:layout_width="107dp"
+                        android:layout_height="49dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Aravali Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sat_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/sat"
+                        />
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Satpura Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dau_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/dau"/>
+
+                    <TextView
+                        android:layout_width="115dp"
+                        android:layout_height="47dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Dauladhar Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/shiv_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/shiv"/>
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Shivalik Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/neel_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/neel"/>
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Neelkanth Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mani_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/mani"
+                        />
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Manimahesh Girls Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vin_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:id="@+id/vin"/>
+
+                    <TextView
+                        android:layout_width="116dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Vindyanchal Boys Hostel"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/info_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="89dp"
+                        android:src="@drawable/info" />
+
+                    <TextView
+                        android:layout_width="92dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="INFO"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

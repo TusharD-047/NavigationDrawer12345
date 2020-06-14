@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".neel"
+    android:background="@drawable/gradient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/hb"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:text="NEELKANTH BOYS HOSTEL"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:background="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/neelkanth"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/t14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The Neelkanth Boys Hostel started functioning in 2008. The hostel has 145 three seated and 2 double seated rooms to accommodate approximately 441 students. The hostel has furnished dining hall facility with Music System. The hostel is well equipped with basic facilities like LED T.V., Geysers, Water Coolers, and Deep Freezer etc. The Gymnasium in the hostel also attracts the students for work outs. Besides this, the internet facility is also available in each room of the hostel."
+        android:textColor="#F5F5F8"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:lineSpacingExtra="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nopalyer.navigationdrawer">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_app"
+        android:label="NIT-H"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BonafideView"></activity>
+        <activity android:name=".PhdRegis" />
+        <activity android:name=".PgRegis" />
+        <activity android:name=".LibVer" />
+        <activity android:name=".Admin.AdminTry" />
+        <activity android:name=".PhysicalAppearance" />
+        <activity android:name=".SpAssignOpen" />
+        <activity android:name=".SpAssignList" />
+        <activity android:name=".DeleteAssignment" />
+        <activity android:name=".UploadedAssignment" />
+        <activity android:name=".tpassignHome" />
+        <activity
+            android:name=".Admin.AdminNoReg"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AdminSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AdminHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AdminDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AdminRoll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AdminDept"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AdminBtechReg"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UpDocument"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Bonafide_Application"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Btech_registration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.Register.Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.tpassign"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.spassign"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.Spschedule"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fees"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutNithhp.home1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.aboutus21.aboutdev"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.calender.calender1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.calender.evencalender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.calender.oddcalender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.help.help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.att"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.msg"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.not"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.ok"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.pro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.Tpmain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.sch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.studentp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login.verification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.StudentsPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".humanities.humanities_phd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FullView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".srijan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".about_college"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".about_city"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity
+            android:name=".nss"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ncc"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".convo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".prayas"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fresh"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nim"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hf"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mag"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dir"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".events"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".functionaries"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostelbooklet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vind"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".udaygiri"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".shivalik"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".satp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pgh"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".neel"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mani"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kbh"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".himgiri"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".himadri"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".daul"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aravali"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ambika"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostels"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".departments"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mechanical.melabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mechanical.meprogrammes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mechanical.mevision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mechanical.meaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mechanical.me"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".electrical.eelabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".electrical.eeprogrammes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".electrical.eevision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".electrical.eeaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".electrical.ee"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cse.cselabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cse.cseprogrammes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cse.csevision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".civil.civillabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".civil.civilprogrammes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".civil.civilvision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".civil.civilaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".civil.Civil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".material.matlabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ece.ecelabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemical.chemlabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".material.materialprogrammes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemical.chemicalprogrammes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ece.eceprogrammes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cse.cseaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cse.CSE"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemical.chemicalvision"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ece.ecevision" />
+        <activity
+            android:name=".material.materialvision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".material.materialaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemical.chemicalaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".material.material"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ece.eceaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ece.ece"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemical.chemical1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".math.mathission"
+            android:label="VISION AND MISSION"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".math.mathsprogrammes"
+            android:label="PROGRAMMES OFFERED"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".math.mathslabs"
+            android:label="LABS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".math.mathsaboutus"
+            android:label="ABOUT US"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".physics.physicsprogrammes"
+            android:label="PROGRAMMES OFFERED"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".physics.physicslabs"
+            android:label="LABS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".physics.physicsmission"
+            android:label="VISION AND MISSION"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".physics.physicsaboutus"
+            android:label="ABOUT US"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".math.maths"
+            android:label="MATHS DEPARTMENT"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".physics.Physics"
+            android:label="PHYSICS DEPARTMENT"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemistry.chemission"
+            android:label="VISION AND MISSION"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemistry.chemprogrammes"
+            android:label="PROGRAMMES OFFERED"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemistry.chemistrylabs"
+            android:label="LABS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemistry.chemistryaboutus"
+            android:label="ABOUT US"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chemistry.chemistry"
+            android:label="CHEMISTRY DEPARTMENT"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".architecture.archlabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".architecture.archaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".architecture.archcourses"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".architecture.archvision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".architecture.architecture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".management.management"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".management.managementabout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".management.managementvision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".management.managementcourses"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".management.managementlab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".humanities.humanities"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".humanities.humanitiesaboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".humanities.humanitiesvision"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".humanities.humanitiescourses"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".humanities.humanitieslabs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login.ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login.SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login.ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.mse_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.mech_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.elec_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.ece_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.chemical_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.cse_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.civil_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.archi_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.management_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.physics_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.humanity_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.msc_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.chem_1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.science"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.engineering"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.branchfaculty.faculty2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.clubs.Clu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.clubs.activities.DetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.clubs.activities.DetailActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.clubs.activities.DetailActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".campus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".achievement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aboutdevelopers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

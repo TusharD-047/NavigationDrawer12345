@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:fillViewport="true"
+    tools:context=".ViewActivity">
+
+    <LinearLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:background="#000000"/>
+
+        <TableLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_height="match_parent"
+                    android:text="Academic Year : " />
+
+                <TextView
+                    android:id="@+id/regtvAcyr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text=" " />
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_height="match_parent"
+                    android:text="Name : " />
+
+                <TextView
+                    android:id="@+id/regtvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text=" " />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Email : "
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvSem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:textColor="#eeeeee"
+                    android:text="" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="#eeeeee"
+                    android:padding="5dp"
+                    android:text="Date of Birth : " />
+
+                <TextView
+                    android:id="@+id/regtvDob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:text="" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="#eeeeee"
+                    android:padding="5dp"
+                    android:text="Father's Name : " />
+
+                <TextView
+                    android:id="@+id/regtvFather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="#eeeeee"
+                    android:padding="5dp"
+                    android:text="Roll No. : " />
+
+                <TextView
+                    android:id="@+id/regtvroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textColor="#eeeeee"
+                    android:text="" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Contact :"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_height="match_parent"
+                    android:text="Room : " />
+
+                <TextView
+                    android:id="@+id/regtvroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text=" " />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_height="match_parent"
+                    android:text="Department : " />
+
+                <TextView
+                    android:id="@+id/regtvdep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text=" " />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_height="match_parent"
+                    android:text="Programme : " />
+
+                <TextView
+                    android:id="@+id/regtvprog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text=" " />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/regaddpdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="Upload" />
+
+            <Button
+                android:id="@+id/regedit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/regupload2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next" />
+
+
+    </LinearLayout>
+
+</ScrollView>

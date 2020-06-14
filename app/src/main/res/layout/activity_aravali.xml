@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aravali"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/hb"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="ARAVALI BOYS HOSTEL"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:background="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/aravali" />
+
+    <TextView
+        android:id="@+id/t14"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:text="Aravali Girls Hostel is a newly constructed hostel and started functioning in 2017.The hostel has 30 two seated rooms with attached bathrooms to accommodate approximately 60 students. The hostel is well equipped with basic facilities like LED T.V., Music System, Geysers, Water Cooler and Deep Freezer etc."
+        android:textColor="#F7F7FB"
+        android:textSize="18sp"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#DDDEDD"
+    tools:context=".MainActivity"
+
+    android:layout_margin="0px">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/black"
+        android:scaleType="fitXY"
+        android:src="@drawable/newlogo" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/regf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="REGISTRATION FORM    (Bachelor,Master and Doctoral Programmes)"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="150px"
+                    android:layout_marginTop="10px"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/aca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Academic Year:"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/session"
+                        android:maxLength="10"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#000"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        />
+
+                </LinearLayout>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row1">
+                        <TextView
+                            android:text="Roll Number:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textColor="#000"
+
+                            android:textStyle="italic"
+                            />
+
+                        <EditText
+                            android:id="@+id/editroll"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+
+                            />
+
+                        <TextView
+                            android:text="Reg.sem no."
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="italic"
+                            android:textColor="#000"
+
+                            android:padding="3dp"/>
+
+                        <Spinner
+                            android:id="@+id/reg"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="#ffffff"
+                            android:dropDownWidth="match_parent"
+                            android:spinnerMode="dropdown">
+
+                        </Spinner>
+
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row2">
+                        <TextView
+                            android:text="Room No.:"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="italic"
+                            android:textColor="#000"
+
+                            android:padding="3dp"/>
+
+                        <EditText
+                            android:id="@+id/editroom"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal" />
+
+
+                        <TextView
+                            android:text="Hostel Name:"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="italic"
+                            android:textColor="#000"
+
+                            android:padding="3dp"/>
+
+                        <Spinner
+                            android:id="@+id/hostel"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#ffffff"
+                            android:dropDownWidth="match_parent"
+                            android:spinnerMode="dropdown">
+
+                        </Spinner>
+
+                    </TableRow>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5px"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name of the Department:"
+                            android:textColor="#000"
+                            android:textSize="14sp"         android:textStyle="italic"
+                            />
+
+                        <Spinner
+                            android:id="@+id/regdep"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#ffffff"
+                            android:dropDownWidth="match_parent"
+                            android:spinnerMode="dropdown">
+
+                        </Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5px"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:textStyle="italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Programme  :  "
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                        <Spinner
+                            android:id="@+id/prog"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#ffffff"
+                            android:dropDownWidth="match_parent"
+                            android:spinnerMode="dropdown">
+
+                        </Spinner>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5px"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:textStyle="italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name: Mr/Ms - "
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/editname"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#000"
+                            android:textSize="13sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5px"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:textStyle="italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date Of Birth: "
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/editdob"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#000"
+                            android:textSize="13sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5px"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:textStyle="italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Father's Name:"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/editfname"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#000"
+                            android:textSize="13sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5px"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:textStyle="italic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Email Address: "
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/emailid"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="13sp"
+                            android:inputType="textEmailAddress"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Address For Correspondence:"
+                        android:textStyle="italic"
+                        android:paddingTop="20px"
+                        android:textColor="#000"
+                        android:textSize="14sp"/>
+                    <EditText
+                        android:id="@+id/addcorres"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row3">
+                        <TextView
+                            android:text="   Pin Code -"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+
+                            android:padding="3dp"/>
+
+                        <EditText
+                            android:id="@+id/pin1"
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="93dp"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:text="Mobile No.-" />
+
+                        <EditText
+                            android:id="@+id/mob1"
+                            android:layout_width="150dp"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+
+                    </TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Permanent Address:          "
+                        android:textColor="#000"
+                        android:textStyle="italic"
+                        android:paddingTop="20px"
+                        android:textSize="14sp"/>
+                    <EditText
+                        android:id="@+id/peradd"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row4">
+                        <TextView
+                            android:text="   Pin Code -"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+
+                            android:padding="3dp"/>
+
+                        <EditText
+                            android:id="@+id/pin2"
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="13sp"
+                            android:maxLength="10"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+
+                            android:text="   Mobile No.-" />
+
+                        <EditText
+                            android:id="@+id/mob2"
+                            android:layout_width="wrap_content"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="13sp"
+                            android:textStyle="normal" />
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row5">
+                        <TextView
+                            android:paddingTop="30px"
+                            android:textColor="#ffffff"
+                            android:background="#606060"
+                            android:layout_span="4"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="Details Of The Courses (Registering During Current Semester)"
+                            android:gravity="center_horizontal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row6">
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text=" Course Code"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="Course Name "
+                            android:gravity="center_horizontal"/>
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="L /T/ (P/D)"
+                            android:gravity="left" />
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:text="Credits"
+                            android:gravity="left" />
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row7">
+
+
+                        <EditText
+                            android:id="@+id/code1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:maxLength="10"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/course1"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal" />
+                        <EditText
+                            android:id="@+id/lab1"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal" />
+                        <EditText
+                            android:id="@+id/credit1"
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:maxLength="2"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row8">
+
+                        <EditText
+                            android:id="@+id/code2"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/course2"
+                            />
+                        <EditText
+                            android:maxLength="10"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/lab2"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/credit2"
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row9">
+
+                        <EditText
+                            android:id="@+id/code3"
+                            android:layout_width="wrap_content"
+                            android:maxLength="10"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/course3"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/lab3"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit3"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row10">
+
+                        <EditText
+                            android:id="@+id/code4"
+                            android:layout_width="wrap_content"
+                            android:maxLength="10"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/course4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/lab4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit4"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row11">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:maxLength="10"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/code5"
+                            />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/course5"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/lab5"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit5"
+
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row13">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:maxLength="10"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/code6"
+                            />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="35"
+                            android:id="@+id/course6"
+
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/lab6"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit6"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row14">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/code7"
+                            />
+
+                        <EditText
+                            android:maxLength="35"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/course7"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/lab7"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit7"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row15">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/code8"
+                            />
+
+                        <EditText
+                            android:maxLength="35"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/course8"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/lab8"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit8"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row16">
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/code9"
+                            />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/course9"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/lab9"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit9"
+
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row17">
+                        <EditText
+                            android:maxLength="10"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/code10"
+                            />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/course10"
+                            />
+                        <EditText
+                            android:maxLength="10"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/lab10"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit10"
+
+                            />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row18">
+                        <TextView
+
+                            android:layout_width="98dp"
+                            android:layout_span="2"
+                            android:text="TOTAL"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:gravity="center_horizontal" />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/labsum"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="4"
+                            android:textStyle="normal"
+                            android:id="@+id/creditsum"
+                            />
+
+
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#000000"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="30dp"
+                    android:shadowRadius="50"
+                    android:layout_marginBottom="10px"
+                    android:text="NEXT" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ambika"
+    android:fillViewport="true">
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <TextView
+        android:id="@+id/hb"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:text="@string/ambika_girls_hostel"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:background="@android:color/black"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:src="@drawable/ambika"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="10dp"
+       android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:text="The Ambika Girls Hostel started functioning in 2012. The hostel has 66 double seated, 26 triple seated, 04 four seated and 25 five seated rooms to accommodate approximately 351 students. The hostel has a well-furnished common room cum recreation hall and a dining hall. The hostel is well equipped with all the basic facilities like Plasma T.V., Washing Machine, Geysers, Deep Freezer, Water Coolers, etc. The hostel has furnished dining hall facility with Music System."
+        android:textColor="#F3F4FB"
+        android:textSize="18sp" />
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pgh"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/hb"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:text="PARVATI GIRLS HOSTEL"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:background="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/pgh" />
+
+    <TextView
+        android:id="@+id/t14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:lineSpacingExtra="10dp"
+        android:text="Parvati Girls Hostel started functioning in 1998. The hostel has 54 single seated and 36 triple seated rooms to ccommodate approximately 162 students. Besides this, the hostel has well-furnished two guest rooms and a visitor's room. The hostel has a well-furnished common room cum recreation hall and a dining hall furnished with Music System. The hostel is well equipped with all the basic facilities like Plasma T.V., Washing Machine, Geysers, Gymnasium, Sewing Machine, Deep Freezer, Water Coolers, etc. Table Tennis table and Badminton Court is also available in the hostel to cater need of indoor games. ."
+        android:textColor="#F6F7FB"
+        android:textSize="18sp"
+        />
+
+    </LinearLayout>
+</ScrollView>

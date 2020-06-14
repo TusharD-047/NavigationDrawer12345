@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".daul"
+    android:background="@drawable/gradient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hb"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:text="DHAULADHAR BOYS HOSTEL"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:background="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/dhauladhar" />
+
+    <TextView
+        android:id="@+id/t14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="The Dhauladhar Boys Hostel started functioning in 1998. The hostel has 24 triple seated, 91 single seated and 02 guest rooms to accommodate approximately 165 students. Besides this the hostel has a well-furnished Dining Hall, Common Room, Gymnasium, Reading Room and Sick room. The hostel is well equipped with basic facilities like, Geysers, Water Coolers, Deep Freezer, Music System, Plasma T.V., and D.T.H connection etc. The hostel also has Table Tennis table for indoor activity of students. The internet facility is also available in each room of the hostel. A Nescafe booth in front of the hostel premises also provides services in the evening hours to the inmates."
+        android:textColor="#F5FAF9"
+        android:textSize="18sp"/>
+    </LinearLayout>
+
+</ScrollView>

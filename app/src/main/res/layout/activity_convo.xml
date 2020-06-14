@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".convo">
+    <ImageView
+        android:id="@+id/imag2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/newlogo" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The Institute recognizes and promotes excellence in academics and extra-curricular activities through institution and award of various types of medals which are given to the students at the time of graduation during the convocation ceremony."
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+    <GridView
+        android:id="@+id/myGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:columnWidth="145dp"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"/>
+
+
+</LinearLayout>

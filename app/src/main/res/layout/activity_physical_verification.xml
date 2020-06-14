@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    tools:context=".PhysicalVerification">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:background="#000000"/>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/darker_gray">
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="S.no."
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="Object"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="Status"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="Registration form"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginRight="3dp"
+                    app:cardBackgroundColor="@color/Table_bg">
+
+
+                    <Button
+                        android:id="@+id/showForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Show" />
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="Fees receipt"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginRight="3dp"
+                    app:cardBackgroundColor="@color/Table_bg">
+
+
+                    <Button
+                        android:id="@+id/showReciept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Show" />
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="Library Dues Verified"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+
+                    android:id="@+id/libtextver"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:text="Hostel Dues Verified"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <TextView
+
+                    android:id="@+id/hostextver"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/Table_bg"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:text="Physical Verification :"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+
+            <Button
+                android:id="@+id/verdone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="Done"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

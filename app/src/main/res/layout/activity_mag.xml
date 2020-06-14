@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mag"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#000000"
+        android:scaleType="fitXY"
+        android:paddingTop="20dp"
+        android:src="@drawable/newlogo" />
+ <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/feesstructure"
+        android:layout_width="214dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/white"
+        android:fadingEdge="horizontal"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="FEES STRUCTURE
+2019-2020"
+        android:textColor="#054F8A"
+        android:textSize="18sp" />
+</RelativeLayout>
+
+</LinearLayout>
