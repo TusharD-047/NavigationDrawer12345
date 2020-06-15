@@ -38,9 +38,10 @@
                         android:id="@+id/regf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="REGISTRATION FORM    (Bachelor,Master and Doctoral Programmes)"
+                        android:text="                 REGISTRATION FORM    ( Master Programmes)"
                         android:textColor="#000000"
-                        android:textSize="14sp"
+                        android:textSize="17sp"
+                        android:textAlignment="center"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -61,7 +62,7 @@
                         android:textSize="12sp" />
 
                     <EditText
-                        android:id="@+id/session"
+                        android:id="@+id/session1"
                         android:maxLength="10"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -80,7 +81,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row1">
+                        android:id="@+id/row41">
                         <TextView
                             android:text="Roll Number:"
                             android:layout_width="wrap_content"
@@ -92,7 +93,7 @@
                             />
 
                         <EditText
-                            android:id="@+id/editroll"
+                            android:id="@+id/edit__roll"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:maxLength="10"
@@ -128,7 +129,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row2">
+                        android:id="@+id/row42">
                         <TextView
                             android:text="Room No.:"
                             android:layout_width="fill_parent"
@@ -139,7 +140,7 @@
                             android:padding="3dp"/>
 
                         <EditText
-                            android:id="@+id/editroom"
+                            android:id="@+id/edit__room"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -184,7 +185,7 @@
                             />
 
                         <Spinner
-                            android:id="@+id/regdep"
+                            android:id="@+id/reg_dep"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
@@ -210,7 +211,7 @@
                             android:textSize="14sp" />
 
                         <Spinner
-                            android:id="@+id/prog"
+                            android:id="@+id/prog_ram"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
@@ -237,7 +238,7 @@
                             android:textSize="14sp" />
 
                         <EditText
-                            android:id="@+id/editname"
+                            android:id="@+id/edit__name"
                             android:layout_width="290dp"
                             android:layout_height="wrap_content"
                             android:inputType="text"
@@ -262,7 +263,7 @@
                             android:textSize="14sp" />
 
                         <EditText
-                            android:id="@+id/editdob"
+                            android:id="@+id/edit__dob"
                             android:layout_width="290dp"
                             android:layout_height="wrap_content"
                             android:inputType="text"
@@ -287,7 +288,7 @@
                             android:textSize="14sp" />
 
                         <EditText
-                            android:id="@+id/editfname"
+                            android:id="@+id/edit__fname"
                             android:layout_width="290dp"
                             android:layout_height="wrap_content"
                             android:inputType="text"
@@ -312,7 +313,7 @@
                             android:textSize="14sp" />
 
                         <EditText
-                            android:id="@+id/emailid"
+                            android:id="@+id/email__id"
                             android:layout_width="290dp"
                             android:layout_height="wrap_content"
                             android:textColor="#000"
@@ -331,7 +332,7 @@
                         android:textColor="#000"
                         android:textSize="14sp"/>
                     <EditText
-                        android:id="@+id/addcorres"
+                        android:id="@+id/add__corres"
                         android:layout_width="290dp"
                         android:layout_height="wrap_content"
                         android:textColor="#000"
@@ -340,7 +341,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row3">
+                        android:id="@+id/row43">
                         <TextView
                             android:text="   Pin Code -"
                             android:layout_width="wrap_content"
@@ -351,7 +352,7 @@
                             android:padding="3dp"/>
 
                         <EditText
-                            android:id="@+id/pin1"
+                            android:id="@+id/pin__1"
                             android:layout_width="wrap_content"
                             android:inputType="number"
                             android:textColor="#000"
@@ -368,7 +369,7 @@
                             android:text="Mobile No.-" />
 
                         <EditText
-                            android:id="@+id/mob1"
+                            android:id="@+id/mob__1"
                             android:layout_width="150dp"
                             android:maxLength="10"
                             android:inputType="number"
@@ -387,7 +388,7 @@
                         android:paddingTop="20px"
                         android:textSize="14sp"/>
                     <EditText
-                        android:id="@+id/peradd"
+                        android:id="@+id/per_add"
                         android:layout_width="290dp"
                         android:layout_height="wrap_content"
                         android:textColor="#000"
@@ -396,7 +397,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row4">
+                        android:id="@+id/row44">
                         <TextView
                             android:text="   Pin Code -"
                             android:layout_width="wrap_content"
@@ -407,7 +408,7 @@
                             android:padding="3dp"/>
 
                         <EditText
-                            android:id="@+id/pin2"
+                            android:id="@+id/pin__2"
                             android:layout_width="wrap_content"
                             android:inputType="number"
                             android:textColor="#000"
@@ -425,7 +426,7 @@
                             android:text="   Mobile No.-" />
 
                         <EditText
-                            android:id="@+id/mob2"
+                            android:id="@+id/mob__2"
                             android:layout_width="wrap_content"
                             android:maxLength="10"
                             android:inputType="number"
@@ -438,7 +439,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row5">
+                        android:id="@+id/row45">
                         <TextView
                             android:paddingTop="30px"
                             android:textColor="#ffffff"
@@ -457,7 +458,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row6">
+                        android:id="@+id/row46">
                         <TextView
                             android:background="#C0C0C0"
                             android:textColor="#000"
@@ -505,11 +506,11 @@
                     <TableRow
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row7">
+                        android:id="@+id/row47">
 
 
                         <EditText
-                            android:id="@+id/code1"
+                            android:id="@+id/code_1"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:maxLength="10"
@@ -518,21 +519,23 @@
                             android:textStyle="normal" />
 
                         <EditText
-                            android:id="@+id/course1"
+                            android:id="@+id/course_1"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal" />
+
                         <EditText
-                            android:id="@+id/lab1"
+                            android:id="@+id/lab_1"
                             android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:maxLength="10"
                             android:textColor="#000"
                             android:textSize="12sp"
-                            android:maxLength="10"
                             android:textStyle="normal" />
                         <EditText
-                            android:id="@+id/credit1"
+                            android:id="@+id/credit_1"
                             android:layout_width="wrap_content"
                             android:inputType="number"
                             android:textColor="#000"
@@ -545,10 +548,10 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row8">
+                        android:id="@+id/row48">
 
                         <EditText
-                            android:id="@+id/code2"
+                            android:id="@+id/code_2"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:maxLength="10"
@@ -561,7 +564,7 @@
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
-                            android:id="@+id/course2"
+                            android:id="@+id/course_2"
                             />
                         <EditText
                             android:maxLength="10"
@@ -569,7 +572,7 @@
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/lab2"
+                            android:id="@+id/lab_2"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -578,7 +581,7 @@
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/credit2"
+                            android:id="@+id/credit_2"
                             />
 
                     </TableRow>
@@ -586,52 +589,10 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row9">
+                        android:id="@+id/row49">
 
                         <EditText
-                            android:id="@+id/code3"
-                            android:layout_width="wrap_content"
-                            android:maxLength="10"
-                            android:textColor="#000"
-                            android:textSize="12sp"
-                            android:textStyle="normal" />
-
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:textColor="#000"
-                            android:textSize="12sp"
-                            android:maxLength="35"
-                            android:textStyle="normal"
-                            android:id="@+id/course3"
-                            />
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:textColor="#000"
-                            android:maxLength="10"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            android:id="@+id/lab3"
-                            />
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:inputType="number"
-                            android:textColor="#000"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            android:maxLength="2"
-                            android:id="@+id/credit3"
-
-                            />
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/row10">
-
-                        <EditText
-                            android:id="@+id/code4"
+                            android:id="@+id/code_3"
                             android:layout_width="wrap_content"
                             android:maxLength="10"
                             android:textColor="#000"
@@ -644,15 +605,15 @@
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
-                            android:id="@+id/course4"
+                            android:id="@+id/course_3"
                             />
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
-                            android:textSize="12sp"
                             android:maxLength="10"
+                            android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/lab4"
+                            android:id="@+id/lab_3"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -661,7 +622,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="2"
-                            android:id="@+id/credit4"
+                            android:id="@+id/credit_3"
 
                             />
 
@@ -670,7 +631,49 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row11">
+                        android:id="@+id/row50">
+
+                        <EditText
+                            android:id="@+id/code_4"
+                            android:layout_width="wrap_content"
+                            android:maxLength="10"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/course_4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/lab_4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/credit_4"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row51">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -678,7 +681,7 @@
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/code5"
+                            android:id="@+id/code_5"
                             />
 
                         <EditText
@@ -687,7 +690,7 @@
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
-                            android:id="@+id/course5"
+                            android:id="@+id/course_5"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -695,7 +698,7 @@
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
-                            android:id="@+id/lab5"
+                            android:id="@+id/lab_5"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -704,7 +707,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="2"
-                            android:id="@+id/credit5"
+                            android:id="@+id/credit_5"
 
                             />
                     </TableRow>
@@ -712,7 +715,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row13">
+                        android:id="@+id/row52">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -720,7 +723,7 @@
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/code6"
+                            android:id="@+id/code_6"
                             />
 
                         <EditText
@@ -729,7 +732,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="35"
-                            android:id="@+id/course6"
+                            android:id="@+id/course_6"
 
                             />
                         <EditText
@@ -738,7 +741,7 @@
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/lab6"
+                            android:id="@+id/lab_6"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -747,7 +750,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="2"
-                            android:id="@+id/credit6"
+                            android:id="@+id/credit_6"
 
                             />
 
@@ -756,7 +759,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row14">
+                        android:id="@+id/row53">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -764,7 +767,7 @@
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/code7"
+                            android:id="@+id/code_7"
                             />
 
                         <EditText
@@ -773,7 +776,7 @@
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/course7"
+                            android:id="@+id/course_7"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -781,7 +784,7 @@
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/lab7"
+                            android:id="@+id/lab_7"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -790,7 +793,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="2"
-                            android:id="@+id/credit7"
+                            android:id="@+id/credit_7"
 
                             />
 
@@ -799,7 +802,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row15">
+                        android:id="@+id/row54">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -807,7 +810,7 @@
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
-                            android:id="@+id/code8"
+                            android:id="@+id/code_8"
                             />
 
                         <EditText
@@ -816,7 +819,7 @@
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/course8"
+                            android:id="@+id/course_8"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -824,7 +827,7 @@
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/lab8"
+                            android:id="@+id/lab_8"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -833,7 +836,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="2"
-                            android:id="@+id/credit8"
+                            android:id="@+id/credit_8"
 
                             />
 
@@ -842,7 +845,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row16">
+                        android:id="@+id/row55">
 
 
                         <EditText
@@ -851,7 +854,7 @@
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
-                            android:id="@+id/code9"
+                            android:id="@+id/code_9"
                             />
 
                         <EditText
@@ -860,7 +863,7 @@
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
-                            android:id="@+id/course9"
+                            android:id="@+id/course_9"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -868,7 +871,7 @@
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/lab9"
+                            android:id="@+id/lab_9"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -877,7 +880,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="2"
-                            android:id="@+id/credit9"
+                            android:id="@+id/credit_9"
 
                             />
                     </TableRow>
@@ -885,14 +888,14 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row17">
+                        android:id="@+id/row56">
                         <EditText
                             android:maxLength="10"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/code10"
+                            android:id="@+id/code_10"
                             />
 
                         <EditText
@@ -901,7 +904,7 @@
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
-                            android:id="@+id/course10"
+                            android:id="@+id/course_10"
                             />
                         <EditText
                             android:maxLength="10"
@@ -909,7 +912,7 @@
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:id="@+id/lab10"
+                            android:id="@+id/lab_10"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -918,7 +921,7 @@
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:maxLength="2"
-                            android:id="@+id/credit10"
+                            android:id="@+id/credit_10"
 
                             />
 
@@ -926,7 +929,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row18">
+                        android:id="@+id/row58">
                         <TextView
 
                             android:layout_width="98dp"
@@ -943,7 +946,7 @@
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
-                            android:id="@+id/labsum"
+                            android:id="@+id/lab_sum"
                             />
                         <EditText
                             android:layout_width="wrap_content"
@@ -951,10 +954,248 @@
                             android:textSize="12sp"
                             android:maxLength="4"
                             android:textStyle="normal"
-                            android:id="@+id/creditsum"
+                            android:id="@+id/credit_sum"
                             />
 
 
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row59">
+                        <TextView
+                            android:paddingTop="30px"
+                            android:textColor="#ffffff"
+                            android:background="#606060"
+                            android:layout_span="4"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="RESULTS OF PREVIOUS SEMESTER(s)"
+                            android:gravity="center_horizontal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row60">
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text=" Semester"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="SGPI "
+                            android:gravity="center_horizontal"/>
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="CGPI"
+                            android:gravity="left" />
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:text="Repeat (if any)"
+                            android:gravity="left" />
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row61">
+
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="1st sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:id="@+id/sg_1"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal" />
+                        <EditText
+                            android:id="@+id/cg_1"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal" />
+                        <EditText
+                            android:id="@+id/rep_1"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row62">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="2nd sem"
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg_2"
+                            />
+                        <EditText
+                            android:maxLength="10"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg_2"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/rep_2"
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row63">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="3rd sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg_3"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg_3"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/rep_3"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row64">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="4th sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg_4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/cg_4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/rep_4"
+
+                            />
 
                     </TableRow>
 
@@ -962,7 +1203,7 @@
                 </TableLayout>
 
                 <Button
-                    android:id="@+id/next"
+                    android:id="@+id/next1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -972,6 +1213,18 @@
                     android:shadowRadius="50"
                     android:layout_marginBottom="10px"
                     android:text="NEXT" />
+
+
+                <TextView
+                    android:textColor="#CA3131"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:text="NOTE: The students should fill this information carefully/legibly and correctly .In case any discrepancy is found later on , the candidate will be held solely responsible for the same "
+                    android:gravity="center_horizontal"/>
+
 
             </LinearLayout>
         </HorizontalScrollView>

@@ -84,6 +84,7 @@ public class Btech_registration extends AppCompatActivity {
     private EditText credit10;
     private EditText labsum;
     private EditText creditsum;
+    private EditText sg1,sg2,sg3,sg4,sg5,sg6,sg7,sg8,sg9,sg10,cg1,cg2,cg3,cg4,cg5,cg6,cg7,cg8,cg9,cg10,rep1,rep2,rep3,rep4,rep5,rep6,rep7,rep8,rep9,rep10;
     final Calendar myCalendar = Calendar.getInstance();
     private Spinner prog,dep;
     ArrayAdapter<String> adapter_programme,adapter_dep;
@@ -154,7 +155,38 @@ public class Btech_registration extends AppCompatActivity {
         credit9 = (EditText) findViewById(R.id.credit9);
         credit10 = (EditText) findViewById(R.id.credit10);
         creditsum = (EditText) findViewById(R.id.creditsum);
-        labsum = (EditText) findViewById(R.id.labsum);
+        sg1 = (EditText) findViewById(R.id.sg1);
+        sg2 = (EditText) findViewById(R.id.sg2);
+        sg3 = (EditText) findViewById(R.id.sg3);
+        sg4 = (EditText) findViewById(R.id.sg4);
+        sg5 = (EditText) findViewById(R.id.sg5);
+        sg6 = (EditText) findViewById(R.id.sg6);
+        sg7 = (EditText) findViewById(R.id.sg7);
+        sg8 = (EditText) findViewById(R.id.sg8);
+        sg9 = (EditText) findViewById(R.id.sg9);
+        sg10 = (EditText) findViewById(R.id.sg10);
+        cg1 = (EditText) findViewById(R.id.cg1);
+        cg2 = (EditText) findViewById(R.id.cg2);
+        cg3 = (EditText) findViewById(R.id.cg3);
+        cg4 = (EditText) findViewById(R.id.cg4);
+        cg5 = (EditText) findViewById(R.id.cg5);
+        cg6 = (EditText) findViewById(R.id.cg6);
+        cg7 = (EditText) findViewById(R.id.cg7);
+        cg8 = (EditText) findViewById(R.id.cg8);
+        cg9 = (EditText) findViewById(R.id.cg9);
+        cg10 = (EditText) findViewById(R.id.cg10);
+        rep1 = (EditText) findViewById(R.id.rep1);
+        rep2 = (EditText) findViewById(R.id.rep2);
+        rep3 = (EditText) findViewById(R.id.rep3);
+        rep4 = (EditText) findViewById(R.id.rep4);
+        rep5 = (EditText) findViewById(R.id.rep5);
+        rep6 = (EditText) findViewById(R.id.rep6);
+        rep7 = (EditText) findViewById(R.id.rep7);
+        rep8 = (EditText) findViewById(R.id.rep8);
+        rep9 = (EditText) findViewById(R.id.rep9);
+        rep10 = (EditText) findViewById(R.id.rep10);
+
+
 
 
         final String[] programme = {"Choose Programme", "B.Tech", "B.Arch", "Dual Degree"};

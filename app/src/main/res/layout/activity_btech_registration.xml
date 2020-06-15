@@ -38,9 +38,9 @@
                         android:id="@+id/regf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="REGISTRATION FORM    (Bachelor,Master and Doctoral Programmes)"
+                        android:text="       REGISTRATION FORM    (   Bachelor    Programmes  )"
                         android:textColor="#000000"
-                        android:textSize="14sp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -957,9 +957,528 @@
 
 
                     </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row19">
+                        <TextView
+                            android:paddingTop="30px"
+                            android:textColor="#ffffff"
+                            android:background="#606060"
+                            android:layout_span="4"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="RESULTS OF PREVIOUS SEMESTER(s)"
+                            android:gravity="center_horizontal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row20">
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text=" Semester"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="SGPI "
+                            android:gravity="center_horizontal"/>
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="CGPI"
+                            android:gravity="left" />
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:text="Repeat (if any)"
+                            android:gravity="left" />
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row21">
+
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="1st sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:id="@+id/sg1"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal" />
+                        <EditText
+                            android:id="@+id/cg1"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal" />
+                        <EditText
+                            android:id="@+id/rep1"
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:maxLength="2"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row22">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="2nd sem"
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg2"
+                            />
+                        <EditText
+                            android:maxLength="10"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg2"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/rep2"
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row23">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="3rd sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg3"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg3"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/rep3"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row24">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="4th sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/cg4"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/rep4"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row25">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="5th sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg5"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="10"
+                            android:textStyle="normal"
+                            android:id="@+id/cg5"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/rep5"
+
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row26">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="6th sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="35"
+                            android:id="@+id/sg6"
+
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg6"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/rep6"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row27">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="7th sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:maxLength="35"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/sg7"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg7"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/rep7"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row28">
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="8th sem "
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:maxLength="35"
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/sg8"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg8"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/rep8"
+
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row29">
+
+
+                        <TextView
+                            android:background="#C0C0C0"
+                            android:textColor="#000"
+                            android:layout_width="98dp"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text=" 9th sem"
+                            android:gravity="center_horizontal"/>
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:maxLength="35"
+                            android:textStyle="normal"
+                            android:id="@+id/sg9"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:textColor="#000"
+                            android:maxLength="10"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:id="@+id/cg9"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:maxLength="2"
+                            android:id="@+id/rep9"
+
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row30"/>
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="10th sem"
+                        android:gravity="center_horizontal"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/sg10"
+                        />
+                    <EditText
+                        android:maxLength="10"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/cg10"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep10"
+
+                        />
 
 
                 </TableLayout>
+
 
                 <Button
                     android:id="@+id/next"
@@ -972,6 +1491,16 @@
                     android:shadowRadius="50"
                     android:layout_marginBottom="10px"
                     android:text="NEXT" />
+                <TextView
+                    android:textColor="#CA3131"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:text="NOTE: The students should fill this information carefully/legibly and correctly .In case any discrepancy is found later on , the candidate will be held solely responsible for the same "
+                    android:gravity="center_horizontal"/>
+
 
             </LinearLayout>
         </HorizontalScrollView>

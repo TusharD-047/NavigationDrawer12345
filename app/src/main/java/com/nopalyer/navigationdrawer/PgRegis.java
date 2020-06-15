@@ -76,12 +76,13 @@ public class PgRegis extends AppCompatActivity {
     private EditText credit10;
     private EditText labsum;
     private EditText creditsum;
+    private EditText sg1,sg2,sg3,sg4,cg1,cg2,cg3,cg4,rep1,rep2,rep3,rep4;
     final Calendar myCalendar = Calendar.getInstance();
     private Spinner prog,dep;
     ArrayAdapter<String> adapter_programme,adapter_dep;
     String progm,depp;
     int year2;
-    private String myname,emailadd,permaadd,coress,rollno,roomno,birth,lab,code,course,credit,father,pincode1,pincode2,phone1,phone2;
+    private String myname,emailadd,permaadd,coress,rollno,roomno,birth,lab,code,course,credit,father,pincode1,pincode2,phone1,phone2,cg,sg;
 
 
 
@@ -91,65 +92,80 @@ public class PgRegis extends AppCompatActivity {
         setContentView(R.layout.activity_pg_regis);
 
 
-        Button submit = (Button) findViewById(R.id.next);
-        prog = (Spinner) findViewById(R.id.prog);
-        dep = (Spinner) findViewById(R.id.regdep);
-        academicyr = findViewById(R.id.session);
-        name = (EditText) findViewById(R.id.editname);
-        fname = (EditText) findViewById(R.id.editfname);
-        roll = (EditText) findViewById(R.id.editroll);
-        dob = (EditText) findViewById(R.id.editdob);
+        Button submit = (Button) findViewById(R.id.next1);
+        prog = (Spinner) findViewById(R.id.prog_ram);
+        dep = (Spinner) findViewById(R.id.reg_dep);
+        academicyr = findViewById(R.id.session1);
+        name = (EditText) findViewById(R.id.edit__name);
+        fname = (EditText) findViewById(R.id.edit__fname);
+        roll = (EditText) findViewById(R.id.edit__roll);
+        dob = (EditText) findViewById(R.id.edit__dob);
         dob.setKeyListener(null);
-        room = (EditText) findViewById(R.id.editroom);
-        emailid = (EditText) findViewById(R.id.emailid);
-        addcoress = (EditText) findViewById(R.id.addcorres);
-        peradd = (EditText) findViewById(R.id.peradd);
-        pin1 = (EditText) findViewById(R.id.pin1);
-        pin2 = (EditText) findViewById(R.id.pin2);
-        mob1 = (EditText) findViewById(R.id.mob1);
-        mob2 = (EditText) findViewById(R.id.mob2);
-        code1 = (EditText) findViewById(R.id.code1);
-        code2 = (EditText) findViewById(R.id.code2);
-        code3 = (EditText) findViewById(R.id.code3);
-        code4 = (EditText) findViewById(R.id.code4);
-        code5 = (EditText) findViewById(R.id.code5);
-        code6 = (EditText) findViewById(R.id.code6);
-        code7 = (EditText) findViewById(R.id.code7);
-        code8 = (EditText) findViewById(R.id.code8);
-        code9 = (EditText) findViewById(R.id.code9);
-        code10 = (EditText) findViewById(R.id.code10);
-        course1 = (EditText) findViewById(R.id.course1);
-        course2 = (EditText) findViewById(R.id.course2);
-        course3 = (EditText) findViewById(R.id.course3);
-        course4 = (EditText) findViewById(R.id.course4);
-        course5 = (EditText) findViewById(R.id.course5);
-        course6 = (EditText) findViewById(R.id.course6);
-        course7 = (EditText) findViewById(R.id.course7);
-        course8 = (EditText) findViewById(R.id.course8);
-        course9 = (EditText) findViewById(R.id.course9);
-        course10 = (EditText) findViewById(R.id.course10);
-        lab1 = (EditText) findViewById(R.id.lab1);
-        lab2 = (EditText) findViewById(R.id.lab2);
-        lab3 = (EditText) findViewById(R.id.lab3);
-        lab4 = (EditText) findViewById(R.id.lab4);
-        lab5 = (EditText) findViewById(R.id.lab5);
-        lab6 = (EditText) findViewById(R.id.lab6);
-        lab7 = (EditText) findViewById(R.id.lab7);
-        lab8 = (EditText) findViewById(R.id.lab8);
-        lab9 = (EditText) findViewById(R.id.lab9);
-        lab10 = (EditText) findViewById(R.id.lab10);
-        credit1 = (EditText) findViewById(R.id.credit1);
-        credit2 = (EditText) findViewById(R.id.credit2);
-        credit3 = (EditText) findViewById(R.id.credit3);
-        credit4 = (EditText) findViewById(R.id.credit4);
-        credit5 = (EditText) findViewById(R.id.credit5);
-        credit6 = (EditText) findViewById(R.id.credit6);
-        credit7 = (EditText) findViewById(R.id.credit7);
-        credit8 = (EditText) findViewById(R.id.credit8);
-        credit9 = (EditText) findViewById(R.id.credit9);
-        credit10 = (EditText) findViewById(R.id.credit10);
-        creditsum = (EditText) findViewById(R.id.creditsum);
-        labsum = (EditText) findViewById(R.id.labsum);
+        room = (EditText) findViewById(R.id.edit__room);
+        emailid = (EditText) findViewById(R.id.email__id);
+        addcoress = (EditText) findViewById(R.id.add__corres);
+        peradd = (EditText) findViewById(R.id.per_add);
+        pin1 = (EditText) findViewById(R.id.pin__1);
+        pin2 = (EditText) findViewById(R.id.pin__2);
+        mob1 = (EditText) findViewById(R.id.mob__1);
+        mob2 = (EditText) findViewById(R.id.mob__2);
+        code1 = (EditText) findViewById(R.id.code_1);
+        code2 = (EditText) findViewById(R.id.code_2);
+        code3 = (EditText) findViewById(R.id.code_3);
+        code4 = (EditText) findViewById(R.id.code_4);
+        code5 = (EditText) findViewById(R.id.code_5);
+        code6 = (EditText) findViewById(R.id.code_6);
+        code7 = (EditText) findViewById(R.id.code_7);
+        code8 = (EditText) findViewById(R.id.code_8);
+        code9 = (EditText) findViewById(R.id.code_9);
+        code10 = (EditText) findViewById(R.id.code_10);
+        course1 = (EditText) findViewById(R.id.course_1);
+        course2 = (EditText) findViewById(R.id.course_2);
+        course3 = (EditText) findViewById(R.id.course_3);
+        course4 = (EditText) findViewById(R.id.course_4);
+        course5 = (EditText) findViewById(R.id.course_5);
+        course6 = (EditText) findViewById(R.id.course_6);
+        course7 = (EditText) findViewById(R.id.course_7);
+        course8 = (EditText) findViewById(R.id.course_8);
+        course9 = (EditText) findViewById(R.id.course_9);
+        course10 = (EditText) findViewById(R.id.course_10);
+        lab1 = (EditText) findViewById(R.id.lab_1);
+        lab2 = (EditText) findViewById(R.id.lab_2);
+        lab3 = (EditText) findViewById(R.id.lab_3);
+        lab4 = (EditText) findViewById(R.id.lab_4);
+        lab5 = (EditText) findViewById(R.id.lab_5);
+        lab6 = (EditText) findViewById(R.id.lab_6);
+        lab7 = (EditText) findViewById(R.id.lab_7);
+        lab8 = (EditText) findViewById(R.id.lab_8);
+        lab9 = (EditText) findViewById(R.id.lab_9);
+        lab10 = (EditText) findViewById(R.id.lab_10);
+        credit1 = (EditText) findViewById(R.id.credit_1);
+        credit2 = (EditText) findViewById(R.id.credit_2);
+        credit3 = (EditText) findViewById(R.id.credit_3);
+        credit4 = (EditText) findViewById(R.id.credit_4);
+        credit5 = (EditText) findViewById(R.id.credit_5);
+        credit6 = (EditText) findViewById(R.id.credit_6);
+        credit7 = (EditText) findViewById(R.id.credit_7);
+        credit8 = (EditText) findViewById(R.id.credit_8);
+        credit9 = (EditText) findViewById(R.id.credit_9);
+        credit10 = (EditText) findViewById(R.id.credit_10);
+        creditsum = (EditText) findViewById(R.id.credit_sum);
+        labsum = (EditText) findViewById(R.id.lab_sum);
+        sg1 = (EditText) findViewById(R.id.sg_1);
+        sg2 = (EditText) findViewById(R.id.sg_2);
+        sg3 = (EditText) findViewById(R.id.sg_3);
+        sg4 = (EditText) findViewById(R.id.sg_4);
+
+        cg1 = (EditText) findViewById(R.id.cg_1);
+        cg2 = (EditText) findViewById(R.id.cg_2);
+        cg3 = (EditText) findViewById(R.id.cg_3);
+        cg4 = (EditText) findViewById(R.id.cg_4);
+
+        rep1 = (EditText) findViewById(R.id.rep_1);
+        rep2 = (EditText) findViewById(R.id.rep_2);
+        rep3 = (EditText) findViewById(R.id.rep_3);
+        rep4 = (EditText) findViewById(R.id.rep_4);
+
 
 
 
@@ -293,6 +309,7 @@ public void onRegisterSuccess(){
         }if(academicyr.getText().toString().isEmpty()){
             academicyr.setError("enter mobile no.");
             valid=false;
+
         }if (progm.equals("Choose Programme")){
             ((TextView)prog.getSelectedView()).setError("Error message");
             valid=false;
@@ -316,6 +333,8 @@ public void onRegisterSuccess(){
         course = course1.getText().toString().trim();
         lab = labsum.getText().toString().trim();
         credit = creditsum.getText().toString().trim();
+        cg=cg1.getText().toString().trim();
+        sg=sg1.getText().toString().trim();
     }
 
 
