@@ -234,7 +234,7 @@ public class Bonafide_Application extends AppCompatActivity {
                             if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8) {
                                 adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
                                 adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                bS3.setAdapter(adapter_sem1);
+                                bS3.setAdapter(adapter_sem3);
                                 dep = department3[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
@@ -295,7 +295,7 @@ public class Bonafide_Application extends AppCompatActivity {
                             if (position == 1 || position == 2 || position == 3) {
                                 adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
                                 adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                bS3.setAdapter(adapter_sem1);
+                                bS3.setAdapter(adapter_sem3);
                                 dep = department2[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
@@ -355,7 +355,7 @@ public class Bonafide_Application extends AppCompatActivity {
                             if (position == 1 || position == 2 || position == 3) {
                                 adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
                                 adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                bS3.setAdapter(adapter_sem1);
+                                bS3.setAdapter(adapter_sem3);
                                 dep = department4[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
