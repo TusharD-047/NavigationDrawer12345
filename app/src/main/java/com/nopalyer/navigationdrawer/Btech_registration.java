@@ -157,7 +157,7 @@ public class Btech_registration extends AppCompatActivity {
         labsum = (EditText) findViewById(R.id.labsum);
 
 
-        final String[] programme = {"Choose Programme", "B.Tech", "B.Arch"};
+        final String[] programme = {"Choose Programme", "B.Tech", "B.Arch", "Dual Degree"};
         final String[] department = {"Choose Branch", "CSE", "CSE DD", "ECE", "ECE DD", "Mechanical", "Civil", "Electrical", "Architecture", "Material Science", "Chemical"};
 
 
