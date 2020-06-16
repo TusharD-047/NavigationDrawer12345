@@ -86,8 +86,8 @@ public class Btech_registration extends AppCompatActivity {
     private EditText creditsum;
     private EditText sg1,sg2,sg3,sg4,sg5,sg6,sg7,sg8,sg9,sg10,cg1,cg2,cg3,cg4,cg5,cg6,cg7,cg8,cg9,cg10,rep1,rep2,rep3,rep4,rep5,rep6,rep7,rep8,rep9,rep10;
     final Calendar myCalendar = Calendar.getInstance();
-    private Spinner prog,dep;
-    ArrayAdapter<String> adapter_programme,adapter_dep;
+    private Spinner prog,dep,hostel,sem;
+    ArrayAdapter<String> adapter_programme,adapter_dep,adapter_hostel,adapter_semester;
     String progm,depp;
     int year2;
     private String myname,emailadd,permaadd,coress,rollno,roomno,birth,lab,code,course,credit,father,pincode1,pincode2,phone1,phone2;
@@ -100,6 +100,8 @@ public class Btech_registration extends AppCompatActivity {
         Button submit = (Button) findViewById(R.id.next);
         prog = (Spinner) findViewById(R.id.prog);
         dep = (Spinner) findViewById(R.id.regdep);
+        hostel = (Spinner) findViewById(R.id.reghostel);
+        sem = (Spinner) findViewById(R.id.regsem);
         academicyr = findViewById(R.id.session);
         name = (EditText) findViewById(R.id.editname);
         fname = (EditText) findViewById(R.id.editfname);
@@ -191,7 +193,8 @@ public class Btech_registration extends AppCompatActivity {
 
         final String[] programme = {"Choose Programme", "B.Tech", "B.Arch", "Dual Degree"};
         final String[] department = {"Choose Branch", "CSE", "CSE DD", "ECE", "ECE DD", "Mechanical", "Civil", "Electrical", "Architecture", "Material Science", "Chemical"};
-
+        final String[] semester1 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem"};
+        final String[] semester2 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem", "9th sem", "10th sem"};
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
@@ -273,11 +276,16 @@ public class Btech_registration extends AppCompatActivity {
                     bd.putString("RollNo", roll.getText().toString());
                     bd.putString("Date Of Birth", dob.getText().toString());
                     bd.putString("Email Address", emailid.getText().toString());
-                    bd.putString("Mobile No. 1", mob1.getText().toString());
                     bd.putString("Academic Year", academicyr.getText().toString());
                     bd.putString("Room", room.getText().toString());
                     bd.putString("Prog", progm);
                     bd.putString("Dep", depp);
+                    bd.putString("Coress", coress);
+                    bd.putString("Mobile No. 1",phone1);
+                    bd.putString("pin1", pincode1);
+                    bd.putString("perma", permaadd);
+                    bd.putString("Mobile No. 2",phone2);
+                    bd.putString("pin2", pincode2);
                     Intent it = new Intent(Btech_registration.this,ViewActivity.class);
                     it.putExtras(bd);
                     startActivity(it);
@@ -325,6 +333,21 @@ public void onRegisterSuccess(){
         }
         if(phone1.isEmpty()){
             mob1.setError("enter mobile no.");
+            valid=false;
+        }if(phone2.isEmpty()){
+            mob2.setError("enter mobile no.");
+            valid=false;
+        }if(pincode1.isEmpty()){
+            pin1.setError("enter pincode");
+            valid=false;
+        }if(pincode2.isEmpty()){
+            pin2.setError("enter pincode");
+            valid=false;
+        }if(permaadd.isEmpty()){
+            peradd.setError("enter Address");
+            valid=false;
+        }if(coress.isEmpty()){
+            addcoress.setError("enter Address");
             valid=false;
         }if(academicyr.getText().toString().isEmpty()){
             academicyr.setError("enter Academic year");
