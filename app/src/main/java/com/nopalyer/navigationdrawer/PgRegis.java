@@ -78,9 +78,9 @@ public class PgRegis extends AppCompatActivity {
     private EditText creditsum;
     private EditText sg1,sg2,sg3,sg4,cg1,cg2,cg3,cg4,rep1,rep2,rep3,rep4;
     final Calendar myCalendar = Calendar.getInstance();
-    private Spinner prog,dep;
-    ArrayAdapter<String> adapter_programme,adapter_dep;
-    String progm,depp;
+    private Spinner prog,dep,sem;
+    ArrayAdapter<String> adapter_programme,adapter_dep1,adapter_dep2,adapter_dep3,adapter_dep4,adapter_sem;
+    String progm,depp,semm;
     int year2;
     private String myname,emailadd,permaadd,coress,rollno,roomno,birth,lab,code,course,credit,father,pincode1,pincode2,phone1,phone2,cg,sg;
 
@@ -169,9 +169,12 @@ public class PgRegis extends AppCompatActivity {
 
 
 
-        final String[] programme = {"Choose Programme", "M.Tech", "Msc"};
-        final String[] department = {"Choose Branch", "CSE", "ECE", "Mechanical", "Civil", "Electrical", "Architecture", "Material Science", "Chemistry","Physics","Mathematics"};
-
+        final String[] programme = {"Choose Programme", "M.tech", "M.Arch", "MBA", "MSc"};
+        final String[] department1 = {"Choose Department", "CSE", "ECE", "Mechanical", "Civil", "Electrical", "Material Science", "Chemical"};
+        final String[] department2 = {"Choose Department", "Mathematics and Computing", "Physics", "Chemistry"};
+        final String[] department3 = {"Choose Department", "Architecture"};
+        final String[] department4 = {"Choose Department", "Management Studies"};
+        final String[] semester = {"Choose Semester", "2nd sem", "3rd sem", "4th sem"};
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
@@ -197,8 +200,47 @@ public class PgRegis extends AppCompatActivity {
                 if (position == 0) {
                     //      show.setEnabled(false);
                 }
-                if (position == 1 || position == 2 ){
+                if (position == 1 ){
                     progm = programme[position];
+                    adapter_dep1 = new ArrayAdapter<>(PgRegis.this, R.layout.colourful_spinner_items, department1);
+                    adapter_dep1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    dep.setAdapter(adapter_dep1);
+                    dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            if (position == 0) {
+                                //  show.setEnabled(false);
+                            }
+                            if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
+                                //   show.setEnabled(true);
+                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, semester);
+                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                sem.setAdapter(adapter_sem);
+                                depp = department1[position];
+                                sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                        if (position == 0) {
+                                            //  show.setEnabled(false);
+                                        }
+                                        if (position == 1 || position == 2 || position == 3) {
+                                            semm = semester[position];
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> parent) {
+
+                                    }
+                                });
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
                 }
             }
 
@@ -208,25 +250,7 @@ public class PgRegis extends AppCompatActivity {
             }
         });
 
-        adapter_dep = new ArrayAdapter<>(PgRegis.this, R.layout.colourful_spinner_items, department);
-        adapter_dep.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-        dep.setAdapter(adapter_dep);
-        dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    //      show.setEnabled(false);
-                }
-                if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8 || position == 9 || position == 10){
-                    depp = department[position];
-                }
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
         dob.setOnClickListener(new View.OnClickListener() {
             @Override
