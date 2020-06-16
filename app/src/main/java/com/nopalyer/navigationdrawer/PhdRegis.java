@@ -75,9 +75,9 @@ public class PhdRegis extends AppCompatActivity {
     private EditText labsum;
     private EditText creditsum;
     final Calendar myCalendar = Calendar.getInstance();
-    private Spinner prog,dep;
-    ArrayAdapter<String> adapter_programme,adapter_dep;
-    String progm,depp;
+    private Spinner prog,dep,sem,hostt;
+    ArrayAdapter<String> adapter_programme,adapter_dep,adapter_sem,adapter_host;
+    String progm,depp,semm,host;
     int year2;
     private String myname,emailadd,permaadd,coress,rollno,roomno,birth,lab,code,course,credit,father,pincode1,pincode2,phone1,phone2;
 
@@ -89,8 +89,10 @@ public class PhdRegis extends AppCompatActivity {
         setContentView(R.layout.activity_phd_regis);
 
         Button submit = (Button) findViewById(R.id.next2);
-        prog = (Spinner) findViewById(R.id.prog_);
+        prog = (Spinner) findViewById(R.id.reg_);
         dep = (Spinner) findViewById(R.id.regdep_);
+        sem = (Spinner) findViewById(R.id.prog_);
+        hostt = (Spinner) findViewById(R.id.hostel_);
         academicyr = findViewById(R.id.session_);
         name = (EditText) findViewById(R.id.editname_);
         fname = (EditText) findViewById(R.id.editfname_);
@@ -150,9 +152,10 @@ public class PhdRegis extends AppCompatActivity {
 
 
 
-        final String[] programme = {"Choose Programme", "P.hd"};
-        final String[] department = {"Choose Branch", "CSE", "CSE DD", "ECE", "ECE DD", "Mechanical", "Civil", "Electrical","Material Science", "Chemical","Chemistry","Physics","Mathematics"};
-
+        final String[] programme = {"Choose Programme", "PhD"};
+        final String[] department = {"Choose Department", "D1", "D2", "D3"};
+        final String[] semester= {"Choose Semester", "2nd sem", "3rd sem", "4th sem"};
+        final String[] hostel = {"Choose Hostel", "Ambika Girls Hostel", "Kailash Boys Hostel", "Himadri Boys Hostel","Udaygiri Boys Hostel","Neelkanth Boys Hostel","Dhauladhar Boys Hostel","Vindhyachal Boys Hostel","Shivalik Boys Hostel","Parvati Girls Hostel","Mani-Mahesh Girls Hostel","Aravali Girls Hostel"};
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
@@ -178,8 +181,47 @@ public class PhdRegis extends AppCompatActivity {
                 if (position == 0) {
                     //      show.setEnabled(false);
                 }
-                if (position == 1 || position == 2 ){
+                if (position == 1){
                     progm = programme[position];
+                    adapter_dep = new ArrayAdapter<>(PhdRegis.this, R.layout.colourful_spinner_items, department);
+                    adapter_dep.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    dep.setAdapter(adapter_dep);
+                    dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            if (position == 0) {
+                                //      show.setEnabled(false);
+                            }
+                            if (position == 1 || position == 2 || position == 3 ){
+                                depp = department[position];
+                                adapter_sem = new ArrayAdapter<String>(PhdRegis.this, R.layout.colourful_spinner_items, semester);
+                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                sem.setAdapter(adapter_sem);
+                                sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                        if (position == 0) {
+                                            //  show.setEnabled(false);
+                                        }
+                                        if (position == 1 || position == 2 || position == 3 || position == 4) {
+                                            semm = semester[position];
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> parent) {
+
+                                    }
+                                });
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+
                 }
             }
 
@@ -188,18 +230,18 @@ public class PhdRegis extends AppCompatActivity {
 
             }
         });
-
-        adapter_dep = new ArrayAdapter<>(PhdRegis.this, R.layout.colourful_spinner_items, department);
-        adapter_dep.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-        dep.setAdapter(adapter_dep);
-        dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        adapter_host = new ArrayAdapter<String>(PhdRegis.this, R.layout.colourful_spinner_items, hostel);
+        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        hostt.setAdapter(adapter_host);
+        hostt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    //      show.setEnabled(false);
+                    //  show.setEnabled(false);
                 }
-                if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8 || position == 9 || position == 10){
-                    depp = department[position];
+                if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7|| position == 8 || position == 9 || position == 10||position==11) {
+                    host = hostel[position];
+
                 }
             }
 
@@ -208,7 +250,7 @@ public class PhdRegis extends AppCompatActivity {
 
             }
         });
-
+//Spinner ends..................... :>
         dob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -107,7 +107,6 @@
                             android:layout_height="wrap_content"
                             android:textStyle="italic"
                             android:textColor="#000"
-
                             android:padding="3dp"/>
 
                         <Spinner

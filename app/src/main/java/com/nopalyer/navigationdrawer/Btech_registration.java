@@ -86,9 +86,9 @@ public class Btech_registration extends AppCompatActivity {
     private EditText creditsum;
     private EditText sg1,sg2,sg3,sg4,sg5,sg6,sg7,sg8,sg9,sg10,cg1,cg2,cg3,cg4,cg5,cg6,cg7,cg8,cg9,cg10,rep1,rep2,rep3,rep4,rep5,rep6,rep7,rep8,rep9,rep10;
     final Calendar myCalendar = Calendar.getInstance();
-    private Spinner prog,dep,hostel,sem;
-    ArrayAdapter<String> adapter_programme,adapter_depp1,adapter_depp2,adapter_depp3,adapter_hostel,adapter_semester,adapter_semester1;
-    String progm,depp,semm;
+    private Spinner prog,dep,hostt,sem;
+    ArrayAdapter<String> adapter_programme,adapter_depp1,adapter_depp2,adapter_depp3,adapter_hostel,adapter_semester,adapter_semester1,adapter_host;
+    String progm,depp,semm,host;
     int year2;
     private String myname,emailadd,permaadd,coress,rollno,roomno,birth,lab,code,course,credit,father,pincode1,pincode2,phone1,phone2;
 
@@ -98,10 +98,10 @@ public class Btech_registration extends AppCompatActivity {
         setContentView(R.layout.activity_btech_registration);
 
         Button submit = (Button) findViewById(R.id.next);
-        prog = (Spinner) findViewById(R.id.prog);
+        prog = (Spinner) findViewById(R.id.regsem);
         dep = (Spinner) findViewById(R.id.regdep);
-        hostel = (Spinner) findViewById(R.id.reghostel);
-        sem = (Spinner) findViewById(R.id.regsem);
+        hostt = (Spinner) findViewById(R.id.reghostel);
+        sem = (Spinner) findViewById(R.id.prog);
         academicyr = findViewById(R.id.session);
         name = (EditText) findViewById(R.id.editname);
         fname = (EditText) findViewById(R.id.editfname);
@@ -195,6 +195,7 @@ public class Btech_registration extends AppCompatActivity {
         final String[] department3 = {"Choose Department", "CSE DD", "ECE DD"};
         final String[] semester1 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem"};
         final String[] semester2 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem", "9th sem", "10th sem"};
+        final String[] hostel = {"Choose Hostel", "Ambika Girls Hostel", "Kailash Boys Hostel", "Himadri Boys Hostel","Udaygiri Boys Hostel","Neelkanth Boys Hostel","Dhauladhar Boys Hostel","Vindhyachal Boys Hostel","Shivalik Boys Hostel","Parvati Girls Hostel","Mani-Mahesh Girls Hostel","Aravali Girls Hostel"};
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
@@ -354,8 +355,27 @@ public class Btech_registration extends AppCompatActivity {
 
             }
         });
+        adapter_host = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items, hostel);
+        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        hostt.setAdapter(adapter_host);
+        hostt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    //  show.setEnabled(false);
+                }
+                if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7|| position == 8 || position == 9 || position == 10||position==11) {
+                    host = hostel[position];
 
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+//Spinner ends .................... :> .... :)
 
         dob.setOnClickListener(new View.OnClickListener() {
             @Override
