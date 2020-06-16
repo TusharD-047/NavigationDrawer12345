@@ -1275,6 +1275,7 @@
         Sweety Kumari
     </string>
     <string name="invalid_name">Please enter valid Name</string>
+    <string name="invalid_reason">Please enter valid Reason</string>
     <string name="invalid_roll">Please enter valid Roll Number</string>
     <string name="invalid_mbl">Please Enter a valid Number</string>
     <string name="invalid_email">"Please enter valid Email "</string>

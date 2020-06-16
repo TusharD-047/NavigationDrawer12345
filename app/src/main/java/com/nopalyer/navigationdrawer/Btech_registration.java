@@ -327,10 +327,7 @@ public void onRegisterSuccess(){
             mob1.setError("enter mobile no.");
             valid=false;
         }if(academicyr.getText().toString().isEmpty()){
-            academicyr.setError("enter mobile no.");
-            valid=false;
-        }if (progm.equals("Choose Programme")){
-            ((TextView)prog.getSelectedView()).setError("Error message");
+            academicyr.setError("enter Academic year");
             valid=false;
         }
         return valid;

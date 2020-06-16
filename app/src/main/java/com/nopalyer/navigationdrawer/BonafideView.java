@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class BonafideView extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private TextView name,faname,rolln,dobn,semtr,catg,email,doc;
+    private TextView name,faname,rolln,dobn,semtr,catg,email,doc,reason;
     private Button upload,edit;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog mProgress;
@@ -54,6 +54,7 @@ public class BonafideView extends AppCompatActivity {
         catg.setText(bundle.get("dep").toString());
         email.setText(bundle.get("Email").toString());
         doc.setText(bundle.get("type").toString());
+        reason.setText(bundle.get("reason").toString());
 
         mProgress = new ProgressDialog(this);
 
@@ -70,7 +71,7 @@ public class BonafideView extends AppCompatActivity {
                         dep = dataSnapshot.child("Department").getValue().toString();
                         roll = dataSnapshot.child("Roll No").getValue().toString();
 
-                        mref = database.getReference("Bonafide Application").child(roll);
+                        mref = database.getReference("Document Application").child(doc.getText().toString()).child(roll);
                         mref.child("Year").setValue(yr);
                         mref.child("Name").setValue(name.getText());
                         mref.child("Programme").setValue(faname.getText());
@@ -80,6 +81,7 @@ public class BonafideView extends AppCompatActivity {
                         mref.child("Department").setValue(catg.getText());
                         mref.child("Email").setValue(email.getText());
                         mref.child("Document").setValue(doc.getText());
+                        mref.child("Reason").setValue(reason.getText());
 
                         mProgress.dismiss();
                         Toast.makeText(BonafideView.this,"Upload Done",Toast.LENGTH_SHORT).show();
@@ -110,6 +112,7 @@ public class BonafideView extends AppCompatActivity {
         catg = (TextView)findViewById(R.id.Bontvdep);
         email = (TextView)findViewById(R.id.Bontvemail);
         doc = (TextView)findViewById(R.id.Bontvdoc);
+        reason = (TextView)findViewById(R.id.Bontvreason);
         upload = (Button)findViewById(R.id.Bonaddpdf);
         edit = (Button)findViewById(R.id.Bonedit);
         firebaseAuth = FirebaseAuth.getInstance();

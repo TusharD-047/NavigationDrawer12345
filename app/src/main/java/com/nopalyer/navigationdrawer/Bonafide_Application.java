@@ -42,7 +42,7 @@ public class Bonafide_Application extends AppCompatActivity {
     private Spinner bS1, bS2, bS3, bS4;
     private Button sub;
     //private CheckBox cb1,cb2,cb3,cb4,cb5,cb6,cb7,cb8;
-    public static String prog, dep, sem, doc;
+    public static String prog = "", dep = "", sem = "", doc = "";
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     List<String> listDataHeader, list;
@@ -75,6 +75,7 @@ public class Bonafide_Application extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonafide__application);
+
         sub = findViewById(R.id.bonSub);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -91,11 +92,14 @@ public class Bonafide_Application extends AppCompatActivity {
         b5 = findViewById(R.id.b5);
         b6 = findViewById(R.id.b6);
 
+        b5.setEnabled(false);
+
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         awesomeValidation.addValidation(this, R.id.b1, RegexTemplate.NOT_EMPTY, R.string.invalid_name);
         awesomeValidation.addValidation(this, R.id.b2, RegexTemplate.NOT_EMPTY, R.string.invalid_roll);
         awesomeValidation.addValidation(this, R.id.b3, "[5-9]{1}[0-9]{9}$", R.string.invalid_mbl);
         awesomeValidation.addValidation(this, R.id.b4, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
+        awesomeValidation.addValidation(this, R.id.b6, RegexTemplate.NOT_EMPTY, R.string.invalid_reason);
 
 
         final String[] programme = {"Choose Programme", "B.Tech", "B.Arch", "Dual Degree","M.tech","MSc","PhD"};
@@ -151,7 +155,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 0) {
                                                         //  show.setEnabled(false);
                                                     }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8) {
+                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
+                                                        doc = documents[position];
+                                                        b5.setEnabled(false);
+                                                    }
+                                                    if (position == 8){
+                                                        b5.setEnabled(true);
                                                         doc = documents[position];
                                                     }
                                                 }
@@ -193,7 +202,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 0) {
                                                         //  show.setEnabled(false);
                                                     }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8) {
+                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
+                                                        doc = documents[position];
+                                                        b5.setEnabled(false);
+                                                    }
+                                                    if (position == 8){
+                                                        b5.setEnabled(true);
                                                         doc = documents[position];
                                                     }
                                                 }
@@ -253,7 +267,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 0) {
                                                         //  show.setEnabled(false);
                                                     }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8) {
+                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
+                                                        doc = documents[position];
+                                                        b5.setEnabled(false);
+                                                    }
+                                                    if (position == 8){
+                                                        b5.setEnabled(true);
                                                         doc = documents[position];
                                                     }
                                                 }
@@ -314,7 +333,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 0) {
                                                         //  show.setEnabled(false);
                                                     }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8) {
+                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
+                                                        doc = documents[position];
+                                                        b5.setEnabled(false);
+                                                    }
+                                                    if (position == 8){
+                                                        b5.setEnabled(true);
                                                         doc = documents[position];
                                                     }
                                                 }
@@ -374,7 +398,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 0) {
                                                         //  show.setEnabled(false);
                                                     }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7 || position == 8) {
+                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
+                                                        doc = documents[position];
+                                                        b5.setEnabled(false);
+                                                    }
+                                                    if (position == 8){
+                                                        b5.setEnabled(true);
                                                         doc = documents[position];
                                                     }
                                                 }
@@ -416,20 +445,38 @@ public class Bonafide_Application extends AppCompatActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (awesomeValidation.validate() && prog != null && dep != null && sem != null && doc!=null) {
-                    Bundle bd = new Bundle();
-                    bd.putString("Name", b1.getText().toString());
-                    bd.putString("Roll No", b2.getText().toString());
-                    bd.putString("Mobile", b3.getText().toString());
-                    bd.putString("Email", b4.getText().toString());
-                    bd.putString("Programme", prog);
-                    bd.putString("dep", dep);
-                    bd.putString("sem", sem);
-                    bd.putString("type", doc);
+                if (awesomeValidation.validate() && prog != null && dep != null && sem != null && doc != null) {
+                    if (doc.equals("Any Other")){
+                        Bundle bd = new Bundle();
+                        bd.putString("Name", b1.getText().toString());
+                        bd.putString("Roll No", b2.getText().toString());
+                        bd.putString("Mobile", b3.getText().toString());
+                        bd.putString("Email", b4.getText().toString());
+                        bd.putString("Programme", prog);
+                        bd.putString("dep", dep);
+                        bd.putString("sem", sem);
+                        bd.putString("type", b5.getText().toString());
+                        bd.putString("reason", b6.getText().toString());
 
-                    Intent it = new Intent(Bonafide_Application.this, BonafideView.class);
-                    it.putExtras(bd);
-                    startActivity(it);
+                        Intent it = new Intent(Bonafide_Application.this, BonafideView.class);
+                        it.putExtras(bd);
+                        startActivity(it);
+                    }else {
+                        Bundle bd = new Bundle();
+                        bd.putString("Name", b1.getText().toString());
+                        bd.putString("Roll No", b2.getText().toString());
+                        bd.putString("Mobile", b3.getText().toString());
+                        bd.putString("Email", b4.getText().toString());
+                        bd.putString("Programme", prog);
+                        bd.putString("dep", dep);
+                        bd.putString("sem", sem);
+                        bd.putString("type", doc);
+                        bd.putString("reason", b6.getText().toString());
+
+                        Intent it = new Intent(Bonafide_Application.this, BonafideView.class);
+                        it.putExtras(bd);
+                        startActivity(it);
+                    }
                 } else {
                     Toast.makeText(getApplicationContext(), "Fill all the required fields", Toast.LENGTH_SHORT).show();
                 }

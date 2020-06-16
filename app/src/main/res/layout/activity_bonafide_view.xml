@@ -198,6 +198,27 @@
                     android:text="" />
             </TableRow>
 
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="#eeeeee"
+                    android:padding="5dp"
+                    android:text="Reason :" />
+
+                <TextView
+                    android:id="@+id/Bontvreason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
         </TableLayout>
 
         <Button
