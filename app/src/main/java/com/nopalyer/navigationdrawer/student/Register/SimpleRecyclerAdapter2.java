@@ -20,10 +20,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.nopalyer.navigationdrawer.Admin.AdminBtechReg;
 import com.nopalyer.navigationdrawer.Admin.AdminNoReg;
 import com.nopalyer.navigationdrawer.Bonafide_Application;
 import com.nopalyer.navigationdrawer.Btech_registration;
+import com.nopalyer.navigationdrawer.Openelective;
 import com.nopalyer.navigationdrawer.PgRegis;
 import com.nopalyer.navigationdrawer.PhdRegis;
 import com.nopalyer.navigationdrawer.R;
@@ -152,6 +152,15 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
                     }
                         break;
                     case 3:
+                        if (sembon.equals("true")){
+                            Intent intent = new Intent(context, Openelective.class);
+                            context.startActivity(intent);
+                        }if (sembon.equals("false")){
+                        Intent intent = new Intent(context, AdminNoReg.class);
+                        context.startActivity(intent);
+                    }
+                        break;
+                    case 4:
                         if (sembon.equals("true")){
                             Intent intent = new Intent(context, Bonafide_Application.class);
                             context.startActivity(intent);
