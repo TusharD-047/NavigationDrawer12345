@@ -36,7 +36,7 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
     private ArrayList<reg> listreg;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference ref1,ref2,ref3,ref4;
+    private DatabaseReference ref1,ref2,ref3,ref4,ref5;
     String semcon,sembon;
 
     public SimpleRecyclerAdapter2(Context context) {
@@ -117,6 +117,19 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
 
             }
         });
+        ref5 = firebaseDatabase.getReference("Admin Switch").child("Bonafide Switch");
+        ref5.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sembon = dataSnapshot.child("Condition").getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
 
         holder.textView.setText(getListreg().get(position).getName());
         Glide.with(context).load(getListreg().get(position).getPhoto()).into(holder.imageView);
