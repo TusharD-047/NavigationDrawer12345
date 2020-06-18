@@ -100,7 +100,11 @@
                             android:textStyle="normal"
 
                             />
-
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row_41">
                         <TextView
                             android:text="Programme"
                             android:layout_width="fill_parent"
@@ -145,8 +149,11 @@
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal" />
-
-
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/row410">
                         <TextView
                             android:text="Hostel Name:"
                             android:layout_width="fill_parent"
