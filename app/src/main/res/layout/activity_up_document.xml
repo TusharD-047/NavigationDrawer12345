@@ -201,7 +201,7 @@
                 android:layout_marginBottom="3dp"
                 android:background="@color/Table_bg"
                 android:gravity="center"
-                android:text="Registration Form"
+                android:text="Fees"
                 android:textColor="#ffffff"
                 android:textSize="20sp">
 
@@ -217,6 +217,56 @@
 
                 <Button
                     android:id="@+id/upForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Choose File" />
+
+            </androidx.cardview.widget.CardView>
+
+        </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/Table_bg"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="3dp"
+                android:background="@color/Table_bg"
+                android:gravity="center"
+                android:text="Additional Document"
+                android:textColor="#ffffff"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"
+                app:cardBackgroundColor="@color/Table_bg">
+
+
+                <Button
+                    android:id="@+id/upAdd"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

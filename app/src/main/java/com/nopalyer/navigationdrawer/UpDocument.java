@@ -53,8 +53,7 @@ import static androidx.core.content.FileProvider.getUriForFile;
 
 public class UpDocument extends AppCompatActivity {
 
-    Button upProfile,upId;
-    Button upForm;
+    Button upProfile,upId,upfees,upAdd;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseStorage firebaseStorage;
@@ -63,6 +62,8 @@ public class UpDocument extends AppCompatActivity {
     String yr = "",dep = "",roll = "",name ="";
     private static int PICK_IMAGE = 123;
     private static int PICK_IMAGE2 = 124;
+    private static int PICK_IMAGE3 = 125;
+    private static int PICK_IMAGE4 = 126;
     ProgressDialog pd,pd1;
 
     @Override
@@ -72,7 +73,8 @@ public class UpDocument extends AppCompatActivity {
 
         upProfile = findViewById(R.id.upPhoto);
         upId = findViewById(R.id.upId);
-        upForm = findViewById(R.id.upForm);
+        upfees = findViewById(R.id.upForm);
+        upAdd = findViewById(R.id.upAdd);
         pd =new ProgressDialog(this);
 
         pd1 =new ProgressDialog(this);
@@ -117,64 +119,32 @@ public class UpDocument extends AppCompatActivity {
             }
         });
 
-    }
-
-    private void UploadPDF() {
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this,
-                Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                    Uri.parse("package:" + getPackageName()));
-            startActivity(intent);
-            return;
-        }
-
-        Intent intent = new Intent();
-        intent.setType("application/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"Select Doocument"),1);
-    }
-
-    private void uploadPDFFile(Uri data) {
-
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Uploading...");
-        progressDialog.show();
-        reference = sref.child(yr).child(dep).child(roll).child("Form");
-        reference.putFile(data).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+        upfees.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
-                while(!uri.isComplete());
-                Uri url1 = uri.getResult();
-                //uploadPDF uploadPDF = new uploadPDF("Info Form",url1.toString());
-                mref.child(yr).child(dep).child(roll).child("Info Form").child("url").setValue(url1.toString());
-                progressDialog.dismiss();
-                Toast.makeText(UpDocument.this,"Form Uploaded",Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(UpDocument.this,"Database Failed",Toast.LENGTH_SHORT).show();
-            }
-        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                double progress = (100.0*taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
-                progressDialog.setMessage("Uploaded:  "+(int)progress+"%");
-
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE3);
             }
         });
+
+        upAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE4);
+            }
+        });
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null){
-            uploadPDFFile(data.getData());
-        }
         if(requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null){
             Uri imagePath = data.getData();
             name = "Urlphoto";
@@ -217,6 +187,30 @@ public class UpDocument extends AppCompatActivity {
         if(requestCode == PICK_IMAGE2 && resultCode == RESULT_OK && data.getData() != null){
             Uri imagePath = data.getData();
             name = "Urlidcard";
+            CropImage.activity(imagePath)
+                    .start(this);
+           /* try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
+                profile.setImageBitmap(bitmap);
+            } catch (IOException e){
+                e.printStackTrace();
+            }*/
+        }
+        if(requestCode == PICK_IMAGE3 && resultCode == RESULT_OK && data.getData() != null){
+            Uri imagePath = data.getData();
+            name = "Fees";
+            CropImage.activity(imagePath)
+                    .start(this);
+           /* try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
+                profile.setImageBitmap(bitmap);
+            } catch (IOException e){
+                e.printStackTrace();
+            }*/
+        }
+        if(requestCode == PICK_IMAGE4 && resultCode == RESULT_OK && data.getData() != null){
+            Uri imagePath = data.getData();
+            name = "Additional";
             CropImage.activity(imagePath)
                     .start(this);
            /* try {
