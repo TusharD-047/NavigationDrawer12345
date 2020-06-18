@@ -9,11 +9,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Openelective extends Activity {
+
     Spinner spin1,spin2,spin3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_openelective);
         spin1 = findViewById(R.id.spin_1);
         spin2 = findViewById(R.id.spin_2);
         spin3 = findViewById(R.id.spin_3);

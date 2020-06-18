@@ -146,6 +146,7 @@ public class Btech_registration extends AppCompatActivity {
         lab8 = (EditText) findViewById(R.id.lab8);
         lab9 = (EditText) findViewById(R.id.lab9);
         lab10 = (EditText) findViewById(R.id.lab10);
+        labsum = findViewById(R.id.labsum);
         credit1 = (EditText) findViewById(R.id.credit1);
         credit2 = (EditText) findViewById(R.id.credit2);
         credit3 = (EditText) findViewById(R.id.credit3);
@@ -184,7 +185,6 @@ public class Btech_registration extends AppCompatActivity {
         rep7 = (EditText) findViewById(R.id.rep7);
         rep8 = (EditText) findViewById(R.id.rep8);
         rep9 = (EditText) findViewById(R.id.rep9);
-
 
 
 
@@ -395,7 +395,7 @@ public class Btech_registration extends AppCompatActivity {
                 int a = yr-year2;
                 if (a< 15){
                     dob.setError("Age Too Short");
-                }else if (validate()){
+                }else{
                     Bundle bd = new Bundle();
                     bd.putString("Name", name.getText().toString());
                     bd.putString("FatherName", fname.getText().toString());
@@ -412,6 +412,78 @@ public class Btech_registration extends AppCompatActivity {
                     bd.putString("perma", permaadd);
                     bd.putString("Mobile No. 2",phone2);
                     bd.putString("pin2", pincode2);
+                    bd.putString("sem", semm);
+                    bd.putString("hostel", host);
+                    bd.putString("code1", code1.getText().toString());
+                    bd.putString("course1", course1.getText().toString());
+                    bd.putString("lab1", lab1.getText().toString());
+                    bd.putString("credit1", credit1.getText().toString());
+                    bd.putString("code2", code2.getText().toString());
+                    bd.putString("course2", course2.getText().toString());
+                    bd.putString("lab2", lab2.getText().toString());
+                    bd.putString("credit2", credit2.getText().toString());
+                    bd.putString("code3", code3.getText().toString());
+                    bd.putString("course3", course3.getText().toString());
+                    bd.putString("lab3", lab3.getText().toString());
+                    bd.putString("credit3", credit3.getText().toString());
+                    bd.putString("code4", code4.getText().toString());
+                    bd.putString("course4", course4.getText().toString());
+                    bd.putString("lab4", lab4.getText().toString());
+                    bd.putString("credit4", credit4.getText().toString());
+                    bd.putString("code5", code5.getText().toString());
+                    bd.putString("course5", course5.getText().toString());
+                    bd.putString("lab5", lab5.getText().toString());
+                    bd.putString("credit5", credit5.getText().toString());
+                    bd.putString("code6", code6.getText().toString());
+                    bd.putString("course6", course6.getText().toString());
+                    bd.putString("lab6", lab6.getText().toString());
+                    bd.putString("credit6", credit6.getText().toString());
+                    bd.putString("code7", code7.getText().toString());
+                    bd.putString("course7", course7.getText().toString());
+                    bd.putString("lab7", lab7.getText().toString());
+                    bd.putString("credit7", credit7.getText().toString());
+                    bd.putString("code8", code8.getText().toString());
+                    bd.putString("course8", course8.getText().toString());
+                    bd.putString("lab8", lab8.getText().toString());
+                    bd.putString("credit8", credit8.getText().toString());
+                    bd.putString("code9", code9.getText().toString());
+                    bd.putString("course9", course9.getText().toString());
+                    bd.putString("lab9", lab9.getText().toString());
+                    bd.putString("credit9", credit9.getText().toString());
+                    bd.putString("code10", code10.getText().toString());
+                    bd.putString("course10", course10.getText().toString());
+                    bd.putString("lab10", lab10.getText().toString());
+                    bd.putString("credit10", credit10.getText().toString());
+                    bd.putString("labsum", labsum.getText().toString());
+                    bd.putString("creditsum", creditsum.getText().toString());
+                    bd.putString("cg1", cg1.getText().toString());
+                    bd.putString("sg1", sg1.getText().toString());
+                    bd.putString("rep1", rep1.getText().toString());
+                    bd.putString("cg2", cg2.getText().toString());
+                    bd.putString("sg2", sg2.getText().toString());
+                    bd.putString("rep2", rep2.getText().toString());
+                    bd.putString("cg3", cg3.getText().toString());
+                    bd.putString("sg3", sg3.getText().toString());
+                    bd.putString("rep3", rep3.getText().toString());
+                    bd.putString("cg4", cg4.getText().toString());
+                    bd.putString("sg4", sg4.getText().toString());
+                    bd.putString("rep4", rep4.getText().toString());
+                    bd.putString("cg5", cg5.getText().toString());
+                    bd.putString("sg5", sg5.getText().toString());
+                    bd.putString("rep5", rep5.getText().toString());
+                    bd.putString("cg6", cg6.getText().toString());
+                    bd.putString("sg6", sg6.getText().toString());
+                    bd.putString("rep6", rep6.getText().toString());
+                    bd.putString("cg7", cg7.getText().toString());
+                    bd.putString("sg7", sg7.getText().toString());
+                    bd.putString("rep7", rep7.getText().toString());
+                    bd.putString("cg8", cg8.getText().toString());
+                    bd.putString("sg8", sg8.getText().toString());
+                    bd.putString("rep8", rep8.getText().toString());
+                    bd.putString("cg9", cg9.getText().toString());
+                    bd.putString("sg9", sg9.getText().toString());
+                    bd.putString("rep9", rep9.getText().toString());
+
                     Intent it = new Intent(Btech_registration.this,ViewActivity.class);
                     it.putExtras(bd);
                     startActivity(it);
@@ -496,8 +568,7 @@ public void onRegisterSuccess(){
         phone2 = mob2.getText().toString().trim();
         code = code1.getText().toString().trim();
         course = course1.getText().toString().trim();
-        lab = labsum.getText().toString().trim();
-        credit = creditsum.getText().toString().trim();
+
     }
 
 

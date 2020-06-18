@@ -157,28 +157,6 @@
                     android:text="" />
             </TableRow>
 
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="5dp"
-                    android:text="Contact :"
-                    android:textColor="#eeeeee"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/regtvCategory"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textColor="#eeeeee"
-                    android:layout_weight="1"
-                    android:textSize="18sp"
-                    android:text="" />
-            </TableRow>
-
             <TableRow>
 
                 <TextView
@@ -191,6 +169,48 @@
 
                 <TextView
                     android:id="@+id/regtvroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text=" " />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_height="match_parent"
+                    android:text="Semester : " />
+
+                <TextView
+                    android:id="@+id/regtvSemester"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:text=" " />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_height="match_parent"
+                    android:text="Hostel : " />
+
+                <TextView
+                    android:id="@+id/regtvhostel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#eeeeee"
@@ -240,6 +260,132 @@
                     android:textSize="18sp"
                     android:padding="5dp"
                     android:text=" " />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Corresponding Address :"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvCrres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Pin  :"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvPin1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Contact :"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Corresponding Address :"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvPer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Pin  :"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvPin2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="Contact :"
+                    android:textColor="#eeeeee"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/regtvmob2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#eeeeee"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="" />
             </TableRow>
 
 
