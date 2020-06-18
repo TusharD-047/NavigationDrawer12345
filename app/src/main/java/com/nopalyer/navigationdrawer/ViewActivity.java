@@ -210,7 +210,7 @@ public class ViewActivity extends AppCompatActivity {
                         mref.child("DOB").setValue(dobn.getText());
                         mref.child("Email").setValue(semtr.getText());
                         mref.child("Mobile1").setValue(catg.getText());
-                        mref.child("Academic Year").setValue(acyr.getText());
+                        mref.child("AcademicYear").setValue(acyr.getText());
                         mref.child("Room").setValue(room.getText());
                         mref.child("Programme").setValue(prog.getText());
                         mref.child("Department").setValue(deppp.getText());
