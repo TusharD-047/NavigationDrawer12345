@@ -7,12 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.nopalyer.navigationdrawer.teacher.DeleteTpAssignment;
 import com.nopalyer.navigationdrawer.teacher.tpassign;
 import com.stripe.android.model.Card;
 
 public class tpassignHome extends AppCompatActivity {
 
-    CardView cv1,cv2;
+    CardView cv1,cv2,cv3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,7 @@ public class tpassignHome extends AppCompatActivity {
 
         cv1 = (CardView)findViewById(R.id.tpassign1);
         cv2 = (CardView)findViewById(R.id.tpassign2);
+        cv3 = (CardView)findViewById(R.id.tpassign3);
 
         cv1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,13 @@ public class tpassignHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(tpassignHome.this, UploadedAssignment.class));
+            }
+        });
+
+        cv3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tpassignHome.this, DeleteTpAssignment.class));
             }
         });
     }

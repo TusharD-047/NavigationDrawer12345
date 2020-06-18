@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Openelective"></activity>
+        <activity android:name=".teacher.DeleteTpAssignment"></activity>
+        <activity android:name=".Openelective" />
         <activity android:name=".BonafideView" />
         <activity android:name=".PhdRegis" />
         <activity android:name=".PgRegis" />
