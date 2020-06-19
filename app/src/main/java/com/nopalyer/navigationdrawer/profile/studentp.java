@@ -48,13 +48,13 @@ import java.util.Map;
 
 public class studentp extends AppCompatActivity {
     private ImageView profile;
-    private TextView name,roll,department,contact,email,name1;
+    private TextView name,roll,department,contact,email,name1,prog;
     ProgressDialog pd,pd1;
     private static int PICK_IMAGE = 123;
     StorageReference storageReference;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference,ref;
     FirebaseStorage firebaseStorage;
     Spinner yearspinner;
     SharedPreferences sharedprefs,sharedPreferences2;
@@ -71,6 +71,7 @@ public class studentp extends AppCompatActivity {
         name = (TextView)findViewById(R.id.name123);
         roll = (TextView)findViewById(R.id.roll123);
         name1 = (TextView)findViewById(R.id.name1);
+        prog = (TextView)findViewById(R.id.program123);
         department = (TextView)findViewById(R.id.department123);
         contact = (TextView)findViewById(R.id.contact123);
         email = (TextView)findViewById(R.id.email123);
@@ -81,81 +82,95 @@ public class studentp extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
 
-        pd.setMessage("Retrieving Info ! Please Smile");
-        pd.setCancelable(false);
-        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        pd.show();
-        databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
-        storageReference = firebaseStorage.getReference();
-        storageReference.child(firebaseAuth.getUid()).child("image").child("Profile").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        ref = firebaseDatabase.getReference();
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onSuccess(Uri uri) {
-                Picasso.get().load(uri).fit().centerCrop().into(profile);
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.hasChild(firebaseAuth.getUid())){
+                    pd.setMessage("Retrieving Info ! Please Smile");
+                    pd.setCancelable(false);
+                    pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    pd.show();
+                    databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                    storageReference = firebaseStorage.getReference();
+                    storageReference.child(firebaseAuth.getUid()).child("image").child("Profile").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            Picasso.get().load(uri).fit().centerCrop().into(profile);
+                        }
+                    });
+
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            name.setText(dataSnapshot.child("Name").getValue().toString().trim());
+                            name1.setText(dataSnapshot.child("Name").getValue().toString().trim());
+                            roll.setText(dataSnapshot.child("Roll No").getValue().toString().trim());
+                            department.setText(dataSnapshot.child("Department").getValue().toString().trim());
+                            prog.setText(dataSnapshot.child("Programme").getValue().toString().trim());
+                            email.setText(firebaseUser.getEmail());
+                            contact.setText(dataSnapshot.child("Contact").getValue().toString().trim());
+                            pd.dismiss();
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            Toast.makeText(studentp.this, databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            pd.dismiss();
+                        }
+                    });
+
+                    profile.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent();
+                            intent.setType("image/*");
+                            intent.setAction(Intent.ACTION_GET_CONTENT);
+                            startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE);
+                        }
+                    });
+
+                    //spinner starts=============================================================================================================================================
+                    final  String[] year1 = {"Choose year","1st year","2nd year","3rd year","4th year"};
+                    sharedprefs = getSharedPreferences("yash",MODE_PRIVATE);
+                    editor=sharedprefs.edit();
+
+                    final int lastposition_yr = sharedprefs.getInt("lastselected_yr",0); // Load data
+
+                    ArrayAdapter<String> adapter_year= new ArrayAdapter<String>(studentp.this,R.layout.colourful_spinner_items,year1);
+                    adapter_year.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    yearspinner.setAdapter(adapter_year);
+                    yearspinner.setSelection(lastposition_yr);    // Update views
+                    yearspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            editor.putInt("lastselected_yr",position).apply();  // save data
+                            save = year1[position];
+
+                            sharedPreferences2 = getSharedPreferences("shree",MODE_PRIVATE);
+                            editor2 = sharedPreferences2.edit();
+                            editor2.putString("yearupdate",save).apply();
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+
+
+                    //spinner ends==============================================================================================================================================
+                }else {
+                    startActivity(new Intent(studentp.this,com.nopalyer.navigationdrawer.editProfile.class));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
-
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                name.setText(dataSnapshot.child("Name").getValue().toString().trim());
-                name1.setText(dataSnapshot.child("Name").getValue().toString().trim());
-                roll.setText(dataSnapshot.child("Roll No").getValue().toString().trim());
-                department.setText(dataSnapshot.child("Department").getValue().toString().trim());
-                email.setText(firebaseUser.getEmail());
-                contact.setText(dataSnapshot.child("Contact").getValue().toString().trim());
-                pd.dismiss();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(studentp.this, databaseError.getCode(),Toast.LENGTH_SHORT).show();
-                pd.dismiss();
-            }
-        });
-
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE);
-            }
-        });
-
-        //spinner starts=============================================================================================================================================
-        final  String[] year1 = {"Choose year","1st year","2nd year","3rd year","4th year"};
-        sharedprefs = getSharedPreferences("yash",MODE_PRIVATE);
-        editor=sharedprefs.edit();
-
-        final int lastposition_yr = sharedprefs.getInt("lastselected_yr",0); // Load data
-
-        ArrayAdapter<String> adapter_year= new ArrayAdapter<String>(studentp.this,R.layout.colourful_spinner_items,year1);
-        adapter_year.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-        yearspinner.setAdapter(adapter_year);
-        yearspinner.setSelection(lastposition_yr);    // Update views
-        yearspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                editor.putInt("lastselected_yr",position).apply();  // save data
-                save = year1[position];
-
-                sharedPreferences2 = getSharedPreferences("shree",MODE_PRIVATE);
-                editor2 = sharedPreferences2.edit();
-                editor2.putString("yearupdate",save).apply();
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
-        //spinner ends==============================================================================================================================================
-
-
     }
 
     @Override

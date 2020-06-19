@@ -24,8 +24,8 @@ import com.google.firebase.storage.StorageReference;
 
 public class editProfile extends AppCompatActivity {
     private ImageView profile;
-    private TextView name,department,contact,email,name1;
-    private EditText roll;
+    private TextView department,email,name1;
+    private EditText roll,name,contact;
     private CheckBox note;
     ProgressDialog pd,pd1;
     private static int PICK_IMAGE = 123;
@@ -50,10 +50,11 @@ public class editProfile extends AppCompatActivity {
         ES0=(Spinner)findViewById(R.id.ES0);
         ES1=(Spinner)findViewById(R.id.ES1);
         ES2=(Spinner)findViewById(R.id.ES2);
-        name = (TextView)findViewById(R.id.name123);
-        profile = (ImageView)findViewById(R.id.profilep);
-        roll = (EditText) findViewById(R.id.roll);
-        save = findViewById(R.id.bonSub);
+        name = (EditText)findViewById(R.id.nameedit);
+        contact = (EditText)findViewById(R.id.editCon);
+        profile = (ImageView)findViewById(R.id.profileedit);
+        roll = (EditText) findViewById(R.id.rolledit);
+        save = findViewById(R.id.Ebutton);
         note =(CheckBox) findViewById(R.id.EC);
 
         final String[] programme = {"Choose Programme", "B.Tech", "B.Arch", "Dual Degree", "M.tech", "M.Arch", "MBA", "MSc", "PhD"};

@@ -8,9 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".editProfile">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".editProfile">
@@ -46,6 +44,7 @@
 
 
                         <ImageView
+                            android:id="@+id/profileedit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
@@ -55,20 +54,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="xyz"
-                        android:textColor="#000000"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="5px"
                         android:layout_marginBottom="50px"
-                        android:text="Role"
+                        android:text="Student"
                         android:textColor="#68686C"
-                        android:textSize="18sp"
-                        android:textStyle="normal" />
+                        android:textSize="24sp"
+                        android:textStyle="normal|bold|italic" />
 
 
                 </LinearLayout>
@@ -126,10 +117,10 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <EditText
+                        android:id="@+id/nameedit"
+                        android:layout_width="275dp"
                         android:layout_height="wrap_content"
-                        android:text="xyz"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -147,17 +138,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Roll No.  "
+                        android:text="Roll No.       "
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/roll"
-                        android:layout_width="match_parent"
+                        android:id="@+id/rolledit"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:maxLength="6"
+                        android:maxLength="7"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -180,7 +170,7 @@
 
                     <Spinner
                         android:id="@+id/ES0"
-                        android:layout_width="match_parent"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:dropDownWidth="match_parent"
@@ -204,7 +194,7 @@
 
                     <Spinner
                         android:id="@+id/ES2"
-                        android:layout_width="match_parent"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:dropDownWidth="match_parent"
@@ -223,14 +213,14 @@
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="Year    "
+                        android:text="Year     "
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/ES1"
-                        android:layout_width="match_parent"
+                        android:layout_width="175dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:dropDownWidth="match_parent"
@@ -254,8 +244,9 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="275dp"
                         android:layout_height="wrap_content"
+                        android:singleLine="false"
                         android:textColor="#ffffff"
                         android:text=" "
                         android:textSize="18sp"
@@ -274,15 +265,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Contact no.  "
+                        android:text="Contact no.   "
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <EditText
+                        android:id="@+id/editCon"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
-                        android:text="0000000000"
+                        android:inputType="number"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -299,10 +291,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text=" I hereby declare that all the information given above is true to the best of my knowledge and belief."
-                        android:textColor="#ffffff"
+                        android:textColor="#FFFFFF"
                         android:textSize="20sp"
-                        android:textStyle="bold" >
-                    </CheckBox>
+                        android:textStyle="bold"></CheckBox>
 
                 </LinearLayout>
 
