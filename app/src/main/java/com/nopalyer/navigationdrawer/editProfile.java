@@ -34,12 +34,12 @@ public class editProfile extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     FirebaseStorage firebaseStorage;
-    Spinner ES1,ES2,ES0;
+    Spinner ES1,ES2,ES0,ES3;
     SharedPreferences sharedprefs,sharedPreferences2;
     SharedPreferences.Editor editor,editor2;
     private Button save;
-    String progm,depp,year;
-    ArrayAdapter<String> adapter_programme, adapter_department1,adapter_department2,adapter_department3,adapter_department4,adapter_department5,adapter_department6, adapter_sem1,adapter_sem2,adapter_sem3;
+    String progm,depp,year,grp;
+    ArrayAdapter<String> adapter_programme, adapter_department1,adapter_department2,adapter_department3,adapter_department4,adapter_department5,adapter_department6, adapter_sem1,adapter_sem2,adapter_sem3,adapter_grp;
 
 
     @Override
@@ -50,6 +50,7 @@ public class editProfile extends AppCompatActivity {
         ES0=(Spinner)findViewById(R.id.ES0);
         ES1=(Spinner)findViewById(R.id.ES1);
         ES2=(Spinner)findViewById(R.id.ES2);
+        ES3=(Spinner)findViewById(R.id.ES3);
         name = (EditText)findViewById(R.id.nameedit);
         contact = (EditText)findViewById(R.id.editCon);
         profile = (ImageView)findViewById(R.id.profileedit);
@@ -67,6 +68,9 @@ public class editProfile extends AppCompatActivity {
         final String[] year1 = {"Choose Year","1st year","2nd year","3rd year","4th year"};
         final String[] year3 = {"Choose Year","1st year","2nd year"};
         final String[] year2 = {"Choose Year","1st year","2nd year","3rd year","4th year","5th year"};
+        final String[] group = {"Choose Group","A","B","C","D","E","F","G","H","I","J"};
+
+
 
         adapter_programme = new ArrayAdapter<>(editProfile.this, R.layout.colourful_spinner_items, programme);
         adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
@@ -100,8 +104,26 @@ public class editProfile extends AppCompatActivity {
                                         if (position == 0) {
                                             //  show.setEnabled(false);
                                         }
-                                        if (position == 1 || position == 2 || position == 3 || position == 4) {
+                                        if (position == 1) {
                                             year = year1[position];
+                                            adapter_grp = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, group);
+                                            adapter_grp.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            ES3.setAdapter(adapter_grp);
+                                            ES3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                @Override
+                                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                                    grp = group[position];
+                                                }
+
+                                                @Override
+                                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                                }
+                                            });
+                                        }
+                                        if (position == 2 || position == 3 || position == 4) {
+                                            year = year1[position];
+                                            ES3.setEnabled(false);
                                         }
                                     }
 
@@ -141,9 +163,25 @@ public class editProfile extends AppCompatActivity {
                                         if (position == 0) {
                                             //  show.setEnabled(false);
                                         }
-                                        if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 ) {
-                                            year = year2[position];
+                                        if (position == 1) {
+                                            adapter_grp = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, group);
+                                            adapter_grp.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            ES3.setAdapter(adapter_grp);
+                                            ES3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                @Override
+                                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                                    grp = group[position];
+                                                }
 
+                                                @Override
+                                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                                }
+                                            });
+                                        }
+                                        if (position == 2 || position == 3 || position == 4 || position == 5 ) {
+                                            year = year2[position];
+                                            ES3.setEnabled(false);
                                         }
                                     }
 
@@ -184,9 +222,25 @@ public class editProfile extends AppCompatActivity {
                                         if (position == 0) {
                                             //  show.setEnabled(false);
                                         }
-                                        if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5) {
-                                            year = year2[position];
+                                        if (position == 1) {
+                                            adapter_grp = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, group);
+                                            adapter_grp.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            ES3.setAdapter(adapter_grp);
+                                            ES3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                @Override
+                                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                                    grp = group[position];
+                                                }
 
+                                                @Override
+                                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                                }
+                                            });
+                                        }
+                                        if (position == 2 || position == 3 || position == 4 || position == 5) {
+                                            year = year2[position];
+                                            ES3.setEnabled(false);
                                         }
                                     }
 
