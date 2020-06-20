@@ -1,0 +1,224 @@
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#000000"
+            android:id="@+id/toolbar"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="165dp"
+            android:id="@+id/cardview">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#36454f">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cbimage"
+                    android:id="@+id/imageka"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/textViewka"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="UG Registration"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="165dp"
+            android:id="@+id/cardview1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#36454f">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageka1"
+                    android:padding="8dp"
+                    android:src="@drawable/cbimage"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/textViewka1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="PG Registration"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="165dp"
+            android:id="@+id/cardview2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#36454f">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageka2"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cbimage"/>
+
+                <TextView
+                    android:id="@+id/textViewka2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="PhD Registration"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="165dp"
+            android:id="@+id/cardview3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#36454f">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageka3"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cbimage"/>
+
+                <TextView
+                    android:id="@+id/textViewka3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Open Elective Registration"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="165dp"
+            android:id="@+id/cardview4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#36454f">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageka4"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cbimage"/>
+
+                <TextView
+                    android:id="@+id/textViewka4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Late Registration"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="165dp"
+            android:id="@+id/cardview5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#36454f">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageka5"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cbimage"/>
+
+                <TextView
+                    android:id="@+id/textViewka5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Document  Application"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
