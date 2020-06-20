@@ -2,11 +2,9 @@ package com.nopalyer.navigationdrawer.student;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,10 +26,8 @@ import com.nopalyer.navigationdrawer.Login.ChangePassword;
 import com.nopalyer.navigationdrawer.MainActivity;
 import com.nopalyer.navigationdrawer.R;
 import com.nopalyer.navigationdrawer.login;
-import com.nopalyer.navigationdrawer.profile.studentp;
 import com.nopalyer.navigationdrawer.student.Register.Register;
 import com.nopalyer.navigationdrawer.student.calender.calender1;
-import com.nopalyer.navigationdrawer.student.help.help;
 
 import java.util.HashMap;
 
@@ -44,7 +40,7 @@ public class StudentsPage extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference ref;
     HashMap<String, Object> student = new HashMap<>();
-    SharedPreferences spyr;
+
 
 ;    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -59,7 +55,7 @@ public class StudentsPage extends AppCompatActivity {
         calender = (CardView) findViewById(R.id.cal);
         help = (CardView) findViewById(R.id.help);
         schedule = (CardView)findViewById(R.id.spsch);
-        assignm = (CardView)findViewById(R.id.assign);
+        assignm = (CardView)findViewById(R.id.spassign123);
         registration= (CardView)findViewById(R.id.registration);
 
 
@@ -132,11 +128,10 @@ public class StudentsPage extends AppCompatActivity {
             public void onClick(View v) {
                 //Bundle bundle = getIntent().getExtras();
                 //updateYear = bundle.getString("yearupdate");
-                spyr = getSharedPreferences("shree",MODE_PRIVATE);
-                final String updtyear = spyr.getString("yearupdate","");
+                //spyr = getSharedPreferences("shree",MODE_PRIVATE);
+                //final String updtyear = spyr.getString("yearupdate","");
 
                 ref =firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
-                ref.child("Year").setValue(updtyear);
                 ref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -192,7 +187,6 @@ public class StudentsPage extends AppCompatActivity {
                break;
 
         }
-
 
         return true;
     }

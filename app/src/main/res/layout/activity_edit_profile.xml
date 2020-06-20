@@ -267,11 +267,12 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/editemail"
                         android:layout_width="275dp"
                         android:layout_height="wrap_content"
                         android:singleLine="false"
-                        android:textColor="#ffffff"
                         android:text=" "
+                        android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
 

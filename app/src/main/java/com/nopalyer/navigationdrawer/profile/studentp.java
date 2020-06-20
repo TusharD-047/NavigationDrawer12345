@@ -49,12 +49,13 @@ import java.util.Map;
 public class studentp extends AppCompatActivity {
     private ImageView profile;
     private TextView name,roll,department,contact,email,name1,prog;
-    ProgressDialog pd,pd1;
+    ProgressDialog pd,pd1,pd2;
+    Button updtyr;
     private static int PICK_IMAGE = 123;
     StorageReference storageReference;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference,ref;
+    DatabaseReference databaseReference,ref,ref2;
     FirebaseStorage firebaseStorage;
     Spinner yearspinner;
     SharedPreferences sharedprefs,sharedPreferences2;
@@ -66,6 +67,7 @@ public class studentp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentp);
 
+        updtyr = findViewById(R.id.updateyear);
         yearspinner=(Spinner)findViewById(R.id.profileSpinner);
         profile = (ImageView)findViewById(R.id.profilep);
         name = (TextView)findViewById(R.id.name123);
@@ -77,16 +79,22 @@ public class studentp extends AppCompatActivity {
         email = (TextView)findViewById(R.id.email123);
         pd =new ProgressDialog(this);
         pd1 =new ProgressDialog(this);
+        pd2 =new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
         final FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference();
 
+        pd2.setMessage("Wait");
+        pd2.setCancelable(false);
+        pd2.show();
         ref = firebaseDatabase.getReference();
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.hasChild(firebaseAuth.getUid())){
+                    pd2.dismiss();
                     pd.setMessage("Retrieving Info ! Please Smile");
                     pd.setCancelable(false);
                     pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -147,10 +155,6 @@ public class studentp extends AppCompatActivity {
                             editor.putInt("lastselected_yr",position).apply();  // save data
                             save = year1[position];
 
-                            sharedPreferences2 = getSharedPreferences("shree",MODE_PRIVATE);
-                            editor2 = sharedPreferences2.edit();
-                            editor2.putString("yearupdate",save).apply();
-
                         }
 
                         @Override
@@ -162,6 +166,7 @@ public class studentp extends AppCompatActivity {
 
                     //spinner ends==============================================================================================================================================
                 }else {
+                    pd2.dismiss();
                     startActivity(new Intent(studentp.this,com.nopalyer.navigationdrawer.editProfile.class));
                 }
             }
@@ -169,6 +174,15 @@ public class studentp extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        updtyr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ref2 = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                ref2.child("Year").setValue(save);
+                startActivity(new Intent(studentp.this,StudentsPage.class));
             }
         });
     }

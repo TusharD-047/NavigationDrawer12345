@@ -1,6 +1,7 @@
 package com.nopalyer.navigationdrawer.student.Register;
 
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -37,7 +38,8 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference ref1,ref2,ref3,ref4,ref5;
-    String semcon,sembon;
+    String semcon1,semcon2,semcon3,semcon4,semcon5;
+    ProgressDialog pd;
 
     public SimpleRecyclerAdapter2(Context context) {
         this.context = context;
@@ -67,11 +69,15 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        ref1 = firebaseDatabase.getReference("Admin Switch").child("Semester Switch");
+        pd = new ProgressDialog(context);
+
+        pd.setMessage("Wait");
+        pd.show();
+        ref1 = firebaseDatabase.getReference("Admin Switch").child("UG Switch");
         ref1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                semcon = dataSnapshot.child("Condition").getValue().toString();
+                semcon1 = dataSnapshot.child("Condition").getValue().toString();
             }
 
             @Override
@@ -80,11 +86,11 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
             }
         });
 
-        ref2 = firebaseDatabase.getReference("Admin Switch").child("Semester Switch");
+        ref2 = firebaseDatabase.getReference("Admin Switch").child("PG Switch");
         ref2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                sembon = dataSnapshot.child("Condition").getValue().toString();
+                semcon2 = dataSnapshot.child("Condition").getValue().toString();
             }
 
             @Override
@@ -92,11 +98,11 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
 
             }
         });
-        ref3 = firebaseDatabase.getReference("Admin Switch").child("Semester Switch");
+        ref3 = firebaseDatabase.getReference("Admin Switch").child("PhD Switch");
         ref3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                semcon = dataSnapshot.child("Condition").getValue().toString();
+                semcon3 = dataSnapshot.child("Condition").getValue().toString();
             }
 
             @Override
@@ -105,11 +111,11 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
             }
         });
 
-        ref4 = firebaseDatabase.getReference("Admin Switch").child("Bonafide Switch");
+        ref4 = firebaseDatabase.getReference("Admin Switch").child("OpenElective Switch");
         ref4.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                sembon = dataSnapshot.child("Condition").getValue().toString();
+                semcon4 = dataSnapshot.child("Condition").getValue().toString();
             }
 
             @Override
@@ -117,11 +123,11 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
 
             }
         });
-        ref5 = firebaseDatabase.getReference("Admin Switch").child("Bonafide Switch");
+        ref5 = firebaseDatabase.getReference("Admin Switch").child("Document Switch");
         ref5.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                sembon = dataSnapshot.child("Condition").getValue().toString();
+                semcon5 = dataSnapshot.child("Condition").getValue().toString();
             }
 
             @Override
@@ -129,7 +135,7 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
 
             }
         });
-
+        pd.dismiss();
 
         holder.textView.setText(getListreg().get(position).getName());
         Glide.with(context).load(getListreg().get(position).getPhoto()).into(holder.imageView);
@@ -138,49 +144,49 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
             public void onClick(View v) {
                 switch (position){
                     case 0:
-                        if (semcon.equals("true")){
+                        if (semcon1.equals("true")){
                             Intent intent = new Intent(context, Btech_registration.class);
                             context.startActivity(intent);
-                        }if (semcon.equals("false")){
+                        }if (semcon1.equals("false")){
                             Intent intent = new Intent(context, AdminNoReg.class);
                             context.startActivity(intent);
                         }
                         break;
                     case 1:
-                        if (sembon.equals("true")){
+                        if (semcon2.equals("true")){
                             Intent intent = new Intent(context, PgRegis.class);
                             context.startActivity(intent);
-                        }if (sembon.equals("false")){
+                        }if (semcon2.equals("false")){
                             Intent intent = new Intent(context, AdminNoReg.class);
                             context.startActivity(intent);
                         }
                         break;
                     case 2:
-                        if (semcon.equals("true")){
+                        if (semcon3.equals("true")){
                             Intent intent = new Intent(context, PhdRegis.class);
                             context.startActivity(intent);
-                        }if (semcon.equals("false")){
-                        Intent intent = new Intent(context, AdminNoReg.class);
-                        context.startActivity(intent);
-                    }
+                        }if (semcon3.equals("false")){
+                            Intent intent = new Intent(context, AdminNoReg.class);
+                            context.startActivity(intent);
+                        }
                         break;
                     case 3:
-                        if (sembon.equals("true")){
+                        if (semcon4.equals("true")){
                             Intent intent = new Intent(context, Openelective.class);
                             context.startActivity(intent);
-                        }if (sembon.equals("false")){
-                        Intent intent = new Intent(context, AdminNoReg.class);
-                        context.startActivity(intent);
-                    }
+                        }if (semcon4.equals("false")){
+                            Intent intent = new Intent(context, AdminNoReg.class);
+                            context.startActivity(intent);
+                        }
                         break;
                     case 4:
-                        if (sembon.equals("true")){
+                        if (semcon5.equals("true")){
                             Intent intent = new Intent(context, Bonafide_Application.class);
                             context.startActivity(intent);
-                        }if (sembon.equals("false")){
-                        Intent intent = new Intent(context, AdminNoReg.class);
-                        context.startActivity(intent);
-                    }
+                        }if (semcon5.equals("false")){
+                            Intent intent = new Intent(context, AdminNoReg.class);
+                            context.startActivity(intent);
+                        }
                         break;
                     default:
                         throw new IllegalStateException("Unexpected value: " + position);
