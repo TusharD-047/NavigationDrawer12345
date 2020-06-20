@@ -314,7 +314,9 @@ public class ViewActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ViewActivity.this,UpDocument.class));
+                Intent i = new Intent(ViewActivity.this,UpDocument.class);
+                i.putExtra("type",type+"Application");
+                startActivity(i);
             }
         });
     }

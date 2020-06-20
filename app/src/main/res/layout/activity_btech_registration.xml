@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="#DDDEDD"
-    tools:context=".MainActivity"
+    tools:context=".Btech_registration"
 
     android:layout_margin="0px">
     <ImageView
@@ -366,9 +366,9 @@
                             android:id="@+id/pin1"
                             android:layout_width="wrap_content"
                             android:inputType="number"
+                            android:maxLength="10"
                             android:textColor="#000"
                             android:textSize="12sp"
-                            android:maxLength="10"
                             android:textStyle="normal" />
 
                         <TextView

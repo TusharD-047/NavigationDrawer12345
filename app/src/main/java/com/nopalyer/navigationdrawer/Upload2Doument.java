@@ -34,7 +34,7 @@ public class Upload2Doument extends AppCompatActivity {
     FirebaseStorage firebaseStorage;
     StorageReference sref,reference,reference2,reference3;
     DatabaseReference ref,mref;
-    String yr = "",dep = "",roll = "",name ="";
+    String yr = "",dep = "",roll = "",name ="",type;
     private static int PICK_IMAGE = 123;
     private static int PICK_IMAGE2 = 124;
     private static int PICK_IMAGE3 = 125;
@@ -48,6 +48,8 @@ public class Upload2Doument extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload2_doument);
 
+        type = getIntent().getExtras().getString("type");
+
         upProfile = findViewById(R.id.upPhotolate);
         upId = findViewById(R.id.upIdlate);
         upfees = findViewById(R.id.upFormlate);
@@ -60,8 +62,8 @@ public class Upload2Doument extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
-        sref =firebaseStorage.getReference("Application Form");
-        mref = firebaseDatabase.getReference("Application Form");
+        sref =firebaseStorage.getReference("LateApplication").child(type);
+        mref = firebaseDatabase.getReference("LateApplication").child(type);
 
         ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
         ref.addValueEventListener(new ValueEventListener() {
