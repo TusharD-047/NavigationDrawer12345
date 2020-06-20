@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Upload2Doument"></activity>
+        <activity android:name=".registrationp2"></activity>
+        <activity android:name=".Upload2Doument" />
         <activity android:name=".View2Activity" />
         <activity android:name=".LateRegistration" />
         <activity android:name=".editProfile" />
