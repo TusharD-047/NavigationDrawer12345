@@ -60,7 +60,7 @@ public class UpDocument extends AppCompatActivity {
     FirebaseStorage firebaseStorage;
     StorageReference sref,reference,reference2,reference3;
     DatabaseReference ref,mref;
-    String yr = "",dep = "",roll = "",name ="";
+    String yr = "",dep = "",roll = "",name ="",type;
     private static int PICK_IMAGE = 123;
     private static int PICK_IMAGE2 = 124;
     private static int PICK_IMAGE3 = 125;
@@ -72,6 +72,7 @@ public class UpDocument extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_up_document);
 
+        type = getIntent().getExtras().getString("type");
         upProfile = findViewById(R.id.upPhoto);
         upId = findViewById(R.id.upId);
         upfees = findViewById(R.id.upForm);
@@ -82,8 +83,8 @@ public class UpDocument extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
-        sref =firebaseStorage.getReference("Application Form");
-        mref = firebaseDatabase.getReference("Application Form");
+        sref =firebaseStorage.getReference(type);
+        mref = firebaseDatabase.getReference(type);
 
         ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
         ref.addValueEventListener(new ValueEventListener() {

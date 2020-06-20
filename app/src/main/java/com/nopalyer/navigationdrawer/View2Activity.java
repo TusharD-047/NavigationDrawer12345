@@ -282,7 +282,9 @@ public class View2Activity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(View2Activity.this,Upload2Doument.class));
+                Intent i = new Intent(View2Activity.this,Upload2Doument.class);
+                i.putExtra("type",type);
+                startActivity(i);
             }
         });
     }
