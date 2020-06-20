@@ -87,95 +87,95 @@ public class LateRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_late_registration);
 
-        Button submit = (Button) findViewById(R.id.next);
-        prog = (Spinner) findViewById(R.id.regsem);
-        dep = (Spinner) findViewById(R.id.regdep);
-        hostt = (Spinner) findViewById(R.id.reghostel);
+        Button submit = (Button) findViewById(R.id.nextLate);
+        prog = (Spinner) findViewById(R.id.regsemLate);
+        dep = (Spinner) findViewById(R.id.regdepLate);
+        hostt = (Spinner) findViewById(R.id.reghostelLate);
         cour = (Spinner) findViewById(R.id.Late);
-        sem = (Spinner) findViewById(R.id.prog);
-        academicyr = findViewById(R.id.session);
-        name = (EditText) findViewById(R.id.editname);
-        fname = (EditText) findViewById(R.id.editfname);
-        roll = (EditText) findViewById(R.id.editroll);
-        dob = (EditText) findViewById(R.id.editdob);
+        sem = (Spinner) findViewById(R.id.progLate);
+        academicyr = findViewById(R.id.sessionLate);
+        name = (EditText) findViewById(R.id.editnameLate);
+        fname = (EditText) findViewById(R.id.editfnameLate);
+        roll = (EditText) findViewById(R.id.editrollLate);
+        dob = (EditText) findViewById(R.id.editdobLate);
         dob.setKeyListener(null);
-        room = (EditText) findViewById(R.id.editroom);
-        emailid = (EditText) findViewById(R.id.emailid);
-        addcoress = (EditText) findViewById(R.id.addcorres);
-        peradd = (EditText) findViewById(R.id.peradd);
-        pin1 = (EditText) findViewById(R.id.pin1);
-        pin2 = (EditText) findViewById(R.id.pin2);
-        mob1 = (EditText) findViewById(R.id.mob1);
-        mob2 = (EditText) findViewById(R.id.mob2);
-        code1 = (EditText) findViewById(R.id.code1);
-        code2 = (EditText) findViewById(R.id.code2);
-        code3 = (EditText) findViewById(R.id.code3);
-        code4 = (EditText) findViewById(R.id.code4);
-        code5 = (EditText) findViewById(R.id.code5);
-        code6 = (EditText) findViewById(R.id.code6);
-        code7 = (EditText) findViewById(R.id.code7);
-        code8 = (EditText) findViewById(R.id.code8);
-        code9 = (EditText) findViewById(R.id.code9);
-        code10 = (EditText) findViewById(R.id.code10);
-        course1 = (EditText) findViewById(R.id.course1);
-        course2 = (EditText) findViewById(R.id.course2);
-        course3 = (EditText) findViewById(R.id.course3);
-        course4 = (EditText) findViewById(R.id.course4);
-        course5 = (EditText) findViewById(R.id.course5);
-        course6 = (EditText) findViewById(R.id.course6);
-        course7 = (EditText) findViewById(R.id.course7);
-        course8 = (EditText) findViewById(R.id.course8);
-        course9 = (EditText) findViewById(R.id.course9);
-        course10 = (EditText) findViewById(R.id.course10);
-        lab1 = (EditText) findViewById(R.id.lab1);
-        lab2 = (EditText) findViewById(R.id.lab2);
-        lab3 = (EditText) findViewById(R.id.lab3);
-        lab4 = (EditText) findViewById(R.id.lab4);
-        lab5 = (EditText) findViewById(R.id.lab5);
-        lab6 = (EditText) findViewById(R.id.lab6);
-        lab7 = (EditText) findViewById(R.id.lab7);
-        lab8 = (EditText) findViewById(R.id.lab8);
-        lab9 = (EditText) findViewById(R.id.lab9);
-        lab10 = (EditText) findViewById(R.id.lab10);
-        labsum = findViewById(R.id.labsum);
-        credit1 = (EditText) findViewById(R.id.credit1);
-        credit2 = (EditText) findViewById(R.id.credit2);
-        credit3 = (EditText) findViewById(R.id.credit3);
-        credit4 = (EditText) findViewById(R.id.credit4);
-        credit5 = (EditText) findViewById(R.id.credit5);
-        credit6 = (EditText) findViewById(R.id.credit6);
-        credit7 = (EditText) findViewById(R.id.credit7);
-        credit8 = (EditText) findViewById(R.id.credit8);
-        credit9 = (EditText) findViewById(R.id.credit9);
-        credit10 = (EditText) findViewById(R.id.credit10);
-        creditsum = (EditText) findViewById(R.id.creditsum);
-        sg1 = (EditText) findViewById(R.id.sg1);
-        sg2 = (EditText) findViewById(R.id.sg2);
-        sg3 = (EditText) findViewById(R.id.sg3);
-        sg4 = (EditText) findViewById(R.id.sg4);
-        sg5 = (EditText) findViewById(R.id.sg5);
-        sg6 = (EditText) findViewById(R.id.sg6);
-        sg7 = (EditText) findViewById(R.id.sg7);
-        sg8 = (EditText) findViewById(R.id.sg8);
-        sg9 = (EditText) findViewById(R.id.sg9);
-        cg1 = (EditText) findViewById(R.id.cg1);
-        cg2 = (EditText) findViewById(R.id.cg2);
-        cg3 = (EditText) findViewById(R.id.cg3);
-        cg4 = (EditText) findViewById(R.id.cg4);
-        cg5 = (EditText) findViewById(R.id.cg5);
-        cg6 = (EditText) findViewById(R.id.cg6);
-        cg7 = (EditText) findViewById(R.id.cg7);
-        cg8 = (EditText) findViewById(R.id.cg8);
-        cg9 = (EditText) findViewById(R.id.cg9);
-        rep1 = (EditText) findViewById(R.id.rep1);
-        rep2 = (EditText) findViewById(R.id.rep2);
-        rep3 = (EditText) findViewById(R.id.rep3);
-        rep4 = (EditText) findViewById(R.id.rep4);
-        rep5 = (EditText) findViewById(R.id.rep5);
-        rep6 = (EditText) findViewById(R.id.rep6);
-        rep7 = (EditText) findViewById(R.id.rep7);
-        rep8 = (EditText) findViewById(R.id.rep8);
-        rep9 = (EditText) findViewById(R.id.rep9);
+        room = (EditText) findViewById(R.id.editroomLate);
+        emailid = (EditText) findViewById(R.id.emailidLate);
+        addcoress = (EditText) findViewById(R.id.addcorresLate);
+        peradd = (EditText) findViewById(R.id.peraddLate);
+        pin1 = (EditText) findViewById(R.id.pin1Late);
+        pin2 = (EditText) findViewById(R.id.pin2Late);
+        mob1 = (EditText) findViewById(R.id.mob1Late);
+        mob2 = (EditText) findViewById(R.id.mob2Late);
+        code1 = (EditText) findViewById(R.id.code1Late);
+        code2 = (EditText) findViewById(R.id.code2Late);
+        code3 = (EditText) findViewById(R.id.code3Late);
+        code4 = (EditText) findViewById(R.id.code4Late);
+        code5 = (EditText) findViewById(R.id.code5Late);
+        code6 = (EditText) findViewById(R.id.code6Late);
+        code7 = (EditText) findViewById(R.id.code7Late);
+        code8 = (EditText) findViewById(R.id.code8Late);
+        code9 = (EditText) findViewById(R.id.code9Late);
+        code10 = (EditText) findViewById(R.id.code10Late);
+        course1 = (EditText) findViewById(R.id.course1Late);
+        course2 = (EditText) findViewById(R.id.course2Late);
+        course3 = (EditText) findViewById(R.id.course3Late);
+        course4 = (EditText) findViewById(R.id.course4Late);
+        course5 = (EditText) findViewById(R.id.course5Late);
+        course6 = (EditText) findViewById(R.id.course6Late);
+        course7 = (EditText) findViewById(R.id.course7Late);
+        course8 = (EditText) findViewById(R.id.course8Late);
+        course9 = (EditText) findViewById(R.id.course9Late);
+        course10 = (EditText) findViewById(R.id.course10Late);
+        lab1 = (EditText) findViewById(R.id.lab1Late);
+        lab2 = (EditText) findViewById(R.id.lab2Late);
+        lab3 = (EditText) findViewById(R.id.lab3Late);
+        lab4 = (EditText) findViewById(R.id.lab4Late);
+        lab5 = (EditText) findViewById(R.id.lab5Late);
+        lab6 = (EditText) findViewById(R.id.lab6Late);
+        lab7 = (EditText) findViewById(R.id.lab7Late);
+        lab8 = (EditText) findViewById(R.id.lab8Late);
+        lab9 = (EditText) findViewById(R.id.lab9Late);
+        lab10 = (EditText) findViewById(R.id.lab10Late);
+        labsum = findViewById(R.id.labsumLate);
+        credit1 = (EditText) findViewById(R.id.credit1Late);
+        credit2 = (EditText) findViewById(R.id.credit2Late);
+        credit3 = (EditText) findViewById(R.id.credit3Late);
+        credit4 = (EditText) findViewById(R.id.credit4Late);
+        credit5 = (EditText) findViewById(R.id.credit5Late);
+        credit6 = (EditText) findViewById(R.id.credit6Late);
+        credit7 = (EditText) findViewById(R.id.credit7Late);
+        credit8 = (EditText) findViewById(R.id.credit8Late);
+        credit9 = (EditText) findViewById(R.id.credit9Late);
+        credit10 = (EditText) findViewById(R.id.credit10Late);
+        creditsum = (EditText) findViewById(R.id.creditsumLate);
+        sg1 = (EditText) findViewById(R.id.sg1Late);
+        sg2 = (EditText) findViewById(R.id.sg2Late);
+        sg3 = (EditText) findViewById(R.id.sg3Late);
+        sg4 = (EditText) findViewById(R.id.sg4Late);
+        sg5 = (EditText) findViewById(R.id.sg5Late);
+        sg6 = (EditText) findViewById(R.id.sg6Late);
+        sg7 = (EditText) findViewById(R.id.sg7Late);
+        sg8 = (EditText) findViewById(R.id.sg8Late);
+        sg9 = (EditText) findViewById(R.id.sg9Late);
+        cg1 = (EditText) findViewById(R.id.cg1Late);
+        cg2 = (EditText) findViewById(R.id.cg2Late);
+        cg3 = (EditText) findViewById(R.id.cg3Late);
+        cg4 = (EditText) findViewById(R.id.cg4Late);
+        cg5 = (EditText) findViewById(R.id.cg5Late);
+        cg6 = (EditText) findViewById(R.id.cg6Late);
+        cg7 = (EditText) findViewById(R.id.cg7Late);
+        cg8 = (EditText) findViewById(R.id.cg8Late);
+        cg9 = (EditText) findViewById(R.id.cg9Late);
+        rep1 = (EditText) findViewById(R.id.rep1Late);
+        rep2 = (EditText) findViewById(R.id.rep2Late);
+        rep3 = (EditText) findViewById(R.id.rep3Late);
+        rep4 = (EditText) findViewById(R.id.rep4Late);
+        rep5 = (EditText) findViewById(R.id.rep5Late);
+        rep6 = (EditText) findViewById(R.id.rep6Late);
+        rep7 = (EditText) findViewById(R.id.rep7Late);
+        rep8 = (EditText) findViewById(R.id.rep8Late);
+        rep9 = (EditText) findViewById(R.id.rep9Late);
 
 
 
@@ -418,7 +418,7 @@ public class LateRegistration extends AppCompatActivity {
                                 adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department2);
                                 adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                                 dep.setAdapter(adapter_depp2);
-                                progm= programme1[position];
+                                progm= programme2[position];
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -456,31 +456,72 @@ public class LateRegistration extends AppCompatActivity {
                                     }
                                 });
                             }
-
                             if (position == 3) {
-                                adapter_depp3 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department3);
-                                adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                dep.setAdapter(adapter_depp3);
-                                progm = programme1[position];
+                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department5);
+                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                dep.setAdapter(adapter_depp2);
+                                progm= programme2[position];
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                         if (position == 0) {
                                             //  show.setEnabled(false);
                                         }
-                                        if (position == 1 || position == 2 ) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester2);
+                                        if (position == 1 ) {
+                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
                                             adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                                             sem.setAdapter(adapter_semester1);
-                                            depp = department2[position];
+                                            depp= department5[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
                                                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                                     if (position == 0) {
                                                         //  show.setEnabled(false);
                                                     }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7|| position == 8 || position == 9) {
-                                                        semm = semester2[position];
+                                                    if (position == 1 || position == 2 || position == 3  ) {
+                                                        semm = semester3[position];
+
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void onNothingSelected(AdapterView<?> parent) {
+
+                                                }
+                                            });
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> parent) {
+
+                                    }
+                                });
+                            }
+                            if (position == 4) {
+                                adapter_depp3 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department4);
+                                adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                dep.setAdapter(adapter_depp3);
+                                progm = programme2[position];
+                                dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                        if (position == 0) {
+                                            //  show.setEnabled(false);
+                                        }
+                                        if (position == 1 || position == 2 || position == 3) {
+                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
+                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            sem.setAdapter(adapter_semester1);
+                                            depp = department4[position];
+                                            sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                @Override
+                                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                                    if (position == 0) {
+                                                        //  show.setEnabled(false);
+                                                    }
+                                                    if (position == 1 || position == 2 || position == 3 ) {
+                                                        semm = semester3[position];
 
                                                     }
                                                 }
@@ -507,8 +548,8 @@ public class LateRegistration extends AppCompatActivity {
                         }
                     });
                 }
-                if (position == 1){
-                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme1);
+                if (position == 3){
+                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme3);
                     adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     prog.setAdapter(adapter_programme);
                     prog.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -518,8 +559,8 @@ public class LateRegistration extends AppCompatActivity {
                                 //      show.setEnabled(false);
                             }
                             if (position == 1){
-                                progm = programme1[position];
-                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, department1);
+                                progm = programme3[position];
+                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, department6);
                                 adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                                 dep.setAdapter(adapter_depp1);
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -528,105 +569,20 @@ public class LateRegistration extends AppCompatActivity {
                                         if (position == 0) {
                                             //      show.setEnabled(false);
                                         }
-                                        if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
+                                        if (position == 1 || position == 2 || position == 3 ) {
                                             //   show.setEnabled(true);
-                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester1);
+                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
                                             adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                                             sem.setAdapter(adapter_semester);
-                                            depp = department1[position];
+                                            depp = department6[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
                                                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                                     if (position == 0) {
                                                         //  show.setEnabled(false);
                                                     }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
-                                                        semm = semester1[position];
-                                                    }
-                                                }
-
-                                                @Override
-                                                public void onNothingSelected(AdapterView<?> parent) {
-
-                                                }
-                                            });
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onNothingSelected(AdapterView<?> parent) {
-
-                                    }
-                                });
-                            }
-                            if (position == 2) {
-                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department2);
-                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                dep.setAdapter(adapter_depp2);
-                                progm= programme1[position];
-                                dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                    @Override
-                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                        if (position == 0) {
-                                            //  show.setEnabled(false);
-                                        }
-                                        if (position == 1 ) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester2);
-                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                            sem.setAdapter(adapter_semester1);
-                                            depp= department2[position];
-                                            sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                @Override
-                                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                                    if (position == 0) {
-                                                        //  show.setEnabled(false);
-                                                    }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7|| position == 8 || position == 9) {
-                                                        semm = semester2[position];
-
-                                                    }
-                                                }
-
-                                                @Override
-                                                public void onNothingSelected(AdapterView<?> parent) {
-
-                                                }
-                                            });
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onNothingSelected(AdapterView<?> parent) {
-
-                                    }
-                                });
-                            }
-
-                            if (position == 3) {
-                                adapter_depp3 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department3);
-                                adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                dep.setAdapter(adapter_depp3);
-                                progm = programme1[position];
-                                dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                    @Override
-                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                        if (position == 0) {
-                                            //  show.setEnabled(false);
-                                        }
-                                        if (position == 1 || position == 2 ) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester2);
-                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
-                                            sem.setAdapter(adapter_semester1);
-                                            depp = department2[position];
-                                            sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                @Override
-                                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                                    if (position == 0) {
-                                                        //  show.setEnabled(false);
-                                                    }
-                                                    if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7|| position == 8 || position == 9) {
-                                                        semm = semester2[position];
-
+                                                    if (position == 1 || position == 2 || position == 3 ) {
+                                                        semm = semester3[position];
                                                     }
                                                 }
 
