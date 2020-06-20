@@ -218,6 +218,7 @@ public class LateRegistration extends AppCompatActivity {
                     //      show.setEnabled(false);
                 }
                 if (position == 1){
+                    cor = course[position];
                     adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme1);
                     adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     prog.setAdapter(adapter_programme);
@@ -363,6 +364,7 @@ public class LateRegistration extends AppCompatActivity {
                     });
                 }
                 if (position == 2){
+                    cor = course[position];
                     adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme2);
                     adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     prog.setAdapter(adapter_programme);
@@ -549,6 +551,7 @@ public class LateRegistration extends AppCompatActivity {
                     });
                 }
                 if (position == 3){
+                    cor = course[position];
                     adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme3);
                     adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     prog.setAdapter(adapter_programme);

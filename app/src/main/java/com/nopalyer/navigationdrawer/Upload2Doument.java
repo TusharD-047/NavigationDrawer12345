@@ -3,31 +3,15 @@ package com.nopalyer.navigationdrawer;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,24 +21,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.itextpdf.xmp.impl.Utils;
-import com.nopalyer.navigationdrawer.profile.studentp;
 import com.nopalyer.navigationdrawer.student.StudentsPage;
-import com.nopalyer.navigationdrawer.teacher.tpassign;
-import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
+public class Upload2Doument extends AppCompatActivity {
 
-import static androidx.core.content.FileProvider.getUriForFile;
-
-public class UpDocument extends AppCompatActivity {
-
-    Button upProfile,upId,upfees,upAdd;
+    Button upProfile,upId,upfees,upAdd,upfesslate,upregislate;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseStorage firebaseStorage;
@@ -65,17 +39,21 @@ public class UpDocument extends AppCompatActivity {
     private static int PICK_IMAGE2 = 124;
     private static int PICK_IMAGE3 = 125;
     private static int PICK_IMAGE4 = 126;
+    private static int PICK_IMAGE5 = 127;
+    private static int PICK_IMAGE6 = 128;
     ProgressDialog pd,pd1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_up_document);
+        setContentView(R.layout.activity_upload2_doument);
 
-        upProfile = findViewById(R.id.upPhoto);
-        upId = findViewById(R.id.upId);
-        upfees = findViewById(R.id.upForm);
-        upAdd = findViewById(R.id.upAdd);
+        upProfile = findViewById(R.id.upPhotolate);
+        upId = findViewById(R.id.upIdlate);
+        upfees = findViewById(R.id.upFormlate);
+        upAdd = findViewById(R.id.upAddlate);
+        upfesslate = findViewById(R.id.upadfeeslate);
+        upregislate = findViewById(R.id.upadregisfeeslate);
         pd =new ProgressDialog(this);
 
         pd1 =new ProgressDialog(this);
@@ -96,7 +74,7 @@ public class UpDocument extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(UpDocument.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(Upload2Doument.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -140,6 +118,25 @@ public class UpDocument extends AppCompatActivity {
             }
         });
 
+        upfesslate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE5);
+            }
+        });
+
+        upregislate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE6);
+            }
+        });
     }
 
     @Override
@@ -177,7 +174,7 @@ public class UpDocument extends AppCompatActivity {
                         //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
                         mref.child(yr).child(dep).child(roll).child(name).setValue(url1.toString());
                         pd1.dismiss();
-                        Toast.makeText(UpDocument.this,"Form Uploaded",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Upload2Doument.this,"Form Uploaded",Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -221,11 +218,36 @@ public class UpDocument extends AppCompatActivity {
                 e.printStackTrace();
             }*/
         }
+        if(requestCode == PICK_IMAGE5 && resultCode == RESULT_OK && data.getData() != null){
+            Uri imagePath = data.getData();
+            name = "LateFees";
+            CropImage.activity(imagePath)
+                    .start(this);
+           /* try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
+                profile.setImageBitmap(bitmap);
+            } catch (IOException e){
+                e.printStackTrace();
+            }*/
+        }
+        if(requestCode == PICK_IMAGE6 && resultCode == RESULT_OK && data.getData() != null){
+            Uri imagePath = data.getData();
+            name = "LateRegisFees";
+            CropImage.activity(imagePath)
+                    .start(this);
+           /* try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
+                profile.setImageBitmap(bitmap);
+            } catch (IOException e){
+                e.printStackTrace();
+            }*/
+        }
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(UpDocument.this, StudentsPage.class));
+        startActivity(new Intent(Upload2Doument.this, StudentsPage.class));
     }
 }

@@ -171,7 +171,7 @@ public class View2Activity extends AppCompatActivity {
                         dep = dataSnapshot.child("Department").getValue().toString();
                         roll = dataSnapshot.child("Roll No").getValue().toString();
 
-                        mref = database.getReference( "LateApplication").child(yr).child(dep).child(roll);
+                        mref = database.getReference( "LateApplication").child(type).child(yr).child(dep).child(roll);
                         mref.child("Course").setValue(type);
                         mref.child("Name").setValue(name.getText().toString());
                         mref.child("FatherName").setValue(faname.getText().toString());
@@ -282,7 +282,7 @@ public class View2Activity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(View2Activity.this,UpDocument.class));
+                startActivity(new Intent(View2Activity.this,Upload2Doument.class));
             }
         });
     }
