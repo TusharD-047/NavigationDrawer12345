@@ -24,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.nopalyer.navigationdrawer.Admin.AdminNoReg;
 import com.nopalyer.navigationdrawer.Bonafide_Application;
 import com.nopalyer.navigationdrawer.Btech_registration;
+import com.nopalyer.navigationdrawer.LateRegistration;
+import com.nopalyer.navigationdrawer.LibVer;
 import com.nopalyer.navigationdrawer.Openelective;
 import com.nopalyer.navigationdrawer.PgRegis;
 import com.nopalyer.navigationdrawer.PhdRegis;
@@ -37,8 +39,8 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
     private ArrayList<reg> listreg;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference ref1,ref2,ref3,ref4,ref5;
-    String semcon1,semcon2,semcon3,semcon4,semcon5;
+    private DatabaseReference ref1,ref2,ref3,ref4,ref5,ref6;
+    String semcon1,semcon2,semcon3,semcon4,semcon5,semcon6;
     ProgressDialog pd;
 
     public SimpleRecyclerAdapter2(Context context) {
@@ -135,6 +137,20 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
 
             }
         });
+
+        ref6 = firebaseDatabase.getReference("Admin Switch").child("LateRegistration Switch");
+        ref6.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                semcon6 = dataSnapshot.child("Condition").getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         pd.dismiss();
 
         holder.textView.setText(getListreg().get(position).getName());
@@ -180,6 +196,15 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
                         }
                         break;
                     case 4:
+                        if (semcon6.equals("true")){
+                            Intent intent = new Intent(context, LateRegistration.class);
+                            context.startActivity(intent);
+                        }if (semcon6.equals("false")){
+                        Intent intent = new Intent(context, AdminNoReg.class);
+                        context.startActivity(intent);
+                    }
+                        break;
+                    case 5:
                         if (semcon5.equals("true")){
                             Intent intent = new Intent(context, Bonafide_Application.class);
                             context.startActivity(intent);
@@ -188,6 +213,7 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
                             context.startActivity(intent);
                         }
                         break;
+
                     default:
                         throw new IllegalStateException("Unexpected value: " + position);
                 }
