@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="#DDDEDD"
-    tools:context=".MainActivity"
+    tools:context=".Btech_registration"
 
     android:layout_margin="0px">
     <ImageView
@@ -38,7 +38,7 @@
                         android:id="@+id/regf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="       REGISTRATION FORM    (   Bachelor    Programmes  )"
+                        android:text="            REGISTRATION FORM    (      Bachelor's Programmes)"
                         android:textColor="#000000"
                         android:textSize="17sp"
                         android:textStyle="bold" />
@@ -80,7 +80,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row1">
+                        android:id="@+id/row_1">
                         <TextView
                             android:text="Roll Number:"
                             android:layout_width="wrap_content"
@@ -104,22 +104,22 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row01">
+                        android:id="@+id/row_41">
                         <TextView
-                            android:text="Programme   "
+                            android:text="Programme"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:textStyle="italic"
-                            android:layout_gravity="fill"
-                            android:singleLine="false"
                             android:textColor="#000"
+
                             android:padding="3dp"/>
 
                         <Spinner
                             android:id="@+id/regsem"
-                            android:layout_width="10000dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
                             android:layout_weight="1"
+
                             android:backgroundTint="#ffffff"
                             android:dropDownWidth="match_parent"
                             android:spinnerMode="dropdown">
@@ -132,7 +132,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row2">
+                        android:id="@+id/row_2">
                         <TextView
                             android:text="Room No.:"
                             android:layout_width="fill_parent"
@@ -153,15 +153,14 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row02">
+                        android:id="@+id/row410">
                         <TextView
                             android:text="Hostel Name:"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:textStyle="italic"
                             android:textColor="#000"
-                            android:layout_gravity="fill"
-                            android:singleLine="false"
+
                             android:padding="3dp"/>
 
                         <Spinner
@@ -188,10 +187,7 @@
                             android:layout_height="wrap_content"
                             android:text="Name of the Department:"
                             android:textColor="#000"
-                            android:layout_gravity="fill"
-                            android:textSize="14sp"
-                            android:singleLine="false"
-                            android:textStyle="italic"
+                            android:textSize="14sp"         android:textStyle="italic"
                             />
 
                         <Spinner
@@ -216,8 +212,7 @@
                             android:textStyle="italic"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Reg.sem no.  "
-                            android:layout_gravity="fill"
+                            android:text="Reg.sem no. "
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -352,7 +347,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row3">
+                        android:id="@+id/row_3">
                         <TextView
                             android:text="   Pin Code -"
                             android:layout_width="wrap_content"
@@ -408,7 +403,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row4">
+                        android:id="@+id/row_4">
                         <TextView
                             android:text="   Pin Code -"
                             android:layout_width="wrap_content"
@@ -450,7 +445,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row5">
+                        android:id="@+id/row_5">
                         <TextView
                             android:paddingTop="30px"
                             android:textColor="#ffffff"
@@ -469,7 +464,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row6">
+                        android:id="@+id/row_6">
                         <TextView
                             android:background="#C0C0C0"
                             android:textColor="#000"
@@ -517,7 +512,8 @@
                     <TableRow
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row7">
+                        android:id="@+id/row_7">
+
 
                         <EditText
                             android:id="@+id/code1"
@@ -556,7 +552,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row8">
+                        android:id="@+id/row_8">
 
                         <EditText
                             android:id="@+id/code2"
@@ -597,7 +593,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row9">
+                        android:id="@+id/row_9">
 
                         <EditText
                             android:id="@+id/code3"
@@ -639,7 +635,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row10">
+                        android:id="@+id/row_10">
 
                         <EditText
                             android:id="@+id/code4"
@@ -681,7 +677,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row11">
+                        android:id="@+id/row_11">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -723,7 +719,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row13">
+                        android:id="@+id/row_13">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -767,7 +763,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row14">
+                        android:id="@+id/row_14">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -810,7 +806,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row15">
+                        android:id="@+id/row_15">
 
                         <EditText
                             android:layout_width="wrap_content"
@@ -853,7 +849,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row16">
+                        android:id="@+id/row_16">
 
 
                         <EditText
@@ -896,7 +892,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row17">
+                        android:id="@+id/row_17">
                         <EditText
                             android:maxLength="10"
                             android:layout_width="wrap_content"
@@ -937,7 +933,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row18">
+                        android:id="@+id/row_18">
                         <TextView
 
                             android:layout_width="98dp"
@@ -971,7 +967,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row19">
+                        android:id="@+id/row59">
                         <TextView
                             android:paddingTop="30px"
                             android:textColor="#ffffff"
@@ -990,7 +986,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row20">
+                        android:id="@+id/row60">
                         <TextView
                             android:background="#C0C0C0"
                             android:textColor="#000"
@@ -1038,7 +1034,7 @@
                     <TableRow
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row21">
+                        android:id="@+id/row61">
 
 
                         <TextView
@@ -1070,9 +1066,7 @@
                         <EditText
                             android:id="@+id/rep1"
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
-                            android:maxLength="2"
                             android:textSize="12sp"
                             android:textStyle="normal" />
 
@@ -1081,7 +1075,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row22">
+                        android:id="@+id/row62">
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1113,8 +1107,6 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
-                            android:inputType="number"
-                            android:maxLength="2"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -1126,7 +1118,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row23">
+                        android:id="@+id/row63">
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1158,11 +1150,9 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:maxLength="2"
                             android:id="@+id/rep3"
 
                             />
@@ -1172,7 +1162,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row24">
+                        android:id="@+id/row64">
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1204,21 +1194,19 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:maxLength="2"
                             android:id="@+id/rep4"
 
                             />
 
                     </TableRow>
-
                     <TableRow
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row25">
+                        android:id="@+id/row615">
+
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1233,37 +1221,32 @@
 
 
                         <EditText
+                            android:id="@+id/sg5"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="35"
-                            android:textStyle="normal"
-                            android:id="@+id/sg5"
-                            />
+                            android:textStyle="normal" />
                         <EditText
+                            android:id="@+id/cg5"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="10"
-                            android:textStyle="normal"
-                            android:id="@+id/cg5"
-                            />
+                            android:textStyle="normal" />
                         <EditText
+                            android:id="@+id/rep5"
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
-                            android:textStyle="normal"
-                            android:maxLength="2"
-                            android:id="@+id/rep5"
+                            android:textStyle="normal" />
 
-                            />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row26">
+                        android:id="@+id/row626">
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1273,7 +1256,7 @@
                             android:padding="3dp"
                             android:textStyle="bold"
                             android:textSize="13sp"
-                            android:text="6th sem "
+                            android:text="6th sem"
                             android:gravity="center_horizontal"/>
 
 
@@ -1281,28 +1264,24 @@
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
-                            android:textStyle="normal"
                             android:maxLength="35"
+                            android:textStyle="normal"
                             android:id="@+id/sg6"
-
                             />
                         <EditText
+                            android:maxLength="10"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
-                            android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/cg6"
                             />
                         <EditText
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:maxLength="2"
                             android:id="@+id/rep6"
-
                             />
 
                     </TableRow>
@@ -1310,7 +1289,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row27">
+                        android:id="@+id/row637">
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1325,10 +1304,10 @@
 
 
                         <EditText
-                            android:maxLength="35"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
+                            android:maxLength="35"
                             android:textStyle="normal"
                             android:id="@+id/sg7"
                             />
@@ -1342,11 +1321,9 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:maxLength="2"
                             android:id="@+id/rep7"
 
                             />
@@ -1356,7 +1333,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row28">
+                        android:id="@+id/row648">
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1371,39 +1348,35 @@
 
 
                         <EditText
-                            android:maxLength="35"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
                             android:textSize="12sp"
+                            android:maxLength="35"
                             android:textStyle="normal"
                             android:id="@+id/sg8"
                             />
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
-                            android:maxLength="10"
                             android:textSize="12sp"
+                            android:maxLength="10"
                             android:textStyle="normal"
                             android:id="@+id/cg8"
                             />
                         <EditText
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:maxLength="2"
                             android:id="@+id/rep8"
 
                             />
 
                     </TableRow>
-
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/row29">
-
+                        android:id="@+id/row649">
 
                         <TextView
                             android:background="#C0C0C0"
@@ -1413,7 +1386,7 @@
                             android:padding="3dp"
                             android:textStyle="bold"
                             android:textSize="13sp"
-                            android:text=" 9th sem"
+                            android:text="9th sem "
                             android:gravity="center_horizontal"/>
 
 
@@ -1428,25 +1401,23 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
-                            android:maxLength="10"
                             android:textSize="12sp"
+                            android:maxLength="10"
                             android:textStyle="normal"
                             android:id="@+id/cg9"
                             />
                         <EditText
                             android:layout_width="wrap_content"
-                            android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
-                            android:maxLength="2"
                             android:id="@+id/rep9"
 
                             />
+
                     </TableRow>
 
                 </TableLayout>
-
 
                 <Button
                     android:id="@+id/next"
@@ -1468,7 +1439,6 @@
                     android:textSize="13sp"
                     android:text="NOTE: The students should fill this information carefully/legibly and correctly .In case any discrepancy is found later on , the candidate will be held solely responsible for the same "
                     android:gravity="center_horizontal"/>
-
 
             </LinearLayout>
         </HorizontalScrollView>

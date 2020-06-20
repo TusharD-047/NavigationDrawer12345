@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="#DDDEDD"
-    tools:context=".MainActivity"
+    tools:context=".LateRegistration"
     android:layout_margin="0px">
 
     <ImageView
