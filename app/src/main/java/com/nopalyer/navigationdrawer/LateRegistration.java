@@ -745,8 +745,9 @@ public class LateRegistration extends AppCompatActivity {
                     bd.putString("cg9", cg9.getText().toString());
                     bd.putString("sg9", sg9.getText().toString());
                     bd.putString("rep9", rep9.getText().toString());
+                    bd.putString("type", cor);
 
-                    Intent it = new Intent(LateRegistration.this,ViewActivity.class);
+                    Intent it = new Intent(LateRegistration.this,View2Activity.class);
                     it.putExtras(bd);
                     startActivity(it);
                 }

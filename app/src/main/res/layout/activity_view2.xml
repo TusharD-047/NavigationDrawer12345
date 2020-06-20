@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:fillViewport="true"
+    tools:context=".View2Activity">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:id="@+id/toolbar"
+                android:background="#000000"/>
+
+            <TableLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Course : " />
+
+                    <TextView
+                        android:id="@+id/regtvcourse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Academic Year : " />
+
+                    <TextView
+                        android:id="@+id/regtvAcyrlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Name : " />
+
+                    <TextView
+                        android:id="@+id/regtvNamelate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="Email : "
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/regtvSemlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:layout_weight="1"
+                        android:textColor="#eeeeee"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="18sp"
+                        android:textColor="#eeeeee"
+                        android:padding="5dp"
+                        android:text="Date of Birth : " />
+
+                    <TextView
+                        android:id="@+id/regtvDoblate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textSize="18sp"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="18sp"
+                        android:textColor="#eeeeee"
+                        android:padding="5dp"
+                        android:text="Father's Name : " />
+
+                    <TextView
+                        android:id="@+id/regtvFatherlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_weight="1"
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="18sp"
+                        android:textColor="#eeeeee"
+                        android:padding="5dp"
+                        android:text="Roll No. : " />
+
+                    <TextView
+                        android:id="@+id/regtvrolllate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        android:textColor="#eeeeee"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Room : " />
+
+                    <TextView
+                        android:id="@+id/regtvroomlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Semester : " />
+
+                    <TextView
+                        android:id="@+id/regtvSemesterlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Hostel : " />
+
+                    <TextView
+                        android:id="@+id/regtvhostellate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Department : " />
+
+                    <TextView
+                        android:id="@+id/regtvdeplate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_height="match_parent"
+                        android:text="Programme : " />
+
+                    <TextView
+                        android:id="@+id/regtvproglate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:padding="5dp"
+                        android:text=" " />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="Corresponding Address :"
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/regtvCrreslate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="Pin  :"
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/regtvPin1late"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="Contact :"
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/regtvCategorylate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="Corresponding Address :"
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/regtvPerlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="Pin  :"
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/regtvPin2late"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="Contact :"
+                        android:textColor="#eeeeee"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/regtvmob2late"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="#eeeeee"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:text="" />
+                </TableRow>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row5">
+
+
+                    <TextView
+                        android:paddingTop="160px"
+                        android:textColor="#ffffff"
+                        android:background="#606060"
+                        android:layout_span="4"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="Details Of The Courses (Registering During Current Semester)"
+                        android:gravity="center_horizontal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row6">
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text=" Course Code"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="Course Name "
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="L /T/ (P/D)"
+                        android:gravity="left" />
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:text="Credits"
+                        android:gravity="left" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row7v">
+
+                    <TextView
+                        android:id="@+id/code1vlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:maxLength="10"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/course1vlate"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal" />
+                    <TextView
+                        android:id="@+id/lab1vlate"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal" />
+                    <TextView
+                        android:id="@+id/credit1vlate"
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:maxLength="2"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row8v">
+
+                    <TextView
+                        android:id="@+id/code2vlate"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/course2vlate"
+                        />
+                    <TextView
+                        android:maxLength="10"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/lab2vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/credit2vlate"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row9v">
+
+                    <TextView
+                        android:id="@+id/code3vlate"
+                        android:layout_width="wrap_content"
+                        android:maxLength="10"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/course3vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/lab3vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit3vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row10v">
+
+                    <TextView
+                        android:id="@+id/code4vlate"
+                        android:layout_width="wrap_content"
+                        android:maxLength="10"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/course4vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal"
+                        android:id="@+id/lab4vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit4vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row11v">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:maxLength="10"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/code5vlate"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/course5vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal"
+                        android:id="@+id/lab5vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit5vlate"
+
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row13v">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:maxLength="10"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/code6vlate"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="35"
+                        android:id="@+id/course6vlate"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/lab6vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit6vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row14v">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/code7vlate"
+                        />
+
+                    <TextView
+                        android:maxLength="35"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/course7vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/lab7vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit7vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row15v">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal"
+                        android:id="@+id/code8vlate"
+                        />
+
+                    <TextView
+                        android:maxLength="35"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/course8vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/lab8vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit8vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row16vlate">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal"
+                        android:id="@+id/code9vlate"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/course9vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/lab9vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit9vlate"
+
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row17v">
+                    <TextView
+                        android:maxLength="10"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/code10vlate"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/course10vlate"
+                        />
+                    <TextView
+                        android:maxLength="10"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/lab10vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/credit10vlate"
+
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row18v">
+                    <TextView
+
+                        android:layout_width="98dp"
+                        android:layout_span="2"
+                        android:text="TOTAL"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:gravity="center_horizontal" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal"
+                        android:id="@+id/labsumvlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="4"
+                        android:textStyle="normal"
+                        android:id="@+id/creditsumvlate"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row19v">
+                    <TextView
+                        android:paddingTop="30px"
+                        android:textColor="#ffffff"
+                        android:background="#606060"
+                        android:layout_span="4"
+                        android:layout_width="98dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="RESULTS OF PREVIOUS SEMESTER(s)"
+                        android:gravity="center_horizontal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row20v">
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text=" Semester"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="SGPI "
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="CGPI"
+                        android:gravity="left" />
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:text="Repeat (if any)"
+                        android:gravity="left" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row21v">
+
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="1st sem "
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:id="@+id/sg1vlate"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal" />
+                    <TextView
+                        android:id="@+id/cg1vlate"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal" />
+                    <TextView
+                        android:id="@+id/rep1vlate"
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:maxLength="2"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row22v">
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="2nd sem"
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/sg2vlate"
+                        />
+                    <TextView
+                        android:maxLength="10"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/cg2vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/rep2vlate"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row23v">
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="3rd sem "
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/sg3vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/cg3vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep3vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row24v">
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="4th sem "
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/sg4vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal"
+                        android:id="@+id/cg4vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep4vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row25v">
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="5th sem "
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/sg5vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="10"
+                        android:textStyle="normal"
+                        android:id="@+id/cg5vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep5vlate"
+
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row26v">
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="6th sem "
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="35"
+                        android:id="@+id/sg6vlate"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/cg6vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep6vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row27v">
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="7th sem "
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:maxLength="35"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/sg7vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/cg7vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep7vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row28v">
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text="8th sem "
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:maxLength="35"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/sg8vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/cg8vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep8vlate"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row29v">
+
+
+                    <TextView
+                        android:background="#C0C0C0"
+                        android:textColor="#000"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:text=" 9th sem"
+                        android:gravity="center_horizontal"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:maxLength="35"
+                        android:textStyle="normal"
+                        android:id="@+id/sg9vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:maxLength="10"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:id="@+id/cg9vlate"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:maxLength="2"
+                        android:id="@+id/rep9vlate"
+
+                        />
+                </TableRow>
+
+            </TableLayout>
+            <Button
+                android:id="@+id/regaddpdflate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="Upload" />
+
+            <Button
+                android:id="@+id/regeditlate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/regupload2late"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next" />
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</ScrollView>

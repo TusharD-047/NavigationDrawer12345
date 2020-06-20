@@ -483,6 +483,7 @@ public class Btech_registration extends AppCompatActivity {
                     bd.putString("cg9", cg9.getText().toString());
                     bd.putString("sg9", sg9.getText().toString());
                     bd.putString("rep9", rep9.getText().toString());
+                    bd.putString("type","UG");
 
                     Intent it = new Intent(Btech_registration.this,ViewActivity.class);
                     it.putExtras(bd);

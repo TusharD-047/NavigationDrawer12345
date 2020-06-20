@@ -1,31 +1,20 @@
 package com.nopalyer.navigationdrawer;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.pdf.PdfDocument;
 import android.os.Build;
 import android.os.Bundle;
-
-import android.os.Environment;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,36 +24,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chunk;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.FontFactory;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.List;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Phrase;
-import com.itextpdf.text.Rectangle;
-import com.itextpdf.text.pdf.ColumnText;
-import com.itextpdf.text.pdf.PdfPageEventHelper;
-import com.itextpdf.text.pdf.PdfWriter;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Map;
 import java.util.Objects;
 
-import static android.os.Environment.*;
-
-
-public class ViewActivity extends AppCompatActivity {
+public class View2Activity extends AppCompatActivity {
 
     private static final String TAG = "AdminActivity";
-    private TextView name,faname,rolln,dobn,semtr,catg,acyr,room,deppp,prog,cressadd,pin1,peradd,pin2,mob2,hostel,sem,labsum,creditsum;
+    private TextView name,faname,rolln,dobn,semtr,catg,acyr,room,deppp,prog,cressadd,pin1,peradd,pin2,mob2,hostel,sem,labsum,creditsum,course;
     private TextView code1,course1,lab1,credit1,code2,course2,lab2,credit2,code3,course3,lab3,credit3,code4,course4,lab4,credit4,code5,course5,lab5,credit5;
     private TextView code6,course6,lab6,credit6,code7,course7,lab7,credit7,code8,course8,lab8,credit8,code9,course9,lab9,credit9,code10,course10,lab10,credit10;
     private TextView cg1,sg1,rep1,cg2,sg2,rep2,cg3,sg3,rep3,cg4,sg4,rep4,cg5,sg5,rep5,cg6,sg6,rep6,cg7,sg7,rep7,cg8,sg8,rep8,cg9,sg9,rep9;
@@ -78,10 +44,11 @@ public class ViewActivity extends AppCompatActivity {
     String yr = "",dep = "",roll = "",type ="";
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view);
+        setContentView(R.layout.activity_view2);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -92,14 +59,15 @@ public class ViewActivity extends AppCompatActivity {
         UI();
         bundle = getIntent().getExtras();
 
-        ActivityCompat.requestPermissions(ViewActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
-        mProgress = new ProgressDialog(ViewActivity.this);
-        pd = new ProgressDialog(ViewActivity.this);
+        ActivityCompat.requestPermissions(View2Activity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
+        mProgress = new ProgressDialog(View2Activity.this);
+        pd = new ProgressDialog(View2Activity.this);
 
 
         pd.setMessage("Wait");
         pd.show();
         type = Objects.requireNonNull(bundle.get("type")).toString();
+        course.setText(Objects.requireNonNull(bundle.get("type")).toString());
         name.setText(Objects.requireNonNull(bundle.get("Name")).toString());
         faname.setText(Objects.requireNonNull(bundle.get("FatherName")).toString());
         rolln.setText(Objects.requireNonNull(bundle.get("RollNo")).toString());
@@ -190,7 +158,6 @@ public class ViewActivity extends AppCompatActivity {
         pd.dismiss();
 
 
-
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,7 +171,8 @@ public class ViewActivity extends AppCompatActivity {
                         dep = dataSnapshot.child("Department").getValue().toString();
                         roll = dataSnapshot.child("Roll No").getValue().toString();
 
-                        mref = database.getReference(type + "Application").child(yr).child(dep).child(roll);
+                        mref = database.getReference( "LateApplication").child(yr).child(dep).child(roll);
+                        mref.child("Course").setValue(type);
                         mref.child("Name").setValue(name.getText().toString());
                         mref.child("FatherName").setValue(faname.getText().toString());
                         mref.child("RollNo").setValue(rolln.getText().toString());
@@ -293,12 +261,12 @@ public class ViewActivity extends AppCompatActivity {
                         mref.child("rep9").setValue(rep9.getText().toString());
 
                         mProgress.dismiss();
-                        Toast.makeText(ViewActivity.this,"Upload Done",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(View2Activity.this,"Upload Done",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(ViewActivity.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(View2Activity.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -307,112 +275,112 @@ public class ViewActivity extends AppCompatActivity {
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ViewActivity.this,Btech_registration.class));
+                startActivity(new Intent(View2Activity.this,Btech_registration.class));
             }
         });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ViewActivity.this,UpDocument.class));
+                startActivity(new Intent(View2Activity.this,UpDocument.class));
             }
         });
     }
 
     private void  UI(){
-        name = (TextView)findViewById(R.id.regtvName);
-        faname = (TextView)findViewById(R.id.regtvFather);
-        rolln = (TextView)findViewById(R.id.regtvroll);
-        dobn = (TextView)findViewById(R.id.regtvDob);
-        semtr = (TextView)findViewById(R.id.regtvSem);
-        catg = (TextView)findViewById(R.id.regtvCategory);
-        room = (TextView)findViewById(R.id.regtvroom);
-        deppp = (TextView)findViewById(R.id.regtvdep);
-        prog = (TextView)findViewById(R.id.regtvprog);
-        pin1 = (TextView)findViewById(R.id.regtvPin1);
-        cressadd = (TextView)findViewById(R.id.regtvCrres);
-        peradd = (TextView)findViewById(R.id.regtvPer);
-        pin2 = (TextView)findViewById(R.id.regtvPin2);
-        mob2 = (TextView)findViewById(R.id.regtvmob2);
-        hostel = (TextView)findViewById(R.id.regtvhostel);
-        sem = (TextView)findViewById(R.id.regtvSemester);
-        code1 = (TextView)findViewById(R.id.code1v);
-        course1 = (TextView)findViewById(R.id.course1v);
-        lab1 = (TextView)findViewById(R.id.lab1v);
-        credit1 = (TextView)findViewById(R.id.credit1v);
-        code2 = (TextView)findViewById(R.id.code2v);
-        course2 = (TextView)findViewById(R.id.course2v);
-        lab2 = (TextView)findViewById(R.id.lab2v);
-        credit2 = (TextView)findViewById(R.id.credit2v);
-        code3 = (TextView)findViewById(R.id.code3v);
-        course3 = (TextView)findViewById(R.id.course3v);
-        lab3 = (TextView)findViewById(R.id.lab3v);
-        credit3 = (TextView)findViewById(R.id.credit3v);
-        code4 = (TextView)findViewById(R.id.code4v);
-        course4 = (TextView)findViewById(R.id.course4v);
-        lab4 = (TextView)findViewById(R.id.lab4v);
-        credit4 = (TextView)findViewById(R.id.credit4v);
-        code5 = (TextView)findViewById(R.id.code5v);
-        course5 = (TextView)findViewById(R.id.course5v);
-        lab5 = (TextView)findViewById(R.id.lab5v);
-        credit5 = (TextView)findViewById(R.id.credit5v);
-        code6 = (TextView)findViewById(R.id.code6v);
-        course6 = (TextView)findViewById(R.id.course6v);
-        lab6 = (TextView)findViewById(R.id.lab6v);
-        credit6 = (TextView)findViewById(R.id.credit6v);
-        code7 = (TextView)findViewById(R.id.code7v);
-        course7 = (TextView)findViewById(R.id.course7v);
-        lab7 = (TextView)findViewById(R.id.lab7v);
-        credit7 = (TextView)findViewById(R.id.credit7v);
-        code8 = (TextView)findViewById(R.id.code8v);
-        course8 = (TextView)findViewById(R.id.course8v);
-        lab8 = (TextView)findViewById(R.id.lab8v);
-        credit8 = (TextView)findViewById(R.id.credit8v);
-        code9 = (TextView)findViewById(R.id.code9v);
-        course9 = (TextView)findViewById(R.id.course9v);
-        lab9 = (TextView)findViewById(R.id.lab9v);
-        credit9 = (TextView)findViewById(R.id.credit9v);
-        code10 = (TextView)findViewById(R.id.code10v);
-        course10 = (TextView)findViewById(R.id.course10v);
-        lab10 = (TextView)findViewById(R.id.lab10v);
-        credit10 = (TextView)findViewById(R.id.credit10v);
-        labsum = (TextView)findViewById(R.id.labsumv);
-        creditsum = (TextView)findViewById(R.id.creditsumv);
-        sg1 =  findViewById(R.id.sg1v);
-        sg2 =  findViewById(R.id.sg2v);
-        sg3 =  findViewById(R.id.sg3v);
-        sg4 =  findViewById(R.id.sg4v);
-        sg5 =  findViewById(R.id.sg5v);
-        sg6 =  findViewById(R.id.sg6v);
-        sg7 =  findViewById(R.id.sg7v);
-        sg8 =  findViewById(R.id.sg8v);
-        sg9 =  findViewById(R.id.sg9v);
-        cg1 =  findViewById(R.id.cg1v);
-        cg2 =  findViewById(R.id.cg2v);
-        cg3 =  findViewById(R.id.cg3v);
-        cg4 =  findViewById(R.id.cg4v);
-        cg5 =  findViewById(R.id.cg5v);
-        cg6 =  findViewById(R.id.cg6v);
-        cg7 =  findViewById(R.id.cg7v);
-        cg8 = findViewById(R.id.cg8v);
-        cg9 =  findViewById(R.id.cg9v);
-        rep1 =  findViewById(R.id.rep1v);
-        rep2 =  findViewById(R.id.rep2v);
-        rep3 = findViewById(R.id.rep3v);
-        rep4 =  findViewById(R.id.rep4v);
-        rep5 =  findViewById(R.id.rep5v);
-        rep6 =  findViewById(R.id.rep6v);
-        rep7 =  findViewById(R.id.rep7v);
-        rep8 = findViewById(R.id.rep8v);
-        rep9 = findViewById(R.id.rep9v);
+        name = (TextView)findViewById(R.id.regtvNamelate);
+        faname = (TextView)findViewById(R.id.regtvFatherlate);
+        rolln = (TextView)findViewById(R.id.regtvrolllate);
+        dobn = (TextView)findViewById(R.id.regtvDoblate);
+        semtr = (TextView)findViewById(R.id.regtvSemlate);
+        catg = (TextView)findViewById(R.id.regtvCategorylate);
+        room = (TextView)findViewById(R.id.regtvroomlate);
+        deppp = (TextView)findViewById(R.id.regtvdeplate);
+        prog = (TextView)findViewById(R.id.regtvproglate);
+        pin1 = (TextView)findViewById(R.id.regtvPin1late);
+        cressadd = (TextView)findViewById(R.id.regtvCrreslate);
+        peradd = (TextView)findViewById(R.id.regtvPerlate);
+        pin2 = (TextView)findViewById(R.id.regtvPin2late);
+        mob2 = (TextView)findViewById(R.id.regtvmob2late);
+        hostel = (TextView)findViewById(R.id.regtvhostellate);
+        sem = (TextView)findViewById(R.id.regtvSemesterlate);
+        code1 = (TextView)findViewById(R.id.code1vlate);
+        course1 = (TextView)findViewById(R.id.course1vlate);
+        lab1 = (TextView)findViewById(R.id.lab1vlate);
+        credit1 = (TextView)findViewById(R.id.credit1vlate);
+        code2 = (TextView)findViewById(R.id.code2vlate);
+        course2 = (TextView)findViewById(R.id.course2vlate);
+        lab2 = (TextView)findViewById(R.id.lab2vlate);
+        credit2 = (TextView)findViewById(R.id.credit2vlate);
+        code3 = (TextView)findViewById(R.id.code3vlate);
+        course3 = (TextView)findViewById(R.id.course3vlate);
+        lab3 = (TextView)findViewById(R.id.lab3vlate);
+        credit3 = (TextView)findViewById(R.id.credit3vlate);
+        code4 = (TextView)findViewById(R.id.code4vlate);
+        course4 = (TextView)findViewById(R.id.course4vlate);
+        lab4 = (TextView)findViewById(R.id.lab4vlate);
+        credit4 = (TextView)findViewById(R.id.credit4vlate);
+        code5 = (TextView)findViewById(R.id.code5vlate);
+        course5 = (TextView)findViewById(R.id.course5vlate);
+        lab5 = (TextView)findViewById(R.id.lab5vlate);
+        credit5 = (TextView)findViewById(R.id.credit5vlate);
+        code6 = (TextView)findViewById(R.id.code6vlate);
+        course6 = (TextView)findViewById(R.id.course6vlate);
+        lab6 = (TextView)findViewById(R.id.lab6vlate);
+        credit6 = (TextView)findViewById(R.id.credit6vlate);
+        code7 = (TextView)findViewById(R.id.code7vlate);
+        course7 = (TextView)findViewById(R.id.course7vlate);
+        lab7 = (TextView)findViewById(R.id.lab7vlate);
+        credit7 = (TextView)findViewById(R.id.credit7vlate);
+        code8 = (TextView)findViewById(R.id.code8vlate);
+        course8 = (TextView)findViewById(R.id.course8vlate);
+        lab8 = (TextView)findViewById(R.id.lab8vlate);
+        credit8 = (TextView)findViewById(R.id.credit8vlate);
+        code9 = (TextView)findViewById(R.id.code9vlate);
+        course9 = (TextView)findViewById(R.id.course9vlate);
+        lab9 = (TextView)findViewById(R.id.lab9vlate);
+        credit9 = (TextView)findViewById(R.id.credit9vlate);
+        code10 = (TextView)findViewById(R.id.code10vlate);
+        course10 = (TextView)findViewById(R.id.course10vlate);
+        lab10 = (TextView)findViewById(R.id.lab10vlate);
+        credit10 = (TextView)findViewById(R.id.credit10vlate);
+        labsum = (TextView)findViewById(R.id.labsumvlate);
+        creditsum = (TextView)findViewById(R.id.creditsumvlate);
+        sg1 =  findViewById(R.id.sg1vlate);
+        sg2 =  findViewById(R.id.sg2vlate);
+        sg3 =  findViewById(R.id.sg3vlate);
+        sg4 =  findViewById(R.id.sg4vlate);
+        sg5 =  findViewById(R.id.sg5vlate);
+        sg6 =  findViewById(R.id.sg6vlate);
+        sg7 =  findViewById(R.id.sg7vlate);
+        sg8 =  findViewById(R.id.sg8vlate);
+        sg9 =  findViewById(R.id.sg9vlate);
+        cg1 =  findViewById(R.id.cg1vlate);
+        cg2 =  findViewById(R.id.cg2vlate);
+        cg3 =  findViewById(R.id.cg3vlate);
+        cg4 =  findViewById(R.id.cg4vlate);
+        cg5 =  findViewById(R.id.cg5vlate);
+        cg6 =  findViewById(R.id.cg6vlate);
+        cg7 =  findViewById(R.id.cg7vlate);
+        cg8 = findViewById(R.id.cg8vlate);
+        cg9 =  findViewById(R.id.cg9vlate);
+        rep1 =  findViewById(R.id.rep1vlate);
+        rep2 =  findViewById(R.id.rep2vlate);
+        rep3 = findViewById(R.id.rep3vlate);
+        rep4 =  findViewById(R.id.rep4vlate);
+        rep5 =  findViewById(R.id.rep5vlate);
+        rep6 =  findViewById(R.id.rep6vlate);
+        rep7 =  findViewById(R.id.rep7vlate);
+        rep8 = findViewById(R.id.rep8vlate);
+        rep9 = findViewById(R.id.rep9vlate);
+        course = findViewById(R.id.regtvcourse);
 
 
-        acyr = findViewById(R.id.regtvAcyr);
-        upload = (Button)findViewById(R.id.regaddpdf);
-        edit = (Button)findViewById(R.id.regedit);
-        next = (Button)findViewById(R.id.regupload2);
+        acyr = findViewById(R.id.regtvAcyrlate);
+        upload = (Button)findViewById(R.id.regaddpdflate);
+        edit = (Button)findViewById(R.id.regeditlate);
+        next = (Button)findViewById(R.id.regupload2late);
         firebaseAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
     }
-
 }

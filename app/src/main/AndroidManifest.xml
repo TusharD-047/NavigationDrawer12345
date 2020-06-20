@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LateRegistration"></activity>
+        <activity android:name=".View2Activity"></activity>
+        <activity android:name=".LateRegistration" />
         <activity android:name=".editProfile" />
         <activity android:name=".teacher.DeleteTpAssignment" />
         <activity android:name=".Openelective" />
