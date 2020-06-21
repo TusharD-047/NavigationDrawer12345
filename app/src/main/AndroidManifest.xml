@@ -55,6 +55,9 @@
             android:name=".UpDocument"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".LateRegistration"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ViewActivity"
             android:screenOrientation="portrait" />
         <activity
