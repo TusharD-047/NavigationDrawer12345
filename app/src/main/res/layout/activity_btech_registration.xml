@@ -17,9 +17,8 @@
         android:src="@drawable/newlogo" />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <HorizontalScrollView
+        android:layout_height="match_parent">
+         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <LinearLayout
@@ -63,6 +62,7 @@
                     <EditText
                         android:id="@+id/session"
                         android:maxLength="10"
+                        android:backgroundTint="#000000"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:inputType="text"
@@ -90,6 +90,7 @@
                     <EditText
                         android:id="@+id/editroll"
                         android:layout_width="290dp"
+                        android:backgroundTint="#000000"
                         android:layout_height="wrap_content"
                         android:inputType="text"
                         android:textColor="#000"
@@ -122,8 +123,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-
-                            android:backgroundTint="#ffffff"
+                            android:backgroundTint="#000000"
                             android:dropDownWidth="match_parent"
                             android:spinnerMode="dropdown">
 
@@ -150,6 +150,7 @@
                         <EditText
                             android:id="@+id/editroom"
                             android:layout_width="290dp"
+                            android:backgroundTint="#000000"
                             android:layout_height="wrap_content"
                             android:inputType="text"
                             android:textColor="#000"
@@ -175,7 +176,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:backgroundTint="#ffffff"
+                            android:backgroundTint="#000000"
                             android:dropDownWidth="match_parent"
                             android:spinnerMode="dropdown">
 
@@ -194,7 +195,8 @@
                             android:layout_height="wrap_content"
                             android:text="Name of the Department:"
                             android:textColor="#000"
-                            android:textSize="14sp"         android:textStyle="italic"
+                            android:textSize="14sp"
+                            android:textStyle="italic"
                             />
 
                         <Spinner
@@ -202,7 +204,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:backgroundTint="#ffffff"
+                            android:backgroundTint="#000000"
                             android:dropDownWidth="match_parent"
                             android:spinnerMode="dropdown">
 
@@ -228,7 +230,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:backgroundTint="#ffffff"
+                            android:backgroundTint="#000000"
                             android:dropDownWidth="match_parent"
                             android:spinnerMode="dropdown">
 
@@ -256,6 +258,7 @@
                             android:layout_height="wrap_content"
                             android:inputType="text"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="13sp"
                             android:textStyle="normal" />
 
@@ -281,6 +284,7 @@
                             android:layout_height="wrap_content"
                             android:inputType="text"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="13sp"
                             android:textStyle="normal" />
 
@@ -306,6 +310,7 @@
                             android:layout_height="wrap_content"
                             android:inputType="text"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="13sp"
                             android:textStyle="normal" />
 
@@ -331,6 +336,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="#000"
                             android:textSize="13sp"
+                            android:backgroundTint="#000000"
                             android:inputType="textEmailAddress"
                             android:textStyle="normal" />
 
@@ -349,6 +355,7 @@
                         android:layout_width="290dp"
                         android:layout_height="wrap_content"
                         android:textColor="#000"
+                        android:backgroundTint="#000000"
                         android:textSize="13sp"
                         android:textStyle="normal" />
                     <TableRow
@@ -369,6 +376,7 @@
                             android:layout_width="wrap_content"
                             android:inputType="number"
                             android:maxLength="10"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal" />
@@ -387,6 +395,7 @@
                             android:maxLength="10"
                             android:inputType="number"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal" />
 
@@ -403,6 +412,7 @@
                     <EditText
                         android:id="@+id/peradd"
                         android:layout_width="290dp"
+                        android:backgroundTint="#000000"
                         android:layout_height="wrap_content"
                         android:textColor="#000"
                         android:textSize="13sp"
@@ -424,6 +434,7 @@
                             android:id="@+id/pin2"
                             android:layout_width="wrap_content"
                             android:inputType="number"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="13sp"
                             android:maxLength="10"
@@ -443,6 +454,7 @@
                             android:layout_width="wrap_content"
                             android:maxLength="10"
                             android:inputType="number"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="13sp"
                             android:textStyle="normal" />
@@ -527,6 +539,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:maxLength="10"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal" />
@@ -535,6 +548,7 @@
                             android:id="@+id/course1"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal" />
@@ -542,6 +556,7 @@
                             android:id="@+id/lab1"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal" />
@@ -549,6 +564,7 @@
                             android:id="@+id/credit1"
                             android:layout_width="wrap_content"
                             android:inputType="number"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:maxLength="2"
                             android:textSize="12sp"
@@ -564,6 +580,7 @@
                         <EditText
                             android:id="@+id/code2"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:maxLength="10"
                             android:textSize="12sp"
@@ -571,6 +588,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="35"
@@ -580,6 +598,7 @@
                         <EditText
                             android:maxLength="10"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -587,6 +606,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:inputType="number"
                             android:maxLength="2"
                             android:textColor="#000"
@@ -605,6 +625,7 @@
                         <EditText
                             android:id="@+id/code3"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:maxLength="10"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -612,6 +633,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="35"
@@ -620,6 +642,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:maxLength="10"
                             android:textSize="12sp"
@@ -628,6 +651,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -646,6 +670,7 @@
 
                         <EditText
                             android:id="@+id/code4"
+                            android:backgroundTint="#000000"
                             android:layout_width="wrap_content"
                             android:maxLength="10"
                             android:textColor="#000"
@@ -654,6 +679,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="35"
@@ -662,6 +688,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="10"
@@ -670,6 +697,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -688,6 +716,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:maxLength="10"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -697,6 +726,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="35"
@@ -705,6 +735,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="10"
@@ -713,6 +744,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -730,6 +762,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:maxLength="10"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -739,6 +772,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -748,6 +782,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:maxLength="10"
                             android:textSize="12sp"
@@ -756,6 +791,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -774,6 +810,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:maxLength="10"
                             android:textSize="12sp"
@@ -784,6 +821,7 @@
                         <EditText
                             android:maxLength="35"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -791,6 +829,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:maxLength="10"
                             android:textSize="12sp"
@@ -799,6 +838,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:inputType="number"
                             android:textColor="#000"
                             android:textSize="12sp"
@@ -817,6 +857,7 @@
 
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="10"
@@ -827,6 +868,7 @@
                         <EditText
                             android:maxLength="35"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -835,6 +877,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -843,6 +886,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:inputType="number"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -862,6 +906,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
@@ -871,6 +916,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -879,6 +925,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -887,6 +934,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:inputType="number"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -904,6 +952,7 @@
                             android:maxLength="10"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/code10"
@@ -912,6 +961,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -921,6 +971,7 @@
                             android:maxLength="10"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/lab10"
@@ -928,6 +979,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:inputType="number"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -954,6 +1006,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
@@ -962,6 +1015,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="4"
                             android:textStyle="normal"
@@ -1060,12 +1114,14 @@
                             android:id="@+id/sg1"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal" />
                         <EditText
                             android:id="@+id/cg1"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:maxLength="10"
@@ -1073,6 +1129,7 @@
                         <EditText
                             android:id="@+id/rep1"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal" />
@@ -1099,6 +1156,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -1107,6 +1165,7 @@
                         <EditText
                             android:maxLength="10"
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -1114,6 +1173,7 @@
                             />
                         <EditText
                             android:layout_width="wrap_content"
+                            android:backgroundTint="#000000"
                             android:textColor="#000"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -1142,6 +1202,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -1150,6 +1211,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -1158,6 +1220,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/rep3"
@@ -1186,6 +1249,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -1194,6 +1258,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
@@ -1202,6 +1267,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/rep4"
@@ -1231,6 +1297,7 @@
                             android:id="@+id/sg5"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal" />
@@ -1238,6 +1305,7 @@
                             android:id="@+id/cg5"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal" />
@@ -1245,6 +1313,7 @@
                             android:id="@+id/rep5"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal" />
 
@@ -1270,6 +1339,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -1279,6 +1349,7 @@
                             android:maxLength="10"
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/cg6"
@@ -1286,6 +1357,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/rep6"
@@ -1313,6 +1385,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -1321,6 +1394,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:maxLength="10"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -1329,6 +1403,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/rep7"
@@ -1357,6 +1432,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -1365,6 +1441,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
@@ -1373,6 +1450,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/rep8"
@@ -1400,6 +1478,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="35"
                             android:textStyle="normal"
@@ -1408,6 +1487,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:maxLength="10"
                             android:textStyle="normal"
@@ -1416,6 +1496,7 @@
                         <EditText
                             android:layout_width="wrap_content"
                             android:textColor="#000"
+                            android:backgroundTint="#000000"
                             android:textSize="12sp"
                             android:textStyle="normal"
                             android:id="@+id/rep9"
@@ -1439,17 +1520,18 @@
                     android:text="NEXT" />
                 <TextView
                     android:textColor="#CA3131"
-                    android:layout_width="700px"
+                    android:layout_width="400dp"
                     android:layout_height="wrap_content"
                     android:padding="3dp"
+                    android:layout_gravity="center_horizontal"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:text="NOTE: The students should fill this information carefully/legibly and correctly .In case any discrepancy is found later on , the candidate will be held solely responsible for the same "
                     android:gravity="center_horizontal"/>
 
             </LinearLayout>
-        </HorizontalScrollView>
-    </ScrollView>
+    </HorizontalScrollView>
+          </ScrollView>
 
 
 </LinearLayout>

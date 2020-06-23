@@ -212,8 +212,8 @@ public class Btech_registration extends AppCompatActivity {
 
         };
 
-        adapter_programme = new ArrayAdapter<>(Btech_registration.this, R.layout.colourful_spinner_items, programme);
-        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_programme = new ArrayAdapter<>(Btech_registration.this, R.layout.colourful_spinner_items2, programme);
+        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         prog.setAdapter(adapter_programme);
         prog.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -223,8 +223,8 @@ public class Btech_registration extends AppCompatActivity {
                 }
                 if (position == 1){
                     progm = programme[position];
-                    adapter_depp1 = new ArrayAdapter<>(Btech_registration.this, R.layout.colourful_spinner_items, department1);
-                    adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_depp1 = new ArrayAdapter<>(Btech_registration.this, R.layout.colourful_spinner_items2, department1);
+                    adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_depp1);
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -234,8 +234,8 @@ public class Btech_registration extends AppCompatActivity {
                             }
                             if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                 //   show.setEnabled(true);
-                                adapter_semester = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items, semester1);
-                                adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_semester = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items2, semester1);
+                                adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_semester);
                                 depp = department1[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -264,8 +264,8 @@ public class Btech_registration extends AppCompatActivity {
                     });
                 }
                 if (position == 2) {
-                    adapter_depp2 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items, department2);
-                    adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_depp2 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items2, department2);
+                    adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_depp2);
                     progm= programme[position];
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -275,8 +275,8 @@ public class Btech_registration extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 ) {
-                                adapter_semester1 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items, semester2);
-                                adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_semester1 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items2, semester2);
+                                adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_semester1);
                                 depp= department2[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -307,8 +307,8 @@ public class Btech_registration extends AppCompatActivity {
                 }
 
                 if (position == 3) {
-                    adapter_depp3 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items, department3);
-                    adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_depp3 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items2, department3);
+                    adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_depp3);
                     progm = programme[position];
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -318,8 +318,8 @@ public class Btech_registration extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 || position == 2 ) {
-                                adapter_semester1 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items, semester2);
-                                adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_semester1 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items2, semester2);
+                                adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_semester1);
                                 depp = department2[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -355,8 +355,8 @@ public class Btech_registration extends AppCompatActivity {
 
             }
         });
-        adapter_host = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items, hostel);
-        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_host = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items2, hostel);
+        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         hostt.setAdapter(adapter_host);
         hostt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
