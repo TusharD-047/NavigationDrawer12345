@@ -58,6 +58,21 @@
             android:name=".LateRegistration"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Openelective"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".editProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Upload2Doument"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacher.DeleteTpAssignment"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ViewActivity"
             android:screenOrientation="portrait" />
         <activity

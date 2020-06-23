@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,6 +33,7 @@ public class Openelective extends Activity {
     String first,sec,third;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
+    FirebaseUser firebaseUser;
     DatabaseReference ref,ref2,ref3,ref4,ref5,ref6;
     ProgressDialog pd;
 
@@ -45,6 +47,7 @@ public class Openelective extends Activity {
         nxt = findViewById(R.id.next3);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
         pd = new ProgressDialog(this);
 
         final String divisions[] =  {
@@ -188,6 +191,8 @@ public class Openelective extends Activity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         final String name = dataSnapshot.child("Name").getValue().toString();
                         final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                        final String email = firebaseUser.getEmail();
+                        final String phone = dataSnapshot.child("Contact").getValue().toString();
                         ref2 = firebaseDatabase.getReference("Result").child(roll);
                         ref2.addValueEventListener(new ValueEventListener() {
                             @Override
@@ -199,14 +204,20 @@ public class Openelective extends Activity {
                                 ref4.child("Name").setValue(name);
                                 ref4.child("Roll").setValue(roll);
                                 ref4.child("Cgpa").setValue(cg);
+                                ref4.child("Email").setValue(email);
+                                ref4.child("Phone").setValue(phone);
                                 ref5 = ref3.child(sec).child("2nd Preference").child(rank);
                                 ref5.child("Name").setValue(name);
                                 ref5.child("Roll").setValue(roll);
                                 ref5.child("Cgpa").setValue(cg);
+                                ref5.child("Email").setValue(email);
+                                ref5.child("Phone").setValue(phone);
                                 ref6 = ref3.child(third).child("3rd Preference").child(rank);
                                 ref6.child("Name").setValue(name);
                                 ref6.child("Roll").setValue(roll);
                                 ref6.child("Cgpa").setValue(cg);
+                                ref6.child("Email").setValue(email);
+                                ref6.child("Phone").setValue(phone);
                                 pd.dismiss();
                                 Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(Openelective.this, StudentsPage.class));
