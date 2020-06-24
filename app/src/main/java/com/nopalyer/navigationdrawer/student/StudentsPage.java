@@ -171,7 +171,7 @@ public class StudentsPage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        int id= item.getItemId();
+    int id= item.getItemId();
 
         switch (id)
         {
