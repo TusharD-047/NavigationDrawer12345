@@ -17,7 +17,7 @@
         android:src="@drawable/newlogo" />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
          <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -1520,14 +1520,14 @@
                     android:text="NEXT" />
                 <TextView
                     android:textColor="#CA3131"
-                    android:layout_width="400dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
                     android:padding="3dp"
-                    android:layout_gravity="center_horizontal"
                     android:textStyle="bold"
                     android:textSize="13sp"
+                    android:layout_gravity="center_horizontal"
                     android:text="NOTE: The students should fill this information carefully/legibly and correctly .In case any discrepancy is found later on , the candidate will be held solely responsible for the same "
-                    android:gravity="center_horizontal"/>
+                    />
 
             </LinearLayout>
     </HorizontalScrollView>

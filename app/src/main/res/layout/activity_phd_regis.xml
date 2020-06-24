@@ -981,13 +981,14 @@
                     android:text="NEXT" />
                 <TextView
                     android:textColor="#CA3131"
-                    android:layout_width="800px"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
                     android:padding="3dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
+                    android:layout_gravity="center_horizontal"
                     android:text="NOTE: The students should fill this information carefully/legibly and correctly .In case any discrepancy is found later on , the candidate will be held solely responsible for the same "
-                    android:gravity="center_horizontal"/>
+                    />
 
             </LinearLayout>
         </HorizontalScrollView>
