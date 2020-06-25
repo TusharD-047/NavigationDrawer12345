@@ -6,21 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".calender"
     android:orientation="vertical"
-    android:background="@drawable/background_1">
+    >
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="324dp"
-        android:layout_height="450dp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
         android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/acadcal" />
+        app:srcCompat="@drawable/cale1" />
 
     <Button
         android:id="@+id/odd"
         android:layout_width="265dp"
         android:layout_height="67dp"
+        android:layout_marginBottom="25px"
         android:text="Odd Semester Calender 2019-20"
-        android:background="#ffffff"
+        android:background="#c0c0c0"
         android:layout_gravity="center_horizontal"
         android:textSize="19dp"
         android:textStyle="bold" />
@@ -31,7 +32,7 @@
         android:layout_height="67dp"
         android:text="Even Semester Calender 2019-20"
         android:layout_gravity="center_horizontal"
-        android:background="#ffffff"
+        android:background="#c0c0c0"
         android:textSize="19dp"
         android:layout_marginTop="10dp"
         android:textStyle="bold"/>

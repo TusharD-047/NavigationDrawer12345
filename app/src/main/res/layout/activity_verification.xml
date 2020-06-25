@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="#102030"
     android:orientation="vertical"
     tools:context=".Login.verification">
 
@@ -15,10 +15,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="318dp"
-        android:layout_height="194dp"
-        android:src="@drawable/mail0"
+        android:layout_width="351dp"
+        android:layout_height="222dp"
         android:layout_gravity="center_horizontal"
+        android:src="@drawable/email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

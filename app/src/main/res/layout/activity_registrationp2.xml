@@ -1,6 +1,6 @@
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@drawable/gradient"
+    android:background="#99CCFF"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
@@ -26,13 +26,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="#36454f">
+                android:background="#001933">
 
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/cbimage"
+                    android:src="@drawable/re"
                     android:id="@+id/imageka"
+                    android:layout_margin="10px"
                     android:padding="8dp"
                     android:scaleType="fitXY"/>
 
@@ -63,14 +64,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="#36454f">
+                android:background="#001933">
 
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:id="@+id/imageka1"
                     android:padding="8dp"
-                    android:src="@drawable/cbimage"
+                    android:src="@drawable/re"
+                    android:layout_margin="10px"
+
                     android:scaleType="fitXY"/>
 
                 <TextView
@@ -97,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="#36454f">
+                android:background="#001933">
 
                 <ImageView
                     android:layout_width="150dp"
@@ -105,7 +108,9 @@
                     android:id="@+id/imageka2"
                     android:padding="8dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cbimage"/>
+                    android:layout_margin="10px"
+
+                    android:src="@drawable/re"/>
 
                 <TextView
                     android:id="@+id/textViewka2"
@@ -131,15 +136,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="#36454f">
+                android:background="#001933">
 
                 <ImageView
+                    android:id="@+id/imageka3"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/imageka3"
                     android:padding="8dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cbimage"/>
+                    android:layout_margin="10px"
+                    android:src="@drawable/re1" />
 
                 <TextView
                     android:id="@+id/textViewka3"
@@ -165,15 +171,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="#36454f">
+                android:background="#001933">
 
                 <ImageView
+                    android:id="@+id/imageka4"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/imageka4"
                     android:padding="8dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cbimage"/>
+                    android:layout_margin="30px"
+                    android:background="#ffffff"
+                    android:src="@drawable/mag" />
 
                 <TextView
                     android:id="@+id/textViewka4"
@@ -199,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="#36454f">
+                android:background="#001933">
 
                 <ImageView
                     android:layout_width="150dp"
@@ -207,7 +215,7 @@
                     android:id="@+id/imageka5"
                     android:padding="8dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cbimage"/>
+                    android:src="@drawable/registration1"/>
 
                 <TextView
                     android:id="@+id/textViewka5"
