@@ -26,6 +26,7 @@ import com.nopalyer.navigationdrawer.Login.ChangePassword;
 import com.nopalyer.navigationdrawer.MainActivity;
 import com.nopalyer.navigationdrawer.R;
 import com.nopalyer.navigationdrawer.login;
+import com.nopalyer.navigationdrawer.registrationp2;
 import com.nopalyer.navigationdrawer.student.Register.Register;
 import com.nopalyer.navigationdrawer.student.calender.calender1;
 
@@ -120,7 +121,7 @@ public class StudentsPage extends AppCompatActivity {
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(StudentsPage.this, Register.class));
+                startActivity(new Intent(StudentsPage.this, registrationp2.class));
             }
         });
         assignm.setOnClickListener(new View.OnClickListener() {
