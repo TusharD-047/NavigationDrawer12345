@@ -136,49 +136,21 @@ public class registrationp2 extends AppCompatActivity {
             c2.setVisibility(View.GONE);
             c3.setVisibility(View.GONE);
             c4.setVisibility(View.GONE);
-            c5.setVisibility(View.GONE);
-            c6.setVisibility(View.GONE);
-
         }
         if(course == "PG"){
             c1.setVisibility(View.GONE);
             c3.setVisibility(View.GONE);
             c4.setVisibility(View.GONE);
-            c5.setVisibility(View.GONE);
-            c6.setVisibility(View.GONE);
-
         }
         if(course == "Phd"){
             c2.setVisibility(View.GONE);
             c1.setVisibility(View.GONE);
             c4.setVisibility(View.GONE);
-            c5.setVisibility(View.GONE);
-            c6.setVisibility(View.GONE);
-
         }
         if(course == "Open"){
             c2.setVisibility(View.GONE);
             c3.setVisibility(View.GONE);
             c1.setVisibility(View.GONE);
-            c5.setVisibility(View.GONE);
-            c6.setVisibility(View.GONE);
-
-        }
-        if(course == "Late"){
-            c2.setVisibility(View.GONE);
-            c3.setVisibility(View.GONE);
-            c4.setVisibility(View.GONE);
-            c1.setVisibility(View.GONE);
-            c6.setVisibility(View.GONE);
-
-        }
-        if(course == "Bona"){
-            c2.setVisibility(View.GONE);
-            c3.setVisibility(View.GONE);
-            c4.setVisibility(View.GONE);
-            c5.setVisibility(View.GONE);
-            c1.setVisibility(View.GONE);
-
         }
 
         c1.setOnClickListener(new View.OnClickListener() {
