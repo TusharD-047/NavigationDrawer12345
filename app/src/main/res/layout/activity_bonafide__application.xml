@@ -26,8 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="35dp"
-        android:layout_marginRight="5dp"
-        android:orientation="horizontal">
+        android:layout_marginRight="5dp">
 
         <TextView
             android:id="@+id/textViewb1"
@@ -45,14 +44,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#00FFFFFF"
+        android:fillViewport="true"
         >
 
         <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -118,7 +119,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Programme"
@@ -147,7 +148,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Department"
@@ -176,7 +177,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Semester"
@@ -250,7 +251,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="5dp"
@@ -258,10 +259,10 @@
 
                     <TextView
                         android:id="@+id/textViewb6"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
                         android:layout_marginRight="10dp"
                         android:text="Required Document"
                         android:textColor="#000000"
@@ -269,11 +270,11 @@
                     <Spinner
                         android:id="@+id/bS4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:layout_marginTop="15dp"
+
                         android:backgroundTint="@color/white"
-                        android:dropDownWidth="match_parent"
+                        android:dropDownWidth="wrap_content"
                         android:spinnerMode="dropdown">
 
                     </Spinner>

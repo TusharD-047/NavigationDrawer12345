@@ -4,8 +4,8 @@
     android:text="I did it"
     android:textSize="13sp"
     android:textColor="#000000"
-    android:paddingLeft="5dp"
     android:textStyle="normal"
-    android:layout_height="30dp">
+    android:padding="5dp"
+    android:layout_height="match_parent">
 
 </CheckedTextView>
