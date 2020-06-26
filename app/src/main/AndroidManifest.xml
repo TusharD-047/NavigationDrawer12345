@@ -467,6 +467,9 @@
             android:name=".management.managementabout"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".registrationp2"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".management.managementvision"
             android:screenOrientation="portrait" />
         <activity
