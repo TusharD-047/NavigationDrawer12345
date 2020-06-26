@@ -54,7 +54,7 @@ import static androidx.core.content.FileProvider.getUriForFile;
 
 public class UpDocument extends AppCompatActivity {
 
-    Button upProfile,upId,upfees,upAdd;
+    Button upProfile,upId,upfees,upAdd,regfinish;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseStorage firebaseStorage;
@@ -75,8 +75,9 @@ public class UpDocument extends AppCompatActivity {
         type = getIntent().getExtras().getString("type");
         upProfile = findViewById(R.id.upPhoto);
         upId = findViewById(R.id.upId);
-        upfees = findViewById(R.id.upForm);
+        upfees = findViewById(R.id.upFees);
         upAdd = findViewById(R.id.upAdd);
+        regfinish =findViewById(R.id.regfinish);
         pd =new ProgressDialog(this);
 
         pd1 =new ProgressDialog(this);
@@ -138,6 +139,12 @@ public class UpDocument extends AppCompatActivity {
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE4);
+            }
+        });
+        regfinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
             }
         });
 
@@ -229,4 +236,5 @@ public class UpDocument extends AppCompatActivity {
         finish();
         startActivity(new Intent(UpDocument.this, StudentsPage.class));
     }
+
 }
