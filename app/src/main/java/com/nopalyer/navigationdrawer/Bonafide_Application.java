@@ -114,8 +114,8 @@ public class Bonafide_Application extends AppCompatActivity {
         final String[] semester3 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem"};
         final String[] documents = {"Choose Required Document(s)", "Bonafide Certificate", "Duplicate Grade Report Card", "Attested/Verified Copy of Semester Result", "No Objection Certificate", "Character Certificate", "Migration Certificate", "Transcript", "Any Other"};
 
-        adapter_programme = new ArrayAdapter<>(Bonafide_Application.this, R.layout.colourful_spinner_items, programme);
-        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_programme = new ArrayAdapter<>(Bonafide_Application.this, R.layout.colourful_spinner_items2, programme);
+        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         bS1.setAdapter(adapter_programme);
         bS1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -124,8 +124,8 @@ public class Bonafide_Application extends AppCompatActivity {
                     //      show.setEnabled(false);
                 }
                 if (position == 1) {
-                    adapter_department1 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department1);
-                    adapter_department1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department1 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department1);
+                    adapter_department1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department1);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -136,8 +136,8 @@ public class Bonafide_Application extends AppCompatActivity {
                             }
                             if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                 //   show.setEnabled(true);
-                                adapter_sem1 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester1);
-                                adapter_sem1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem1 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester1);
+                                adapter_sem1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem1);
                                 dep = department1[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -148,8 +148,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                             sem = semester1[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -190,8 +190,8 @@ public class Bonafide_Application extends AppCompatActivity {
                     });
                 }
                 if (position == 2) {
-                    adapter_department4 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department4);
-                    adapter_department4.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department4 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department4);
+                    adapter_department4.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department4);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -201,8 +201,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 ) {
-                                adapter_sem2 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester2);
-                                adapter_sem2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem2 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester2);
+                                adapter_sem2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem2);
                                 dep = department4[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -213,8 +213,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7|| position == 8 || position == 9) {
                                             sem = semester2[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -256,8 +256,8 @@ public class Bonafide_Application extends AppCompatActivity {
                 }
 
                 if (position == 3) {
-                    adapter_department5 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department5);
-                    adapter_department5.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department5 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department5);
+                    adapter_department5.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department5);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -267,8 +267,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 || position == 2 ) {
-                                adapter_sem2 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester2);
-                                adapter_sem2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem2 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester2);
+                                adapter_sem2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem2);
                                 dep = department5[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -279,8 +279,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7|| position == 8 || position == 9) {
                                             sem = semester2[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -321,8 +321,8 @@ public class Bonafide_Application extends AppCompatActivity {
                     });
                 }
                 if (position == 4) {
-                    adapter_department1 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department1);
-                    adapter_department1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department1 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department1);
+                    adapter_department1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department1);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -332,8 +332,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
-                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
-                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester3);
+                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem3);
                                 dep = department1[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -344,8 +344,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3) {
                                             sem = semester3[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -386,8 +386,8 @@ public class Bonafide_Application extends AppCompatActivity {
                     });
                 }
                 if (position == 5) {
-                    adapter_department4 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department4);
-                    adapter_department4.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department4 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department4);
+                    adapter_department4.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department4);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -397,8 +397,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 ) {
-                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
-                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester3);
+                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem3);
                                 dep = department4[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -409,8 +409,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3) {
                                             sem = semester3[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -451,8 +451,8 @@ public class Bonafide_Application extends AppCompatActivity {
                     });
                 }
                 if (position == 6) {
-                    adapter_department6 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department6);
-                    adapter_department6.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department6 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department6);
+                    adapter_department6.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department6);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -462,8 +462,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 ) {
-                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
-                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester3);
+                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem3);
                                 dep = department6[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -474,8 +474,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3) {
                                             sem = semester3[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -516,8 +516,8 @@ public class Bonafide_Application extends AppCompatActivity {
                     });
                 }
                 if (position == 7) {
-                    adapter_department2 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department2);
-                    adapter_department2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department2 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department2);
+                    adapter_department2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department2);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -527,8 +527,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 || position == 2|| position == 3 ) {
-                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
-                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester3);
+                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem3);
                                 dep = department2[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -539,8 +539,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 || position == 4) {
                                             sem = semester3[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -581,8 +581,8 @@ public class Bonafide_Application extends AppCompatActivity {
                     });
                 }
                 if (position == 8) {
-                    adapter_department3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, department3);
-                    adapter_department3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_department3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, department3);
+                    adapter_department3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     bS2.setAdapter(adapter_department3);
                     prog = programme[position];
                     bS2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -592,8 +592,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 || position == 2|| position == 3 ) {
-                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, semester3);
-                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem3 = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, semester3);
+                                adapter_sem3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 bS3.setAdapter(adapter_sem3);
                                 dep = department3[position];
                                 bS3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -604,8 +604,8 @@ public class Bonafide_Application extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 || position == 4) {
                                             sem = semester3[position];
-                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items, documents);
-                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_doc = new ArrayAdapter<String>(Bonafide_Application.this, R.layout.colourful_spinner_items2, documents);
+                                            adapter_doc.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             bS4.setAdapter(adapter_doc);
                                             bS4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
