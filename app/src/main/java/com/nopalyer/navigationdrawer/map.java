@@ -29,9 +29,29 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         map=googleMap;
 
-        LatLng Himachal =new LatLng(31.706814, 76.526423);
+        LatLng Himachal =new LatLng(31.709237, 76.528043);
         map.addMarker(new MarkerOptions().position(Himachal).title("NIT HAMIRPUR"));
         map.moveCamera(CameraUpdateFactory.newLatLng(Himachal));
+
+     /*   LatLng Ground =new LatLng(31.706069, 76.524679);
+        map.addMarker(new MarkerOptions().position(Ground).title("NIT HAMIRPUR Ground"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(Ground));
+
+        LatLng Park =new LatLng(31.707247, 76.528445);
+        map.addMarker(new MarkerOptions().position(Park).title("Students Park"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(Park));
+
+        LatLng health =new LatLng(31.706087, 76.527694);
+        map.addMarker(new MarkerOptions().position(health).title("NITH Health Center"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(health));
+
+        LatLng ambika =new LatLng(31.704342, 76.525385);
+        map.addMarker(new MarkerOptions().position(ambika).title("Ambika Girls Hostel"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(ambika));
+
+        LatLng kbh =new LatLng(31.710352, 76.526616);
+        map.addMarker(new MarkerOptions().position(kbh).title("Kailash Boys Hostel"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(kbh)); */
 
     }
 }

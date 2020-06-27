@@ -272,7 +272,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-
                         android:backgroundTint="@color/white"
                         android:dropDownWidth="wrap_content"
                         android:spinnerMode="dropdown">

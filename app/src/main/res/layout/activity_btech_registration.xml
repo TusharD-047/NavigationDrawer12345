@@ -1522,6 +1522,7 @@
                     android:textColor="#CA3131"
                     android:layout_width="400dp"
                     android:layout_height="65dp"
+                    android:layout_marginBottom="10px"
                     android:padding="3dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
