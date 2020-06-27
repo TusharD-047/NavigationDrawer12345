@@ -103,7 +103,7 @@ public class tpassign extends AppCompatActivity {
                     show.setEnabled(false);
                 }
                 if (position == 1) {
-                    adapter_group = new ArrayAdapter<String>(tpassign.this, R.layout.colourful_spinner_items, group);
+                    adapter_group = new ArrayAdapter<>(tpassign.this, R.layout.colourful_spinner_items, group);
                     adapter_group.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     sp2.setAdapter(adapter_group);
                     year2 = year[position];
