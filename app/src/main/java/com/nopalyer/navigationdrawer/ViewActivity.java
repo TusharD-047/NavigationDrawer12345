@@ -92,7 +92,6 @@ public class ViewActivity extends AppCompatActivity {
         UI();
         bundle = getIntent().getExtras();
 
-        ActivityCompat.requestPermissions(ViewActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
         mProgress = new ProgressDialog(ViewActivity.this);
         pd = new ProgressDialog(ViewActivity.this);
 

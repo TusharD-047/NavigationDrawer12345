@@ -1,7 +1,9 @@
 package com.nopalyer.navigationdrawer.student;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.nopalyer.navigationdrawer.Login.ChangePassword;
 import com.nopalyer.navigationdrawer.MainActivity;
 import com.nopalyer.navigationdrawer.R;
+import com.nopalyer.navigationdrawer.ViewActivity;
 import com.nopalyer.navigationdrawer.login;
 import com.nopalyer.navigationdrawer.registrationp2;
 import com.nopalyer.navigationdrawer.student.Register.Register;
@@ -48,6 +52,9 @@ public class StudentsPage extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students_page);
+
+        ActivityCompat.requestPermissions(StudentsPage.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION}, PackageManager.PERMISSION_GRANTED);
+
         faculty_card = (CardView) findViewById(R.id.faculty_card);
         clubs_card = (CardView) findViewById(R.id.club);
         myProfile = (CardView) findViewById(R.id.pro) ;

@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
@@ -24,6 +25,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -54,18 +56,23 @@ import static androidx.core.content.FileProvider.getUriForFile;
 
 public class UpDocument extends AppCompatActivity {
 
-    Button upProfile,upId,upfees,upAdd,regfinish;
+    Button upProfile,upId,upfees,upAdd,regfinish,uphostel;
+    ImageView photopv,idpv,feepv,hospv,incomepv;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseStorage firebaseStorage;
-    StorageReference sref,reference,reference2,reference3;
+    StorageReference sref,reference,reference2,reference3,reference4,reference5;
     DatabaseReference ref,mref;
     String yr = "",dep = "",roll = "",name ="",type;
     private static int PICK_IMAGE = 123;
     private static int PICK_IMAGE2 = 124;
     private static int PICK_IMAGE3 = 125;
     private static int PICK_IMAGE4 = 126;
+    private static int PICK_IMAGE5 = 127;
     ProgressDialog pd,pd1;
+    String photost ="",idst ="",feesst ="",hosst ="",incomest ="";
+    Uri photo,id,fees,hos,income;
+    long size,size2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,10 +81,16 @@ public class UpDocument extends AppCompatActivity {
 
         type = getIntent().getExtras().getString("type");
         upProfile = findViewById(R.id.upPhoto);
+        uphostel = findViewById(R.id.upHostelFees);
         upId = findViewById(R.id.upId);
         upfees = findViewById(R.id.upFees);
         upAdd = findViewById(R.id.upAdd);
         regfinish =findViewById(R.id.regfinish);
+        photopv = findViewById(R.id.PhotoPreview);
+        idpv = findViewById(R.id.Idpreview);
+        feepv = findViewById(R.id.FeesPreview);
+        hospv = findViewById(R.id.Hostelpreview);
+        incomepv = findViewById(R.id.AddDocPreview);
         pd =new ProgressDialog(this);
 
         pd1 =new ProgressDialog(this);
@@ -141,10 +154,136 @@ public class UpDocument extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE4);
             }
         });
+        uphostel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE5);
+            }
+        });
         regfinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
+                if (hosst.isEmpty() || idst.isEmpty() || feesst.isEmpty() || photost.isEmpty()){
+                    Toast.makeText(UpDocument.this,"All Document Are necessary except Income Certificate",Toast.LENGTH_SHORT).show();
+                }else if (incomest.isEmpty()){
+                    pd1.setMessage("Uploading Image ! Please Smile");
+                    pd1.setCancelable(false);
+                    pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    pd1.show();
+                    reference2 = sref.child(yr).child(dep).child(roll).child(photost);
+                    reference2.putFile(photo).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(photost).setValue(url1.toString());
+                        }
+                    });
+                    reference = sref.child(yr).child(dep).child(roll).child(idst);
+                    reference.putFile(id).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(idst).setValue(url1.toString());
+                        }
+                    });
+                    reference3 = sref.child(yr).child(dep).child(roll).child(feesst);
+                    reference3.putFile(fees).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(feesst).setValue(url1.toString());
+                        }
+                    });
+                    reference5 = sref.child(yr).child(dep).child(roll).child(hosst);
+                    reference5.putFile(hos).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(hosst).setValue(url1.toString());
+                        }
+                    });
+                    pd1.dismiss();
+                    Toast.makeText(UpDocument.this,"Doneee",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
+                } else {
+                    pd1.setMessage("Uploading Image ! Please Smile");
+                    pd1.setCancelable(false);
+                    pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    pd1.show();
+                    reference2 = sref.child(yr).child(dep).child(roll).child(photost);
+                    reference2.putFile(photo).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(photost).setValue(url1.toString());
+                        }
+                    });
+                    reference = sref.child(yr).child(dep).child(roll).child(idst);
+                    reference.putFile(id).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(idst).setValue(url1.toString());
+                        }
+                    });
+                    reference3 = sref.child(yr).child(dep).child(roll).child(feesst);
+                    reference3.putFile(fees).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(feesst).setValue(url1.toString());
+                        }
+                    });
+                    reference4 = sref.child(yr).child(dep).child(roll).child(incomest);
+                    reference4.putFile(income).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(incomest).setValue(url1.toString());
+                        }
+                    });
+                    reference5 = sref.child(yr).child(dep).child(roll).child(hosst);
+                    reference5.putFile(hos).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url1 = uri.getResult();
+                            //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
+                            mref.child(yr).child(dep).child(roll).child(hosst).setValue(url1.toString());
+                        }
+                    });
+                    pd1.dismiss();
+                    Toast.makeText(UpDocument.this,"Doneee",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
+                }
             }
         });
 
@@ -156,9 +295,11 @@ public class UpDocument extends AppCompatActivity {
 
         if(requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null){
             Uri imagePath = data.getData();
+
             name = "Urlphoto";
             CropImage.activity(imagePath)
                     .start(this);
+
            /* try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
                 profile.setImageBitmap(bitmap);
@@ -171,23 +312,33 @@ public class UpDocument extends AppCompatActivity {
 
             if(resultCode == RESULT_OK){
                 Uri resultUri = result.getUri();
-                pd1.setMessage("Uploading Image ! Please Smile");
-                pd1.setCancelable(false);
-                pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                pd1.show();
-                reference2 = sref.child(yr).child(dep).child(roll).child(name);
-                reference2.putFile(resultUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
-                        while(!uri.isComplete());
-                        Uri url1 = uri.getResult();
-                        //uploadPDF uploadPDF = new uploadPDF(name,url1.toString());
-                        mref.child(yr).child(dep).child(roll).child(name).setValue(url1.toString());
-                        pd1.dismiss();
-                        Toast.makeText(UpDocument.this,"Form Uploaded",Toast.LENGTH_SHORT).show();
+                File f = new File(resultUri.getPath());
+                size = f.length();
+                if (size/1024 < 100){
+                    if (name.equals("Urlphoto")){
+                        photost = name;
+                        photo = resultUri;
+                        photopv.setImageURI(resultUri);
+                    }else if (name.equals("Urlidcard")){
+                        idst = name;
+                        id = resultUri;
+                        idpv.setImageURI(resultUri);
+                    }else if (name.equals("Fees")){
+                        feesst = name;
+                        fees = resultUri;
+                        feepv.setImageURI(resultUri);
+                    }else if (name.equals("Additional")){
+                        incomest = name;
+                        income = resultUri;
+                        incomepv.setImageURI(resultUri);
+                    }else if (name.equals("Urlhostel")){
+                        hosst = name;
+                        hos = resultUri;
+                        hospv.setImageURI(resultUri);
                     }
-                });
+                }else {
+                    Toast.makeText(UpDocument.this,"Upload with smaller size",Toast.LENGTH_SHORT).show();
+                }
 
             }
 
@@ -195,6 +346,7 @@ public class UpDocument extends AppCompatActivity {
 
         if(requestCode == PICK_IMAGE2 && resultCode == RESULT_OK && data.getData() != null){
             Uri imagePath = data.getData();
+
             name = "Urlidcard";
             CropImage.activity(imagePath)
                     .start(this);
@@ -222,6 +374,20 @@ public class UpDocument extends AppCompatActivity {
             name = "Additional";
             CropImage.activity(imagePath)
                     .start(this);
+           /* try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
+                profile.setImageBitmap(bitmap);
+            } catch (IOException e){
+                e.printStackTrace();
+            }*/
+        }
+        if(requestCode == PICK_IMAGE5 && resultCode == RESULT_OK && data.getData() != null){
+            Uri imagePath = data.getData();
+
+            name = "Urlhostel";
+            CropImage.activity(imagePath)
+                    .start(this);
+
            /* try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
                 profile.setImageBitmap(bitmap);

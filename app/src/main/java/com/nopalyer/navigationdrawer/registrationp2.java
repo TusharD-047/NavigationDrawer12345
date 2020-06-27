@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -19,15 +20,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.nopalyer.navigationdrawer.Admin.AdminNoReg;
 
+import java.util.Objects;
+
 public class registrationp2 extends AppCompatActivity {
     CardView c1,c2,c3,c4,c5,c6;
     ProgressDialog pd;
     Toolbar toolbar;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference ref1,ref2,ref3,ref4,ref5,ref6;
+    private DatabaseReference ref1,ref2,ref3,ref4,ref5,ref6,reef;
     String semcon1,semcon2,semcon3,semcon4,semcon5,semcon6;
-    String course = "UG";
+    String course,year;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,6 @@ public class registrationp2 extends AppCompatActivity {
         pd = new ProgressDialog(this);
 
 
-
         pd.setMessage("Wait");
         pd.show();
         ref1 = firebaseDatabase.getReference("Admin Switch").child("UG Switch");
@@ -59,6 +61,101 @@ public class registrationp2 extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 semcon1 = dataSnapshot.child("Condition").getValue().toString();
+                ref2 = firebaseDatabase.getReference("Admin Switch").child("PG Switch");
+                ref2.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        semcon2 = dataSnapshot.child("Condition").getValue().toString();
+                        ref3 = firebaseDatabase.getReference("Admin Switch").child("PhD Switch");
+                        ref3.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                semcon3 = dataSnapshot.child("Condition").getValue().toString();
+                                ref4 = firebaseDatabase.getReference("Admin Switch").child("OpenElective Switch");
+                                ref4.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        semcon4 = dataSnapshot.child("Condition").getValue().toString();
+                                        ref5 = firebaseDatabase.getReference("Admin Switch").child("Document Switch");
+                                        ref5.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                semcon5 = dataSnapshot.child("Condition").getValue().toString();
+                                                ref6 = firebaseDatabase.getReference("Admin Switch").child("LateRegistration Switch");
+                                                ref6.addValueEventListener(new ValueEventListener() {
+                                                    @Override
+                                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                        semcon6 = dataSnapshot.child("Condition").getValue().toString();
+                                                        reef = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                                                        reef.addValueEventListener(new ValueEventListener() {
+                                                            @Override
+                                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                                course = dataSnapshot.child("Programme").getValue().toString();
+                                                                year = dataSnapshot.child("Year").getValue().toString();
+
+                                                                if(course.equals("B.Tech") || course.equals("B.Arch") || course.equals("Dual Degree")){
+                                                                    if (year.equals("3rd year")){
+                                                                        c2.setVisibility(View.GONE);
+                                                                        c3.setVisibility(View.GONE);
+                                                                    }else {
+                                                                        c2.setVisibility(View.GONE);
+                                                                        c3.setVisibility(View.GONE);
+                                                                        c4.setVisibility(View.GONE);
+                                                                    }
+                                                                }
+                                                                else if(course.equals("M.tech") || course.equals("M.Arch") || course.equals("MBA") || course.equals("MSc")){
+                                                                    c1.setVisibility(View.GONE);
+                                                                    c3.setVisibility(View.GONE);
+                                                                    c4.setVisibility(View.GONE);
+                                                                }
+                                                                else if(course.equals("PhD")){
+                                                                    c2.setVisibility(View.GONE);
+                                                                    c1.setVisibility(View.GONE);
+                                                                    c4.setVisibility(View.GONE);
+                                                                }
+                                                                pd.dismiss();
+                                                            }
+
+                                                            @Override
+                                                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                                            }
+                                                        });
+                                                    }
+
+                                                    @Override
+                                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                                    }
+                                                });
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                            }
+                                        });
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
 
             @Override
@@ -67,91 +164,6 @@ public class registrationp2 extends AppCompatActivity {
             }
         });
 
-        ref2 = firebaseDatabase.getReference("Admin Switch").child("PG Switch");
-        ref2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                semcon2 = dataSnapshot.child("Condition").getValue().toString();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        ref3 = firebaseDatabase.getReference("Admin Switch").child("PhD Switch");
-        ref3.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                semcon3 = dataSnapshot.child("Condition").getValue().toString();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        ref4 = firebaseDatabase.getReference("Admin Switch").child("OpenElective Switch");
-        ref4.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                semcon4 = dataSnapshot.child("Condition").getValue().toString();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        ref5 = firebaseDatabase.getReference("Admin Switch").child("Document Switch");
-        ref5.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                semcon5 = dataSnapshot.child("Condition").getValue().toString();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        ref6 = firebaseDatabase.getReference("Admin Switch").child("LateRegistration Switch");
-        ref6.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                semcon6 = dataSnapshot.child("Condition").getValue().toString();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        pd.dismiss();
-
-        if(course == "UG"){
-            c2.setVisibility(View.GONE);
-            c3.setVisibility(View.GONE);
-            c4.setVisibility(View.GONE);
-        }
-        if(course == "PG"){
-            c1.setVisibility(View.GONE);
-            c3.setVisibility(View.GONE);
-            c4.setVisibility(View.GONE);
-        }
-        if(course == "Phd"){
-            c2.setVisibility(View.GONE);
-            c1.setVisibility(View.GONE);
-            c4.setVisibility(View.GONE);
-        }
-        if(course == "Open"){
-            c2.setVisibility(View.GONE);
-            c3.setVisibility(View.GONE);
-            c1.setVisibility(View.GONE);
-        }
 
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
