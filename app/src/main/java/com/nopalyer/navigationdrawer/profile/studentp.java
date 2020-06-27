@@ -42,6 +42,7 @@ import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,6 +62,7 @@ public class studentp extends AppCompatActivity {
     SharedPreferences sharedprefs,sharedPreferences2;
     SharedPreferences.Editor editor,editor2;
     String save = "";
+    Long size;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -207,31 +209,37 @@ public class studentp extends AppCompatActivity {
 
             if(resultCode == RESULT_OK){
                 Uri resultUri = result.getUri();
-                pd1.setMessage("Uploading Image ! Please Smile");
-                pd1.setCancelable(false);
-                pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                pd1.show();
-                StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("image").child("Profile");
-                imageReference.putFile(resultUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                File f = new File(resultUri.getPath());
+                size = f.length();
+                if (size/1024 < 200 ){
+                    pd1.setMessage("Uploading Image ! Please Smile");
+                    pd1.setCancelable(false);
+                    pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    pd1.show();
+                    StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("image").child("Profile");
+                    imageReference.putFile(resultUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
 
-                        if(task.isSuccessful()){
-                            Toast.makeText(studentp.this, "Upload Image Successfully",Toast.LENGTH_SHORT).show();
-                            storageReference = firebaseStorage.getReference();
-                            storageReference.child(firebaseAuth.getUid()).child("image").child("Profile").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    Picasso.get().load(uri).fit().centerCrop().into(profile);
-                                }
-                            });
-                            pd1.dismiss();
-                        }else {
-                            Toast.makeText(studentp.this, "Image not Uploaded",Toast.LENGTH_SHORT).show();
-                            pd1.dismiss();
+                            if(task.isSuccessful()){
+                                Toast.makeText(studentp.this, "Upload Image Successfully",Toast.LENGTH_SHORT).show();
+                                storageReference = firebaseStorage.getReference();
+                                storageReference.child(firebaseAuth.getUid()).child("image").child("Profile").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                    @Override
+                                    public void onSuccess(Uri uri) {
+                                        Picasso.get().load(uri).fit().centerCrop().into(profile);
+                                    }
+                                });
+                                pd1.dismiss();
+                            }else {
+                                Toast.makeText(studentp.this, "Image not Uploaded",Toast.LENGTH_SHORT).show();
+                                pd1.dismiss();
+                            }
                         }
-                    }
-                });
+                    });
+                }else {
+                    Toast.makeText(studentp.this, "Upload with Smaller Size",Toast.LENGTH_SHORT).show();
+                }
 
             }
 
