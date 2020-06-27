@@ -334,7 +334,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="5dp"
-                    android:text="Corresponding Address :"
+                    android:text="Permanent Address :"
                     android:textColor="#eeeeee"
                     android:textSize="18sp" />
 
@@ -421,6 +421,8 @@
             android:id="@+id/row6">
             <TextView
                 android:background="#C0C0C0"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:textColor="#000"
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
@@ -434,30 +436,37 @@
                 android:background="#C0C0C0"
                 android:textColor="#000"
                 android:layout_width="98dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:textStyle="bold"
                 android:textSize="13sp"
                 android:text="Course Name "
                 android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#C0C0C0"
+                android:gravity="left"
+                android:padding="3dp"
+                android:text="L /T/ (P/D)"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:textStyle="bold" />
             <TextView
                 android:background="#C0C0C0"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:textColor="#000"
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:textStyle="bold"
                 android:textSize="13sp"
-                android:text="L /T/ (P/D)"
-                android:gravity="left" />
-            <TextView
-                android:background="#C0C0C0"
-                android:textColor="#000"
-                android:layout_width="98dp"
-                android:layout_height="wrap_content"
-                android:padding="3dp"
-                android:textStyle="bold"
-                android:textSize="12sp"
                 android:text="Credits"
                 android:gravity="left" />
 
@@ -469,7 +478,10 @@
             android:id="@+id/row7v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:id="@+id/code1v"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:maxLength="10"
@@ -478,6 +490,9 @@
                 android:textStyle="normal" />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:id="@+id/course1v"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -485,6 +500,9 @@
                 android:maxLength="35"
                 android:textStyle="normal" />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:id="@+id/lab1v"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -492,6 +510,9 @@
                 android:maxLength="10"
                 android:textStyle="normal" />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:id="@+id/credit1v"
                 android:layout_width="wrap_content"
                 android:inputType="number"
@@ -508,6 +529,9 @@
             android:id="@+id/row8v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:id="@+id/code2v"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -516,6 +540,9 @@
                 android:textStyle="normal" />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -524,6 +551,9 @@
                 android:id="@+id/course2v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:maxLength="10"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -532,6 +562,9 @@
                 android:id="@+id/lab2v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:maxLength="2"
@@ -549,6 +582,9 @@
             android:id="@+id/row9v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:id="@+id/code3v"
                 android:layout_width="wrap_content"
                 android:maxLength="10"
@@ -557,6 +593,9 @@
                 android:textStyle="normal" />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -565,6 +604,9 @@
                 android:id="@+id/course3v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:maxLength="10"
@@ -573,6 +615,9 @@
                 android:id="@+id/lab3v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -591,6 +636,9 @@
             android:id="@+id/row10v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:id="@+id/code4v"
                 android:layout_width="wrap_content"
                 android:maxLength="10"
@@ -599,6 +647,9 @@
                 android:textStyle="normal" />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -607,6 +658,9 @@
                 android:id="@+id/course4v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -615,6 +669,9 @@
                 android:id="@+id/lab4v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -633,6 +690,9 @@
             android:id="@+id/row11v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:maxLength="10"
                 android:textColor="#000"
@@ -642,6 +702,9 @@
                 />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -650,6 +713,9 @@
                 android:id="@+id/course5v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -658,6 +724,9 @@
                 android:id="@+id/lab5v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -675,6 +744,9 @@
             android:id="@+id/row13v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:maxLength="10"
                 android:textColor="#000"
@@ -684,6 +756,9 @@
                 />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -693,6 +768,9 @@
 
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:maxLength="10"
@@ -701,6 +779,9 @@
                 android:id="@+id/lab6v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -719,6 +800,9 @@
             android:id="@+id/row14v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:maxLength="10"
@@ -728,6 +812,9 @@
                 />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:maxLength="35"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -736,6 +823,9 @@
                 android:id="@+id/course7v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:maxLength="10"
@@ -744,6 +834,9 @@
                 android:id="@+id/lab7v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -762,6 +855,9 @@
             android:id="@+id/row15v">
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -771,6 +867,9 @@
                 />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:maxLength="35"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -779,6 +878,9 @@
                 android:id="@+id/course8v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:maxLength="10"
@@ -787,6 +889,9 @@
                 android:id="@+id/lab8v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -806,6 +911,9 @@
 
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -815,6 +923,9 @@
                 />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -823,6 +934,9 @@
                 android:id="@+id/course9v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:maxLength="10"
@@ -831,6 +945,9 @@
                 android:id="@+id/lab9v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -847,6 +964,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/row17v">
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:maxLength="10"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -856,6 +976,9 @@
                 />
 
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
@@ -864,6 +987,9 @@
                 android:id="@+id/course10v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:maxLength="10"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
@@ -872,6 +998,9 @@
                 android:id="@+id/lab10v"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:inputType="number"
                 android:textColor="#000"
@@ -888,28 +1017,38 @@
             android:layout_height="wrap_content"
             android:id="@+id/row18v">
             <TextView
-
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:layout_width="98dp"
                 android:layout_span="2"
+                android:background="#C0C0C0"
                 android:text="TOTAL"
-                android:textColor="@color/white"
+                android:textColor="#000000"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:gravity="center_horizontal" />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
+                android:padding="3dp"
                 android:maxLength="10"
                 android:textStyle="normal"
                 android:id="@+id/labsumv"
                 />
             <TextView
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:textColor="#000"
                 android:textSize="12sp"
+                android:padding="3dp"
                 android:maxLength="4"
                 android:textStyle="normal"
                 android:id="@+id/creditsumv"
@@ -944,43 +1083,51 @@
                     android:background="#C0C0C0"
                     android:textColor="#000"
                     android:layout_width="98dp"
-                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_height="match_parent"
                     android:padding="3dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:text=" Semester"
-                    android:gravity="center_horizontal"/>
+                    android:gravity="center"/>
 
                 <TextView
                     android:background="#C0C0C0"
                     android:textColor="#000"
                     android:layout_width="98dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:padding="3dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:text="SGPI "
-                    android:gravity="center_horizontal"/>
+                    android:gravity="center"/>
                 <TextView
                     android:background="#C0C0C0"
                     android:textColor="#000"
                     android:layout_width="98dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:text="CGPI"
-                    android:gravity="left" />
+                    android:gravity="center" />
                 <TextView
                     android:background="#C0C0C0"
                     android:textColor="#000"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:layout_width="98dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:padding="3dp"
                     android:textStyle="bold"
-                    android:textSize="12sp"
-                    android:text="Repeat (if any)"
-                    android:gravity="left" />
+                    android:textSize="13sp"
+                    android:text="Repeat (if any)  dfdgdsggfg "
+                    android:gravity="center" />
 
 
             </TableRow>
@@ -993,6 +1140,8 @@
                 <TextView
                     android:background="#C0C0C0"
                     android:textColor="#000"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:layout_width="98dp"
                     android:layout_height="wrap_content"
                     android:padding="3dp"
@@ -1005,24 +1154,35 @@
                 <TextView
                     android:id="@+id/sg1v"
                     android:layout_width="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:background="#C0C0C0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:maxLength="35"
+                    android:padding="3dp"
+                    android:textColor="#000"
+                    android:textSize="13sp"
                     android:textStyle="normal" />
                 <TextView
                     android:id="@+id/cg1v"
+                    android:background="#C0C0C0"
                     android:layout_width="wrap_content"
+                    android:padding="3dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:textSize="13sp"
                     android:maxLength="10"
                     android:textStyle="normal" />
                 <TextView
                     android:id="@+id/rep1v"
+                    android:background="#C0C0C0"
                     android:layout_width="wrap_content"
-                    android:inputType="number"
+                    android:layout_marginRight="1dp"
+                    android:padding="3dp"
+                    android:layout_marginBottom="1dp"
                     android:textColor="#000"
-                    android:maxLength="2"
-                    android:textSize="12sp"
+                    android:textSize="13sp"
                     android:textStyle="normal" />
 
             </TableRow>
@@ -1038,6 +1198,8 @@
                     android:layout_width="98dp"
                     android:layout_height="wrap_content"
                     android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:text="2nd sem"
@@ -1046,8 +1208,12 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:maxLength="35"
                     android:textStyle="normal"
                     android:id="@+id/sg2v"
@@ -1055,17 +1221,24 @@
                 <TextView
                     android:maxLength="10"
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:textSize="13sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textStyle="normal"
                     android:id="@+id/cg2v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
                     android:inputType="number"
-                    android:maxLength="2"
+                    android:padding="3dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:textStyle="normal"
                     android:id="@+id/rep2v"
                     />
@@ -1084,34 +1257,47 @@
                     android:layout_height="wrap_content"
                     android:padding="3dp"
                     android:textStyle="bold"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textSize="13sp"
                     android:text="3rd sem "
                     android:gravity="center_horizontal"/>
 
 
                 <TextView
+                    android:padding="3dp"
                     android:layout_width="wrap_content"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:background="#C0C0C0"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:maxLength="35"
                     android:textStyle="normal"
                     android:id="@+id/sg3v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
+                    android:padding="3dp"
                     android:textColor="#000"
+                    android:background="#C0C0C0"
                     android:maxLength="10"
-                    android:textSize="12sp"
+                    android:textSize="13sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textStyle="normal"
                     android:id="@+id/cg3v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:padding="3dp"
+                    android:background="#C0C0C0"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:textStyle="normal"
-                    android:maxLength="2"
                     android:id="@+id/rep3v"
 
                     />
@@ -1129,6 +1315,8 @@
                     android:layout_width="98dp"
                     android:layout_height="wrap_content"
                     android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:text="4th sem "
@@ -1137,27 +1325,38 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
+                    android:padding="3dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:maxLength="35"
                     android:textStyle="normal"
                     android:id="@+id/sg4v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:maxLength="10"
                     android:textStyle="normal"
                     android:id="@+id/cg4v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
                     android:inputType="number"
+                    android:padding="3dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
-                    android:maxLength="2"
                     android:id="@+id/rep4v"
 
                     />
@@ -1173,6 +1372,8 @@
                     android:background="#C0C0C0"
                     android:textColor="#000"
                     android:layout_width="98dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:layout_height="wrap_content"
                     android:padding="3dp"
                     android:textStyle="bold"
@@ -1183,8 +1384,12 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
+                    android:padding="3dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:maxLength="35"
                     android:textStyle="normal"
                     android:id="@+id/sg5v"
@@ -1192,7 +1397,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:background="#C0C0C0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:maxLength="10"
                     android:textStyle="normal"
                     android:id="@+id/cg5v"
@@ -1200,10 +1409,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:background="#C0C0C0"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
-                    android:maxLength="2"
                     android:id="@+id/rep5v"
 
                     />
@@ -1221,6 +1433,8 @@
                     android:layout_height="wrap_content"
                     android:padding="3dp"
                     android:textStyle="bold"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textSize="13sp"
                     android:text="6th sem "
                     android:gravity="center_horizontal"/>
@@ -1228,8 +1442,12 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:background="#C0C0C0"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
                     android:maxLength="35"
                     android:id="@+id/sg6v"
@@ -1238,18 +1456,25 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:textColor="#000"
+                    android:background="#C0C0C0"
+                    android:padding="3dp"
                     android:maxLength="10"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
                     android:id="@+id/cg6v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:padding="3dp"
+                    android:background="#C0C0C0"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
-                    android:maxLength="2"
                     android:id="@+id/rep6v"
 
                     />
@@ -1268,6 +1493,8 @@
                     android:layout_height="wrap_content"
                     android:padding="3dp"
                     android:textStyle="bold"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textSize="13sp"
                     android:text="7th sem "
                     android:gravity="center_horizontal"/>
@@ -1277,25 +1504,36 @@
                     android:maxLength="35"
                     android:layout_width="wrap_content"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:background="#C0C0C0"
+                    android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
                     android:id="@+id/sg7v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:textColor="#000"
+                    android:background="#C0C0C0"
                     android:maxLength="10"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
                     android:id="@+id/cg7v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:background="#C0C0C0"
+                    android:padding="3dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
-                    android:maxLength="2"
                     android:id="@+id/rep7v"
 
                     />
@@ -1314,6 +1552,8 @@
                     android:layout_height="wrap_content"
                     android:padding="3dp"
                     android:textStyle="bold"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textSize="13sp"
                     android:text="8th sem "
                     android:gravity="center_horizontal"/>
@@ -1321,27 +1561,38 @@
 
                 <TextView
                     android:maxLength="35"
+                    android:padding="3dp"
                     android:layout_width="wrap_content"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:background="#C0C0C0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
                     android:id="@+id/sg8v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:textColor="#000"
+                    android:padding="3dp"
+                    android:background="#C0C0C0"
                     android:maxLength="10"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
                     android:id="@+id/cg8v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:background="#C0C0C0"
+                    android:padding="3dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
-                    android:maxLength="2"
                     android:id="@+id/rep8v"
 
                     />
@@ -1361,6 +1612,8 @@
                     android:layout_height="wrap_content"
                     android:padding="3dp"
                     android:textStyle="bold"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
                     android:textSize="13sp"
                     android:text=" 9th sem"
                     android:gravity="center_horizontal"/>
@@ -1369,7 +1622,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#C0C0C0"
+                    android:textSize="13sp"
                     android:maxLength="35"
                     android:textStyle="normal"
                     android:id="@+id/sg9v"
@@ -1378,17 +1635,24 @@
                     android:layout_width="wrap_content"
                     android:textColor="#000"
                     android:maxLength="10"
-                    android:textSize="12sp"
+                    android:padding="3dp"
+                    android:background="#C0C0C0"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
                     android:id="@+id/cg9v"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:inputType="number"
+                    android:background="#C0C0C0"
+                    android:padding="3dp"
                     android:textColor="#000"
-                    android:textSize="12sp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="13sp"
                     android:textStyle="normal"
-                    android:maxLength="2"
                     android:id="@+id/rep9v"
 
                     />

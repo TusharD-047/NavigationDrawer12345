@@ -260,16 +260,16 @@
     </LinearLayout>
 
 <com.google.android.material.navigation.NavigationView
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:id="@+id/navigationView"
-app:menu="@menu/menu_item"
-app:headerLayout="@layout/header"
-android:background="@drawable/gradient"
-android:layout_gravity="start"
-app:itemTextColor="#EC9706"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navigationView"
+    app:menu="@menu/menu_item"
+    app:headerLayout="@layout/header"
+    android:background="#102030"
+    android:layout_gravity="start"
+    app:itemTextColor="#ffffff"
     app:itemIconPadding="15dp"
-app:itemIconTint="#357E81"/>
+    app:itemIconTint="#EC9706"/>
 
 
     </androidx.drawerlayout.widget.DrawerLayout>
