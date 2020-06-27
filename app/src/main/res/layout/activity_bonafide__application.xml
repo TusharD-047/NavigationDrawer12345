@@ -79,6 +79,7 @@
                         android:id="@+id/b1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="#000000"
                         android:inputType="textPersonName"
                         android:padding="10dp" />
                 </LinearLayout>
@@ -106,6 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
+                        android:backgroundTint="#000000"
                         android:padding="10dp"
                         android:textColorHint="#000000" />
                 </LinearLayout>
@@ -133,6 +135,7 @@
                         android:id="@+id/bS1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="#000000"
                         android:layout_weight="1"
                         android:spinnerMode="dropdown"/>
 
@@ -161,6 +164,7 @@
                         android:id="@+id/bS2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="#000000"
                         android:layout_weight="1"
                         android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                         android:spinnerMode="dropdown"/>
@@ -191,6 +195,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="#000000"
                         android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                         android:spinnerMode="dropdown"/>
 
@@ -217,6 +222,7 @@
 
                     <EditText
                         android:id="@+id/b3"
+                        android:backgroundTint="#000000"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="phone"
@@ -243,6 +249,7 @@
 
                     <EditText
                         android:id="@+id/b4"
+                        android:backgroundTint="#000000"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
@@ -272,7 +279,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="#000000"
                         android:dropDownWidth="wrap_content"
                         android:spinnerMode="dropdown">
 
@@ -300,6 +307,7 @@
                         android:id="@+id/b5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="#000000"
                         android:inputType="text"
                         android:padding="10dp" />
                 </LinearLayout>
@@ -326,6 +334,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
+                        android:backgroundTint="#000000"
                         android:padding="10dp" />
                 </LinearLayout>
                 <LinearLayout
