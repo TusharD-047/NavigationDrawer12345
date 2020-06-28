@@ -55,6 +55,7 @@ public class registrationp2 extends AppCompatActivity {
 
 
         pd.setMessage("Wait");
+        pd.setCancelable(false);
         pd.show();
         ref1 = firebaseDatabase.getReference("Admin Switch").child("UG Switch");
         ref1.addValueEventListener(new ValueEventListener() {
