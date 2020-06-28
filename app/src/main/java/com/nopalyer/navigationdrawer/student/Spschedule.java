@@ -65,7 +65,7 @@ public class Spschedule extends AppCompatActivity {
 
         final String[] year = {"Choose year","1st","2nd","3rd","4th"};
         final String[] group = {"Choose group","A","B","C","D","E","F","G","H","I","J"};
-        final String[] department = {"Choose branch","CSE","CSE DD","ECE","ECE DD","Mechanical","Civil","Electrical","Architecture","Material Science","Chemical"};
+        final String[] department = {"Choose branch","CSE","CSE-DD","ECE","ECE-DD","Mechanical","Civil","Electrical","Architecture","Material Science","Chemical"};
 
         sharedprefs = getSharedPreferences("yash",MODE_PRIVATE);
         editor=sharedprefs.edit();

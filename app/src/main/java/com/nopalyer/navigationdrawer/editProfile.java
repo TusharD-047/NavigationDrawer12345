@@ -88,7 +88,7 @@ public class editProfile extends AppCompatActivity {
         final String[] department2 = {"Choose Department", "Mathematics and Computing", "Physics", "Chemistry"};
         final String[] department3 = {"Choose Department", "D1", "D2", "D3"};
         final String[] department4 = {"Choose Department", "Architecture"};
-        final String[] department5 = {"Choose Department", "CSE DD", "ECE DD"};
+        final String[] department5 = {"Choose Department", "CSE-DD", "ECE-DD"};
         final String[] department6 = {"Choose Department", "Management Studies"};
         final String[] year1 = {"Choose Year","1st year","2nd year","3rd year","4th year"};
         final String[] year3 = {"Choose Year","1st year","2nd year"};

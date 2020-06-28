@@ -192,7 +192,7 @@ public class Btech_registration extends AppCompatActivity {
         final String[] programme = {"Choose Programme", "B.Tech", "B.Arch", "Dual Degree"};
         final String[] department1 = {"Choose Department", "CSE", "ECE", "Mechanical", "Civil", "Electrical", "Material Science", "Chemical"};
         final String[] department2 = {"Choose Department", "Architecture"};
-        final String[] department3 = {"Choose Department", "CSE DD", "ECE DD"};
+        final String[] department3 = {"Choose Department", "CSE-DD", "ECE-DD"};
         final String[] semester1 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem"};
         final String[] semester2 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem", "9th sem", "10th sem"};
         final String[] hostel = {"Choose Hostel", "Ambika Girls Hostel", "Kailash Boys Hostel", "Himadri Boys Hostel","Udaygiri Boys Hostel","Neelkanth Boys Hostel","Dhauladhar Boys Hostel","Vindhyachal Boys Hostel","Shivalik Boys Hostel","Parvati Girls Hostel","Mani-Mahesh Girls Hostel","Aravali Girls Hostel"};

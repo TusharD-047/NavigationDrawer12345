@@ -107,7 +107,7 @@ public class Bonafide_Application extends AppCompatActivity {
         final String[] department2 = {"Choose Department", "Mathematics and Computing", "Physics", "Chemistry"};
         final String[] department3 = {"Choose Department", "D1", "D2", "D3"};
         final String[] department4 = {"Choose Department", "Architecture"};
-        final String[] department5 = {"Choose Department", "CSE DD", "ECE DD"};
+        final String[] department5 = {"Choose Department", "CSE-DD", "ECE-DD"};
         final String[] department6 = {"Choose Department", "Management Studies"};
         final String[] semester1 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem"};
         final String[] semester2 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem", "9th sem", "10th sem"};

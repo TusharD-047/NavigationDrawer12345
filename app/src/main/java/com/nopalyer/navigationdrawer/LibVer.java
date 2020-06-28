@@ -95,7 +95,7 @@ public class LibVer extends AppCompatActivity {
         lib2 = (Spinner) findViewById(R.id.lib2);
 
         final String[] year = {"Choose year","1st year","2nd year","3rd year","4th year"};
-        final String[] department = {"Choose branch","CSE","CSE DD","ECE","ECE DD","Mechanical","Civil","Electrical","Architecture","Material Science","Chemical"};
+        final String[] department = {"Choose branch","CSE","CSE-DD","ECE","ECE-DD","Mechanical","Civil","Electrical","Architecture","Material Science","Chemical"};
 
         adapter_year = new ArrayAdapter<>(LibVer.this, R.layout.colourful_spinner_items, year);
         adapter_year.setDropDownViewResource(R.layout.colourful_spinner_dropdown);

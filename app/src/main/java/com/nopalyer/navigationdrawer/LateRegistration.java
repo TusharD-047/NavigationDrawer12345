@@ -185,7 +185,7 @@ public class LateRegistration extends AppCompatActivity {
         final String[] programme3 = {"Choose Programme", "PhD"};
         final String[] department1 = {"Choose Department", "CSE", "ECE", "Mechanical", "Civil", "Electrical", "Material Science", "Chemical"};
         final String[] department2 = {"Choose Department", "Architecture"};
-        final String[] department3 = {"Choose Department", "CSE DD", "ECE DD"};
+        final String[] department3 = {"Choose Department", "CSE-DD", "ECE-DD"};
         final String[] department4 = {"Choose Department", "Mathematics and Computing", "Physics", "Chemistry"};
         final String[] department5 = {"Choose Department", "Management Studies"};
         final String[] department6 = {"Choose Department", "D1", "D2", "D3"};
