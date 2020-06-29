@@ -321,7 +321,7 @@ public class Btech_registration extends AppCompatActivity {
                                 adapter_semester1 = new ArrayAdapter<String>(Btech_registration.this, R.layout.colourful_spinner_items2, semester2);
                                 adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_semester1);
-                                depp = department2[position];
+                                depp = department3[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

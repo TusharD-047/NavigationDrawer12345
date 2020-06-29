@@ -120,13 +120,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:text="(Size Must be Under 200KB)"
-                        android:textSize="18sp"
-                        android:textStyle="italic"
-                        android:gravity="center"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="(Size Must be Under 100KB)"
                         android:textColor="#ffffff"
-                        android:layout_weight="1">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -207,13 +207,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:text="(Size Must be Under 200KB)"
-                        android:textSize="18sp"
-                        android:textStyle="italic"
-                        android:gravity="center"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="(Size Must be Under 100KB)"
                         android:textColor="#ffffff"
-                        android:layout_weight="1">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -293,13 +293,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:text="(Size Must be Under 200KB)"
-                        android:textSize="18sp"
-                        android:textStyle="italic"
-                        android:gravity="center"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="(Size Must be Under 100KB)"
                         android:textColor="#ffffff"
-                        android:layout_weight="1">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -380,7 +380,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:text="(Size Must be Under 200KB)"
+                        android:text="(Size Must be Under 100KB)"
                         android:textSize="18sp"
                         android:textStyle="italic"
                         android:gravity="center"
@@ -465,7 +465,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:text="(Size Must be Under 200KB)"
+                        android:text="(Size Must be Under 100KB)"
                         android:textSize="18sp"
                         android:textStyle="italic"
                         android:gravity="center"
