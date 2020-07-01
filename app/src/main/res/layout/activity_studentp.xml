@@ -126,7 +126,6 @@
                         android:id="@+id/name123"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Anshika Arya"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -157,7 +156,6 @@
                         android:id="@+id/roll123"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="193060"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -188,7 +186,6 @@
                         android:id="@+id/program123"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="B.Tech"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -219,7 +216,6 @@
                         android:id="@+id/department123"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mechanical Enggineering Department"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -250,7 +246,6 @@
                         android:id="@+id/email123"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="anshikaarya41@gmail.com"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
@@ -281,7 +276,6 @@
                         android:id="@+id/contact123"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6299169076"
                         android:textColor="#ffffff"
                         android:textSize="18sp"
                         android:textStyle="normal" />
