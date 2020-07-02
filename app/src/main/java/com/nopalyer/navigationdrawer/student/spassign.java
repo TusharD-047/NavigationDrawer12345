@@ -39,10 +39,10 @@ public class spassign extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference,ref2;
+    private DatabaseReference databaseReference,ref2,ref3;
     private ListView ListForm;
     List<uploadPDF> uploadPDFS;
-    ProgressDialog pd2;
+    ProgressDialog pd2,pd;
     String year = "";
     String branch = "";
     String group= "";
@@ -61,17 +61,33 @@ public class spassign extends AppCompatActivity {
         toolbar.setTitleTextColor(Color.WHITE);
 
         Bundle bundle = getIntent().getExtras();
-        year = bundle.getString("year");
-        branch = bundle.getString("dep");
+        //year = bundle.getString("year");
+        //branch = bundle.getString("dep");
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         ListForm = (ListView)findViewById(R.id.Listassign);
         pd2 =new ProgressDialog(this);
+        pd =new ProgressDialog(this);
         uploadPDFS = new ArrayList<>();
-        ref2 = firebaseDatabase.getReference("Group").child(firebaseAuth.getUid());
 
-        viewAllFiles();
+        //pd.setMessage("jndkd");
+        //pd.show();
+        ref3 = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+        ref3.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                year = dataSnapshot.child("Year").getValue().toString();
+                branch = dataSnapshot.child("Department").getValue().toString();
+                ///pd.dismiss();
+                viewAllFiles();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         ListForm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -88,19 +104,19 @@ public class spassign extends AppCompatActivity {
     }
 
     private void viewAllFiles() {
-
         listDataHeader = new ArrayList<>();
         if(year.equals("1st year")){
             pd2.setMessage("Loading Deprt... ! Please Smile");
             pd2.setCancelable(false);
             pd2.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-            pd2.show();
+            //pd2.show();
 
+            ref2 = firebaseDatabase.getReference("Group").child(firebaseAuth.getUid());
             ref2.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     group = dataSnapshot.child("group").getValue().toString();
-                    pd2.dismiss();
+                    //pd2.dismiss();
                     databaseReference = firebaseDatabase.getReference("Assignment").child(year).child(group);
                     databaseReference.addChildEventListener(new ChildEventListener() {
                         @Override

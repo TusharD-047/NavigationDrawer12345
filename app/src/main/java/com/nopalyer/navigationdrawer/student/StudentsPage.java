@@ -139,7 +139,7 @@ public class StudentsPage extends AppCompatActivity {
                 //spyr = getSharedPreferences("shree",MODE_PRIVATE);
                 //final String updtyear = spyr.getString("yearupdate","");
 
-                ref =firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                /*ref =firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
                 ref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -156,7 +156,9 @@ public class StudentsPage extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
                         Toast.makeText(StudentsPage.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*/
+
+                startActivity(new Intent(StudentsPage.this,spassign.class));
             }
         });
     }
