@@ -30,6 +30,7 @@ import com.nopalyer.navigationdrawer.Openelective;
 import com.nopalyer.navigationdrawer.PgRegis;
 import com.nopalyer.navigationdrawer.PhdRegis;
 import com.nopalyer.navigationdrawer.R;
+import com.nopalyer.navigationdrawer.RegInstruction;
 
 import java.util.ArrayList;
 
@@ -161,7 +162,7 @@ public class SimpleRecyclerAdapter2 extends RecyclerView.Adapter<SimpleRecyclerA
                 switch (position){
                     case 0:
                         if (semcon1.equals("true")){
-                            Intent intent = new Intent(context, Btech_registration.class);
+                            Intent intent = new Intent(context, RegInstruction.class);
                             context.startActivity(intent);
                         }if (semcon1.equals("false")){
                             Intent intent = new Intent(context, AdminNoReg.class);
