@@ -104,12 +104,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   Department  "
+                android:text="   Programme   "
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
-                android:id="@+id/vibhag"
+                android:id="@+id/karyakrm"
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
@@ -122,13 +122,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   Department  "
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/vibhag"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:text=" "
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
                 android:layout_marginBottom="17dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="   Year  "
+                    android:text="   Year     "
                     android:textColor="#ffffff"
                     android:textSize="20sp"
                     android:textStyle="bold" />
