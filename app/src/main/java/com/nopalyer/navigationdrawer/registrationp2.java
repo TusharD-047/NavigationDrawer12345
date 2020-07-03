@@ -170,7 +170,7 @@ public class registrationp2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (semcon1.equals("true")) {
-                    Intent intent = new Intent(registrationp2.this, Btech_registration.class);
+                    Intent intent = new Intent(registrationp2.this, RegInstruction.class);
                     startActivity(intent);
                 }
                 if (semcon1.equals("false")) {

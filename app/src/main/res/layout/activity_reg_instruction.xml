@@ -171,7 +171,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:text="(Read the instructions/ Pre-requisite  carefully before filling
-the application form)"
+the Registration Form)"
                     android:textColor="@color/white"
                     android:textSize="19dp" />
             </LinearLayout>
@@ -187,7 +187,7 @@ the application form)"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:text="(A) Instructions for filling the APPLICATION FORM :\n1. Please fill all the Personal and Educational details carefully.\n
+                android:text="(A) Instructions for filling the REGISTRATION FORM :\n1. Please fill all the Personal and Educational details carefully.\n
 2. After filling all the information click on 'Next' button at the last of the page.\n
 3. A Preview Form will be generated ,you can edit the form (if there is any mistake).Otherwise click on 'Upload' button.\n
 4. After uploading your form ,click on 'Next' to upload the required documents like fee receipt, photograph,etc.\n
@@ -214,7 +214,7 @@ the application form)"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:text="(C) Then click on 'Done' ,you will see 'YOUR FORM HAS BEEN SUBMITTED SUCCESSFULY' on your screen.\n
+                android:text="(C) Then click on 'Done' ,you will receive a message 'YOUR FORM HAS BEEN SUBMITTED SUCCESSFULY' on your screen.\n\n
 Wohoo! ... Your Registration is under process."
                 android:textColor="@color/white"
                 android:textSize="19dp"
@@ -233,9 +233,9 @@ Wohoo! ... Your Registration is under process."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="I acknowledge that I have read and understood the above procedures in its entirety and agree to abide by them."
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"></CheckBox>
+                    android:textColor="#FF00000"
+                    android:textSize="19sp"
+                    android:textStyle="normal"></CheckBox>
 
             </LinearLayout>
             <Button
