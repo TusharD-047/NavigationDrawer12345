@@ -77,13 +77,13 @@
 
     <ImageView
         android:id="@+id/image123"
-        android:layout_width="267dp"
-        android:layout_height="245dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         android:layout_marginRight="10dp"
-        android:src="@drawable/pro1" />
+        android:src="@drawable/login1" />
 
 
 </RelativeLayout>

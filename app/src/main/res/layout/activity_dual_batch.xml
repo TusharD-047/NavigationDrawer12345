@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#102030"
     tools:context=".dual_batch">
+    <ImageView
+        android:id="@+id/image1234"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/login1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/crroll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="6"
+        android:ems="10"
+        android:layout_below="@+id/image123"
+        android:hint="Enter Roll"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:backgroundTint="@android:color/white"
+        android:drawableStart="@drawable/ic_email_black_24dp"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawablePadding="10dp"
+        android:inputType="numberSigned"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/roll1"
+        android:layout_below="@+id/crroll1">
+        <EditText
+            android:id="@+id/crpass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:ems="10"
+            android:backgroundTint="@android:color/white"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="10dp"
+            android:maxLength="6"
+            android:inputType="textPassword"
+            />
+
+        <TextView
+            android:id="@+id/newpass11"
+            android:layout_width="26dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="21dp"
+            android:alpha=".5"
+            android:background="@drawable/ic_images1" />
+
+        <Button
+            android:id="@+id/crbuttn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/crpass1"
+            android:background="@drawable/roundbutton"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
