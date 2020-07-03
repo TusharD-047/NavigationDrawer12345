@@ -218,6 +218,7 @@ the Registration Form)"
                 android:textColor="@color/white"
                 android:textSize="19dp"
                 android:textStyle="normal" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -232,6 +233,7 @@ the Registration Form)"
                 android:textColor="@color/white"
                 android:textSize="19dp"
                 android:textStyle="normal" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -256,7 +258,7 @@ Wohoo! ... Your Registration is under process."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="I acknowledge that I have read and understood the above procedures in its entirety and agree to abide by them."
-                    android:textColor="#ff0000"
+                    android:textColor="#F6D89B"
                     android:textSize="19sp"
                     android:textStyle="normal"></CheckBox>
 
