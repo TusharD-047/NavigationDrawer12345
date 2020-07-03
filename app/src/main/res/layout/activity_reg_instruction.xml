@@ -256,7 +256,7 @@ Wohoo! ... Your Registration is under process."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="I acknowledge that I have read and understood the above procedures in its entirety and agree to abide by them."
-                    android:textColor="#FF00000"
+                    android:textColor="#ff0000"
                     android:textSize="19sp"
                     android:textStyle="normal"></CheckBox>
 

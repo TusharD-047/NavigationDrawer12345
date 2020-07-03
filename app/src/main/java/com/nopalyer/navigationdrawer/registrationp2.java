@@ -171,6 +171,7 @@ public class registrationp2 extends AppCompatActivity {
             public void onClick(View v) {
                 if (semcon1.equals("true")) {
                     Intent intent = new Intent(registrationp2.this, RegInstruction.class);
+                    intent.putExtra("prog","Ug");
                     startActivity(intent);
                 }
                 if (semcon1.equals("false")) {
@@ -183,7 +184,8 @@ public class registrationp2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (semcon2.equals("true")) {
-                    Intent intent = new Intent(registrationp2.this, PgRegis.class);
+                    Intent intent = new Intent(registrationp2.this, RegInstruction.class);
+                    intent.putExtra("prog","Pg");
                     startActivity(intent);
                 }
                 if (semcon2.equals("false")) {
@@ -196,7 +198,8 @@ public class registrationp2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (semcon3.equals("true")) {
-                    Intent intent = new Intent(registrationp2.this, PhdRegis.class);
+                    Intent intent = new Intent(registrationp2.this, RegInstruction.class);
+                    intent.putExtra("prog","Phd");
                     startActivity(intent);
                 }
                 if (semcon3.equals("false")) {
@@ -222,7 +225,8 @@ public class registrationp2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (semcon5.equals("true")) {
-                    Intent intent = new Intent(registrationp2.this, LateRegistration.class);
+                    Intent intent = new Intent(registrationp2.this, RegInstruction.class);
+                    intent.putExtra("prog","late");
                     startActivity(intent);
                 }
                 if (semcon5.equals("false")) {
