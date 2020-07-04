@@ -28,7 +28,7 @@ import com.theartofdev.edmodo.cropper.CropImage;
 
 public class Upload2Doument extends AppCompatActivity {
 
-    Button upProfile,upId,upfees,upAdd,upfesslate,upregislate;
+    Button upProfile,upId,upfees,upAdd,upfesslate,upregislate,regfinish;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseStorage firebaseStorage;
@@ -56,6 +56,7 @@ public class Upload2Doument extends AppCompatActivity {
         upAdd = findViewById(R.id.upAddlate);
         upfesslate = findViewById(R.id.upadfeeslate);
         upregislate = findViewById(R.id.upadregisfeeslate);
+        regfinish = findViewById(R.id.regfinish);
         pd =new ProgressDialog(this);
 
         pd1 =new ProgressDialog(this);
@@ -137,6 +138,12 @@ public class Upload2Doument extends AppCompatActivity {
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE6);
+            }
+        });
+        regfinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Upload2Doument.this,RegistrationFinished.class));
             }
         });
     }

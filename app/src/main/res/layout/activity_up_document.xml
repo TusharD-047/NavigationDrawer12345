@@ -456,7 +456,7 @@
                     android:layout_weight="1"
                     android:background="@color/Table_bg"
                     android:gravity="center"
-                    android:text="Income / Category Certificate"
+                    android:text="Income / Category Certificate(If any)"
                     android:textColor="#ffffff"
                     android:textSize="20sp">
 
@@ -541,7 +541,7 @@
                         android:layout_weight="1"
                         android:background="@color/Table_bg"
                         android:gravity="center"
-                        android:text=" Late Fees Receipt"
+                        android:text=" Receipt of Fine\n(Due to late submission of fess, If any) "
                         android:textColor="#ffffff"
                         android:textSize="20sp">
 
