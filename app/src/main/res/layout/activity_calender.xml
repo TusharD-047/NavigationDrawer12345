@@ -21,7 +21,7 @@
         android:layout_height="67dp"
         android:layout_marginBottom="25px"
         android:text="Odd Semester Calender 2019-20"
-        android:background="#c0c0c0"
+        android:background="@drawable/roundbutton"
         android:layout_gravity="center_horizontal"
         android:textSize="19dp"
         android:textStyle="bold" />
@@ -32,7 +32,7 @@
         android:layout_height="67dp"
         android:text="Even Semester Calender 2019-20"
         android:layout_gravity="center_horizontal"
-        android:background="#c0c0c0"
+        android:background="@drawable/roundbutton"
         android:textSize="19dp"
         android:layout_marginTop="10dp"
         android:textStyle="bold"/>

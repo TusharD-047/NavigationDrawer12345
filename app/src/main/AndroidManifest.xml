@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegInstruction"></activity>
+        <activity android:name=".dual_batch"></activity>
+        <activity android:name=".signup_option" />
+        <activity android:name=".RegInstruction" />
         <activity android:name=".RegistrationFinished" />
         <activity android:name=".BonafideView" />
         <activity android:name=".PhdRegis" />

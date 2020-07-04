@@ -4,13 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login.SignUp"
-    android:background="#102030">
-
-
+    android:background="#102030"
+    tools:context=".dual_batch">
+    <ImageView
+        android:id="@+id/image1234"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/login1" />
 
     <EditText
-        android:id="@+id/crroll"
+        android:id="@+id/crroll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="6"
@@ -32,10 +39,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rl1"
-        android:layout_below="@+id/crroll">
+        android:id="@+id/roll1"
+        android:layout_below="@+id/crroll1">
         <EditText
-            android:id="@+id/crpass"
+            android:id="@+id/crpass1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Password"
@@ -54,7 +61,7 @@
             />
 
         <TextView
-            android:id="@+id/newpass1"
+            android:id="@+id/newpass11"
             android:layout_width="26dp"
             android:layout_height="16dp"
             android:layout_alignParentRight="true"
@@ -64,26 +71,16 @@
             android:background="@drawable/ic_images1" />
 
         <Button
-            android:id="@+id/crbuttn"
+            android:id="@+id/crbuttn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/crpass"
+            android:layout_below="@id/crpass1"
             android:background="@drawable/roundbutton"/>
     </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/image123"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginRight="10dp"
-        android:src="@drawable/login1" />
 
 
 </RelativeLayout>
