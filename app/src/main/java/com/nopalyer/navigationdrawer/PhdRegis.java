@@ -172,8 +172,8 @@ public class PhdRegis extends AppCompatActivity {
 
         };
 
-        adapter_programme = new ArrayAdapter<>(PhdRegis.this, R.layout.colourful_spinner_items, programme);
-        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_programme = new ArrayAdapter<>(PhdRegis.this, R.layout.colourful_spinner_items2, programme);
+        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         prog.setAdapter(adapter_programme);
         prog.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -183,8 +183,8 @@ public class PhdRegis extends AppCompatActivity {
                 }
                 if (position == 1){
                     progm = programme[position];
-                    adapter_dep = new ArrayAdapter<>(PhdRegis.this, R.layout.colourful_spinner_items, department);
-                    adapter_dep.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_dep = new ArrayAdapter<>(PhdRegis.this, R.layout.colourful_spinner_items2, department);
+                    adapter_dep.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_dep);
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -194,8 +194,8 @@ public class PhdRegis extends AppCompatActivity {
                             }
                             if (position == 1 || position == 2 || position == 3 ){
                                 depp = department[position];
-                                adapter_sem = new ArrayAdapter<String>(PhdRegis.this, R.layout.colourful_spinner_items, semester);
-                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem = new ArrayAdapter<String>(PhdRegis.this, R.layout.colourful_spinner_items2, semester);
+                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_sem);
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
@@ -230,8 +230,8 @@ public class PhdRegis extends AppCompatActivity {
 
             }
         });
-        adapter_host = new ArrayAdapter<String>(PhdRegis.this, R.layout.colourful_spinner_items, hostel);
-        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_host = new ArrayAdapter<String>(PhdRegis.this, R.layout.colourful_spinner_items2, hostel);
+        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         hostt.setAdapter(adapter_host);
         hostt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

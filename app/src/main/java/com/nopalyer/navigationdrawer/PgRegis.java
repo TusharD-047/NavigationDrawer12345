@@ -194,8 +194,8 @@ public class PgRegis extends AppCompatActivity {
 
         };
 
-        adapter_programme = new ArrayAdapter<>(PgRegis.this, R.layout.colourful_spinner_items, programme);
-        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_programme = new ArrayAdapter<>(PgRegis.this, R.layout.colourful_spinner_items2, programme);
+        adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         prog.setAdapter(adapter_programme);
         prog.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -205,8 +205,8 @@ public class PgRegis extends AppCompatActivity {
                 }
                 if (position == 1 ){
                     progm = programme[position];
-                    adapter_dep1 = new ArrayAdapter<>(PgRegis.this, R.layout.colourful_spinner_items, department1);
-                    adapter_dep1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_dep1 = new ArrayAdapter<>(PgRegis.this, R.layout.colourful_spinner_items2, department1);
+                    adapter_dep1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_dep1);
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -216,8 +216,8 @@ public class PgRegis extends AppCompatActivity {
                             }
                             if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                 //   show.setEnabled(true);
-                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, semester);
-                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, semester);
+                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_sem);
                                 depp = department1[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -246,8 +246,8 @@ public class PgRegis extends AppCompatActivity {
                     });
                 }
                 if (position == 2) {
-                    adapter_dep3 = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, department3);
-                    adapter_dep3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_dep3 = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, department3);
+                    adapter_dep3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_dep3);
                     progm = programme[position];
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -257,8 +257,8 @@ public class PgRegis extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 ) {
-                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, semester);
-                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, semester);
+                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_sem);
                                 depp = department3[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -288,8 +288,8 @@ public class PgRegis extends AppCompatActivity {
                     });
                 }
                 if (position == 3) {
-                    adapter_dep4 = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, department4);
-                    adapter_dep4.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_dep4 = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, department4);
+                    adapter_dep4.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_dep4);
                     progm = programme[position];
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -299,8 +299,8 @@ public class PgRegis extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 ) {
-                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, semester);
-                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, semester);
+                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_sem);
                                 depp = department4[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -330,8 +330,8 @@ public class PgRegis extends AppCompatActivity {
                     });
                 }
                 if (position == 4) {
-                    adapter_dep2 = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, department2);
-                    adapter_dep2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_dep2 = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, department2);
+                    adapter_dep2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     dep.setAdapter(adapter_dep2);
                     progm = programme[position];
                     dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -341,8 +341,8 @@ public class PgRegis extends AppCompatActivity {
                                 //  show.setEnabled(false);
                             }
                             if (position == 1 || position == 2|| position == 3 ) {
-                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, semester);
-                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_sem = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, semester);
+                                adapter_sem.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 sem.setAdapter(adapter_sem);
                                 depp = department2[position];
                                 sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -378,8 +378,8 @@ public class PgRegis extends AppCompatActivity {
 
             }
         });
-        adapter_host = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items, hostel);
-        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_host = new ArrayAdapter<String>(PgRegis.this, R.layout.colourful_spinner_items2, hostel);
+        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         hostt.setAdapter(adapter_host);
         hostt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

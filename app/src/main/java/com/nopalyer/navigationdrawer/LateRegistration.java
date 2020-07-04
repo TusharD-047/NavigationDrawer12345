@@ -208,8 +208,8 @@ public class LateRegistration extends AppCompatActivity {
             }
 
         };
-        adapter_cor = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, course);
-        adapter_cor.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_cor = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items2, course);
+        adapter_cor.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         cour.setAdapter(adapter_cor);
         cour.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -219,8 +219,8 @@ public class LateRegistration extends AppCompatActivity {
                 }
                 if (position == 1){
                     cor = course[position];
-                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme1);
-                    adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items2, programme1);
+                    adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     prog.setAdapter(adapter_programme);
                     prog.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -230,8 +230,8 @@ public class LateRegistration extends AppCompatActivity {
                             }
                             if (position == 1){
                                 progm = programme1[position];
-                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, department1);
-                                adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items2, department1);
+                                adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp1);
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
@@ -241,8 +241,8 @@ public class LateRegistration extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                             //   show.setEnabled(true);
-                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester1);
-                                            adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester1);
+                                            adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester);
                                             depp = department1[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -271,8 +271,8 @@ public class LateRegistration extends AppCompatActivity {
                                 });
                             }
                             if (position == 2) {
-                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department2);
-                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, department2);
+                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp2);
                                 progm= programme1[position];
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -282,8 +282,8 @@ public class LateRegistration extends AppCompatActivity {
                                             //  show.setEnabled(false);
                                         }
                                         if (position == 1 ) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester2);
-                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester2);
+                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester1);
                                             depp= department2[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -314,8 +314,8 @@ public class LateRegistration extends AppCompatActivity {
                             }
 
                             if (position == 3) {
-                                adapter_depp3 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department3);
-                                adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp3 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, department3);
+                                adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp3);
                                 progm = programme1[position];
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -325,8 +325,8 @@ public class LateRegistration extends AppCompatActivity {
                                             //  show.setEnabled(false);
                                         }
                                         if (position == 1 || position == 2 ) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester2);
-                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester2);
+                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester1);
                                             depp = department2[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -365,8 +365,8 @@ public class LateRegistration extends AppCompatActivity {
                 }
                 if (position == 2){
                     cor = course[position];
-                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme2);
-                    adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items2, programme2);
+                    adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     prog.setAdapter(adapter_programme);
                     prog.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -376,8 +376,8 @@ public class LateRegistration extends AppCompatActivity {
                             }
                             if (position == 1){
                                 progm = programme2[position];
-                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, department1);
-                                adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items2, department1);
+                                adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp1);
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
@@ -387,8 +387,8 @@ public class LateRegistration extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                             //   show.setEnabled(true);
-                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
-                                            adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester3);
+                                            adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester);
                                             depp = department1[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -417,8 +417,8 @@ public class LateRegistration extends AppCompatActivity {
                                 });
                             }//.....
                             if (position == 2) {
-                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department2);
-                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, department2);
+                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp2);
                                 progm= programme2[position];
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -428,8 +428,8 @@ public class LateRegistration extends AppCompatActivity {
                                             //  show.setEnabled(false);
                                         }
                                         if (position == 1 ) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
-                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester3);
+                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester1);
                                             depp= department2[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -459,8 +459,8 @@ public class LateRegistration extends AppCompatActivity {
                                 });
                             }
                             if (position == 3) {
-                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department5);
-                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp2 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, department5);
+                                adapter_depp2.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp2);
                                 progm= programme2[position];
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -470,8 +470,8 @@ public class LateRegistration extends AppCompatActivity {
                                             //  show.setEnabled(false);
                                         }
                                         if (position == 1 ) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
-                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester3);
+                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester1);
                                             depp= department5[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -501,8 +501,8 @@ public class LateRegistration extends AppCompatActivity {
                                 });
                             }
                             if (position == 4) {
-                                adapter_depp3 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, department4);
-                                adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp3 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, department4);
+                                adapter_depp3.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp3);
                                 progm = programme2[position];
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -512,8 +512,8 @@ public class LateRegistration extends AppCompatActivity {
                                             //  show.setEnabled(false);
                                         }
                                         if (position == 1 || position == 2 || position == 3) {
-                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
-                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester1 = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester3);
+                                            adapter_semester1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester1);
                                             depp = department4[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -552,8 +552,8 @@ public class LateRegistration extends AppCompatActivity {
                 }
                 if (position == 3){
                     cor = course[position];
-                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, programme3);
-                    adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                    adapter_programme = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items2, programme3);
+                    adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                     prog.setAdapter(adapter_programme);
                     prog.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
@@ -563,8 +563,8 @@ public class LateRegistration extends AppCompatActivity {
                             }
                             if (position == 1){
                                 progm = programme3[position];
-                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items, department6);
-                                adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                adapter_depp1 = new ArrayAdapter<>(LateRegistration.this, R.layout.colourful_spinner_items2, department6);
+                                adapter_depp1.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                 dep.setAdapter(adapter_depp1);
                                 dep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
@@ -574,8 +574,8 @@ public class LateRegistration extends AppCompatActivity {
                                         }
                                         if (position == 1 || position == 2 || position == 3 ) {
                                             //   show.setEnabled(true);
-                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, semester3);
-                                            adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            adapter_semester = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, semester3);
+                                            adapter_semester.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
                                             sem.setAdapter(adapter_semester);
                                             depp = department6[position];
                                             sem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -620,8 +620,8 @@ public class LateRegistration extends AppCompatActivity {
         });
 
 
-        adapter_host = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items, hostel);
-        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+        adapter_host = new ArrayAdapter<String>(LateRegistration.this, R.layout.colourful_spinner_items2, hostel);
+        adapter_host.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
         hostt.setAdapter(adapter_host);
         hostt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
