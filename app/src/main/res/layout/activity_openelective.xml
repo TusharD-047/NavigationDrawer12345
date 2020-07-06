@@ -1,111 +1,371 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Openelective">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@android:color/black"
-        android:scaleType="fitXY"
-        android:src="@drawable/newlogo" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OPEN ELECTIVE REGISTRATION"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:paddingTop="25px"
-        android:layout_marginLeft="97dp"
-        android:textColor="#000000"
-        android:gravity="center_horizontal" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:layout_marginTop="50px"
-        android:orientation="horizontal">
-
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/regis2" />
-
-        <Spinner
-            android:layout_width="275dp"
-            android:layout_height="51dp"
-            android:layout_margin="10dp"
-            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/black"
+            android:scaleType="fitXY"
+            android:src="@drawable/newlogo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPEN ELECTIVE REGISTRATION"
+            android:textAlignment="center"
             android:textStyle="bold"
-            android:backgroundTint="#0E0955"
-            android:id="@+id/spin_1"
-            ></Spinner>
+            android:paddingTop="25px"
+            android:layout_marginLeft="97dp"
+            android:textColor="#000000"
+            android:gravity="center_horizontal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_1"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_2"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/spin_3"
+                android:backgroundTint="#0E0955"
+
+                >
+
+            </Spinner>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_4"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_5"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_6"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_7"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_8"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_9"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_10"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_11"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_12"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/next3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#0E0955"
+            android:textColor="#ffffff"
+            android:layout_marginTop="40dp"
+            android:shadowRadius="50"
+            android:layout_marginBottom="10px"
+            android:text="SUBMIT" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/regis2" />
-
-        <Spinner
-            android:layout_width="275dp"
-            android:layout_height="51dp"
-            android:layout_margin="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:backgroundTint="#0E0955"
-            android:id="@+id/spin_2"
-            ></Spinner>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/regis2" />
-
-        <Spinner
-            android:layout_width="275dp"
-            android:layout_height="51dp"
-            android:layout_margin="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:id="@+id/spin_3"
-            android:backgroundTint="#0E0955"
-
-            ></Spinner>
-
-
-    </LinearLayout>
-    <Button
-        android:id="@+id/next3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="#0E0955"
-        android:textColor="#ffffff"
-        android:layout_marginTop="40dp"
-        android:shadowRadius="50"
-        android:layout_marginBottom="10px"
-        android:text="SUBMIT" />
-
-</LinearLayout>
+</ScrollView>
