@@ -293,6 +293,9 @@ public class ViewActivity extends AppCompatActivity {
 
                         mProgress.dismiss();
                         Toast.makeText(ViewActivity.this,"Upload Done",Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(ViewActivity.this,UpDocument.class);
+                        i.putExtra("type",type+"Application");
+                        startActivity(i);
                     }
 
                     @Override
@@ -307,15 +310,6 @@ public class ViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ViewActivity.this,Btech_registration.class));
-            }
-        });
-
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ViewActivity.this,UpDocument.class);
-                i.putExtra("type",type+"Application");
-                startActivity(i);
             }
         });
     }
@@ -411,7 +405,6 @@ public class ViewActivity extends AppCompatActivity {
         acyr = findViewById(R.id.regtvAcyr);
         upload = (Button)findViewById(R.id.regaddpdf);
         edit = (Button)findViewById(R.id.regedit);
-        next = (Button)findViewById(R.id.regupload2);
         firebaseAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
     }

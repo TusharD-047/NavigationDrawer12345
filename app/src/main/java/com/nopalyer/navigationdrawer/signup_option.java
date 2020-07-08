@@ -13,7 +13,7 @@ import com.nopalyer.navigationdrawer.student.calender.evencalender;
 import com.nopalyer.navigationdrawer.student.calender.oddcalender;
 
 public class signup_option extends AppCompatActivity {
-    Button btn_signup1,btn_signup2;
+    Button btn_signup1,btn_signup2,btn_signup3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class signup_option extends AppCompatActivity {
         setContentView(R.layout.activity_signup_option);
         btn_signup1=(Button)  findViewById(R.id.signup1);
         btn_signup2=(Button)  findViewById(R.id.signup2);
+        btn_signup3=(Button)  findViewById(R.id.signup3);
 
         btn_signup1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +34,15 @@ public class signup_option extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(signup_option.this, dual_batch.class);
+                i.putExtra("batch","16");
+                startActivity(i);
+            }
+        });
+        btn_signup3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(signup_option.this, dual_batch.class);
+                i.putExtra("batch","17");
                 startActivity(i);
             }
         });

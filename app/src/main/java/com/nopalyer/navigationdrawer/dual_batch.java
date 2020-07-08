@@ -24,8 +24,7 @@ public class dual_batch extends AppCompatActivity {
     private TextView showHide1;
     private FirebaseAuth firebaseAuth1;
     private int ShowPass1;
-
-
+    String batch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +33,7 @@ public class dual_batch extends AppCompatActivity {
         pass1 = findViewById(R.id.crpass1);
         showHide1=(TextView)findViewById(R.id.newpass11);
         go1 = findViewById(R.id.crbuttn1);
+        batch = getIntent().getStringExtra("batch");
 
         ShowPass1 = 1;
         showHide1.setOnClickListener(new View.OnClickListener() {
@@ -66,12 +66,28 @@ public class dual_batch extends AppCompatActivity {
             public void onClick(View v) {
                 if (Email1.getText().toString().isEmpty()){
                     Email1.setError("Required Field");
-                }else if (Email1.getText().toString().trim().length() < 5){
+                }else if (Email1.getText().toString().trim().length() < 3){
                     Email1.setError("Enter Valid Roll No");
                 }else if (pass1.getText().toString().trim().length() < 6){
                     pass1.setError("Password Length must be 6");
-                }else {
-                    final String mail = Email1.getText().toString().trim() + "@nith.ac.in";
+                }else if (batch.equals("16")){
+                    final String mail = "16mi" + Email1.getText().toString().trim() + "@nith.ac.in";
+                    firebaseAuth1.createUserWithEmailAndPassword(mail,pass1.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(dual_batch.this,"Succesfully Created ... Your Email is " + mail , Toast.LENGTH_LONG).show();
+                                firebaseAuth1.signOut();
+                                finish();
+                                startActivity(new Intent(dual_batch.this,com.nopalyer.navigationdrawer.login.class));
+                            }else{
+                                Toast.makeText(dual_batch.this,"Try Again",Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+                else if (batch.equals("17")){
+                    final String mail = "17mi" + Email1.getText().toString().trim() + "@nith.ac.in";
                     firebaseAuth1.createUserWithEmailAndPassword(mail,pass1.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
