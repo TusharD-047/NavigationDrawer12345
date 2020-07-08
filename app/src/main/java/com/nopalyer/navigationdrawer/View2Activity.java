@@ -262,6 +262,9 @@ public class View2Activity extends AppCompatActivity {
 
                         mProgress.dismiss();
                         Toast.makeText(View2Activity.this,"Upload Done",Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(View2Activity.this,Upload2Doument.class);
+                        i.putExtra("type",type);
+                        startActivity(i);
                     }
 
                     @Override
@@ -279,14 +282,7 @@ public class View2Activity extends AppCompatActivity {
             }
         });
 
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(View2Activity.this,Upload2Doument.class);
-                i.putExtra("type",type);
-                startActivity(i);
-            }
-        });
+
     }
 
     private void  UI(){
@@ -381,7 +377,6 @@ public class View2Activity extends AppCompatActivity {
         acyr = findViewById(R.id.regtvAcyrlate);
         upload = (Button)findViewById(R.id.regaddpdflate);
         edit = (Button)findViewById(R.id.regeditlate);
-        next = (Button)findViewById(R.id.regupload2late);
         firebaseAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
     }

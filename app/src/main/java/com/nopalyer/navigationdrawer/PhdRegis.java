@@ -56,7 +56,6 @@ public class PhdRegis extends AppCompatActivity {
     private EditText lab2;
     private EditText lab3;
     private EditText lab4;
-
     private EditText lab5;
     private EditText lab6;
     private EditText lab7;

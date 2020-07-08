@@ -70,6 +70,8 @@ public class UpDocument extends AppCompatActivity {
     private static int PICK_IMAGE4 = 126;
     private static int PICK_IMAGE5 = 127;
     private static int PICK_IMAGE6 = 128;
+    private static int PICK_IMAGE7 = 129;
+
     ProgressDialog pd,pd1;
     String photost ="",idst ="",feesst ="",hosst ="",incomest ="",lfeesst="";
     Uri photo,id,fees,hos,income,lfees;
