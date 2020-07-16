@@ -27,7 +27,7 @@ import com.nopalyer.navigationdrawer.student.calender.calender1;
 import com.nopalyer.navigationdrawer.tpassignHome;
 
 public class Tpmain extends AppCompatActivity implements View.OnClickListener {
-    private CardView sch, not,att, cal, pro,msg,ok, help, website, au,assign;
+    private CardView sch, cal, pro,ok, help, website, au,assign;
     Toolbar toolbar;
     private FirebaseAuth firebaseAuth;
 
@@ -37,11 +37,8 @@ public class Tpmain extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tp_main);
         sch = (CardView) findViewById(R.id.sch);
-        not = (CardView) findViewById(R.id.not);
-        att = (CardView) findViewById(R.id.att);
         cal = (CardView) findViewById(R.id.cal);
         pro = (CardView) findViewById(R.id.pro);
-        msg = (CardView) findViewById(R.id.msg);
         ok = (CardView) findViewById(R.id.ok);
         help = (CardView) findViewById(R.id.help);
         website = (CardView) findViewById(R.id.website);
@@ -55,11 +52,8 @@ public class Tpmain extends AppCompatActivity implements View.OnClickListener {
 
 
         sch.setOnClickListener(this);
-        not.setOnClickListener(this);
-        att.setOnClickListener(this);
         cal.setOnClickListener(this);
         pro.setOnClickListener(this);
-        msg.setOnClickListener(this);
         ok.setOnClickListener(this);
         help.setOnClickListener(this);
         website.setOnClickListener(this);
@@ -77,24 +71,12 @@ public class Tpmain extends AppCompatActivity implements View.OnClickListener {
                 i = new Intent(this, sch.class);
                 startActivity(i);
                 break;
-            case R.id.not:
-                i = new Intent(this, not.class);
-                startActivity(i);
-                break;
-            case R.id.att:
-                i = new Intent(this, att.class);
-                startActivity(i);
-                break;
             case R.id.cal:
                 i = new Intent(this, calender1.class);
                 startActivity(i);
                 break;
             case R.id.pro:
                 i = new Intent(this, pro.class);
-                startActivity(i);
-                break;
-            case R.id.msg:
-                i = new Intent(this, msg.class);
                 startActivity(i);
                 break;
             case R.id.ok:
