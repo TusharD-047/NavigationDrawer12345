@@ -298,60 +298,6 @@
             </Spinner>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:layout_marginTop="50px"
-            android:orientation="horizontal">
-
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
-
-            <Spinner
-                android:layout_width="275dp"
-                android:layout_height="51dp"
-                android:layout_margin="10dp"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:backgroundTint="#0E0955"
-                android:id="@+id/spin_11"
-                >
-
-            </Spinner>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:layout_marginTop="50px"
-            android:orientation="horizontal">
-
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
-
-            <Spinner
-                android:layout_width="275dp"
-                android:layout_height="51dp"
-                android:layout_margin="10dp"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:backgroundTint="#0E0955"
-                android:id="@+id/spin_12"
-                >
-
-            </Spinner>
-
-        </LinearLayout>
 
 
         <Button

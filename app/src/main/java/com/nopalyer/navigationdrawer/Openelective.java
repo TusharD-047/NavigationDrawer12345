@@ -28,9 +28,9 @@ import java.util.Arrays;
 
 public class Openelective extends Activity {
 
-    Spinner spin1,spin2,spin3,spin4,spin5,spin6,spin7,spin8,spin9,spin10,spin11,spin12;
+    Spinner spin1,spin2,spin3,spin4,spin5,spin6,spin7,spin8,spin9,spin10;
     Button nxt;
-    String first,sec,third,forth,five,six,seven,eight,nine,ten,eleven,twelve;
+    String first,sec,third,forth,five,six,seven,eight,nine,ten;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseUser firebaseUser;
@@ -51,8 +51,7 @@ public class Openelective extends Activity {
         spin8 = findViewById(R.id.spin_8);
         spin9 = findViewById(R.id.spin_9);
         spin10 = findViewById(R.id.spin_10);
-        spin11 = findViewById(R.id.spin_11);
-        spin12 = findViewById(R.id.spin_12);
+
         nxt = findViewById(R.id.next3);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -61,7 +60,7 @@ public class Openelective extends Activity {
 
         final String divisions[] =  {
                 "--1st Preference--",
-                "CSE","ECE","Mechanical","Electrical","Chemical","Civil","Material Science","Chemistry","Mathematics and Scientific Computing", "Physics and photonics science" ,"Management Studies ","Humanities and social science "
+                "CH-306","CH-370","CY-306","CE-306","CE-307","CE-308","CS-306","CS-370","EC-370", "EE-370" ,"EE-371 ","HS-306","HS-370","MB-306","MB-380","MS-370","MS-371","MA-370","MA-371","ME-370","ME-371","PH-370","PH-371"
 
         };
         /*final String Electrical[] ={
@@ -125,8 +124,7 @@ public class Openelective extends Activity {
                     spin8.setEnabled(false);
                     spin9.setEnabled(false);
                     spin10.setEnabled(false);
-                    spin11.setEnabled(false);
-                    spin12.setEnabled(false);
+
                     nxt.setEnabled(false);
                 }
                 if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12) {
@@ -155,8 +153,7 @@ public class Openelective extends Activity {
                                 spin8.setEnabled(false);
                                 spin9.setEnabled(false);
                                 spin10.setEnabled(false);
-                                spin11.setEnabled(false);
-                                spin12.setEnabled(false);
+
                                 nxt.setEnabled(false);
                             }
                             if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11) {
@@ -184,8 +181,7 @@ public class Openelective extends Activity {
                                             spin8.setEnabled(false);
                                             spin9.setEnabled(false);
                                             spin10.setEnabled(false);
-                                            spin11.setEnabled(false);
-                                            spin12.setEnabled(false);
+
                                             nxt.setEnabled(false);
                                         }
 
@@ -214,8 +210,7 @@ public class Openelective extends Activity {
                                                         spin8.setEnabled(false);
                                                         spin9.setEnabled(false);
                                                         spin10.setEnabled(false);
-                                                        spin11.setEnabled(false);
-                                                        spin12.setEnabled(false);
+
                                                         nxt.setEnabled(false);
                                                     }
 
@@ -244,8 +239,7 @@ public class Openelective extends Activity {
                                                                     spin8.setEnabled(false);
                                                                     spin9.setEnabled(false);
                                                                     spin10.setEnabled(false);
-                                                                    spin11.setEnabled(false);
-                                                                    spin12.setEnabled(false);
+
                                                                     nxt.setEnabled(false);
                                                                 }
                                                                 if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) {
@@ -272,8 +266,7 @@ public class Openelective extends Activity {
                                                                                 spin8.setEnabled(false);
                                                                                 spin9.setEnabled(false);
                                                                                 spin10.setEnabled(false);
-                                                                                spin11.setEnabled(false);
-                                                                                spin12.setEnabled(false);
+
                                                                                 nxt.setEnabled(false);
                                                                             }
                                                                             if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7) {
@@ -299,8 +292,7 @@ public class Openelective extends Activity {
                                                                                             spin8.setEnabled(false);
                                                                                             spin9.setEnabled(false);
                                                                                             spin10.setEnabled(false);
-                                                                                            spin11.setEnabled(false);
-                                                                                            spin12.setEnabled(false);
+
                                                                                             nxt.setEnabled(false);
                                                                                         }
                                                                                         if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6) {
@@ -325,8 +317,7 @@ public class Openelective extends Activity {
 
                                                                                                         spin9.setEnabled(false);
                                                                                                         spin10.setEnabled(false);
-                                                                                                        spin11.setEnabled(false);
-                                                                                                        spin12.setEnabled(false);
+
                                                                                                         nxt.setEnabled(false);
                                                                                                     }
                                                                                                     if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5) {
@@ -350,8 +341,7 @@ public class Openelective extends Activity {
 
 
                                                                                                                     spin10.setEnabled(false);
-                                                                                                                    spin11.setEnabled(false);
-                                                                                                                    spin12.setEnabled(false);
+
                                                                                                                     nxt.setEnabled(false);
                                                                                                                 }
                                                                                                                 if (i == 1 || i == 2 || i == 3 || i == 4) {
@@ -374,59 +364,15 @@ public class Openelective extends Activity {
                                                                                                                             if (i == 0) {
 
 
-                                                                                                                                spin11.setEnabled(false);
-                                                                                                                                spin12.setEnabled(false);
+
                                                                                                                                 nxt.setEnabled(false);
+                                                                                                                            } else {
+                                                                                                                                nxt.setEnabled(true);
                                                                                                                             }
-                                                                                                                            if (i == 1 || i == 2 || i == 3) {
-                                                                                                                                spin11.setEnabled(true);
-                                                                                                                                final ArrayList<String> thdpref11 = new ArrayList<>();
-                                                                                                                                thdpref11.add("11th Preference");
-                                                                                                                                for (int j = 0; j < thdpref10.size(); j++) {
-                                                                                                                                    if (!Arrays.asList(thdpref10.get(j)).contains(ten)) {
-                                                                                                                                        thdpref11.add(thdpref10.get(j));
-                                                                                                                                    }
-                                                                                                                                }
-                                                                                                                                thdpref11.remove("10th Preference");
-                                                                                                                                ArrayAdapter<String> adapter13;
-                                                                                                                                adapter13 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref11);
-                                                                                                                                spin11.setAdapter(adapter13);
-                                                                                                                                spin11.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                                                                                                    @Override
-                                                                                                                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                                                        eleven = thdpref11.get(i);
-                                                                                                                                        if (i == 0) {
+
+                                                                                                                        }
 
 
-                                                                                                                                            spin12.setEnabled(false);
-                                                                                                                                            nxt.setEnabled(false);
-                                                                                                                                        }
-                                                                                                                                        if (i == 1 || i == 2) {
-                                                                                                                                            spin12.setEnabled(true);
-                                                                                                                                            final ArrayList<String> thdpref12 = new ArrayList<>();
-                                                                                                                                            thdpref12.add("12th Preference");
-                                                                                                                                            for (int j = 0; j < thdpref11.size(); j++) {
-                                                                                                                                                if (!Arrays.asList(thdpref11.get(j)).contains(eleven)) {
-                                                                                                                                                    thdpref12.add(thdpref11.get(j));
-                                                                                                                                                }
-                                                                                                                                            }
-                                                                                                                                            thdpref12.remove("11th Preference");
-                                                                                                                                            ArrayAdapter<String> adapter14;
-                                                                                                                                            adapter14 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref12);
-                                                                                                                                            spin12.setAdapter(adapter14);
-                                                                                                                                            spin12.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                                                                                                                @Override
-                                                                                                                                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                                                                    twelve = thdpref12.get(i);
-                                                                                                                                                    if (i == 0) {
-
-
-                                                                                                                                                        nxt.setEnabled(false);
-                                                                                                                                                    } else {
-                                                                                                                                                        nxt.setEnabled(true);
-                                                                                                                                                    }
-
-                                                                                                                                                }
 
 
                                                                                                                                                 @Override
@@ -492,18 +438,7 @@ public class Openelective extends Activity {
                                                 } });
                                         }}
 
-                                    @Override
-                                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                    } });
-                            }}
-
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                        } });
-                }}
 
 
             @Override
