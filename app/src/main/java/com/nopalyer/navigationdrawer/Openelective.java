@@ -127,7 +127,7 @@ public class Openelective extends Activity {
 
                     nxt.setEnabled(false);
                 }
-                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12) {
+                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20 || i==21|| i == 22 || i==23) {
                     spin2.setEnabled(true);
                     final ArrayList<String> sndpref = new ArrayList<>();
                     sndpref.add("2nd Preference");
@@ -156,7 +156,7 @@ public class Openelective extends Activity {
 
                                 nxt.setEnabled(false);
                             }
-                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11) {
+                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20|| i==21|| i == 22 ) {
                                 spin3.setEnabled(true);
                                 final ArrayList<String> thdpref = new ArrayList<>();
                                 thdpref.add("3rd Preference");
@@ -185,7 +185,7 @@ public class Openelective extends Activity {
                                             nxt.setEnabled(false);
                                         }
 
-                                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10) {
+                                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20|| i==21) {
                                             spin4.setEnabled(true);
                                             final ArrayList<String> thdpref4 = new ArrayList<>();
                                             thdpref4.add("4th Preference");
@@ -214,7 +214,7 @@ public class Openelective extends Activity {
                                                         nxt.setEnabled(false);
                                                     }
 
-                                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9) {
+                                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20) {
                                                         spin5.setEnabled(true);
                                                         final ArrayList<String> thdpref5 = new ArrayList<>();
                                                         thdpref5.add("5th Preference");
@@ -242,7 +242,7 @@ public class Openelective extends Activity {
 
                                                                     nxt.setEnabled(false);
                                                                 }
-                                                                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8) {
+                                                                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17|| i == 18 || i == 19) {
                                                                     spin6.setEnabled(true);
                                                                     final ArrayList<String> thdpref6 = new ArrayList<>();
                                                                     thdpref6.add("6th Preference");
@@ -269,7 +269,7 @@ public class Openelective extends Activity {
 
                                                                                 nxt.setEnabled(false);
                                                                             }
-                                                                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7) {
+                                                                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16|| i==17|| i == 18 ) {
                                                                                 spin7.setEnabled(true);
                                                                                 final ArrayList<String> thdpref7 = new ArrayList<>();
                                                                                 thdpref7.add("7th Preference");
@@ -295,7 +295,7 @@ public class Openelective extends Activity {
 
                                                                                             nxt.setEnabled(false);
                                                                                         }
-                                                                                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6) {
+                                                                                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16|| i==17) {
                                                                                             spin8.setEnabled(true);
                                                                                             final ArrayList<String> thdpref8 = new ArrayList<>();
                                                                                             thdpref8.add("8th Preference");
@@ -320,7 +320,7 @@ public class Openelective extends Activity {
 
                                                                                                         nxt.setEnabled(false);
                                                                                                     }
-                                                                                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5) {
+                                                                                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16) {
                                                                                                         spin9.setEnabled(true);
                                                                                                         final ArrayList<String> thdpref9 = new ArrayList<>();
                                                                                                         thdpref9.add("9th Preference");
@@ -344,7 +344,7 @@ public class Openelective extends Activity {
 
                                                                                                                     nxt.setEnabled(false);
                                                                                                                 }
-                                                                                                                if (i == 1 || i == 2 || i == 3 || i == 4) {
+                                                                                                                if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15) {
                                                                                                                     spin10.setEnabled(true);
                                                                                                                     final ArrayList<String> thdpref10 = new ArrayList<>();
                                                                                                                     thdpref10.add("10th Preference");
