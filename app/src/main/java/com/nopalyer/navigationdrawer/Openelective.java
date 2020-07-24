@@ -34,13 +34,14 @@ public class Openelective extends Activity {
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseUser firebaseUser;
-    DatabaseReference ref,ref2,ref3,ref4,ref5,ref6;
+    DatabaseReference ref,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10,ref11,ref12,ref13;
     ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openelective);
+        first="";sec="";third="";forth="";five="";six="";seven="";eight="";nine="";ten="";;
         spin1 = findViewById(R.id.spin_1);
         spin2 = findViewById(R.id.spin_2);
         spin3 = findViewById(R.id.spin_3);
@@ -113,8 +114,8 @@ public class Openelective extends Activity {
         spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                first = divisions[i];
                 if (i == 0) {
+
                     spin2.setEnabled(false);
                     spin3.setEnabled(false);
                     spin4.setEnabled(false);
@@ -125,9 +126,10 @@ public class Openelective extends Activity {
                     spin9.setEnabled(false);
                     spin10.setEnabled(false);
 
-                    nxt.setEnabled(false);
+                    nxt.setEnabled(true);
                 }
                 if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20 || i==21|| i == 22 || i==23) {
+                    first = divisions[i];
                     spin2.setEnabled(true);
                     final ArrayList<String> sndpref = new ArrayList<>();
                     sndpref.add("2nd Preference");
@@ -143,7 +145,6 @@ public class Openelective extends Activity {
                     spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            sec = sndpref.get(i);
                             if (i == 0) {
                                 spin3.setEnabled(false);
                                 spin4.setEnabled(false);
@@ -154,9 +155,10 @@ public class Openelective extends Activity {
                                 spin9.setEnabled(false);
                                 spin10.setEnabled(false);
 
-                                nxt.setEnabled(false);
+                                nxt.setEnabled(true);
                             }
                             if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20|| i==21|| i == 22 ) {
+                                sec = sndpref.get(i);
                                 spin3.setEnabled(true);
                                 final ArrayList<String> thdpref = new ArrayList<>();
                                 thdpref.add("3rd Preference");
@@ -172,7 +174,6 @@ public class Openelective extends Activity {
                                 spin3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
                                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                        third = thdpref.get(i);
                                         if (i == 0) {
                                             spin4.setEnabled(false);
                                             spin5.setEnabled(false);
@@ -182,10 +183,11 @@ public class Openelective extends Activity {
                                             spin9.setEnabled(false);
                                             spin10.setEnabled(false);
 
-                                            nxt.setEnabled(false);
+                                            nxt.setEnabled(true);
                                         }
 
                                         if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20|| i==21) {
+                                            third = thdpref.get(i);
                                             spin4.setEnabled(true);
                                             final ArrayList<String> thdpref4 = new ArrayList<>();
                                             thdpref4.add("4th Preference");
@@ -201,7 +203,6 @@ public class Openelective extends Activity {
                                             spin4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
                                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                    forth = thdpref4.get(i);
                                                     if (i == 0) {
 
                                                         spin5.setEnabled(false);
@@ -211,10 +212,11 @@ public class Openelective extends Activity {
                                                         spin9.setEnabled(false);
                                                         spin10.setEnabled(false);
 
-                                                        nxt.setEnabled(false);
+                                                        nxt.setEnabled(true);
                                                     }
 
                                                     if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20) {
+                                                        forth = thdpref4.get(i);
                                                         spin5.setEnabled(true);
                                                         final ArrayList<String> thdpref5 = new ArrayList<>();
                                                         thdpref5.add("5th Preference");
@@ -230,7 +232,6 @@ public class Openelective extends Activity {
                                                         spin5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                             @Override
                                                             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                five = thdpref5.get(i);
                                                                 if (i == 0) {
 
 
@@ -240,9 +241,10 @@ public class Openelective extends Activity {
                                                                     spin9.setEnabled(false);
                                                                     spin10.setEnabled(false);
 
-                                                                    nxt.setEnabled(false);
+                                                                    nxt.setEnabled(true);
                                                                 }
                                                                 if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17|| i == 18 || i == 19) {
+                                                                    five = thdpref5.get(i);
                                                                     spin6.setEnabled(true);
                                                                     final ArrayList<String> thdpref6 = new ArrayList<>();
                                                                     thdpref6.add("6th Preference");
@@ -258,18 +260,17 @@ public class Openelective extends Activity {
                                                                     spin6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                                         @Override
                                                                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                            six = thdpref6.get(i);
                                                                             if (i == 0) {
-
 
                                                                                 spin7.setEnabled(false);
                                                                                 spin8.setEnabled(false);
                                                                                 spin9.setEnabled(false);
                                                                                 spin10.setEnabled(false);
 
-                                                                                nxt.setEnabled(false);
+                                                                                nxt.setEnabled(true);
                                                                             }
                                                                             if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16|| i==17|| i == 18 ) {
+                                                                                six = thdpref6.get(i);
                                                                                 spin7.setEnabled(true);
                                                                                 final ArrayList<String> thdpref7 = new ArrayList<>();
                                                                                 thdpref7.add("7th Preference");
@@ -285,7 +286,6 @@ public class Openelective extends Activity {
                                                                                 spin7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                                                     @Override
                                                                                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                        seven = thdpref7.get(i);
                                                                                         if (i == 0) {
 
 
@@ -293,9 +293,10 @@ public class Openelective extends Activity {
                                                                                             spin9.setEnabled(false);
                                                                                             spin10.setEnabled(false);
 
-                                                                                            nxt.setEnabled(false);
+                                                                                            nxt.setEnabled(true);
                                                                                         }
                                                                                         if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16|| i==17) {
+                                                                                            seven = thdpref7.get(i);
                                                                                             spin8.setEnabled(true);
                                                                                             final ArrayList<String> thdpref8 = new ArrayList<>();
                                                                                             thdpref8.add("8th Preference");
@@ -311,16 +312,16 @@ public class Openelective extends Activity {
                                                                                             spin8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                                                                 @Override
                                                                                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                    eight = thdpref8.get(i);
                                                                                                     if (i == 0) {
 
 
                                                                                                         spin9.setEnabled(false);
                                                                                                         spin10.setEnabled(false);
 
-                                                                                                        nxt.setEnabled(false);
+                                                                                                        nxt.setEnabled(true);
                                                                                                     }
                                                                                                     if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16) {
+                                                                                                        eight = thdpref8.get(i);
                                                                                                         spin9.setEnabled(true);
                                                                                                         final ArrayList<String> thdpref9 = new ArrayList<>();
                                                                                                         thdpref9.add("9th Preference");
@@ -336,15 +337,13 @@ public class Openelective extends Activity {
                                                                                                         spin9.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                                                                             @Override
                                                                                                             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                                nine = thdpref9.get(i);
                                                                                                                 if (i == 0) {
-
-
                                                                                                                     spin10.setEnabled(false);
 
-                                                                                                                    nxt.setEnabled(false);
+                                                                                                                    nxt.setEnabled(true);
                                                                                                                 }
                                                                                                                 if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15) {
+                                                                                                                    nine = thdpref9.get(i);
                                                                                                                     spin10.setEnabled(true);
                                                                                                                     final ArrayList<String> thdpref10 = new ArrayList<>();
                                                                                                                     thdpref10.add("10th Preference");
@@ -360,13 +359,11 @@ public class Openelective extends Activity {
                                                                                                                     spin10.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                                                                                         @Override
                                                                                                                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                                            ten = thdpref10.get(i);
                                                                                                                             if (i == 0) {
 
-
-
-                                                                                                                                nxt.setEnabled(false);
+                                                                                                                                nxt.setEnabled(true);
                                                                                                                             } else {
+                                                                                                                                ten = thdpref10.get(i);
                                                                                                                                 nxt.setEnabled(true);
                                                                                                                             }
 
@@ -450,59 +447,386 @@ public class Openelective extends Activity {
         nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd.setMessage("Registring....");
-                pd.setCancelable(false);
-                pd.show();
-                ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
-                ref.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        final String name = dataSnapshot.child("Name").getValue().toString();
-                        final String roll = dataSnapshot.child("Roll No").getValue().toString();
-                        final String email = firebaseUser.getEmail();
-                        final String phone = dataSnapshot.child("Contact").getValue().toString();
-                        ref2 = firebaseDatabase.getReference("Result").child(roll);
-                        ref2.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                String rank = dataSnapshot.child("Rank").getValue().toString();
-                                String cg = dataSnapshot.child("Cgpa").getValue().toString();
-                                ref3 = firebaseDatabase.getReference("OpenElective");
-                                ref4 = ref3.child(first).child("1st Preference").child(rank);
-                                ref4.child("Name").setValue(name);
-                                ref4.child("Roll").setValue(roll);
-                                ref4.child("Cgpa").setValue(cg);
-                                ref4.child("Email").setValue(email);
-                                ref4.child("Phone").setValue(phone);
-                                ref5 = ref3.child(sec).child("2nd Preference").child(rank);
-                                ref5.child("Name").setValue(name);
-                                ref5.child("Roll").setValue(roll);
-                                ref5.child("Cgpa").setValue(cg);
-                                ref5.child("Email").setValue(email);
-                                ref5.child("Phone").setValue(phone);
-                                ref6 = ref3.child(third).child("3rd Preference").child(rank);
-                                ref6.child("Name").setValue(name);
-                                ref6.child("Roll").setValue(roll);
-                                ref6.child("Cgpa").setValue(cg);
-                                ref6.child("Email").setValue(email);
-                                ref6.child("Phone").setValue(phone);
-                                pd.dismiss();
-                                Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Openelective.this, StudentsPage.class));
-                            }
+                if (first.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill atleast 1st preference",Toast.LENGTH_SHORT).show();
+                }else {
+                    pd.setMessage("Registring....");
+                    pd.setCancelable(false);
+                    pd.show();
+                    ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                    ref.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            final String name = dataSnapshot.child("Name").getValue().toString();
+                            final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                            final String email = firebaseUser.getEmail();
+                            final String phone = dataSnapshot.child("Contact").getValue().toString();
+                            ref2 = firebaseDatabase.getReference("Result").child(roll);
+                            ref2.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    String rank = dataSnapshot.child("Rank").getValue().toString();
+                                    String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                    ref3 = firebaseDatabase.getReference("OpenElective");
+                                    if (sec.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                    }else if (third.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                    }else if (forth.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                    }else if (five.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                        ref7 = ref3.child(forth).child("4th Preference").child(rank);
+                                        ref7.child("Name").setValue(name);
+                                        ref7.child("Roll").setValue(roll);
+                                        ref7.child("Cgpa").setValue(cg);
+                                        ref7.child("Email").setValue(email);
+                                        ref7.child("Phone").setValue(phone);
+                                    }else if (six.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                        ref7 = ref3.child(forth).child("4th Preference").child(rank);
+                                        ref7.child("Name").setValue(name);
+                                        ref7.child("Roll").setValue(roll);
+                                        ref7.child("Cgpa").setValue(cg);
+                                        ref7.child("Email").setValue(email);
+                                        ref7.child("Phone").setValue(phone);
+                                        ref8 = ref3.child(five).child("5th Preference").child(rank);
+                                        ref8.child("Name").setValue(name);
+                                        ref8.child("Roll").setValue(roll);
+                                        ref8.child("Cgpa").setValue(cg);
+                                        ref8.child("Email").setValue(email);
+                                        ref8.child("Phone").setValue(phone);
+                                    }else if (seven.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                        ref7 = ref3.child(forth).child("4th Preference").child(rank);
+                                        ref7.child("Name").setValue(name);
+                                        ref7.child("Roll").setValue(roll);
+                                        ref7.child("Cgpa").setValue(cg);
+                                        ref7.child("Email").setValue(email);
+                                        ref7.child("Phone").setValue(phone);
+                                        ref8 = ref3.child(five).child("5th Preference").child(rank);
+                                        ref8.child("Name").setValue(name);
+                                        ref8.child("Roll").setValue(roll);
+                                        ref8.child("Cgpa").setValue(cg);
+                                        ref8.child("Email").setValue(email);
+                                        ref8.child("Phone").setValue(phone);
+                                        ref9 = ref3.child(six).child("6th Preference").child(rank);
+                                        ref9.child("Name").setValue(name);
+                                        ref9.child("Roll").setValue(roll);
+                                        ref9.child("Cgpa").setValue(cg);
+                                        ref9.child("Email").setValue(email);
+                                        ref9.child("Phone").setValue(phone);
+                                    }else if (eight.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                        ref7 = ref3.child(forth).child("4th Preference").child(rank);
+                                        ref7.child("Name").setValue(name);
+                                        ref7.child("Roll").setValue(roll);
+                                        ref7.child("Cgpa").setValue(cg);
+                                        ref7.child("Email").setValue(email);
+                                        ref7.child("Phone").setValue(phone);
+                                        ref8 = ref3.child(five).child("5th Preference").child(rank);
+                                        ref8.child("Name").setValue(name);
+                                        ref8.child("Roll").setValue(roll);
+                                        ref8.child("Cgpa").setValue(cg);
+                                        ref8.child("Email").setValue(email);
+                                        ref8.child("Phone").setValue(phone);
+                                        ref9 = ref3.child(six).child("6th Preference").child(rank);
+                                        ref9.child("Name").setValue(name);
+                                        ref9.child("Roll").setValue(roll);
+                                        ref9.child("Cgpa").setValue(cg);
+                                        ref9.child("Email").setValue(email);
+                                        ref9.child("Phone").setValue(phone);
+                                        ref10 = ref3.child(seven).child("7th Preference").child(rank);
+                                        ref10.child("Name").setValue(name);
+                                        ref10.child("Roll").setValue(roll);
+                                        ref10.child("Cgpa").setValue(cg);
+                                        ref10.child("Email").setValue(email);
+                                        ref10.child("Phone").setValue(phone);
+                                    }else if (nine.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                        ref7 = ref3.child(forth).child("4th Preference").child(rank);
+                                        ref7.child("Name").setValue(name);
+                                        ref7.child("Roll").setValue(roll);
+                                        ref7.child("Cgpa").setValue(cg);
+                                        ref7.child("Email").setValue(email);
+                                        ref7.child("Phone").setValue(phone);
+                                        ref8 = ref3.child(five).child("5th Preference").child(rank);
+                                        ref8.child("Name").setValue(name);
+                                        ref8.child("Roll").setValue(roll);
+                                        ref8.child("Cgpa").setValue(cg);
+                                        ref8.child("Email").setValue(email);
+                                        ref8.child("Phone").setValue(phone);
+                                        ref9 = ref3.child(six).child("6th Preference").child(rank);
+                                        ref9.child("Name").setValue(name);
+                                        ref9.child("Roll").setValue(roll);
+                                        ref9.child("Cgpa").setValue(cg);
+                                        ref9.child("Email").setValue(email);
+                                        ref9.child("Phone").setValue(phone);
+                                        ref10 = ref3.child(seven).child("7th Preference").child(rank);
+                                        ref10.child("Name").setValue(name);
+                                        ref10.child("Roll").setValue(roll);
+                                        ref10.child("Cgpa").setValue(cg);
+                                        ref10.child("Email").setValue(email);
+                                        ref10.child("Phone").setValue(phone);
+                                        ref11 = ref3.child(eight).child("8th Preference").child(rank);
+                                        ref11.child("Name").setValue(name);
+                                        ref11.child("Roll").setValue(roll);
+                                        ref11.child("Cgpa").setValue(cg);
+                                        ref11.child("Email").setValue(email);
+                                        ref11.child("Phone").setValue(phone);
+                                    }else if (ten.isEmpty()){
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                        ref7 = ref3.child(forth).child("4th Preference").child(rank);
+                                        ref7.child("Name").setValue(name);
+                                        ref7.child("Roll").setValue(roll);
+                                        ref7.child("Cgpa").setValue(cg);
+                                        ref7.child("Email").setValue(email);
+                                        ref7.child("Phone").setValue(phone);
+                                        ref8 = ref3.child(five).child("5th Preference").child(rank);
+                                        ref8.child("Name").setValue(name);
+                                        ref8.child("Roll").setValue(roll);
+                                        ref8.child("Cgpa").setValue(cg);
+                                        ref8.child("Email").setValue(email);
+                                        ref8.child("Phone").setValue(phone);
+                                        ref9 = ref3.child(six).child("6th Preference").child(rank);
+                                        ref9.child("Name").setValue(name);
+                                        ref9.child("Roll").setValue(roll);
+                                        ref9.child("Cgpa").setValue(cg);
+                                        ref9.child("Email").setValue(email);
+                                        ref9.child("Phone").setValue(phone);
+                                        ref10 = ref3.child(seven).child("7th Preference").child(rank);
+                                        ref10.child("Name").setValue(name);
+                                        ref10.child("Roll").setValue(roll);
+                                        ref10.child("Cgpa").setValue(cg);
+                                        ref10.child("Email").setValue(email);
+                                        ref10.child("Phone").setValue(phone);
+                                        ref11 = ref3.child(eight).child("8th Preference").child(rank);
+                                        ref11.child("Name").setValue(name);
+                                        ref11.child("Roll").setValue(roll);
+                                        ref11.child("Cgpa").setValue(cg);
+                                        ref11.child("Email").setValue(email);
+                                        ref11.child("Phone").setValue(phone);
+                                        ref12 = ref3.child(nine).child("9th Preference").child(rank);
+                                        ref12.child("Name").setValue(name);
+                                        ref12.child("Roll").setValue(roll);
+                                        ref12.child("Cgpa").setValue(cg);
+                                        ref12.child("Email").setValue(email);
+                                        ref12.child("Phone").setValue(phone);
+                                    }else {
+                                        ref4 = ref3.child(first).child("1st Preference").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Roll").setValue(roll);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref5 = ref3.child(sec).child("2nd Preference").child(rank);
+                                        ref5.child("Name").setValue(name);
+                                        ref5.child("Roll").setValue(roll);
+                                        ref5.child("Cgpa").setValue(cg);
+                                        ref5.child("Email").setValue(email);
+                                        ref5.child("Phone").setValue(phone);
+                                        ref6 = ref3.child(third).child("3rd Preference").child(rank);
+                                        ref6.child("Name").setValue(name);
+                                        ref6.child("Roll").setValue(roll);
+                                        ref6.child("Cgpa").setValue(cg);
+                                        ref6.child("Email").setValue(email);
+                                        ref6.child("Phone").setValue(phone);
+                                        ref7 = ref3.child(forth).child("4th Preference").child(rank);
+                                        ref7.child("Name").setValue(name);
+                                        ref7.child("Roll").setValue(roll);
+                                        ref7.child("Cgpa").setValue(cg);
+                                        ref7.child("Email").setValue(email);
+                                        ref7.child("Phone").setValue(phone);
+                                        ref8 = ref3.child(five).child("5th Preference").child(rank);
+                                        ref8.child("Name").setValue(name);
+                                        ref8.child("Roll").setValue(roll);
+                                        ref8.child("Cgpa").setValue(cg);
+                                        ref8.child("Email").setValue(email);
+                                        ref8.child("Phone").setValue(phone);
+                                        ref9 = ref3.child(six).child("6th Preference").child(rank);
+                                        ref9.child("Name").setValue(name);
+                                        ref9.child("Roll").setValue(roll);
+                                        ref9.child("Cgpa").setValue(cg);
+                                        ref9.child("Email").setValue(email);
+                                        ref9.child("Phone").setValue(phone);
+                                        ref10 = ref3.child(seven).child("7th Preference").child(rank);
+                                        ref10.child("Name").setValue(name);
+                                        ref10.child("Roll").setValue(roll);
+                                        ref10.child("Cgpa").setValue(cg);
+                                        ref10.child("Email").setValue(email);
+                                        ref10.child("Phone").setValue(phone);
+                                        ref11 = ref3.child(eight).child("8th Preference").child(rank);
+                                        ref11.child("Name").setValue(name);
+                                        ref11.child("Roll").setValue(roll);
+                                        ref11.child("Cgpa").setValue(cg);
+                                        ref11.child("Email").setValue(email);
+                                        ref11.child("Phone").setValue(phone);
+                                        ref12 = ref3.child(nine).child("9th Preference").child(rank);
+                                        ref12.child("Name").setValue(name);
+                                        ref12.child("Roll").setValue(roll);
+                                        ref12.child("Cgpa").setValue(cg);
+                                        ref12.child("Email").setValue(email);
+                                        ref12.child("Phone").setValue(phone);
+                                        ref13 = ref3.child(ten).child("10th Preference").child(rank);
+                                        ref13.child("Name").setValue(name);
+                                        ref13.child("Roll").setValue(roll);
+                                        ref13.child("Cgpa").setValue(cg);
+                                        ref13.child("Email").setValue(email);
+                                        ref13.child("Phone").setValue(phone);
+                                    }
+                                    pd.dismiss();
+                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+                                    Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
-                    }
-                });
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
             }
         });
     }
