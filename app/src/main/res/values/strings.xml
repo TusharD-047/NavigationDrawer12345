@@ -1279,4 +1279,42 @@
     <string name="invalid_roll">Please enter valid Roll Number</string>
     <string name="invalid_mbl">Please Enter a valid Number</string>
     <string name="invalid_email">"Please enter valid Email "</string>
+
+
+
+    <string name="group1">B.Tech/Dual Degree(1st year)</string>
+    <string name="group2">B.Arch(1st year)</string>
+    <string name="group3">B.Tech(2nd year and onwards)</string>
+    <string name="group4">Dual Degree(2nd year and onwards)</string>
+    <string name="group5">B.Arch(2nd year and onwards)</string>
+
+    <string-array name="group1">
+        <item> All B.Tech/Dual Degree</item>
+
+    </string-array>
+    <string-array name="group2">
+        <item>Bachelor of Architecture</item>
+
+    </string-array>
+    <string-array name="group3">
+        <item>Computer Science and Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Chemical Engineering</item>
+        <item>Electronics and Communication Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Material Science and Engineering</item>
+        <item>Mathematics and Scientific Computing</item>
+        <item>Engineering Physics</item>
+    </string-array>
+    <string-array name="group4">
+        <item>Computer Science and Engineering(DD)</item>
+        <item>Electronics and Communication Engineering(DD)</item>
+
+    </string-array>
+    <string-array name="group5">
+        <item>Bachelor of Architecture</item>
+
+
+    </string-array>
 </resources>
