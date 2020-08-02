@@ -13,7 +13,6 @@
         android:id="@+id/list_child"
         android:textSize="18sp"
         android:textColor="#102030"
-
         android:paddingLeft="50dp"/>
 
 </LinearLayout>

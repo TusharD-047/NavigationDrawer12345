@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Courses extends AppCompatActivity {
+public class courses1 extends AppCompatActivity {
     ExpandableListView expandableListView;
     List<String> listGroup;
     HashMap<String,List<String>> listItem;
@@ -17,7 +17,7 @@ public class Courses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_courses);
+        setContentView(R.layout.activity_courses1);
         expandableListView=findViewById(R.id.expandable_listview);
         listGroup = new ArrayList<>();
         listItem =new HashMap<>();
