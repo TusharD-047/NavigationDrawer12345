@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#102030"
+    android:orientation="vertical"
     tools:context=".courses1">
+
+    <ImageView
+        android:id="@+id/ima10"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#000000"
+        android:paddingTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/newlogo" />
+
+    <TextView
+        android:id="@+id/textVie15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5px"
+        android:gravity="center_horizontal"
+        android:text="COURSE STRUCTURE AND SYLLABUS"
+        android:textAlignment="center"
+        android:textColor="#FFCC99"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
     <ExpandableListView
         android:id="@+id/expandable_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
 
-</RelativeLayout>
+</LinearLayout>
