@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -106,6 +108,7 @@ public class Openelective extends Activity {
         };
 
 */
+
         final ArrayAdapter<String> adapter;
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, divisions);
 
@@ -830,4 +833,22 @@ public class Openelective extends Activity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.info, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String mera = " ";
+        switch (item.getItemId()) {
+            case (R.id.adhik):
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }
