@@ -23,7 +23,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
-            android:background="#90A1A8">
+            android:background="#A9B5BA">
 
             <TextView
                 android:layout_width="match_parent"

@@ -14,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -28,7 +30,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Openelective extends Activity {
+public class Openelective extends AppCompatActivity {
 
     Spinner spin1,spin2,spin3,spin4,spin5,spin6,spin7,spin8,spin9,spin10;
     Button nxt;
@@ -38,11 +40,15 @@ public class Openelective extends Activity {
     FirebaseUser firebaseUser;
     DatabaseReference ref,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10,ref11,ref12,ref13;
     ProgressDialog pd;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openelective);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         first="";sec="";third="";forth="";five="";six="";seven="";eight="";nine="";ten="";;
         spin1 = findViewById(R.id.spin_1);
         spin2 = findViewById(R.id.spin_2);
@@ -834,6 +840,8 @@ public class Openelective extends Activity {
         });
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.info, menu);
@@ -842,7 +850,7 @@ public class Openelective extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        String mera = " ";
+        String mera2 = " ";
         switch (item.getItemId()) {
             case (R.id.adhik):
                 //.....
