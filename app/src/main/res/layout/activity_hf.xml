@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".hf"
     android:orientation="vertical"
-    android:background="@drawable/gradient">
+    android:background="#102030">
     <ImageView
         android:id="@+id/imag4"
         android:layout_width="match_parent"

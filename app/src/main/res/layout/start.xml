@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alignmentMode="alignMargins"
-            android:background="@drawable/gradient"
+            android:background="#102030"
             android:columnCount="2"
             android:columnOrderPreserved="false"
             android:rowCount="4">

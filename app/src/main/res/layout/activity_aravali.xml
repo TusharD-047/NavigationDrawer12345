@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".aravali"
     android:orientation="vertical"
-    android:background="@drawable/gradient">
+    android:background="#102030">
 
     <TextView
         android:id="@+id/hb"

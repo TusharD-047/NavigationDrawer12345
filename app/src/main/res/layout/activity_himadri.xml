@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".himadri"
     android:orientation="vertical"
-    android:background="@drawable/gradient">
+    android:background="#102030">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

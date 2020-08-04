@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".mag"
     android:orientation="vertical"
-    android:background="@drawable/gradient">
+    android:background="#102030">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -17,6 +17,7 @@
         android:paddingTop="20dp"
         android:src="@drawable/newlogo" />
  <RelativeLayout
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
@@ -27,6 +28,7 @@
         android:background="@android:color/white"
         android:fadingEdge="horizontal"
         android:gravity="center"
+      android:textStyle="bold"
         android:layout_centerInParent="true"
         android:text="FEES STRUCTURE
 2019-2020"

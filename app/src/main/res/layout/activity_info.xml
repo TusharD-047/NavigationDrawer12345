@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="#102030"
     tools:context=".info"
     android:orientation="vertical">
 
@@ -32,8 +32,9 @@
         android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:text="HOSTEL BOOKLET"
-        android:textColor="#054F8A"
+        android:textColor="#081C8C"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:layout_marginTop="55dp"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -43,6 +44,7 @@
         android:layout_height="67dp"
         android:text="FUNCTIONARIES"
         android:textColor="#081C8C"
+        android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:textSize="18sp"
         android:layout_marginTop="10dp"
