@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -215,6 +218,8 @@ public class registrationp2 extends AppCompatActivity {
             }
         });
         c4.setOnClickListener(new View.OnClickListener() {
+            
+
             @Override
             public void onClick(View v) {
                 if (semcon4.equals("true")) {
@@ -258,6 +263,26 @@ public class registrationp2 extends AppCompatActivity {
 
 
     }
+
+   /* private void createCustomizeDialog() {
+        final AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        @SuppressLint("InflateParams") final View alertLayout = inflater.inflate(R.layout.popup, null);
+        Button cntinue=(Button)alertLayout.findViewById(R.id.cntinue);
+
+        cntinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+        builder.setView(alertLayout);
+        alertDialog=builder.create();
+        //noinspection ConstantConditions
+        alertDialog.show();
+
+    }*/
 
     public void showPopup(View v){
         TextView close ;

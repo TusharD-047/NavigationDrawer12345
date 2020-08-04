@@ -124,7 +124,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:onClick="showPopup"
+
             android:layout_width="match_parent"
             app:cardElevation="10dp"
             app:cardCornerRadius="12dp"
@@ -134,6 +134,7 @@
             android:id="@+id/cardview3">
 
             <LinearLayout
+                android:onClick="showPopup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
