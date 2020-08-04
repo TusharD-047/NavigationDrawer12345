@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +35,7 @@ public class registrationp2 extends AppCompatActivity {
     private DatabaseReference ref1,ref2,ref3,ref4,ref5,ref6,reef;
     String semcon1,semcon2,semcon3,semcon4,semcon5,semcon6;
     String course,year;
+    Dialog msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class registrationp2 extends AppCompatActivity {
         getSupportActionBar().setTitle("Registration");
         toolbar.setTitleTextColor(Color.WHITE);
 
+        msg = new Dialog(this);
         c1 = findViewById(R.id.cardview);
         c2 = findViewById(R.id.cardview1);
         c3 = findViewById(R.id.cardview2);
@@ -252,4 +258,27 @@ public class registrationp2 extends AppCompatActivity {
 
 
     }
+
+    public void showPopup(View v){
+        TextView close ;
+        Button cntinue;
+        msg.setContentView(R.layout.popup);
+        close = (TextView) msg.findViewById(R.id.close);
+        cntinue = (Button) msg.findViewById(R.id.cntinue);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                msg.dismiss();
+            }
+        });
+        cntinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                msg.dismiss();
+            }
+        });
+        msg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        msg.show();
+    }
+
 }
