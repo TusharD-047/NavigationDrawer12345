@@ -52,6 +52,7 @@
                 android:src="@drawable/regis2" />
 
             <Spinner
+                android:onClick="showPopup"
                 android:layout_width="275dp"
                 android:layout_height="51dp"
                 android:layout_margin="10dp"

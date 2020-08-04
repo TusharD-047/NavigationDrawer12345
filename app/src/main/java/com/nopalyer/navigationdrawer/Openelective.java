@@ -1,8 +1,11 @@
 package com.nopalyer.navigationdrawer;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -41,6 +45,7 @@ public class Openelective extends AppCompatActivity {
     DatabaseReference ref,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10,ref11,ref12,ref13;
     ProgressDialog pd;
     Toolbar toolbar;
+    Dialog msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +65,7 @@ public class Openelective extends AppCompatActivity {
         spin8 = findViewById(R.id.spin_8);
         spin9 = findViewById(R.id.spin_9);
         spin10 = findViewById(R.id.spin_10);
+        msg = new Dialog(this);
 
         nxt = findViewById(R.id.next3);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -840,6 +846,28 @@ public class Openelective extends AppCompatActivity {
         });
     }
 
+
+    public void showPopup(View v){
+        TextView close ;
+        Button cntinue;
+        msg.setContentView(R.layout.popup);
+        close = (TextView) msg.findViewById(R.id.close);
+        cntinue = (Button) msg.findViewById(R.id.cntinue);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                msg.dismiss();
+            }
+        });
+        cntinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                msg.dismiss();
+            }
+        });
+        msg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        msg.show();
+    }
 
 
     @Override
