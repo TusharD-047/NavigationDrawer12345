@@ -1,8 +1,10 @@
 package com.nopalyer.navigationdrawer;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -51,8 +53,21 @@ public class Openelective extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openelective);
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(Openelective.this);
+        builder.setCancelable(true);
+        builder.setTitle("MESSAGE");
+        builder.setMessage("Please click on the i icon for more info about Open Elective Registration and do check the subjects code once before filling your choice.");
+        builder.setPositiveButton("CONTINUE", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.show();
 
         first="";sec="";third="";forth="";five="";six="";seven="";eight="";nine="";ten="";;
         spin1 = findViewById(R.id.spin_1);
