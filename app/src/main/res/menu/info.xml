@@ -5,7 +5,7 @@
 
     <item android:id="@+id/adhik"
         android:title="info"
-        android:icon="@drawable/ic_baseline_error_24"
+        android:icon="@drawable/ic_baseline_info_24"
         android:orderInCategory="100"
         app:showAsAction="always"/>
 
