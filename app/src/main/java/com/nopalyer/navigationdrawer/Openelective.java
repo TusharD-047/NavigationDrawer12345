@@ -845,6 +845,7 @@ public class Openelective extends Activity {
         String mera = " ";
         switch (item.getItemId()) {
             case (R.id.adhik):
+                //.....
                 break;
         }
 
