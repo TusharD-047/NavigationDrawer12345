@@ -238,4 +238,10 @@ public class login extends AppCompatActivity {
                     .putBoolean("isFirstRun", false).apply();*/
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(login.this,MainActivity.class));
+    }
 }

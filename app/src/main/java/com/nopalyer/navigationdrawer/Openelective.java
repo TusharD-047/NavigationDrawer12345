@@ -875,7 +875,7 @@ public class Openelective extends AppCompatActivity {
         String mera2 = " ";
         switch (item.getItemId()) {
             case (R.id.adhik):
-                //.....
+                startActivity(new Intent(Openelective.this,OpenElectiveInfo.class));
                 break;
         }
 

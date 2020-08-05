@@ -126,7 +126,6 @@ public class courses1 extends AppCompatActivity {
                     i.putExtra("branch",b);
                     startActivity(i);
                 }
-
                 return false;
             }
         });
