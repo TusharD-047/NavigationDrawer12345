@@ -45,7 +45,7 @@ public class OpenElectiveInfo extends AppCompatActivity {
         mref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String url = dataSnapshot.child("url").getValue().toString();
+                String url = dataSnapshot.child("Url").getValue().toString();
                 new RetrievePdfStream().execute(url);
             }
 
