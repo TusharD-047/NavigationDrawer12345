@@ -39,7 +39,7 @@ public class View2Activity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog mProgress,pd;
     private FirebaseDatabase database;
-    private DatabaseReference ref,mref;
+    private DatabaseReference ref,mref,ref2;
     private Toolbar toolbar;
     String yr = "",dep = "",roll = "",type ="";
 
@@ -163,113 +163,128 @@ public class View2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 mProgress.setMessage("Wait");
                 mProgress.show();
-                ref = database.getReference(firebaseAuth.getUid()).child("Profile");
-                ref.addValueEventListener(new ValueEventListener() {
+                ref2 = database.getReference(firebaseAuth.getUid());
+                ref2.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        yr = dataSnapshot.child("Year").getValue().toString();
-                        dep = dataSnapshot.child("Department").getValue().toString();
-                        roll = dataSnapshot.child("Roll No").getValue().toString();
+                        if (dataSnapshot.hasChild("Profile")){
+                            ref = database.getReference(firebaseAuth.getUid()).child("Profile");
+                            ref.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    yr = dataSnapshot.child("Year").getValue().toString();
+                                    dep = dataSnapshot.child("Department").getValue().toString();
+                                    roll = dataSnapshot.child("Roll No").getValue().toString();
 
-                        mref = database.getReference( "LateApplication").child(type).child(yr).child(dep).child(roll);
-                        mref.child("Course").setValue(type);
-                        mref.child("Name").setValue(name.getText().toString());
-                        mref.child("FatherName").setValue(faname.getText().toString());
-                        mref.child("RollNo").setValue(rolln.getText().toString());
-                        mref.child("DOB").setValue(dobn.getText().toString());
-                        mref.child("Email").setValue(semtr.getText().toString());
-                        mref.child("Mobile1").setValue(catg.getText().toString());
-                        mref.child("AcademicYear").setValue(acyr.getText().toString());
-                        mref.child("Room").setValue(room.getText().toString());
-                        mref.child("Programme").setValue(prog.getText().toString());
-                        mref.child("Department").setValue(deppp.getText().toString());
-                        mref.child("CorresspondingAddress").setValue(cressadd.getText().toString());
-                        mref.child("Pin1").setValue(pin1.getText().toString());
-                        mref.child("PermanentAddress").setValue(peradd.getText().toString());
-                        mref.child("Pin2").setValue(pin2.getText().toString());
-                        mref.child("Mobile2").setValue(mob2.getText().toString());
-                        mref.child("Hostel").setValue(hostel.getText().toString());
-                        mref.child("Semester").setValue(sem.getText().toString());
-                        mref.child("Sub1").setValue(code1.getText().toString());
-                        mref.child("Course1").setValue(course1.getText().toString());
-                        mref.child("Lab1").setValue(lab1.getText().toString());
-                        mref.child("Credit1").setValue(credit1.getText().toString());
-                        mref.child("Sub2").setValue(code2.getText().toString());
-                        mref.child("Course2").setValue(course2.getText().toString());
-                        mref.child("Lab2").setValue(lab2.getText().toString());
-                        mref.child("Credit2").setValue(credit2.getText().toString());
-                        mref.child("Sub3").setValue(code3.getText().toString());
-                        mref.child("Course3").setValue(course3.getText().toString());
-                        mref.child("Lab3").setValue(lab3.getText().toString());
-                        mref.child("Credit3").setValue(credit3.getText().toString());
-                        mref.child("Sub4").setValue(code4.getText().toString());
-                        mref.child("Course4").setValue(course4.getText().toString());
-                        mref.child("Lab4").setValue(lab4.getText().toString());
-                        mref.child("Credit4").setValue(credit4.getText().toString());
-                        mref.child("Sub5").setValue(code5.getText().toString());
-                        mref.child("Course5").setValue(course5.getText().toString());
-                        mref.child("Lab5").setValue(lab5.getText().toString());
-                        mref.child("Credit5").setValue(credit5.getText().toString());
-                        mref.child("Sub6").setValue(code6.getText().toString());
-                        mref.child("Course6").setValue(course6.getText().toString());
-                        mref.child("Lab6").setValue(lab6.getText().toString());
-                        mref.child("Credit6").setValue(credit6.getText().toString());
-                        mref.child("Sub7").setValue(code7.getText().toString());
-                        mref.child("Course7").setValue(course7.getText().toString());
-                        mref.child("Lab7").setValue(lab7.getText().toString());
-                        mref.child("Credit7").setValue(credit7.getText().toString());
-                        mref.child("Sub8").setValue(code8.getText().toString());
-                        mref.child("Course8").setValue(course8.getText().toString());
-                        mref.child("Lab8").setValue(lab8.getText().toString());
-                        mref.child("Credit8").setValue(credit8.getText().toString());
-                        mref.child("Sub9").setValue(code9.getText().toString());
-                        mref.child("Course9").setValue(course9.getText().toString());
-                        mref.child("Lab9").setValue(lab9.getText().toString());
-                        mref.child("Credit9").setValue(credit9.getText().toString());
-                        mref.child("Sub10").setValue(code10.getText().toString());
-                        mref.child("Course10").setValue(course10.getText().toString());
-                        mref.child("Lab10").setValue(lab10.getText().toString());
-                        mref.child("Credit10").setValue(credit10.getText().toString());
-                        mref.child("CreditSum").setValue(creditsum.getText().toString());
-                        mref.child("LabSum").setValue(labsum.getText().toString());
-                        mref.child("cg1").setValue(cg1.getText().toString());
-                        mref.child("sg1").setValue(sg1.getText().toString());
-                        mref.child("rep1").setValue(rep1.getText().toString());
-                        mref.child("cg2").setValue(cg2.getText().toString());
-                        mref.child("sg2").setValue(sg2.getText().toString());
-                        mref.child("rep2").setValue(rep2.getText().toString());
-                        mref.child("cg3").setValue(cg3.getText().toString());
-                        mref.child("sg3").setValue(sg3.getText().toString());
-                        mref.child("rep3").setValue(rep3.getText().toString());
-                        mref.child("cg4").setValue(cg4.getText().toString());
-                        mref.child("sg4").setValue(sg4.getText().toString());
-                        mref.child("rep4").setValue(rep4.getText().toString());
-                        mref.child("cg5").setValue(cg5.getText().toString());
-                        mref.child("sg5").setValue(sg5.getText().toString());
-                        mref.child("rep5").setValue(rep5.getText().toString());
-                        mref.child("cg6").setValue(cg6.getText().toString());
-                        mref.child("sg6").setValue(sg6.getText().toString());
-                        mref.child("rep6").setValue(rep6.getText().toString());
-                        mref.child("cg7").setValue(cg7.getText().toString());
-                        mref.child("sg7").setValue(sg7.getText().toString());
-                        mref.child("rep7").setValue(rep7.getText().toString());
-                        mref.child("cg8").setValue(cg8.getText().toString());
-                        mref.child("sg8").setValue(sg8.getText().toString());
-                        mref.child("rep8").setValue(rep8.getText().toString());
-                        mref.child("cg9").setValue(cg9.getText().toString());
-                        mref.child("sg9").setValue(sg9.getText().toString());
-                        mref.child("rep9").setValue(rep9.getText().toString());
+                                    mref = database.getReference( "LateApplication").child(type).child(yr).child(dep).child(roll);
+                                    mref.child("Course").setValue(type);
+                                    mref.child("Name").setValue(name.getText().toString());
+                                    mref.child("FatherName").setValue(faname.getText().toString());
+                                    mref.child("RollNo").setValue(rolln.getText().toString());
+                                    mref.child("DOB").setValue(dobn.getText().toString());
+                                    mref.child("Email").setValue(semtr.getText().toString());
+                                    mref.child("Mobile1").setValue(catg.getText().toString());
+                                    mref.child("AcademicYear").setValue(acyr.getText().toString());
+                                    mref.child("Room").setValue(room.getText().toString());
+                                    mref.child("Programme").setValue(prog.getText().toString());
+                                    mref.child("Department").setValue(deppp.getText().toString());
+                                    mref.child("CorresspondingAddress").setValue(cressadd.getText().toString());
+                                    mref.child("Pin1").setValue(pin1.getText().toString());
+                                    mref.child("PermanentAddress").setValue(peradd.getText().toString());
+                                    mref.child("Pin2").setValue(pin2.getText().toString());
+                                    mref.child("Mobile2").setValue(mob2.getText().toString());
+                                    mref.child("Hostel").setValue(hostel.getText().toString());
+                                    mref.child("Semester").setValue(sem.getText().toString());
+                                    mref.child("Sub1").setValue(code1.getText().toString());
+                                    mref.child("Course1").setValue(course1.getText().toString());
+                                    mref.child("Lab1").setValue(lab1.getText().toString());
+                                    mref.child("Credit1").setValue(credit1.getText().toString());
+                                    mref.child("Sub2").setValue(code2.getText().toString());
+                                    mref.child("Course2").setValue(course2.getText().toString());
+                                    mref.child("Lab2").setValue(lab2.getText().toString());
+                                    mref.child("Credit2").setValue(credit2.getText().toString());
+                                    mref.child("Sub3").setValue(code3.getText().toString());
+                                    mref.child("Course3").setValue(course3.getText().toString());
+                                    mref.child("Lab3").setValue(lab3.getText().toString());
+                                    mref.child("Credit3").setValue(credit3.getText().toString());
+                                    mref.child("Sub4").setValue(code4.getText().toString());
+                                    mref.child("Course4").setValue(course4.getText().toString());
+                                    mref.child("Lab4").setValue(lab4.getText().toString());
+                                    mref.child("Credit4").setValue(credit4.getText().toString());
+                                    mref.child("Sub5").setValue(code5.getText().toString());
+                                    mref.child("Course5").setValue(course5.getText().toString());
+                                    mref.child("Lab5").setValue(lab5.getText().toString());
+                                    mref.child("Credit5").setValue(credit5.getText().toString());
+                                    mref.child("Sub6").setValue(code6.getText().toString());
+                                    mref.child("Course6").setValue(course6.getText().toString());
+                                    mref.child("Lab6").setValue(lab6.getText().toString());
+                                    mref.child("Credit6").setValue(credit6.getText().toString());
+                                    mref.child("Sub7").setValue(code7.getText().toString());
+                                    mref.child("Course7").setValue(course7.getText().toString());
+                                    mref.child("Lab7").setValue(lab7.getText().toString());
+                                    mref.child("Credit7").setValue(credit7.getText().toString());
+                                    mref.child("Sub8").setValue(code8.getText().toString());
+                                    mref.child("Course8").setValue(course8.getText().toString());
+                                    mref.child("Lab8").setValue(lab8.getText().toString());
+                                    mref.child("Credit8").setValue(credit8.getText().toString());
+                                    mref.child("Sub9").setValue(code9.getText().toString());
+                                    mref.child("Course9").setValue(course9.getText().toString());
+                                    mref.child("Lab9").setValue(lab9.getText().toString());
+                                    mref.child("Credit9").setValue(credit9.getText().toString());
+                                    mref.child("Sub10").setValue(code10.getText().toString());
+                                    mref.child("Course10").setValue(course10.getText().toString());
+                                    mref.child("Lab10").setValue(lab10.getText().toString());
+                                    mref.child("Credit10").setValue(credit10.getText().toString());
+                                    mref.child("CreditSum").setValue(creditsum.getText().toString());
+                                    mref.child("LabSum").setValue(labsum.getText().toString());
+                                    mref.child("cg1").setValue(cg1.getText().toString());
+                                    mref.child("sg1").setValue(sg1.getText().toString());
+                                    mref.child("rep1").setValue(rep1.getText().toString());
+                                    mref.child("cg2").setValue(cg2.getText().toString());
+                                    mref.child("sg2").setValue(sg2.getText().toString());
+                                    mref.child("rep2").setValue(rep2.getText().toString());
+                                    mref.child("cg3").setValue(cg3.getText().toString());
+                                    mref.child("sg3").setValue(sg3.getText().toString());
+                                    mref.child("rep3").setValue(rep3.getText().toString());
+                                    mref.child("cg4").setValue(cg4.getText().toString());
+                                    mref.child("sg4").setValue(sg4.getText().toString());
+                                    mref.child("rep4").setValue(rep4.getText().toString());
+                                    mref.child("cg5").setValue(cg5.getText().toString());
+                                    mref.child("sg5").setValue(sg5.getText().toString());
+                                    mref.child("rep5").setValue(rep5.getText().toString());
+                                    mref.child("cg6").setValue(cg6.getText().toString());
+                                    mref.child("sg6").setValue(sg6.getText().toString());
+                                    mref.child("rep6").setValue(rep6.getText().toString());
+                                    mref.child("cg7").setValue(cg7.getText().toString());
+                                    mref.child("sg7").setValue(sg7.getText().toString());
+                                    mref.child("rep7").setValue(rep7.getText().toString());
+                                    mref.child("cg8").setValue(cg8.getText().toString());
+                                    mref.child("sg8").setValue(sg8.getText().toString());
+                                    mref.child("rep8").setValue(rep8.getText().toString());
+                                    mref.child("cg9").setValue(cg9.getText().toString());
+                                    mref.child("sg9").setValue(sg9.getText().toString());
+                                    mref.child("rep9").setValue(rep9.getText().toString());
 
-                        mProgress.dismiss();
-                        Toast.makeText(View2Activity.this,"Upload Done",Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(View2Activity.this,Upload2Doument.class);
-                        i.putExtra("type",type);
-                        startActivity(i);
+                                    mProgress.dismiss();
+                                    Toast.makeText(View2Activity.this,"Upload Done",Toast.LENGTH_SHORT).show();
+                                    Intent i = new Intent(View2Activity.this,Upload2Doument.class);
+                                    i.putExtra("type",type);
+                                    startActivity(i);
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+                                    Toast.makeText(View2Activity.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }else{
+                            Toast.makeText(View2Activity.this,"Complete Your profile",Toast.LENGTH_SHORT).show();
+                        }
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(View2Activity.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+
                     }
                 });
             }
