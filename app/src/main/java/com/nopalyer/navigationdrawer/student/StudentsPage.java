@@ -1,6 +1,7 @@
 package com.nopalyer.navigationdrawer.student;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -46,6 +47,7 @@ public class StudentsPage extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference ref;
     HashMap<String, Object> student = new HashMap<>();
+    ProgressDialog pd;
 
 
 ;    @RequiresApi(api = Build.VERSION_CODES.M)
@@ -54,98 +56,106 @@ public class StudentsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students_page);
 
-        ActivityCompat.requestPermissions(StudentsPage.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION}, PackageManager.PERMISSION_GRANTED);
-
-        faculty_card = (CardView) findViewById(R.id.faculty_card);
-        clubs_card = (CardView) findViewById(R.id.club);
-        myProfile = (CardView) findViewById(R.id.pro) ;
-        website = (CardView) findViewById(R.id.website1);
-        aboutdev = (CardView) findViewById(R.id.au);
-        calender = (CardView) findViewById(R.id.cal);
-        help = (CardView) findViewById(R.id.help);
-        schedule = (CardView)findViewById(R.id.spsch);
-        assignm = (CardView)findViewById(R.id.spassign123);
-        registration= (CardView)findViewById(R.id.registration);
-        course= (CardView)findViewById(R.id.course);
-
-
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
-
-        setSupportActionBar(toolbar);
-
+        pd = new ProgressDialog(this);
+        pd.setMessage("Wait...");
+        pd.setCancelable(false);
+        pd.show();
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
+        ref = firebaseDatabase.getReference();
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.hasChild(firebaseAuth.getUid())){
+                    pd.dismiss();
+                    faculty_card = (CardView) findViewById(R.id.faculty_card);
+                    clubs_card = (CardView) findViewById(R.id.club);
+                    myProfile = (CardView) findViewById(R.id.pro) ;
+                    website = (CardView) findViewById(R.id.website1);
+                    aboutdev = (CardView) findViewById(R.id.au);
+                    calender = (CardView) findViewById(R.id.cal);
+                    help = (CardView) findViewById(R.id.help);
+                    schedule = (CardView)findViewById(R.id.spsch);
+                    assignm = (CardView)findViewById(R.id.spassign123);
+                    registration= (CardView)findViewById(R.id.registration);
+                    course= (CardView)findViewById(R.id.course);
 
-        faculty_card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(StudentsPage.this, "Faculties Of NITH", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.branchfaculty.faculty2.class));
-            }
-        });
-        clubs_card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(StudentsPage.this, "Clubs Of NITH", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.clubs.Clu.class));
-            }
-        });
-        myProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(StudentsPage.this,com.nopalyer.navigationdrawer.profile.studentp.class));
-            }
-        });
-        website.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(StudentsPage.this, "Nith Website", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://nith.ac.in/")));
-            }
-        });
-        aboutdev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.aboutus21.aboutdev.class));
-            }
-        });
-        calender.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(StudentsPage.this, calender1.class));
-            }
-        });
-        help.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.help.help.class));
-            }
-        });
-        schedule.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(StudentsPage.this, Spschedule.class));
-            }
-        });
-        registration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(StudentsPage.this, registrationp2.class));
-            }
-        });
-        course.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(StudentsPage.this, courses1.class));
-            }
-        });
-        assignm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Bundle bundle = getIntent().getExtras();
-                //updateYear = bundle.getString("yearupdate");
-                //spyr = getSharedPreferences("shree",MODE_PRIVATE);
-                //final String updtyear = spyr.getString("yearupdate","");
+
+                    toolbar = (Toolbar)findViewById(R.id.toolbar);
+
+                    setSupportActionBar(toolbar);
+
+
+                    faculty_card.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(StudentsPage.this, "Faculties Of NITH", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.branchfaculty.faculty2.class));
+                        }
+                    });
+                    clubs_card.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(StudentsPage.this, "Clubs Of NITH", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.clubs.Clu.class));
+                        }
+                    });
+                    myProfile.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            startActivity(new Intent(StudentsPage.this,com.nopalyer.navigationdrawer.profile.studentp.class));
+                        }
+                    });
+                    website.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(StudentsPage.this, "Nith Website", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://nith.ac.in/")));
+                        }
+                    });
+                    aboutdev.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.aboutus21.aboutdev.class));
+                        }
+                    });
+                    calender.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(new Intent(StudentsPage.this, calender1.class));
+                        }
+                    });
+                    help.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(new Intent(StudentsPage.this, com.nopalyer.navigationdrawer.student.help.help.class));
+                        }
+                    });
+                    schedule.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(new Intent(StudentsPage.this, Spschedule.class));
+                        }
+                    });
+                    registration.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(new Intent(StudentsPage.this, registrationp2.class));
+                        }
+                    });
+                    course.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startActivity(new Intent(StudentsPage.this, courses1.class));
+                        }
+                    });
+                    assignm.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            //Bundle bundle = getIntent().getExtras();
+                            //updateYear = bundle.getString("yearupdate");
+                            //spyr = getSharedPreferences("shree",MODE_PRIVATE);
+                            //final String updtyear = spyr.getString("yearupdate","");
 
                 /*ref =firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
                 ref.addValueEventListener(new ValueEventListener() {
@@ -166,7 +176,19 @@ public class StudentsPage extends AppCompatActivity {
                     }
                 });*/
 
-                startActivity(new Intent(StudentsPage.this,spassign.class));
+                            startActivity(new Intent(StudentsPage.this,spassign.class));
+                        }
+                    });
+                }else {
+                    Toast.makeText(StudentsPage.this,"Complete your Profile",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(StudentsPage.this,com.nopalyer.navigationdrawer.editProfile.class));
+                    pd.dismiss();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }

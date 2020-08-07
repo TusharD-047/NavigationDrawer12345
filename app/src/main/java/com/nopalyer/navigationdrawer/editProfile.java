@@ -601,8 +601,9 @@ public class editProfile extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        firebaseAuth.signOut();
-        startActivity(new Intent(editProfile.this, StudentsPage.class));
+        //super.onBackPressed();
+        //firebaseAuth.signOut();
+        //startActivity(new Intent(editProfile.this, StudentsPage.class));
+        Toast.makeText(editProfile.this, "Complete Your profile First",Toast.LENGTH_SHORT).show();
     }
 }

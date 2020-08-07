@@ -191,7 +191,7 @@ public class login extends AppCompatActivity {
                             startActivity(new Intent(login.this,Tpmain.class));
                             Toast.makeText(login.this, "Login successful", Toast.LENGTH_LONG).show();
                             pd.dismiss();
-                        }else if(role.equals("admin")){
+                        }/*else if(role.equals("admin")){
                             startActivity(new Intent(login.this, AdminTry.class));
                             Toast.makeText(login.this, "Login successful", Toast.LENGTH_LONG).show();
                             pd.dismiss();
@@ -207,7 +207,7 @@ public class login extends AppCompatActivity {
                             startActivity(new Intent(login.this, PhysicalAppearance.class));
                             Toast.makeText(login.this, "Login successful", Toast.LENGTH_LONG).show();
                             pd.dismiss();
-                        }
+                        }*/
                     }else {
                         startActivity(new Intent(login.this,StudentsPage.class));
                         Toast.makeText(login.this, "Login successful", Toast.LENGTH_LONG).show();
