@@ -21,7 +21,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#102030"
+            android:background="#C0C0C0"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
@@ -29,8 +29,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="15dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -52,18 +52,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   Name     "
-                android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:text="   Name :    "
+                android:textColor="#000000"
+                android:textSize="19sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/naam"
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
                 android:text=" "
+                android:textColor="#000000"
+                android:textSize="17sp"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -79,9 +79,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   Roll No.       "
-                android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:text="   Roll No.:       "
+                android:textColor="#000000"
+                android:textSize="19sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -90,8 +90,8 @@
                 android:layout_height="wrap_content"
                 android:maxLength="7"
                 android:text=" "
-                android:textColor="#ffffff"
-                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textSize="17sp"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -104,16 +104,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   Programme   "
-                android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:text="   Programme :   "
+                android:textColor="#000000"
+                android:textSize="19sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/karyakrm"
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textSize="17sp"
                 android:text=" "
                 android:textStyle="normal" />
 
@@ -127,16 +127,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="   Department  "
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
+                    android:text="   Department : "
+                    android:textColor="#000000"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
                 <TextView
                     android:id="@+id/vibhag"
                     android:layout_width="275dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
                     android:text=" "
                     android:textStyle="normal" />
 
@@ -151,16 +151,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="   Year     "
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
+                    android:text="   Year :     "
+                    android:textColor="#000000"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
                 <TextView
                     android:id="@+id/umr"
                     android:layout_width="275dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
                     android:text=" "
                     android:textStyle="normal" />
 
@@ -172,7 +172,7 @@
                 android:layout_marginTop="10px"
                 android:layout_marginRight="20px"
                 android:layout_marginBottom="10px"
-                android:background="#009688" />
+                android:background="#000000" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -184,19 +184,21 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="                   Instructions                    "
-                    android:textColor="@color/white"
-                    android:textSize="27dp"
+                    android:text="                   INSTRUCTIONS                    "
+                    android:textColor="#102030"
+                    android:textSize="22dp"
+                    android:textAlignment="center"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginRight="10dp"
                     android:text="(Read the instructions/ Pre-requisite  carefully before filling
 the Registration Form)"
-                    android:textColor="@color/white"
-                    android:textSize="19dp" />
+                    android:textColor="#606060"
+                    android:textStyle="bold"
+                    android:textSize="17dp" />
             </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -210,40 +212,48 @@ the Registration Form)"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:text="(A) Instructions for filling the REGISTRATION FORM :\n1. Please fill all the Personal and Educational details carefully.\n
+                android:text="(A) Instructions for filling the REGISTRATION FORM :\n\n1. Please fill all the Personal and Educational details carefully.\n
 2. After filling all the information click on 'Next' button at the last of the page.\n
 3. A Preview Form will be generated ,you can edit the form (if there is any mistake).Otherwise click on 'Upload' button.\n
 4. After uploading your form ,click on 'Next' to upload the required documents like fee receipt, photograph,etc.\n
 "
-                android:textColor="@color/white"
-                android:textSize="19dp"
-                android:textStyle="normal" />
+                android:textColor="#202020"
+                android:textSize="16dp"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:text="(B) Before proceeding to apply, please ensure that you have: \n
+                android:text="(B) Before proceeding to apply, please ensure that you have: \n\n
 1. Scanned copy of Photograph (Size must be under 100KB )\n
 2. Scanned copy of Institute's ID Card (Size must be under 100KB )\n
 3. Scanned copy of Fee Receipt (Size must be under 100KB )\n
 4. Scanned copy of Hostel Fee Receipt ,if required (Size must be under 100KB )\n
 5. Scanned copy of Income/Category Certificate ,if required (Size must be under 100KB )\n"
-                android:textColor="@color/white"
-                android:textSize="19dp"
-                android:textStyle="normal" />
+                android:textColor="#202020"
+                android:textSize="16dp"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"
-                android:text="(C) Then click on 'Done' ,you will receive a message 'YOUR FORM HAS BEEN SUBMITTED SUCCESSFULY' on your screen.\n\n
-Wohoo! ... Your Registration is under process."
-                android:textColor="@color/white"
-                android:textSize="19dp"
-                android:textStyle="normal" />
+                android:text="(C) Then click on 'Done' ,you will receive a message 'YOUR FORM HAS BEEN SUBMITTED SUCCESSFULY' on your screen.\n"
+                android:textColor="#202020"
+                android:textSize="16dp"
+                android:textStyle="italic" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="10dp"
+                android:text="Wohoo! ... Your Registration is under process."
+                android:textColor="#006600"
+                android:textSize="16dp"
+                android:textStyle="italic" />
         </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -258,9 +268,9 @@ Wohoo! ... Your Registration is under process."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="I acknowledge that I have read and understood the above procedures in its entirety and agree to abide by them."
-                    android:textColor="#F6D89B"
-                    android:textSize="19sp"
-                    android:textStyle="normal"></CheckBox>
+                    android:textColor="#CC0000"
+                    android:textSize="15sp"
+                    android:textStyle="italic"></CheckBox>
 
             </LinearLayout>
             <Button
@@ -268,7 +278,11 @@ Wohoo! ... Your Registration is under process."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#102030"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:text="Next" />
 
         </LinearLayout>
