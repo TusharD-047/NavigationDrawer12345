@@ -58,7 +58,7 @@ public class studentp extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference,ref,ref2;
     FirebaseStorage firebaseStorage;
-    Spinner yearspinner;
+    //Spinner yearspinner;
     SharedPreferences sharedprefs,sharedPreferences2;
     SharedPreferences.Editor editor,editor2;
     String save = "";
@@ -70,7 +70,7 @@ public class studentp extends AppCompatActivity {
         setContentView(R.layout.activity_studentp);
 
         updtyr = findViewById(R.id.updateyear);
-        yearspinner=(Spinner)findViewById(R.id.profileSpinner);
+        //yearspinner=(Spinner)findViewById(R.id.profileSpinner);
         profile = (ImageView)findViewById(R.id.profilep);
         name = (TextView)findViewById(R.id.name123);
         roll = (TextView)findViewById(R.id.roll123);
@@ -141,7 +141,7 @@ public class studentp extends AppCompatActivity {
                     });
 
                     //spinner starts=============================================================================================================================================
-                    final  String[] year1 = {"Choose year","1st year","2nd year","3rd year","4th year"};
+                    /*final  String[] year1 = {"Choose year","1st year","2nd year","3rd year","4th year"};
                     sharedprefs = getSharedPreferences("yash",MODE_PRIVATE);
                     editor=sharedprefs.edit();
 
@@ -164,7 +164,7 @@ public class studentp extends AppCompatActivity {
 
                         }
                     });
-
+*/
 
                     //spinner ends==============================================================================================================================================
                 }else {

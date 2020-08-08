@@ -39,7 +39,7 @@ import com.theartofdev.edmodo.cropper.CropImage;
 
 public class editProfile extends AppCompatActivity {
     private ImageView profile;
-    private TextView department,email,name1;
+    private TextView department,email,name1,samuh;
     private EditText roll,name,contact;
     private CheckBox note;
     ProgressDialog pd,pd1;
@@ -73,6 +73,7 @@ public class editProfile extends AppCompatActivity {
         save = findViewById(R.id.Ebutton);
         note =(CheckBox) findViewById(R.id.EC);
         email = findViewById(R.id.editemail);
+        samuh = findViewById(R.id.samuh);
 
         pd = new ProgressDialog(this);
         pd1 = new ProgressDialog(this);
@@ -131,6 +132,8 @@ public class editProfile extends AppCompatActivity {
                                         }
                                         if (position == 1) {
                                             year = year1[position];
+                                            samuh.setVisibility(View.VISIBLE);
+                                            ES3.setVisibility(View.VISIBLE);
                                             adapter_grp = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, group);
                                             adapter_grp.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                                             ES3.setAdapter(adapter_grp);
@@ -148,7 +151,8 @@ public class editProfile extends AppCompatActivity {
                                         }
                                         if (position == 2 || position == 3 || position == 4) {
                                             year = year1[position];
-                                            ES3.setEnabled(false);
+                                            ES3.setVisibility(View.GONE);
+                                            samuh.setVisibility(View.GONE);
                                         }
                                     }
 
@@ -189,6 +193,8 @@ public class editProfile extends AppCompatActivity {
                                             //  show.setEnabled(false);
                                         }
                                         if (position == 1) {
+                                            samuh.setVisibility(View.VISIBLE);
+                                            ES3.setVisibility(View.VISIBLE);
                                             adapter_grp = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, group);
                                             adapter_grp.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                                             ES3.setAdapter(adapter_grp);
@@ -206,7 +212,8 @@ public class editProfile extends AppCompatActivity {
                                         }
                                         if (position == 2 || position == 3 || position == 4 || position == 5 ) {
                                             year = year2[position];
-                                            ES3.setEnabled(false);
+                                            samuh.setVisibility(View.GONE);
+                                            ES3.setVisibility(View.GONE);
                                         }
                                     }
 
@@ -250,6 +257,8 @@ public class editProfile extends AppCompatActivity {
                                         if (position == 1) {
                                             adapter_grp = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, group);
                                             adapter_grp.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
+                                            ES3.setVisibility(View.VISIBLE);
+                                            samuh.setVisibility(View.VISIBLE);
                                             ES3.setAdapter(adapter_grp);
                                             ES3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                 @Override
@@ -265,6 +274,8 @@ public class editProfile extends AppCompatActivity {
                                         }
                                         if (position == 2 || position == 3 || position == 4 || position == 5) {
                                             year = year2[position];
+                                            samuh.setVisibility(View.GONE);
+                                            ES3.setVisibility(View.GONE);
                                             ES3.setEnabled(false);
                                         }
                                     }
@@ -284,6 +295,8 @@ public class editProfile extends AppCompatActivity {
                     });
                 }
                 if (position == 4){
+                    samuh.setVisibility(View.GONE);
+                    ES3.setVisibility(View.GONE);
                     progm = programme[position];
                     adapter_department1 = new ArrayAdapter<>(editProfile.this, R.layout.colourful_spinner_items, department1);
                     adapter_department1.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
@@ -326,6 +339,8 @@ public class editProfile extends AppCompatActivity {
                     });
                 }
                 if (position == 5) {
+                    ES3.setVisibility(View.GONE);
+                    samuh.setVisibility(View.GONE);
                     adapter_department4 = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, department4);
                     adapter_department4.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     ES2.setAdapter(adapter_department4);
@@ -369,6 +384,8 @@ public class editProfile extends AppCompatActivity {
                 }
 
                 if (position == 6) {
+                    ES3.setVisibility(View.GONE);
+                    samuh.setVisibility(View.GONE);
                     adapter_department6 = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, department6);
                     adapter_department6.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     ES2.setAdapter(adapter_department6);
@@ -411,6 +428,8 @@ public class editProfile extends AppCompatActivity {
                     });
                 }
                 if (position == 7) {
+                    ES3.setVisibility(View.GONE);
+                    samuh.setVisibility(View.GONE);
                     adapter_department2 = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, department2);
                     adapter_department2.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     ES2.setAdapter(adapter_department2);
@@ -454,6 +473,8 @@ public class editProfile extends AppCompatActivity {
                 }
 
                 if (position == 8) {
+                    samuh.setVisibility(View.GONE);
+                    ES3.setVisibility(View.GONE);
                     adapter_department3 = new ArrayAdapter<String>(editProfile.this, R.layout.colourful_spinner_items, department3);
                     adapter_department3.setDropDownViewResource(R.layout.colourful_spinner_dropdown);
                     ES2.setAdapter(adapter_department3);
