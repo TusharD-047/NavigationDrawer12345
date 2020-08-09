@@ -8,6 +8,13 @@
     https://nith.ac.in/
     </string>
 
+    <string-array name="year">
+        <item>1st year</item>
+        <item>2nd year</item>
+        <item>3rd year</item>
+        <item>4th year</item>
+        <item>5th year</item>
+    </string-array>
 
     <string name="SinghaSir">
         <b>A.S Singha  </b>\n

@@ -46,6 +46,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import android.widget.AutoCompleteTextView;
 
 public class studentp extends AppCompatActivity {
     private ImageView profile;
@@ -58,16 +59,24 @@ public class studentp extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference,ref,ref2;
     FirebaseStorage firebaseStorage;
+
     //Spinner yearspinner;
     SharedPreferences sharedprefs,sharedPreferences2;
     SharedPreferences.Editor editor,editor2;
     String save = "";
     Long size;
+    private static final String[] year = new String[]{
+            "1st year", "2nd year", "3rd year", "4th year", "5th year"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentp);
+        String[] countries = getResources().getStringArray(R.array.year);
+        AutoCompleteTextView editText = findViewById(R.id.actv);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.custom_list_item, R.id.text_view_list_item, countries);
+        editText.setAdapter(adapter);
 
         updtyr = findViewById(R.id.updateyear);
         //yearspinner=(Spinner)findViewById(R.id.profileSpinner);

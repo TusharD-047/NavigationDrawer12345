@@ -289,21 +289,24 @@
                     android:layout_marginBottom="10px"
                     android:background="#990099"/>
 
-                <LinearLayout
-                    android:orientation="vertical"
+                <TextView
+                    android:id="@+id/text_view_countries"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:textColor="#ffffff"
+                    android:text=" Update Year :"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />  <AutoCompleteTextView
+                android:id="@+id/actv"
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#ffffff"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Year : "/>
-
-
-                </LinearLayout>
+                android:completionThreshold="1"
+                android:dropDownAnchor="@id/text_view_countries"
+                android:hint="enter year(1st year)"
+                android:popupBackground="#ffffff"/>
 
 
 
