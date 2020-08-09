@@ -297,16 +297,19 @@
                     android:textColor="#ffffff"
                     android:text=" Update Year :"
                     android:textStyle="bold"
-                    android:textSize="20sp" />  <AutoCompleteTextView
-                android:id="@+id/actv"
-                android:textColor="#000000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                    android:textSize="20sp" />
 
-                android:completionThreshold="1"
-                android:dropDownAnchor="@id/text_view_countries"
-                android:hint="enter year(1st year)"
-                android:popupBackground="#ffffff"/>
+                <AutoCompleteTextView
+                    android:id="@+id/actv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+
+                    android:dropDownAnchor="@id/text_view_countries"
+                    android:hint="enter year(1st year)"
+                    android:popupBackground="#ffffff"
+                    android:textColor="#FBFBFB"
+                    android:textColorHint="#F6F3F3" />
 
 
 

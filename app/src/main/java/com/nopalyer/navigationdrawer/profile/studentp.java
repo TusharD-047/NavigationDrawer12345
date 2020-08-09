@@ -59,6 +59,7 @@ public class studentp extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference,ref,ref2;
     FirebaseStorage firebaseStorage;
+    AutoCompleteTextView editText;
 
     //Spinner yearspinner;
     SharedPreferences sharedprefs,sharedPreferences2;
@@ -73,7 +74,7 @@ public class studentp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentp);
         String[] countries = getResources().getStringArray(R.array.year);
-        AutoCompleteTextView editText = findViewById(R.id.actv);
+        editText = findViewById(R.id.actv);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 R.layout.custom_list_item, R.id.text_view_list_item, countries);
         editText.setAdapter(adapter);
@@ -129,6 +130,7 @@ public class studentp extends AppCompatActivity {
                             prog.setText(dataSnapshot.child("Programme").getValue().toString().trim());
                             email.setText(firebaseUser.getEmail());
                             contact.setText(dataSnapshot.child("Contact").getValue().toString().trim());
+                            editText.setText(dataSnapshot.child("Year").getValue().toString().trim());
                             pd.dismiss();
                         }
 
@@ -192,7 +194,7 @@ public class studentp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ref2 = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
-                ref2.child("Year").setValue(save);
+                ref2.child("Year").setValue(editText.getText().toString());
                 startActivity(new Intent(studentp.this,StudentsPage.class));
             }
         });
