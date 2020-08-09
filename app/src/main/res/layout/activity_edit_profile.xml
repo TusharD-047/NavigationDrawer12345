@@ -114,6 +114,7 @@
                         android:layout_height="wrap_content"
                         android:text="Name     "
                         android:textColor="#ffffff"
+                        android:fontFamily="serif-monospace"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -132,13 +133,14 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="22dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Roll No.       "
+                        android:fontFamily="serif-monospace"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -165,17 +167,17 @@
                         android:layout_height="wrap_content"
                         android:text="Programme  "
                         android:textColor="#ffffff"
+                        android:fontFamily="serif-monospace"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/ES0"
-                        android:layout_width="200dp"
+                        android:layout_width="375dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:dropDownWidth="match_parent"
-                        android:spinnerMode="dropdown">
-                    </Spinner>
+                        android:spinnerMode="dropdown"></Spinner>
                 </LinearLayout>
 
                 <LinearLayout
@@ -188,13 +190,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Department  "
+                        android:fontFamily="serif-monospace"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/ES2"
-                        android:layout_width="200dp"
+                        android:layout_width="375dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:dropDownWidth="match_parent"
@@ -214,6 +217,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:text="Year     "
+                        android:fontFamily="serif-monospace"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -239,6 +243,7 @@
                         android:layout_height="wrap_content"
                         android:text="Group   "
                         android:textColor="#ffffff"
+                        android:fontFamily="serif-monospace"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -264,6 +269,7 @@
                         android:layout_height="wrap_content"
                         android:text="Email Id  "
                         android:textColor="#ffffff"
+                        android:fontFamily="serif-monospace"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -291,6 +297,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Contact no.   "
+                        android:fontFamily="serif-monospace"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#102030"
     android:layout_marginLeft="2dp"
-    tools:context=".mech_1">
+    tools:context=".student.branchfaculty.mech_1">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -293,7 +293,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/Debashish"
+                android:text="@string/Varun"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -316,7 +316,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/MOhitPant"
+                android:text="@string/Debashish"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -339,7 +339,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/Ajoy"
+                android:text="@string/MOhitPant"
                 android:textColor="@color/white"/>
 
         </LinearLayout>
@@ -363,7 +363,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/AkhileshChaudhary"
+                android:text="@string/Ajoy"
                 android:textColor="@color/white"/>
 
         </LinearLayout>
@@ -388,7 +388,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/DeepakSharma"
+                android:text="@string/AkhileshChaudhary"
                 android:textColor="@color/white"/>
 
         </LinearLayout>
@@ -412,7 +412,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/Dilshad"
+                android:text="@string/DeepakSharma"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -435,7 +435,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/LaxmikantYadav"
+                android:text="@string/Dilshad"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -457,7 +457,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/ManojSinha"
+                android:text="@string/LaxmikantYadav"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -479,7 +479,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/Param"
+                android:text="@string/ManojSinha"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -502,7 +502,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/parnikaShrivastava"
+                android:text="@string/Param"
                 android:textColor="@color/white"/>
         </LinearLayout>
         <LinearLayout
@@ -524,7 +524,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/Priyadarshi"
+                android:text="@string/parnikaShrivastava"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -548,7 +548,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/RajeshKumarMech"
+                android:text="@string/Priyadarshi"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -570,7 +570,7 @@
                 android:layout_weight="3"
                 android:layout_marginLeft="5dp"
                 android:textIsSelectable="true"
-                android:text="@string/Santosh"
+                android:text="@string/RajeshKumarMech"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
