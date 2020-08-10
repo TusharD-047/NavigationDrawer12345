@@ -100,13 +100,13 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp"
                 android:fillViewport="true">
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="120px"
                     android:orientation="vertical"
                     android:paddingTop="50px">
@@ -176,7 +176,7 @@
 
                         <Spinner
                             android:id="@+id/ES0"
-                            android:layout_width="375dp"
+                            android:layout_width="347dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:dropDownWidth="match_parent"
@@ -199,7 +199,7 @@
 
                         <Spinner
                             android:id="@+id/ES2"
-                            android:layout_width="475dp"
+                            android:layout_width="348dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:dropDownWidth="match_parent"
@@ -282,6 +282,7 @@
                             android:textStyle="normal" />
 
 
+
                     </LinearLayout>
 
 
@@ -310,36 +311,39 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:orientation="horizontal">
-
-                        <CheckBox
-                            android:id="@+id/EC"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=" I hereby declare that all the information given above is true to the best of my knowledge and belief."
-                            android:textColor="#FFFFFF"
-                            android:textSize="20sp"
-                            android:textStyle="bold"></CheckBox>
-
-                    </LinearLayout>
 
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:layout_marginTop="40dp"
-                        android:layout_marginRight="20px"
-                        android:layout_marginBottom="10px"
-                        android:background="#990099" />
 
 
                 </LinearLayout>
 
             </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/EC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" I hereby declare that all the information given above is true to the best of my knowledge and belief."
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></CheckBox>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20px"
+                android:layout_marginBottom="10px"
+                android:background="#990099" />
 
             <Button
                 android:id="@+id/Ebutton"
