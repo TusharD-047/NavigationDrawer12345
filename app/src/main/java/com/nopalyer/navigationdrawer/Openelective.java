@@ -20,11 +20,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +37,7 @@ import com.nopalyer.navigationdrawer.student.StudentsPage;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Openelective extends AppCompatActivity {
 
@@ -44,10 +47,10 @@ public class Openelective extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     FirebaseUser firebaseUser;
-    DatabaseReference ref,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10,ref11,ref12,ref13;
-    ProgressDialog pd;
+    DatabaseReference ref,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10,ref11,ref12,ref13,databaseReference;
+    ProgressDialog pd,pd2;
     Toolbar toolbar;
-
+    List<String> listDataHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,12 +90,381 @@ public class Openelective extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         pd = new ProgressDialog(this);
+        listDataHeader = new ArrayList<>();
+        databaseReference = FirebaseDatabase.getInstance().getReference("Subjects");
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                final String headertitile = dataSnapshot.getKey();
 
-        final String divisions[] =  {
-                "--1st Preference--",
-                "CH-306","CH-370","CY-306","CE-306","CE-307","CE-308","CS-306","CS-370","EC-370", "EE-370" ,"EE-371 ","HS-306","HS-370","MB-306","MB-380","MS-370","MS-371","MA-370","MA-371","ME-370","ME-371","PH-370","PH-371"
+                listDataHeader.add(headertitile);
+                final String[] divisions = new String[listDataHeader.size()];
+                //divisions[0] = "--1st Preference--";
+                for(int i=0; i<divisions.length;i++){
+                    divisions[i] = listDataHeader.get(i);
+                }
+                final String[] divisions2 = new String[divisions.length+1];
+                divisions2[0]= "--1st Preference--";
+                for (int k =0;k<divisions.length;k++){
+                    divisions2[k+1] = divisions[k];
+                }
+                final ArrayAdapter<String> adapter;
+                adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,divisions2);
+                spin1.setAdapter(adapter);
 
-        };
+                spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        if (i == 0) {
+
+                            spin2.setEnabled(false);
+                            spin3.setEnabled(false);
+                            spin4.setEnabled(false);
+                            spin5.setEnabled(false);
+                            spin6.setEnabled(false);
+                            spin7.setEnabled(false);
+                            spin8.setEnabled(false);
+                            spin9.setEnabled(false);
+                            spin10.setEnabled(false);
+
+                            nxt.setEnabled(true);
+                        }
+                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20 || i==21|| i == 22 || i==23) {
+                            first = divisions2[i];
+                            spin2.setEnabled(true);
+                            final ArrayList<String> sndpref = new ArrayList<>();
+                            sndpref.add("2nd Preference");
+                            for (int j = 0; j < divisions2.length; j++) {
+                                if (!Arrays.asList(divisions2[j]).contains(first)) {
+                                    sndpref.add(divisions2[j]);
+                                }
+                            }
+                            sndpref.remove("--1st Preference--");
+                            final ArrayAdapter<String> adapter4;
+                            adapter4 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, sndpref);
+                            spin2.setAdapter(adapter4);
+                            spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                    if (i == 0) {
+                                        spin3.setEnabled(false);
+                                        spin4.setEnabled(false);
+                                        spin5.setEnabled(false);
+                                        spin6.setEnabled(false);
+                                        spin7.setEnabled(false);
+                                        spin8.setEnabled(false);
+                                        spin9.setEnabled(false);
+                                        spin10.setEnabled(false);
+
+                                        nxt.setEnabled(true);
+                                    }
+                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20|| i==21|| i == 22 ) {
+                                        sec = sndpref.get(i);
+                                        spin3.setEnabled(true);
+                                        final ArrayList<String> thdpref = new ArrayList<>();
+                                        thdpref.add("3rd Preference");
+                                        for (int j = 0; j < sndpref.size(); j++) {
+                                            if (!Arrays.asList(sndpref.get(j)).contains(sec)) {
+                                                thdpref.add(sndpref.get(j));
+                                            }
+                                        }
+                                        thdpref.remove("2nd Preference");
+                                        ArrayAdapter<String> adapter5;
+                                        adapter5 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref);
+                                        spin3.setAdapter(adapter5);
+                                        spin3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                            @Override
+                                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                if (i == 0) {
+                                                    spin4.setEnabled(false);
+                                                    spin5.setEnabled(false);
+                                                    spin6.setEnabled(false);
+                                                    spin7.setEnabled(false);
+                                                    spin8.setEnabled(false);
+                                                    spin9.setEnabled(false);
+                                                    spin10.setEnabled(false);
+
+                                                    nxt.setEnabled(true);
+                                                }
+
+                                                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20|| i==21) {
+                                                    third = thdpref.get(i);
+                                                    spin4.setEnabled(true);
+                                                    final ArrayList<String> thdpref4 = new ArrayList<>();
+                                                    thdpref4.add("4th Preference");
+                                                    for (int j = 0; j < thdpref.size(); j++) {
+                                                        if (!Arrays.asList(thdpref.get(j)).contains(third)) {
+                                                            thdpref4.add(thdpref.get(j));
+                                                        }
+                                                    }
+                                                    thdpref4.remove("3rd Preference");
+                                                    ArrayAdapter<String> adapter6;
+                                                    adapter6 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref4);
+                                                    spin4.setAdapter(adapter6);
+                                                    spin4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                        @Override
+                                                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                            if (i == 0) {
+
+                                                                spin5.setEnabled(false);
+                                                                spin6.setEnabled(false);
+                                                                spin7.setEnabled(false);
+                                                                spin8.setEnabled(false);
+                                                                spin9.setEnabled(false);
+                                                                spin10.setEnabled(false);
+
+                                                                nxt.setEnabled(true);
+                                                            }
+
+                                                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20) {
+                                                                forth = thdpref4.get(i);
+                                                                spin5.setEnabled(true);
+                                                                final ArrayList<String> thdpref5 = new ArrayList<>();
+                                                                thdpref5.add("5th Preference");
+                                                                for (int j = 0; j < thdpref4.size(); j++) {
+                                                                    if (!Arrays.asList(thdpref4.get(j)).contains(forth)) {
+                                                                        thdpref5.add(thdpref4.get(j));
+                                                                    }
+                                                                }
+                                                                thdpref5.remove("4th Preference");
+                                                                ArrayAdapter<String> adapter7;
+                                                                adapter7 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref5);
+                                                                spin5.setAdapter(adapter7);
+                                                                spin5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                                    @Override
+                                                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                                        if (i == 0) {
+
+
+                                                                            spin6.setEnabled(false);
+                                                                            spin7.setEnabled(false);
+                                                                            spin8.setEnabled(false);
+                                                                            spin9.setEnabled(false);
+                                                                            spin10.setEnabled(false);
+
+                                                                            nxt.setEnabled(true);
+                                                                        }
+                                                                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17|| i == 18 || i == 19) {
+                                                                            five = thdpref5.get(i);
+                                                                            spin6.setEnabled(true);
+                                                                            final ArrayList<String> thdpref6 = new ArrayList<>();
+                                                                            thdpref6.add("6th Preference");
+                                                                            for (int j = 0; j < thdpref5.size(); j++) {
+                                                                                if (!Arrays.asList(thdpref5.get(j)).contains(five)) {
+                                                                                    thdpref6.add(thdpref5.get(j));
+                                                                                }
+                                                                            }
+                                                                            thdpref6.remove("5th Preference");
+                                                                            ArrayAdapter<String> adapter8;
+                                                                            adapter8 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref6);
+                                                                            spin6.setAdapter(adapter8);
+                                                                            spin6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                                                @Override
+                                                                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                                                    if (i == 0) {
+
+                                                                                        spin7.setEnabled(false);
+                                                                                        spin8.setEnabled(false);
+                                                                                        spin9.setEnabled(false);
+                                                                                        spin10.setEnabled(false);
+
+                                                                                        nxt.setEnabled(true);
+                                                                                    }
+                                                                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16|| i==17|| i == 18 ) {
+                                                                                        six = thdpref6.get(i);
+                                                                                        spin7.setEnabled(true);
+                                                                                        final ArrayList<String> thdpref7 = new ArrayList<>();
+                                                                                        thdpref7.add("7th Preference");
+                                                                                        for (int j = 0; j < thdpref6.size(); j++) {
+                                                                                            if (!Arrays.asList(thdpref6.get(j)).contains(six)) {
+                                                                                                thdpref7.add(thdpref6.get(j));
+                                                                                            }
+                                                                                        }
+                                                                                        thdpref7.remove("6th Preference");
+                                                                                        ArrayAdapter<String> adapter9;
+                                                                                        adapter9 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref7);
+                                                                                        spin7.setAdapter(adapter9);
+                                                                                        spin7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                                                            @Override
+                                                                                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                                                                if (i == 0) {
+
+
+                                                                                                    spin8.setEnabled(false);
+                                                                                                    spin9.setEnabled(false);
+                                                                                                    spin10.setEnabled(false);
+
+                                                                                                    nxt.setEnabled(true);
+                                                                                                }
+                                                                                                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16|| i==17) {
+                                                                                                    seven = thdpref7.get(i);
+                                                                                                    spin8.setEnabled(true);
+                                                                                                    final ArrayList<String> thdpref8 = new ArrayList<>();
+                                                                                                    thdpref8.add("8th Preference");
+                                                                                                    for (int j = 0; j < thdpref7.size(); j++) {
+                                                                                                        if (!Arrays.asList(thdpref7.get(j)).contains(seven)) {
+                                                                                                            thdpref8.add(thdpref7.get(j));
+                                                                                                        }
+                                                                                                    }
+                                                                                                    thdpref8.remove("7th Preference");
+                                                                                                    ArrayAdapter<String> adapter10;
+                                                                                                    adapter10 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref8);
+                                                                                                    spin8.setAdapter(adapter10);
+                                                                                                    spin8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                                                                        @Override
+                                                                                                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                                                                            if (i == 0) {
+
+
+                                                                                                                spin9.setEnabled(false);
+                                                                                                                spin10.setEnabled(false);
+
+                                                                                                                nxt.setEnabled(true);
+                                                                                                            }
+                                                                                                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16) {
+                                                                                                                eight = thdpref8.get(i);
+                                                                                                                spin9.setEnabled(true);
+                                                                                                                final ArrayList<String> thdpref9 = new ArrayList<>();
+                                                                                                                thdpref9.add("9th Preference");
+                                                                                                                for (int j = 0; j < thdpref8.size(); j++) {
+                                                                                                                    if (!Arrays.asList(thdpref8.get(j)).contains(eight)) {
+                                                                                                                        thdpref9.add(thdpref8.get(j));
+                                                                                                                    }
+                                                                                                                }
+                                                                                                                thdpref9.remove("8th Preference");
+                                                                                                                ArrayAdapter<String> adapter11;
+                                                                                                                adapter11 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref9);
+                                                                                                                spin9.setAdapter(adapter11);
+                                                                                                                spin9.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                                                                                    @Override
+                                                                                                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                                                                                        if (i == 0) {
+                                                                                                                            spin10.setEnabled(false);
+
+                                                                                                                            nxt.setEnabled(true);
+                                                                                                                        }
+                                                                                                                        if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15) {
+                                                                                                                            nine = thdpref9.get(i);
+                                                                                                                            spin10.setEnabled(true);
+                                                                                                                            final ArrayList<String> thdpref10 = new ArrayList<>();
+                                                                                                                            thdpref10.add("10th Preference");
+                                                                                                                            for (int j = 0; j < thdpref9.size(); j++) {
+                                                                                                                                if (!Arrays.asList(thdpref9.get(j)).contains(nine)) {
+                                                                                                                                    thdpref10.add(thdpref9.get(j));
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                            thdpref10.remove("9th Preference");
+                                                                                                                            ArrayAdapter<String> adapter12;
+                                                                                                                            adapter12 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref10);
+                                                                                                                            spin10.setAdapter(adapter12);
+                                                                                                                            spin10.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                                                                                                @Override
+                                                                                                                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                                                                                                    if (i == 0) {
+
+                                                                                                                                        nxt.setEnabled(true);
+                                                                                                                                    } else {
+                                                                                                                                        ten = thdpref10.get(i);
+                                                                                                                                        nxt.setEnabled(true);
+                                                                                                                                    }
+
+                                                                                                                                }
+
+
+
+
+                                                                                                                                @Override
+                                                                                                                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                                                                                                }
+                                                                                                                            });
+                                                                                                                        }
+                                                                                                                    }
+
+                                                                                                                    @Override
+                                                                                                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                                                                                    }
+                                                                                                                });
+                                                                                                            }}
+
+                                                                                                        @Override
+                                                                                                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                                                                        }
+                                                                                                    });
+                                                                                                }}
+
+
+                                                                                            @Override
+                                                                                            public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                                                            }
+                                                                                        });
+                                                                                    }}
+
+
+                                                                                @Override
+                                                                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                                                } });
+                                                                        }}
+
+
+                                                                    @Override
+                                                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                                    } });
+                                                            }}
+
+                                                        @Override
+                                                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                        } });
+                                                }}
+
+                                            @Override
+                                            public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                            } });
+                                    }}
+
+
+                                @Override
+                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                } });
+                        }}
+
+
+
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    } });
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         /*final String Electrical[] ={
                 "CSE","ECE","Mechanical","Chemical","Civil"
 
@@ -135,343 +507,6 @@ public class Openelective extends AppCompatActivity {
         };
 
 */
-
-        final ArrayAdapter<String> adapter;
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, divisions);
-
-        spin1.setAdapter(adapter);
-
-        spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) {
-
-                    spin2.setEnabled(false);
-                    spin3.setEnabled(false);
-                    spin4.setEnabled(false);
-                    spin5.setEnabled(false);
-                    spin6.setEnabled(false);
-                    spin7.setEnabled(false);
-                    spin8.setEnabled(false);
-                    spin9.setEnabled(false);
-                    spin10.setEnabled(false);
-
-                    nxt.setEnabled(true);
-                }
-                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20 || i==21|| i == 22 || i==23) {
-                    first = divisions[i];
-                    spin2.setEnabled(true);
-                    final ArrayList<String> sndpref = new ArrayList<>();
-                    sndpref.add("2nd Preference");
-                    for (int j = 0; j < divisions.length; j++) {
-                        if (!Arrays.asList(divisions[j]).contains(first)) {
-                            sndpref.add(divisions[j]);
-                        }
-                    }
-                    sndpref.remove("--1st Preference--");
-                    final ArrayAdapter<String> adapter4;
-                    adapter4 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, sndpref);
-                    spin2.setAdapter(adapter4);
-                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            if (i == 0) {
-                                spin3.setEnabled(false);
-                                spin4.setEnabled(false);
-                                spin5.setEnabled(false);
-                                spin6.setEnabled(false);
-                                spin7.setEnabled(false);
-                                spin8.setEnabled(false);
-                                spin9.setEnabled(false);
-                                spin10.setEnabled(false);
-
-                                nxt.setEnabled(true);
-                            }
-                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20|| i==21|| i == 22 ) {
-                                sec = sndpref.get(i);
-                                spin3.setEnabled(true);
-                                final ArrayList<String> thdpref = new ArrayList<>();
-                                thdpref.add("3rd Preference");
-                                for (int j = 0; j < sndpref.size(); j++) {
-                                    if (!Arrays.asList(sndpref.get(j)).contains(sec)) {
-                                        thdpref.add(sndpref.get(j));
-                                    }
-                                }
-                                thdpref.remove("2nd Preference");
-                                ArrayAdapter<String> adapter5;
-                                adapter5 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref);
-                                spin3.setAdapter(adapter5);
-                                spin3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                    @Override
-                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                        if (i == 0) {
-                                            spin4.setEnabled(false);
-                                            spin5.setEnabled(false);
-                                            spin6.setEnabled(false);
-                                            spin7.setEnabled(false);
-                                            spin8.setEnabled(false);
-                                            spin9.setEnabled(false);
-                                            spin10.setEnabled(false);
-
-                                            nxt.setEnabled(true);
-                                        }
-
-                                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20|| i==21) {
-                                            third = thdpref.get(i);
-                                            spin4.setEnabled(true);
-                                            final ArrayList<String> thdpref4 = new ArrayList<>();
-                                            thdpref4.add("4th Preference");
-                                            for (int j = 0; j < thdpref.size(); j++) {
-                                                if (!Arrays.asList(thdpref.get(j)).contains(third)) {
-                                                    thdpref4.add(thdpref.get(j));
-                                                }
-                                            }
-                                            thdpref4.remove("3rd Preference");
-                                            ArrayAdapter<String> adapter6;
-                                            adapter6 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref4);
-                                            spin4.setAdapter(adapter6);
-                                            spin4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                @Override
-                                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                    if (i == 0) {
-
-                                                        spin5.setEnabled(false);
-                                                        spin6.setEnabled(false);
-                                                        spin7.setEnabled(false);
-                                                        spin8.setEnabled(false);
-                                                        spin9.setEnabled(false);
-                                                        spin10.setEnabled(false);
-
-                                                        nxt.setEnabled(true);
-                                                    }
-
-                                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20) {
-                                                        forth = thdpref4.get(i);
-                                                        spin5.setEnabled(true);
-                                                        final ArrayList<String> thdpref5 = new ArrayList<>();
-                                                        thdpref5.add("5th Preference");
-                                                        for (int j = 0; j < thdpref4.size(); j++) {
-                                                            if (!Arrays.asList(thdpref4.get(j)).contains(forth)) {
-                                                                thdpref5.add(thdpref4.get(j));
-                                                            }
-                                                        }
-                                                        thdpref5.remove("4th Preference");
-                                                        ArrayAdapter<String> adapter7;
-                                                        adapter7 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref5);
-                                                        spin5.setAdapter(adapter7);
-                                                        spin5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                            @Override
-                                                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                if (i == 0) {
-
-
-                                                                    spin6.setEnabled(false);
-                                                                    spin7.setEnabled(false);
-                                                                    spin8.setEnabled(false);
-                                                                    spin9.setEnabled(false);
-                                                                    spin10.setEnabled(false);
-
-                                                                    nxt.setEnabled(true);
-                                                                }
-                                                                if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17|| i == 18 || i == 19) {
-                                                                    five = thdpref5.get(i);
-                                                                    spin6.setEnabled(true);
-                                                                    final ArrayList<String> thdpref6 = new ArrayList<>();
-                                                                    thdpref6.add("6th Preference");
-                                                                    for (int j = 0; j < thdpref5.size(); j++) {
-                                                                        if (!Arrays.asList(thdpref5.get(j)).contains(five)) {
-                                                                            thdpref6.add(thdpref5.get(j));
-                                                                        }
-                                                                    }
-                                                                    thdpref6.remove("5th Preference");
-                                                                    ArrayAdapter<String> adapter8;
-                                                                    adapter8 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref6);
-                                                                    spin6.setAdapter(adapter8);
-                                                                    spin6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                                        @Override
-                                                                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                            if (i == 0) {
-
-                                                                                spin7.setEnabled(false);
-                                                                                spin8.setEnabled(false);
-                                                                                spin9.setEnabled(false);
-                                                                                spin10.setEnabled(false);
-
-                                                                                nxt.setEnabled(true);
-                                                                            }
-                                                                            if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16|| i==17|| i == 18 ) {
-                                                                                six = thdpref6.get(i);
-                                                                                spin7.setEnabled(true);
-                                                                                final ArrayList<String> thdpref7 = new ArrayList<>();
-                                                                                thdpref7.add("7th Preference");
-                                                                                for (int j = 0; j < thdpref6.size(); j++) {
-                                                                                    if (!Arrays.asList(thdpref6.get(j)).contains(six)) {
-                                                                                        thdpref7.add(thdpref6.get(j));
-                                                                                    }
-                                                                                }
-                                                                                thdpref7.remove("6th Preference");
-                                                                                ArrayAdapter<String> adapter9;
-                                                                                adapter9 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref7);
-                                                                                spin7.setAdapter(adapter9);
-                                                                                spin7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                                                    @Override
-                                                                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                        if (i == 0) {
-
-
-                                                                                            spin8.setEnabled(false);
-                                                                                            spin9.setEnabled(false);
-                                                                                            spin10.setEnabled(false);
-
-                                                                                            nxt.setEnabled(true);
-                                                                                        }
-                                                                                        if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16|| i==17) {
-                                                                                            seven = thdpref7.get(i);
-                                                                                            spin8.setEnabled(true);
-                                                                                            final ArrayList<String> thdpref8 = new ArrayList<>();
-                                                                                            thdpref8.add("8th Preference");
-                                                                                            for (int j = 0; j < thdpref7.size(); j++) {
-                                                                                                if (!Arrays.asList(thdpref7.get(j)).contains(seven)) {
-                                                                                                    thdpref8.add(thdpref7.get(j));
-                                                                                                }
-                                                                                            }
-                                                                                            thdpref8.remove("7th Preference");
-                                                                                            ArrayAdapter<String> adapter10;
-                                                                                            adapter10 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref8);
-                                                                                            spin8.setAdapter(adapter10);
-                                                                                            spin8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                                                                @Override
-                                                                                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                    if (i == 0) {
-
-
-                                                                                                        spin9.setEnabled(false);
-                                                                                                        spin10.setEnabled(false);
-
-                                                                                                        nxt.setEnabled(true);
-                                                                                                    }
-                                                                                                    if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16) {
-                                                                                                        eight = thdpref8.get(i);
-                                                                                                        spin9.setEnabled(true);
-                                                                                                        final ArrayList<String> thdpref9 = new ArrayList<>();
-                                                                                                        thdpref9.add("9th Preference");
-                                                                                                        for (int j = 0; j < thdpref8.size(); j++) {
-                                                                                                            if (!Arrays.asList(thdpref8.get(j)).contains(eight)) {
-                                                                                                                thdpref9.add(thdpref8.get(j));
-                                                                                                            }
-                                                                                                        }
-                                                                                                        thdpref9.remove("8th Preference");
-                                                                                                        ArrayAdapter<String> adapter11;
-                                                                                                        adapter11 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref9);
-                                                                                                        spin9.setAdapter(adapter11);
-                                                                                                        spin9.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                                                                            @Override
-                                                                                                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                                if (i == 0) {
-                                                                                                                    spin10.setEnabled(false);
-
-                                                                                                                    nxt.setEnabled(true);
-                                                                                                                }
-                                                                                                                if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15) {
-                                                                                                                    nine = thdpref9.get(i);
-                                                                                                                    spin10.setEnabled(true);
-                                                                                                                    final ArrayList<String> thdpref10 = new ArrayList<>();
-                                                                                                                    thdpref10.add("10th Preference");
-                                                                                                                    for (int j = 0; j < thdpref9.size(); j++) {
-                                                                                                                        if (!Arrays.asList(thdpref9.get(j)).contains(nine)) {
-                                                                                                                            thdpref10.add(thdpref9.get(j));
-                                                                                                                        }
-                                                                                                                    }
-                                                                                                                    thdpref10.remove("9th Preference");
-                                                                                                                    ArrayAdapter<String> adapter12;
-                                                                                                                    adapter12 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref10);
-                                                                                                                    spin10.setAdapter(adapter12);
-                                                                                                                    spin10.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                                                                                                        @Override
-                                                                                                                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                                                                                                                            if (i == 0) {
-
-                                                                                                                                nxt.setEnabled(true);
-                                                                                                                            } else {
-                                                                                                                                ten = thdpref10.get(i);
-                                                                                                                                nxt.setEnabled(true);
-                                                                                                                            }
-
-                                                                                                                        }
-
-
-
-
-                                                                                                                                                @Override
-                                                                                                                                                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                                                                                                                }
-                                                                                                                                            });
-                                                                                                                                        }
-                                                                                                                                    }
-
-                                                                                                                                    @Override
-                                                                                                                                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                                                                                                    }
-                                                                                                                                });
-                                                                                                                            }}
-
-                                                                                                                        @Override
-                                                                                                                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                                                                                        }
-                                                                                                                    });
-                                                                                                                }}
-
-
-                                                                                                            @Override
-                                                                                                            public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                                                                            }
-                                                                                                        });
-                                                                                                    }}
-
-
-                                                                                                @Override
-                                                                                                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                                                                } });
-                                                                                        }}
-
-
-                                                                                    @Override
-                                                                                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                                                    } });
-                                                                            }}
-
-                                                                        @Override
-                                                                        public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                                        } });
-                                                                }}
-
-                                                            @Override
-                                                            public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                            } });
-                                                    }}
-
-
-                                                @Override
-                                                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                                                } });
-                                        }}
-
-
-
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            } });
 
 
         nxt.setOnClickListener(new View.OnClickListener() {
