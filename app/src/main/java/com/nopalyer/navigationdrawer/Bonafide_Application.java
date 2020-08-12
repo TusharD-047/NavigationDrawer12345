@@ -159,10 +159,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     }
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.GONE);
                                                         b5.setEnabled(false);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
+                                                        b5.setVisibility(View.VISIBLE);
                                                         doc = documents[position];
                                                     }
                                                 }
@@ -224,11 +226,13 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     }
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.GONE);
                                                         b5.setEnabled(false);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.VISIBLE);
                                                     }
                                                 }
 
@@ -291,10 +295,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
                                                         b5.setEnabled(false);
+                                                        b5.setVisibility(View.GONE);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.VISIBLE);
                                                     }
                                                 }
 
@@ -356,10 +362,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
                                                         b5.setEnabled(false);
+                                                        b5.setVisibility(View.GONE);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.VISIBLE);
                                                     }
                                                 }
 
@@ -420,11 +428,13 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     }
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.GONE);
                                                         b5.setEnabled(false);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.VISIBLE);
                                                     }
                                                 }
 
@@ -486,10 +496,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
                                                         b5.setEnabled(false);
+                                                        b5.setVisibility(View.GONE);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.VISIBLE);
                                                     }
                                                 }
 
@@ -551,10 +563,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
                                                         b5.setEnabled(false);
+                                                        b5.setVisibility(View.GONE);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.VISIBLE);
                                                     }
                                                 }
 
@@ -616,10 +630,12 @@ public class Bonafide_Application extends AppCompatActivity {
                                                     if (position == 1 || position == 2 || position == 3 || position == 4 || position == 5 || position == 6 || position == 7) {
                                                         doc = documents[position];
                                                         b5.setEnabled(false);
+                                                        b5.setVisibility(View.GONE);
                                                     }
                                                     if (position == 8){
                                                         b5.setEnabled(true);
                                                         doc = documents[position];
+                                                        b5.setVisibility(View.VISIBLE);
                                                     }
                                                 }
 
