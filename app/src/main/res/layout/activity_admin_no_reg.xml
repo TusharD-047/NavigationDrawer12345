@@ -4,21 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#102030"
     tools:context=".Admin.AdminNoReg">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#000000"
+        android:src="@drawable/newlogo"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="187dp"
-        android:layout_height="102dp"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="297dp"
-        android:layout_marginEnd="193dp"
-        android:layout_marginBottom="415dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="No Registeration Available"
+        android:text="Registration has not started yet"
+        android:textColor="#ffffff"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:layout_constraintVertical_bias="0.905"
+        app:srcCompat="@drawable/na" />
 </androidx.constraintlayout.widget.ConstraintLayout>
