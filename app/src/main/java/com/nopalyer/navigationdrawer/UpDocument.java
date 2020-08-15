@@ -71,8 +71,6 @@ public class UpDocument extends AppCompatActivity {
     private static int PICK_IMAGE5 = 127;
     private static int PICK_IMAGE6 = 128;
     private static int PICK_IMAGE7 = 129;
-
-    ProgressDialog pd,pd1;
     String photost ="",idst ="",feesst ="",hosst ="",incomest ="",lfeesst="";
     Uri photo,id,fees,hos,income,lfees;
     long size,size2;
@@ -96,9 +94,6 @@ public class UpDocument extends AppCompatActivity {
         hospv = findViewById(R.id.Hostelpreview);
         incomepv = findViewById(R.id.AddDocPreview);
         lfeepv = findViewById(R.id.LFeesPreview);
-        pd =new ProgressDialog(this);
-
-        pd1 =new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
@@ -183,10 +178,6 @@ public class UpDocument extends AppCompatActivity {
                 if (hosst.isEmpty() || idst.isEmpty() || feesst.isEmpty() || photost.isEmpty()){
                     Toast.makeText(UpDocument.this,"All Document Are necessary except Income Certificate",Toast.LENGTH_SHORT).show();
                 }else if (incomest.isEmpty() && lfeesst.isEmpty()){
-                    pd1.setMessage("Uploading Image ! Please Smile");
-                    pd1.setCancelable(false);
-                    pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                    pd1.show();
                     reference2 = sref.child(yr).child(dep).child(roll).child(photost);
                     reference2.putFile(photo).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -231,14 +222,9 @@ public class UpDocument extends AppCompatActivity {
                             mref.child(yr).child(dep).child(roll).child(hosst).setValue(url1.toString());
                         }
                     });
-                    pd1.dismiss();
                     Toast.makeText(UpDocument.this,"Doneee",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
                 }   else if(incomest.isEmpty()){
-                    pd1.setMessage("Uploading Image ! Please Smile");
-                    pd1.setCancelable(false);
-                    pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                    pd1.show();
                     reference2 = sref.child(yr).child(dep).child(roll).child(photost);
                     reference2.putFile(photo).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -294,15 +280,10 @@ public class UpDocument extends AppCompatActivity {
                             mref.child(yr).child(dep).child(roll).child(lfeesst).setValue(url1.toString());
                         }
                     });
-                    pd1.dismiss();
                     Toast.makeText(UpDocument.this,"Doneee",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
                 }
                 else if(lfeesst.isEmpty()){
-                    pd1.setMessage("Uploading Image ! Please Smile");
-                    pd1.setCancelable(false);
-                    pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                    pd1.show();
                     reference2 = sref.child(yr).child(dep).child(roll).child(photost);
                     reference2.putFile(photo).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -358,15 +339,10 @@ public class UpDocument extends AppCompatActivity {
                             mref.child(yr).child(dep).child(roll).child(hosst).setValue(url1.toString());
                         }
                     });
-                    pd1.dismiss();
                     Toast.makeText(UpDocument.this,"Doneee",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
                 }
                 else {
-                    pd1.setMessage("Uploading Image ! Please Smile");
-                    pd1.setCancelable(false);
-                    pd1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                    pd1.show();
                     reference2 = sref.child(yr).child(dep).child(roll).child(photost);
                     reference2.putFile(photo).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -433,7 +409,6 @@ public class UpDocument extends AppCompatActivity {
                             mref.child(yr).child(dep).child(roll).child(lfeesst).setValue(url1.toString());
                         }
                     });
-                    pd1.dismiss();
                     Toast.makeText(UpDocument.this,"Doneee",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(UpDocument.this,RegistrationFinished.class));
                 }
@@ -570,9 +545,7 @@ public class UpDocument extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-        startActivity(new Intent(UpDocument.this, StudentsPage.class));
+
     }
 
 }

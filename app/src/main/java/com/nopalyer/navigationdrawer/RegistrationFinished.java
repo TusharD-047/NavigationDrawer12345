@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.nopalyer.navigationdrawer.student.StudentsPage;
 
 public class RegistrationFinished extends AppCompatActivity {
@@ -23,15 +24,16 @@ public class RegistrationFinished extends AppCompatActivity {
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(RegistrationFinished.this, StudentsPage.class));
+                        FirebaseAuth auth = FirebaseAuth.getInstance();
+                        auth.signOut();
+                        finish();
+                        startActivity(new Intent(RegistrationFinished.this,login.class));
                     }
                 });
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-        startActivity(new Intent(RegistrationFinished.this, StudentsPage.class));
+
     }
 }
