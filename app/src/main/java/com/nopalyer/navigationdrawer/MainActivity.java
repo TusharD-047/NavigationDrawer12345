@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 }
                             }else {
                                 Boolean emailflag = user.isEmailVerified();
-                                if (emailflag){
+                                /*if (emailflag){
                                     startActivity(new Intent(MainActivity.this, StudentsPage.class));
                                     pd.dismiss();
                                 }else {
@@ -218,8 +218,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                     finish();
                                     startActivity(new Intent(MainActivity.this, verification.class));
                                     pd.dismiss();
-                                }
-
+                                }*/
+                                startActivity(new Intent(MainActivity.this, StudentsPage.class));
                             }
                         }
 

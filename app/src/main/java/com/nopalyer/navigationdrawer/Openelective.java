@@ -533,16 +533,16 @@ public class Openelective extends AppCompatActivity {
                                     String rank = dataSnapshot.child("Rank").getValue().toString();
                                     String cg = dataSnapshot.child("Cgpa").getValue().toString();
                                     ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
-                                    ref3.child("1st Preference").setValue(first);
-                                    ref3.child("2nd Preference").setValue(sec);
-                                    ref3.child("3rd Preference").setValue(third);
-                                    ref3.child("4th Preference").setValue(forth);
-                                    ref3.child("5th Preference").setValue(five);
-                                    ref3.child("6th Preference").setValue(six);
-                                    ref3.child("7th Preference").setValue(seven);
-                                    ref3.child("8th Preference").setValue(eight);
-                                    ref3.child("9th Preference").setValue(nine);
-                                    ref3.child("10th Preference").setValue(ten);
+                                    ref3.child("1").setValue(first);
+                                    ref3.child("2").setValue(sec);
+                                    ref3.child("3").setValue(third);
+                                    ref3.child("4").setValue(forth);
+                                    ref3.child("5").setValue(five);
+                                    ref3.child("6").setValue(six);
+                                    ref3.child("7").setValue(seven);
+                                    ref3.child("8").setValue(eight);
+                                    ref3.child("9").setValue(nine);
+                                    ref3.child("10").setValue(ten);
 
                                     ref4 = firebaseDatabase.getReference("Info").child(rank);
                                     ref4.child("Name").setValue(name);
