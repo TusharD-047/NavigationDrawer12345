@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +44,9 @@ import java.util.List;
 public class Openelective extends AppCompatActivity {
 
     Spinner spin1,spin2,spin3,spin4,spin5,spin6,spin7,spin8,spin9,spin10,spin11,spin12,spin13,spin14,spin15,spin16,spin17,spin18,spin19,spin20,spin21,spin22,spin23;
+    ImageView im16,im17,im18,im19,im20,im21,im22,im23;
     Button nxt;
+    LinearLayout l15,l16,l17,l18,l19,l20,l21,l22,l23,l24,l25;
     String first,sec,third,forth,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty,twentyone,twentytwo,twentythree;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
@@ -53,6 +57,8 @@ public class Openelective extends AppCompatActivity {
     String dep = "";
     List<String> listDataHeader,listDataHeader1;
     int sublength,deplength;
+    int abc;
+    ArrayList<String> selection = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +105,24 @@ public class Openelective extends AppCompatActivity {
         spin22 = findViewById(R.id.spin_22);
         spin23 = findViewById(R.id.spin_23);
 
+        im16 = findViewById(R.id.image_16);
+        im17 = findViewById(R.id.image_17);
+        im18 = findViewById(R.id.image_18);
+        im19 = findViewById(R.id.image_19);
+        im20 = findViewById(R.id.image_20);
+        im21 = findViewById(R.id.image_21);
+        im22 = findViewById(R.id.image_22);
+        im23 = findViewById(R.id.image_23);
+
+        l15 = findViewById(R.id.l15);
+        l16 = findViewById(R.id.l16);
+        l17 = findViewById(R.id.l17);
+        l18 = findViewById(R.id.l18);
+        l19 = findViewById(R.id.l19);
+        l20 = findViewById(R.id.l20);
+        l21 = findViewById(R.id.l21);
+        l22 = findViewById(R.id.l22);
+        l23 = findViewById(R.id.l23);
 
         nxt = findViewById(R.id.next3);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -148,7 +172,67 @@ public class Openelective extends AppCompatActivity {
                                         }
                                     }
                                 }
+                                abc = sublength-deplength;
+                                if(abc==15){
+                                    l16.setVisibility(View.GONE);
+                                    l17.setVisibility(View.GONE);
+                                    l18.setVisibility(View.GONE);
+                                    l19.setVisibility(View.GONE);
+                                    l20.setVisibility(View.GONE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
 
+                                }
+                                if(abc==16){
+                                    l16.setVisibility(View.VISIBLE);
+                                    l17.setVisibility(View.GONE);
+                                    l18.setVisibility(View.GONE);
+                                    l19.setVisibility(View.GONE);
+                                    l20.setVisibility(View.GONE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+                                }
+                                if(abc==17){
+                                    l17.setVisibility(View.VISIBLE);
+                                    l18.setVisibility(View.GONE);
+                                    l19.setVisibility(View.GONE);
+                                    l20.setVisibility(View.GONE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+                                }
+                                if(abc==18){
+                                    l18.setVisibility(View.VISIBLE);
+                                    l19.setVisibility(View.GONE);
+                                    l20.setVisibility(View.GONE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+                                }
+                                if(abc==19){
+                                    l19.setVisibility(View.VISIBLE);
+                                    l20.setVisibility(View.GONE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+                                }
+                                if(abc==20){
+                                    l20.setVisibility(View.VISIBLE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+                                }
+                                if(abc==21){
+                                    l21.setVisibility(View.VISIBLE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+                                }
+                                if(abc==22){
+                                    l22.setVisibility(View.VISIBLE);
+                                    l23.setVisibility(View.GONE);
+                                }
                                 final String[] divisions2 = new String[divisions1.size()+1];
                                 divisions2[0]= "--1st Preference--";
                                 for (int k =0;k<divisions1.size();k++){
@@ -189,7 +273,9 @@ public class Openelective extends AppCompatActivity {
                                             nxt.setEnabled(true);
                                         }if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20 || i==21|| i == 22 || i==23) {
                                             first = divisions2[i];
+                                            selection.add(first);
                                             spin2.setEnabled(true);
+
                                             final ArrayList<String> sndpref = new ArrayList<>();
                                             sndpref.add("2nd Preference");
                                             for (int j = 0; j < divisions2.length; j++) {
@@ -231,6 +317,7 @@ public class Openelective extends AppCompatActivity {
                                                     }
                                                     if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19 || i == 20|| i==21|| i == 22 ) {
                                                         sec = sndpref.get(i);
+                                                        selection.add(sec);
                                                         spin3.setEnabled(true);
                                                         final ArrayList<String> thdpref = new ArrayList<>();
                                                         thdpref.add("3rd Preference");
@@ -272,6 +359,7 @@ public class Openelective extends AppCompatActivity {
 
                                                                 if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20|| i==21) {
                                                                     third = thdpref.get(i);
+                                                                    selection.add(third);
                                                                     spin4.setEnabled(true);
                                                                     final ArrayList<String> thdpref4 = new ArrayList<>();
                                                                     thdpref4.add("4th Preference");
@@ -313,6 +401,7 @@ public class Openelective extends AppCompatActivity {
 
                                                                             if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17 || i == 18 || i == 19|| i == 20) {
                                                                                 forth = thdpref4.get(i);
+                                                                                selection.add(forth);
                                                                                 spin5.setEnabled(true);
                                                                                 final ArrayList<String> thdpref5 = new ArrayList<>();
                                                                                 thdpref5.add("5th Preference");
@@ -352,6 +441,7 @@ public class Openelective extends AppCompatActivity {
                                                                                         }
                                                                                         if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16 || i==17|| i == 18 || i == 19) {
                                                                                             five = thdpref5.get(i);
+                                                                                            selection.add(five);
                                                                                             spin6.setEnabled(true);
                                                                                             final ArrayList<String> thdpref6 = new ArrayList<>();
                                                                                             thdpref6.add("6th Preference");
@@ -390,6 +480,7 @@ public class Openelective extends AppCompatActivity {
                                                                                                     }
                                                                                                     if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15 || i == 16|| i==17|| i == 18 ) {
                                                                                                         six = thdpref6.get(i);
+                                                                                                        selection.add(six);
                                                                                                         spin7.setEnabled(true);
                                                                                                         final ArrayList<String> thdpref7 = new ArrayList<>();
                                                                                                         thdpref7.add("7th Preference");
@@ -427,6 +518,7 @@ public class Openelective extends AppCompatActivity {
                                                                                                                 }
                                                                                                                 if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16|| i==17) {
                                                                                                                     seven = thdpref7.get(i);
+                                                                                                                    selection.add(seven);
                                                                                                                     spin8.setEnabled(true);
                                                                                                                     final ArrayList<String> thdpref8 = new ArrayList<>();
                                                                                                                     thdpref8.add("8th Preference");
@@ -463,6 +555,7 @@ public class Openelective extends AppCompatActivity {
                                                                                                                             }
                                                                                                                             if (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13 || i == 14 || i == 15|| i == 16) {
                                                                                                                                 eight = thdpref8.get(i);
+                                                                                                                                selection.add(eight);
                                                                                                                                 spin9.setEnabled(true);
                                                                                                                                 final ArrayList<String> thdpref9 = new ArrayList<>();
                                                                                                                                 thdpref9.add("9th Preference");
@@ -498,6 +591,7 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                         }
                                                                                                                                         if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15) {
                                                                                                                                             nine = thdpref9.get(i);
+                                                                                                                                            selection.add(nine);
                                                                                                                                             spin10.setEnabled(true);
                                                                                                                                             final ArrayList<String> thdpref10 = new ArrayList<>();
                                                                                                                                             thdpref10.add("10th Preference");
@@ -529,8 +623,9 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                         spin22.setEnabled(false);
                                                                                                                                                         spin23.setEnabled(false);
                                                                                                                                                         nxt.setEnabled(true);
-                                                                                                                                                    } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
+                                                                                                                                                    } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14){
                                                                                                                                                         ten = thdpref10.get(i);
+                                                                                                                                                        selection.add(ten);
                                                                                                                                                         spin11.setEnabled(true);
                                                                                                                                                         final ArrayList<String> thdpref11 = new ArrayList<>();
                                                                                                                                                         thdpref11.add("11th Preference");
@@ -561,15 +656,19 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                     spin22.setEnabled(false);
                                                                                                                                                                     spin23.setEnabled(false);
                                                                                                                                                                     nxt.setEnabled(true);
-                                                                                                                                                                } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
+                                                                                                                                                                } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13){
                                                                                                                                                                     eleven = thdpref11.get(i);
+                                                                                                                                                                    selection.add(eleven);
                                                                                                                                                                     spin12.setEnabled(true);
                                                                                                                                                                     final ArrayList<String> thdpref12 = new ArrayList<>();
                                                                                                                                                                     thdpref12.add("12th Preference");
-                                                                                                                                                                    for (int j = 0; j < thdpref12.size(); j++) {
+                                                                                                                                                                    for (int j = 0; j < thdpref11.size(); j++) {
                                                                                                                                                                         if (!Arrays.asList(thdpref11.get(j)).contains(eleven)) {
                                                                                                                                                                             thdpref12.add(thdpref11.get(j));
                                                                                                                                                                         }
+                                                                                                                                                                    }
+                                                                                                                                                                    for(int j=0;j<thdpref11.size();j++){
+                                                                                                                                                                        Toast.makeText(Openelective.this,thdpref11.get(j),Toast.LENGTH_SHORT).show();
                                                                                                                                                                     }
 
                                                                                                                                                                     thdpref12.remove("11th Preference");
@@ -592,18 +691,20 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                 spin22.setEnabled(false);
                                                                                                                                                                                 spin23.setEnabled(false);
                                                                                                                                                                                 nxt.setEnabled(true);
-                                                                                                                                                                            } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
+                                                                                                                                                                            } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12){
                                                                                                                                                                                 twelve = thdpref12.get(i);
+                                                                                                                                                                                selection.add(twelve);
                                                                                                                                                                                 spin13.setEnabled(true);
                                                                                                                                                                                 final ArrayList<String> thdpref13 = new ArrayList<>();
                                                                                                                                                                                 thdpref13.add("13th Preference");
-                                                                                                                                                                                for (int j = 0; j < thdpref13.size(); j++) {
+                                                                                                                                                                                for (int j = 0; j < thdpref12.size(); j++) {
                                                                                                                                                                                     if (!Arrays.asList(thdpref12.get(j)).contains(twelve)) {
                                                                                                                                                                                         thdpref13.add(thdpref12.get(j));
                                                                                                                                                                                     }
                                                                                                                                                                                 }
 
-                                                                                                                                                                                thdpref12.remove("12th Preference");
+                                                                                                                                                                                thdpref13.remove("12th Preference");
+
                                                                                                                                                                                 ArrayAdapter<String> adapter15;
                                                                                                                                                                                 adapter15 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref13);
                                                                                                                                                                                 spin13.setAdapter(adapter15);
@@ -621,19 +722,21 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                             spin21.setEnabled(false);
                                                                                                                                                                                             spin22.setEnabled(false);
                                                                                                                                                                                             spin23.setEnabled(false);
-                                                                                                                                                                                            nxt.setEnabled(true);
-                                                                                                                                                                                        } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
+                                                                                                                                                                                            nxt.setEnabled(false);
+                                                                                                                                                                                        } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11){
                                                                                                                                                                                             thirteen = thdpref13.get(i);
+                                                                                                                                                                                            selection.add(thirteen);
                                                                                                                                                                                             spin14.setEnabled(true);
+                                                                                                                                                                                            nxt.setEnabled(true);
                                                                                                                                                                                             final ArrayList<String> thdpref14 = new ArrayList<>();
                                                                                                                                                                                             thdpref14.add("14th Preference");
-                                                                                                                                                                                            for (int j = 0; j < thdpref14.size(); j++) {
+                                                                                                                                                                                            for (int j = 0; j < thdpref13.size(); j++) {
                                                                                                                                                                                                 if (!Arrays.asList(thdpref13.get(j)).contains(thirteen)) {
                                                                                                                                                                                                     thdpref14.add(thdpref13.get(j));
                                                                                                                                                                                                 }
                                                                                                                                                                                             }
 
-                                                                                                                                                                                            thdpref13.remove("13th Preference");
+                                                                                                                                                                                            thdpref14.remove("13th Preference");
                                                                                                                                                                                             ArrayAdapter<String> adapter16;
                                                                                                                                                                                             adapter16 = new ArrayAdapter<String>(Openelective.this, android.R.layout.simple_spinner_dropdown_item, thdpref14);
                                                                                                                                                                                             spin14.setAdapter(adapter16);
@@ -650,13 +753,15 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                         spin21.setEnabled(false);
                                                                                                                                                                                                         spin22.setEnabled(false);
                                                                                                                                                                                                         spin23.setEnabled(false);
-                                                                                                                                                                                                        nxt.setEnabled(true);
+                                                                                                                                                                                                        nxt.setEnabled(false);
                                                                                                                                                                                                     } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                         fourteen = thdpref14.get(i);
+                                                                                                                                                                                                        selection.add(fourteen);
                                                                                                                                                                                                         spin15.setEnabled(true);
+                                                                                                                                                                                                        nxt.setEnabled(true);
                                                                                                                                                                                                         final ArrayList<String> thdpref15 = new ArrayList<>();
                                                                                                                                                                                                         thdpref15.add("15th Preference");
-                                                                                                                                                                                                        for (int j = 0; j < thdpref15.size(); j++) {
+                                                                                                                                                                                                        for (int j = 0; j < thdpref14.size(); j++) {
                                                                                                                                                                                                             if (!Arrays.asList(thdpref14.get(j)).contains(fourteen)) {
                                                                                                                                                                                                                 thdpref15.add(thdpref14.get(j));
                                                                                                                                                                                                             }
@@ -681,10 +786,11 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                     nxt.setEnabled(true);
                                                                                                                                                                                                                 } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                     fifteen = thdpref15.get(i);
+                                                                                                                                                                                                                    selection.add(fifteen);
                                                                                                                                                                                                                     spin16.setEnabled(true);
                                                                                                                                                                                                                     final ArrayList<String> thdpref16 = new ArrayList<>();
                                                                                                                                                                                                                     thdpref16.add("16th Preference");
-                                                                                                                                                                                                                    for (int j = 0; j < thdpref16.size(); j++) {
+                                                                                                                                                                                                                    for (int j = 0; j < thdpref15.size(); j++) {
                                                                                                                                                                                                                         if (!Arrays.asList(thdpref15.get(j)).contains(fifteen)) {
                                                                                                                                                                                                                             thdpref16.add(thdpref15.get(j));
                                                                                                                                                                                                                         }
@@ -708,10 +814,12 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                 nxt.setEnabled(true);
                                                                                                                                                                                                                             } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                 sixteen = thdpref16.get(i);
+                                                                                                                                                                                                                                selection.add(sixteen);
+                                                                                                                                                                                                                                nxt.setEnabled(true);
                                                                                                                                                                                                                                 spin17.setEnabled(true);
                                                                                                                                                                                                                                 final ArrayList<String> thdpref17 = new ArrayList<>();
                                                                                                                                                                                                                                 thdpref17.add("17th Preference");
-                                                                                                                                                                                                                                for (int j = 0; j < thdpref17.size(); j++) {
+                                                                                                                                                                                                                                for (int j = 0; j < thdpref16.size(); j++) {
                                                                                                                                                                                                                                     if (!Arrays.asList(thdpref16.get(j)).contains(sixteen)) {
                                                                                                                                                                                                                                         thdpref17.add(thdpref16.get(j));
                                                                                                                                                                                                                                     }
@@ -731,13 +839,15 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                             spin21.setEnabled(false);
                                                                                                                                                                                                                                             spin22.setEnabled(false);
                                                                                                                                                                                                                                             spin23.setEnabled(false);
-                                                                                                                                                                                                                                            nxt.setEnabled(true);
+                                                                                                                                                                                                                                            nxt.setEnabled(false);
                                                                                                                                                                                                                                         } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                             seventeen = thdpref17.get(i);
+                                                                                                                                                                                                                                            selection.add(seventeen);
+                                                                                                                                                                                                                                            nxt.setEnabled(true);
                                                                                                                                                                                                                                             spin18.setEnabled(true);
                                                                                                                                                                                                                                             final ArrayList<String> thdpref18 = new ArrayList<>();
                                                                                                                                                                                                                                             thdpref18.add("18th Preference");
-                                                                                                                                                                                                                                            for (int j = 0; j < thdpref18.size(); j++) {
+                                                                                                                                                                                                                                            for (int j = 0; j < thdpref17.size(); j++) {
                                                                                                                                                                                                                                                 if (!Arrays.asList(thdpref17.get(j)).contains(seventeen)) {
                                                                                                                                                                                                                                                     thdpref18.add(thdpref17.get(j));
                                                                                                                                                                                                                                                 }
@@ -756,13 +866,15 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                                         spin21.setEnabled(false);
                                                                                                                                                                                                                                                         spin22.setEnabled(false);
                                                                                                                                                                                                                                                         spin23.setEnabled(false);
-                                                                                                                                                                                                                                                        nxt.setEnabled(true);
+                                                                                                                                                                                                                                                        nxt.setEnabled(false);
                                                                                                                                                                                                                                                     } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                                         eighteen = thdpref18.get(i);
+                                                                                                                                                                                                                                                        selection.add(eighteen);
                                                                                                                                                                                                                                                         spin19.setEnabled(true);
+                                                                                                                                                                                                                                                        nxt.setEnabled(true);
                                                                                                                                                                                                                                                         final ArrayList<String> thdpref19 = new ArrayList<>();
                                                                                                                                                                                                                                                         thdpref19.add("19th Preference");
-                                                                                                                                                                                                                                                        for (int j = 0; j < thdpref19.size(); j++) {
+                                                                                                                                                                                                                                                        for (int j = 0; j < thdpref18.size(); j++) {
                                                                                                                                                                                                                                                             if (!Arrays.asList(thdpref18.get(j)).contains(eighteen)) {
                                                                                                                                                                                                                                                                 thdpref19.add(thdpref18.get(j));
                                                                                                                                                                                                                                                             }
@@ -780,13 +892,15 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                                                     spin21.setEnabled(false);
                                                                                                                                                                                                                                                                     spin22.setEnabled(false);
                                                                                                                                                                                                                                                                     spin23.setEnabled(false);
-                                                                                                                                                                                                                                                                    nxt.setEnabled(true);
+                                                                                                                                                                                                                                                                    nxt.setEnabled(false);
                                                                                                                                                                                                                                                                 } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                                                     nineteen = thdpref19.get(i);
+                                                                                                                                                                                                                                                                    selection.add(nineteen);
                                                                                                                                                                                                                                                                     spin20.setEnabled(true);
+                                                                                                                                                                                                                                                                    nxt.setEnabled(true);
                                                                                                                                                                                                                                                                     final ArrayList<String> thdpref20 = new ArrayList<>();
                                                                                                                                                                                                                                                                     thdpref20.add("20th Preference");
-                                                                                                                                                                                                                                                                    for (int j = 0; j < thdpref20.size(); j++) {
+                                                                                                                                                                                                                                                                    for (int j = 0; j < thdpref19.size(); j++) {
                                                                                                                                                                                                                                                                         if (!Arrays.asList(thdpref19.get(j)).contains(nineteen)) {
                                                                                                                                                                                                                                                                             thdpref20.add(thdpref19.get(j));
                                                                                                                                                                                                                                                                         }
@@ -803,13 +917,15 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                                                                 spin21.setEnabled(false);
                                                                                                                                                                                                                                                                                 spin22.setEnabled(false);
                                                                                                                                                                                                                                                                                 spin23.setEnabled(false);
-                                                                                                                                                                                                                                                                                nxt.setEnabled(true);
+                                                                                                                                                                                                                                                                                nxt.setEnabled(false);
                                                                                                                                                                                                                                                                             } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                                                                 twenty = thdpref20.get(i);
+                                                                                                                                                                                                                                                                                selection.add(twenty);
                                                                                                                                                                                                                                                                                 spin21.setEnabled(true);
+                                                                                                                                                                                                                                                                                nxt.setEnabled(true);
                                                                                                                                                                                                                                                                                 final ArrayList<String> thdpref21 = new ArrayList<>();
                                                                                                                                                                                                                                                                                 thdpref21.add("21th Preference");
-                                                                                                                                                                                                                                                                                for (int j = 0; j < thdpref21.size(); j++) {
+                                                                                                                                                                                                                                                                                for (int j = 0; j < thdpref20.size(); j++) {
                                                                                                                                                                                                                                                                                     if (!Arrays.asList(thdpref20.get(j)).contains(twenty)) {
                                                                                                                                                                                                                                                                                         thdpref21.add(thdpref20.get(j));
                                                                                                                                                                                                                                                                                     }
@@ -825,13 +941,15 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                                                                         if (i == 0) {
                                                                                                                                                                                                                                                                                             spin22.setEnabled(false);
                                                                                                                                                                                                                                                                                             spin23.setEnabled(false);
-                                                                                                                                                                                                                                                                                            nxt.setEnabled(true);
+                                                                                                                                                                                                                                                                                            nxt.setEnabled(false);
                                                                                                                                                                                                                                                                                         } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                                                                             twentyone = thdpref21.get(i);
+                                                                                                                                                                                                                                                                                            selection.add(twentyone);
                                                                                                                                                                                                                                                                                             spin22.setEnabled(true);
+                                                                                                                                                                                                                                                                                            nxt.setEnabled(true);
                                                                                                                                                                                                                                                                                             final ArrayList<String> thdpref22 = new ArrayList<>();
                                                                                                                                                                                                                                                                                             thdpref22.add("22th Preference");
-                                                                                                                                                                                                                                                                                            for (int j = 0; j < thdpref22.size(); j++) {
+                                                                                                                                                                                                                                                                                            for (int j = 0; j < thdpref21.size(); j++) {
                                                                                                                                                                                                                                                                                                 if (!Arrays.asList(thdpref21.get(j)).contains(twentyone)) {
                                                                                                                                                                                                                                                                                                     thdpref22.add(thdpref21.get(j));
                                                                                                                                                                                                                                                                                                 }
@@ -846,13 +964,15 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                                                                                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                                                                                                                                                                                                                                                                                     if (i == 0) {
                                                                                                                                                                                                                                                                                                         spin23.setEnabled(false);
-                                                                                                                                                                                                                                                                                                        nxt.setEnabled(true);
+                                                                                                                                                                                                                                                                                                        nxt.setEnabled(false);
                                                                                                                                                                                                                                                                                                     } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                                                                                         twentytwo = thdpref22.get(i);
+                                                                                                                                                                                                                                                                                                        selection.add(twentytwo);
                                                                                                                                                                                                                                                                                                         spin23.setEnabled(true);
+                                                                                                                                                                                                                                                                                                        nxt.setEnabled(true);
                                                                                                                                                                                                                                                                                                         final ArrayList<String> thdpref23 = new ArrayList<>();
                                                                                                                                                                                                                                                                                                         thdpref23.add("23th Preference");
-                                                                                                                                                                                                                                                                                                        for (int j = 0; j < thdpref23.size(); j++) {
+                                                                                                                                                                                                                                                                                                        for (int j = 0; j < thdpref22.size(); j++) {
                                                                                                                                                                                                                                                                                                             if (!Arrays.asList(thdpref22.get(j)).contains(twentytwo)) {
                                                                                                                                                                                                                                                                                                                 thdpref23.add(thdpref22.get(j));
                                                                                                                                                                                                                                                                                                             }
@@ -866,9 +986,11 @@ public class Openelective extends AppCompatActivity {
                                                                                                                                                                                                                                                                                                             @Override
                                                                                                                                                                                                                                                                                                             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                                                                                                                                                                                                                                                                                                 if (i == 0) {
-                                                                                                                                                                                                                                                                                                                    nxt.setEnabled(true);
+                                                                                                                                                                                                                                                                                                                    nxt.setEnabled(false);
                                                                                                                                                                                                                                                                                                                 } if (i == 1 || i == 2 || i == 3 || i == 4|| i == 5 ||i == 6|| i == 7|| i == 8|| i == 9|| i == 10 || i == 11 || i == 12 || i==13|| i == 14 || i == 15){
                                                                                                                                                                                                                                                                                                                     twentythree = thdpref23.get(i);
+                                                                                                                                                                                                                                                                                                                    selection.add(twentythree);
+                                                                                                                                                                                                                                                                                                                    nxt.setEnabled(true);
                                                                                                                                                                                                                                                                                                                 }
 
                                                                                                                                                                                                                                                                                                             }
@@ -1202,7 +1324,7 @@ public class Openelective extends AppCompatActivity {
         nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()){
+                if (abc!=selection.size()){
                     Toast.makeText(Openelective.this,"Fill atleast 1st preference",Toast.LENGTH_SHORT).show();
                 }else {
                     pd.setMessage("Registring....");
@@ -1223,23 +1345,18 @@ public class Openelective extends AppCompatActivity {
                                     String rank = dataSnapshot.child("Rank").getValue().toString();
                                     String cg = dataSnapshot.child("Cgpa").getValue().toString();
                                     ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
-                                    ref3.child("1").setValue(first);
-                                    ref3.child("2").setValue(sec);
-                                    ref3.child("3").setValue(third);
-                                    ref3.child("4").setValue(forth);
-                                    ref3.child("5").setValue(five);
-                                    ref3.child("6").setValue(six);
-                                    ref3.child("7").setValue(seven);
-                                    ref3.child("8").setValue(eight);
-                                    ref3.child("9").setValue(nine);
-                                    ref3.child("10").setValue(ten);
+                                    for(int j=0;j<selection.size();j++){
+                                        int k= j+1;
+                                        ref3.child(String.valueOf(k)).setValue(selection.get(j));
+                                    }
 
                                     ref4 = firebaseDatabase.getReference("Info").child(rank);
                                     ref4.child("Name").setValue(name);
-                                    ref4.child("Roll").setValue(roll);
+                                    ref4.child("Rollno").setValue(roll);
                                     ref4.child("Email").setValue(email);
-                                    ref4.child("Cg").setValue(cg);
+                                    ref4.child("Cgpa").setValue(cg);
                                     ref4.child("Phone").setValue(phone);
+                                    ref4.child("Branch").setValue(dep);
 
                                     pd.dismiss();
                                     Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();

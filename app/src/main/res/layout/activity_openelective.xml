@@ -42,7 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l1">
 
 
             <ImageView
@@ -69,7 +70,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l2">
 
             <ImageView
                 android:layout_width="40dp"
@@ -94,7 +96,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l3">
 
             <ImageView
                 android:layout_width="40dp"
@@ -123,7 +126,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l4">
 
 
             <ImageView
@@ -150,7 +154,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l5">
 
 
             <ImageView
@@ -177,7 +182,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l6">
 
 
             <ImageView
@@ -204,7 +210,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l7">
 
 
             <ImageView
@@ -231,7 +238,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l8">
 
 
             <ImageView
@@ -258,7 +266,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l9">
 
 
             <ImageView
@@ -285,7 +294,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l10">
 
 
             <ImageView
@@ -312,7 +322,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l11">
 
 
             <ImageView
@@ -340,7 +351,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l12">
 
 
             <ImageView
@@ -368,7 +380,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l13">
 
 
             <ImageView
@@ -396,7 +409,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l14">
 
 
             <ImageView
@@ -424,7 +438,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l15">
 
 
             <ImageView
@@ -452,7 +467,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l16">
 
 
             <ImageView
@@ -460,7 +476,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_16"/>
 
             <Spinner
                 android:layout_width="275dp"
@@ -480,7 +497,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l17">
 
 
             <ImageView
@@ -488,7 +506,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_17"/>
 
             <Spinner
                 android:layout_width="275dp"
@@ -508,7 +527,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l18">
 
 
             <ImageView
@@ -516,7 +536,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_18"/>
 
             <Spinner
                 android:layout_width="275dp"
@@ -536,7 +557,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l19">
 
 
             <ImageView
@@ -544,7 +566,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_19"/>
 
             <Spinner
                 android:layout_width="275dp"
@@ -564,7 +587,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l20">
 
 
             <ImageView
@@ -572,7 +596,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_20"/>
 
             <Spinner
                 android:layout_width="275dp"
@@ -592,7 +617,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l21">
 
 
             <ImageView
@@ -600,7 +626,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_21"/>
 
             <Spinner
                 android:layout_width="275dp"
@@ -620,7 +647,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l22">
 
 
             <ImageView
@@ -628,7 +656,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_22"/>
 
             <Spinner
                 android:layout_width="275dp"
@@ -648,7 +677,8 @@
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginTop="50px"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/l23">
 
 
             <ImageView
@@ -656,7 +686,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/regis2" />
+                android:src="@drawable/regis2"
+                android:id="@+id/image_23"/>
 
             <Spinner
                 android:layout_width="275dp"
