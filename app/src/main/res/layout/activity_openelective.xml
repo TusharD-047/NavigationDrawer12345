@@ -308,6 +308,370 @@
             </Spinner>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_11"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_12"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_13"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_14"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_15"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_16"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_17"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_18"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_19"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_20"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_21"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_22"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/regis2" />
+
+            <Spinner
+                android:layout_width="275dp"
+                android:layout_height="51dp"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:backgroundTint="#0E0955"
+                android:id="@+id/spin_23"
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
 
 
         <Button
