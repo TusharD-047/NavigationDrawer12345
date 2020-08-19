@@ -61,7 +61,7 @@ public class login extends AppCompatActivity {
         ForgotPass = (TextView)findViewById(R.id.email3);
         signup = (TextView)findViewById(R.id.email4);
         showHide=(TextView)findViewById(R.id.newpass1);
-        pd =new ProgressDialog(this);
+        pd = new ProgressDialog(this);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -124,7 +124,7 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                 if(ShowPass ==1)
                 {
-                    ShowPass =0;
+                    ShowPass = 0;
                     password.setTransformationMethod(null);
                     if(password.getText().length()>0)
                         password.setSelection(password.getText().length());

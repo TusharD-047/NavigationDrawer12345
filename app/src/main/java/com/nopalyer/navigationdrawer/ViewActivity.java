@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -43,7 +44,6 @@ import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
-import com.itextpdf.text.List;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
@@ -55,6 +55,8 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -73,8 +75,9 @@ public class ViewActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog mProgress,pd;
     private FirebaseDatabase database;
-    private DatabaseReference ref,mref,ref2;
+    private DatabaseReference ref,mref,ref2,ref3,kmref;
     private Toolbar toolbar;
+    List<String> listDataHeader;
     String yr = "",dep = "",roll = "",type ="";
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -195,6 +198,7 @@ public class ViewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mProgress.setMessage("Wait");
                 mProgress.show();
+
                 ref2 = database.getReference(firebaseAuth.getUid());
                 ref2.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -207,6 +211,8 @@ public class ViewActivity extends AppCompatActivity {
                                     yr = dataSnapshot.child("Year").getValue().toString();
                                     dep = dataSnapshot.child("Department").getValue().toString();
                                     roll = dataSnapshot.child("Roll No").getValue().toString();
+
+
 
                                     mref = database.getReference(type + "Application").child(yr).child(dep).child(roll);
                                     mref.child("Name").setValue(name.getText().toString());
@@ -296,11 +302,62 @@ public class ViewActivity extends AppCompatActivity {
                                     mref.child("sg9").setValue(sg9.getText().toString());
                                     mref.child("rep9").setValue(rep9.getText().toString());
 
-                                    mProgress.dismiss();
-                                    Toast.makeText(ViewActivity.this,"Upload Done",Toast.LENGTH_SHORT).show();
-                                    Intent i = new Intent(ViewActivity.this,UpDocument.class);
-                                    i.putExtra("type",type+"Application");
-                                    startActivity(i);
+                                    ref3 = database.getReference("FeesDues");
+                                    ref3.addChildEventListener(new ChildEventListener() {
+                                        @Override
+                                        public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                                            final String roll2 = dataSnapshot.getKey();
+
+                                            listDataHeader.add(roll2);
+
+                                            String[] dues = new String[listDataHeader.size()];
+
+                                            for(int i=0; i<dues.length;i++){
+                                                dues[i] = listDataHeader.get(i);
+                                            }
+                                            if(Arrays.asList(dues).contains(roll)){
+                                                kmref = database.getReference(type + "Application").child(yr).child(dep).child(roll);
+                                                kmref.child("LibVerify").setValue("No");
+                                            }
+                                            else if(!(Arrays.asList(dues).contains(roll))){
+
+                                                kmref = database.getReference(type + "Application").child(yr).child(dep).child(roll);
+                                                kmref.child("LibVerify").setValue("Yes");
+
+                                            }
+
+
+                                            mProgress.dismiss();
+                                            Toast.makeText(ViewActivity.this,"Upload Done",Toast.LENGTH_SHORT).show();
+                                            Intent i = new Intent(ViewActivity.this,UpDocument.class);
+                                            i.putExtra("type",type+"Application");
+                                            startActivity(i);
+
+                                        }
+
+                                        @Override
+                                        public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                                        }
+
+                                        @Override
+                                        public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+                                        }
+
+                                        @Override
+                                        public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                        }
+                                    });
+
+
                                 }
 
                                 @Override
