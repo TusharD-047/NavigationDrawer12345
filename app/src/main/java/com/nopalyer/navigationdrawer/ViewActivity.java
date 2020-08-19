@@ -55,6 +55,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -101,6 +102,8 @@ public class ViewActivity extends AppCompatActivity {
 
         pd.setMessage("Wait");
         pd.show();
+        database = FirebaseDatabase.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         type = Objects.requireNonNull(bundle.get("type")).toString();
         name.setText(Objects.requireNonNull(bundle.get("Name")).toString());
         faname.setText(Objects.requireNonNull(bundle.get("FatherName")).toString());
@@ -306,6 +309,8 @@ public class ViewActivity extends AppCompatActivity {
                                     ref3.addChildEventListener(new ChildEventListener() {
                                         @Override
                                         public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                                            listDataHeader = new ArrayList<>();
 
                                             final String roll2 = dataSnapshot.getKey();
 
