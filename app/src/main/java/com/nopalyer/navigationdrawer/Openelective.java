@@ -138,7 +138,7 @@ public class Openelective extends AppCompatActivity {
         databaseReference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               dep = dataSnapshot.child("Department").getValue().toString().trim();
+               dep = dataSnapshot.child("Department").getValue().toString();
                 databaseReference2 = FirebaseDatabase.getInstance().getReference("Department Wise").child(dep);
                 databaseReference2.addChildEventListener(new ChildEventListener() {
                     @Override
@@ -157,9 +157,11 @@ public class Openelective extends AppCompatActivity {
                             @Override
                             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                                 final String headertitile = dataSnapshot.getKey();
+                                    listDataHeader.add(headertitile);
+                                Toast.makeText(Openelective.this, String.valueOf(listDataHeader.size()),Toast.LENGTH_LONG).show();
 
-                                listDataHeader.add(headertitile);
                                 final String[] divisions = new String[listDataHeader.size()];
+
                                 //divisions[0] = "--1st Preference--";
                                 for(int i=0; i<divisions.length;i++){
                                     divisions[i] = listDataHeader.get(i);
@@ -176,6 +178,7 @@ public class Openelective extends AppCompatActivity {
                                 }
                                 abc = sublength-deplength;
                                 if(abc==13){
+                                    l13.setVisibility(View.VISIBLE);
                                     l14.setVisibility(View.GONE);
                                     l15.setVisibility(View.GONE);
                                     l16.setVisibility(View.GONE);
@@ -275,7 +278,7 @@ public class Openelective extends AppCompatActivity {
                                     @Override
                                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                                         if (i == 0) {
-
+//                                            Toast.makeText(Openelective.this, String.valueOf(listDataHeader.size()),Toast.LENGTH_SHORT).show();
                                             spin2.setEnabled(false);
                                             spin3.setEnabled(false);
                                             spin4.setEnabled(false);
