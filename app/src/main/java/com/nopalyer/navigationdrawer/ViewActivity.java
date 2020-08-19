@@ -215,8 +215,6 @@ public class ViewActivity extends AppCompatActivity {
                                     dep = dataSnapshot.child("Department").getValue().toString();
                                     roll = dataSnapshot.child("Roll No").getValue().toString();
 
-
-
                                     mref = database.getReference(type + "Application").child(yr).child(dep).child(roll);
                                     mref.child("Name").setValue(name.getText().toString());
                                     mref.child("FatherName").setValue(faname.getText().toString());

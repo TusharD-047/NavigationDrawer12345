@@ -139,34 +139,33 @@ public class Openelective extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                dep = dataSnapshot.child("Department").getValue().toString();
-                databaseReference2 = FirebaseDatabase.getInstance().getReference("Department Wise").child(dep);
-                databaseReference2.addChildEventListener(new ChildEventListener() {
+                databaseReference = FirebaseDatabase.getInstance().getReference("Subjects");
+                databaseReference.addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                        final String depsub = dataSnapshot.getKey();
+                        final String headertitile = dataSnapshot.getKey();
+                        listDataHeader.add(headertitile);
+                        Toast.makeText(Openelective.this, String.valueOf(listDataHeader.size()),Toast.LENGTH_LONG).show();
 
-                        listDataHeader1.add(depsub);
-                        final String[] divsub = new String[listDataHeader1.size()];
-                        for(int i=0;i<divsub.length;i++){
-                            divsub[i] = listDataHeader1.get(i);
+                        final String[] divisions = new String[listDataHeader.size()];
+
+                        //divisions[0] = "--1st Preference--";
+                        for(int i=0; i<divisions.length;i++){
+                            divisions[i] = listDataHeader.get(i);
                         }
-                        deplength = divsub.length;
-
-                        databaseReference = FirebaseDatabase.getInstance().getReference("Subjects");
-                        databaseReference.addChildEventListener(new ChildEventListener() {
+                        sublength = divisions.length;
+                        databaseReference2 = FirebaseDatabase.getInstance().getReference("Department Wise").child(dep);
+                        databaseReference2.addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                                final String headertitile = dataSnapshot.getKey();
-                                    listDataHeader.add(headertitile);
-                                Toast.makeText(Openelective.this, String.valueOf(listDataHeader.size()),Toast.LENGTH_LONG).show();
+                                final String depsub = dataSnapshot.getKey();
 
-                                final String[] divisions = new String[listDataHeader.size()];
-
-                                //divisions[0] = "--1st Preference--";
-                                for(int i=0; i<divisions.length;i++){
-                                    divisions[i] = listDataHeader.get(i);
+                                listDataHeader1.add(depsub);
+                                final String[] divsub = new String[listDataHeader1.size()];
+                                for(int i=0;i<divsub.length;i++){
+                                    divsub[i] = listDataHeader1.get(i);
                                 }
-                                sublength = divisions.length;
+                                deplength = divsub.length;
                                 final ArrayList<String> divisions1 = new ArrayList<>();
                                 for(int i=0;i<divisions.length;i++){
                                     for(int j=0;j<divsub.length;j++) {
@@ -1291,16 +1290,16 @@ public class Openelective extends AppCompatActivity {
                                                 @Override
                                                 public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                                } });
-                                        }}
+                                                }
 
-
-
-
+                                            });
+                                        }
+                                    }
                                     @Override
                                     public void onNothingSelected(AdapterView<?> adapterView) {
 
-                                    } });
+                                    }
+                                });
                             }
 
                             @Override
