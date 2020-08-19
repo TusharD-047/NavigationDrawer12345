@@ -1364,7 +1364,7 @@ public class Openelective extends AppCompatActivity {
             public void onClick(View v) {
                 if(abc==13){
                     if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()){
-//                    Toast.makeText(Openelective.this,"Fill atleast 1st preference",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Openelective.this,"Fill 13 preference",Toast.LENGTH_SHORT).show();
                     }else {
                         pd.setMessage("Registring....");
                         pd.setCancelable(false);
@@ -1427,7 +1427,7 @@ public class Openelective extends AppCompatActivity {
                 }
                 if(abc==14){
                     if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()){
-//                    Toast.makeText(Openelective.this,"Fill atleast 1st preference",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Openelective.this,"Fill atleast 14 preference",Toast.LENGTH_SHORT).show();
                     }else {
                         pd.setMessage("Registring....");
                         pd.setCancelable(false);
@@ -1491,7 +1491,7 @@ public class Openelective extends AppCompatActivity {
                 }
                 if(abc==15){
                     if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()){
-//                    Toast.makeText(Openelective.this,"Fill atleast 1st preference",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Openelective.this,"Fill 15 preference",Toast.LENGTH_SHORT).show();
                     }else {
                         pd.setMessage("Registring....");
                         pd.setCancelable(false);
@@ -1526,6 +1526,562 @@ public class Openelective extends AppCompatActivity {
                                         ref3.child("13").setValue(thirteen);
                                         ref3.child("14").setValue(fourteen);
                                         ref3.child("15").setValue(fifteen);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==16){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill 16 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==17){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()||seventeen.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill 17 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+                                        ref3.child("17").setValue(seventeen);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==18){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()||seventeen.isEmpty()||eighteen.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill atleast 18 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+                                        ref3.child("17").setValue(seventeen);
+                                        ref3.child("18").setValue(eighteen);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==19){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()||seventeen.isEmpty()|| eighteen.isEmpty()||nineteen.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill 19 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+                                        ref3.child("17").setValue(seventeen);
+                                        ref3.child("18").setValue(eighteen);
+                                        ref3.child("19").setValue(nineteen);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==20){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()||seventeen.isEmpty()|| eighteen.isEmpty()||nineteen.isEmpty()||twenty.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill atleast 20 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+                                        ref3.child("17").setValue(seventeen);
+                                        ref3.child("18").setValue(eighteen);
+                                        ref3.child("19").setValue(nineteen);
+                                        ref3.child("20").setValue(twenty);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==21){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()||seventeen.isEmpty()|| eighteen.isEmpty()||nineteen.isEmpty()||twenty.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill 21 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+                                        ref3.child("17").setValue(seventeen);
+                                        ref3.child("18").setValue(eighteen);
+                                        ref3.child("19").setValue(nineteen);
+                                        ref3.child("20").setValue(twenty);
+                                        ref3.child("21").setValue(twentyone);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==22){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()||seventeen.isEmpty()|| eighteen.isEmpty()||nineteen.isEmpty()||twenty.isEmpty()||twentytwo.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill 22 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+                                        ref3.child("17").setValue(seventeen);
+                                        ref3.child("18").setValue(eighteen);
+                                        ref3.child("19").setValue(nineteen);
+                                        ref3.child("20").setValue(twenty);
+                                        ref3.child("21").setValue(twentyone);
+                                        ref3.child("22").setValue(twentytwo);
+
+                                        ref4 = firebaseDatabase.getReference("Info").child(rank);
+                                        ref4.child("Name").setValue(name);
+                                        ref4.child("Rollno").setValue(roll);
+                                        ref4.child("Email").setValue(email);
+                                        ref4.child("Cgpa").setValue(cg);
+                                        ref4.child("Phone").setValue(phone);
+                                        ref4.child("Branch").setValue(dep);
+
+                                        pd.dismiss();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Openelective.this, StudentsPage.class));
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Toast.makeText(Openelective.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }
+                if(abc==23){
+                    if (first.isEmpty() || sec.isEmpty() || third.isEmpty() || forth.isEmpty() || five.isEmpty() || six.isEmpty() || seven.isEmpty() || eight.isEmpty() || nine.isEmpty() || ten.isEmpty()|| eleven.isEmpty() || twelve.isEmpty() || thirteen.isEmpty()||fourteen.isEmpty()||fifteen.isEmpty()||sixteen.isEmpty()||seventeen.isEmpty()|| eighteen.isEmpty()||nineteen.isEmpty()||twenty.isEmpty()||twentytwo.isEmpty()||twentythree.isEmpty()){
+                    Toast.makeText(Openelective.this,"Fill all 23 preference",Toast.LENGTH_SHORT).show();
+                    }else {
+                        pd.setMessage("Registring....");
+                        pd.setCancelable(false);
+                        pd.show();
+                        ref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+                        ref.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                final String name = dataSnapshot.child("Name").getValue().toString();
+                                final String roll = dataSnapshot.child("Roll No").getValue().toString();
+                                final String email = firebaseUser.getEmail();
+                                final String phone = dataSnapshot.child("Contact").getValue().toString();
+                                ref2 = firebaseDatabase.getReference("Result").child(roll);
+                                ref2.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        String rank = dataSnapshot.child("Rank").getValue().toString();
+                                        String cg = dataSnapshot.child("Cgpa").getValue().toString();
+                                        ref3 = firebaseDatabase.getReference("OpenElective").child(rank);
+                                        ref3.child("1").setValue(first);
+                                        ref3.child("2").setValue(sec);
+                                        ref3.child("3").setValue(third);
+                                        ref3.child("4").setValue(forth);
+                                        ref3.child("5").setValue(five);
+                                        ref3.child("6").setValue(six);
+                                        ref3.child("7").setValue(seven);
+                                        ref3.child("8").setValue(eight);
+                                        ref3.child("9").setValue(nine);
+                                        ref3.child("10").setValue(ten);
+                                        ref3.child("11").setValue(eleven);
+                                        ref3.child("12").setValue(twelve);
+                                        ref3.child("13").setValue(thirteen);
+                                        ref3.child("14").setValue(fourteen);
+                                        ref3.child("15").setValue(fifteen);
+                                        ref3.child("16").setValue(sixteen);
+                                        ref3.child("17").setValue(seventeen);
+                                        ref3.child("18").setValue(eighteen);
+                                        ref3.child("19").setValue(nineteen);
+                                        ref3.child("20").setValue(twenty);
+                                        ref3.child("21").setValue(twentyone);
+                                        ref3.child("22").setValue(twentytwo);
+                                        ref3.child("23").setValue(twentythree);
 
                                         ref4 = firebaseDatabase.getReference("Info").child(rank);
                                         ref4.child("Name").setValue(name);
