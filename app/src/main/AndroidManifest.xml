@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OpenElectiveInfo"></activity>
+        <activity android:name=".Opencopy" />
+        <activity android:name=".OpenElectiveInfo" />
         <activity android:name=".CourseView" />
         <activity android:name=".courses1" />
         <activity android:name=".dual_batch" />

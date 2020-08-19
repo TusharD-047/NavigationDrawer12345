@@ -223,7 +223,7 @@ public class registrationp2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (semcon4.equals("true")) {
-                    Intent intent = new Intent(registrationp2.this, Openelective.class);
+                    Intent intent = new Intent(registrationp2.this, Opencopy.class);
                     startActivity(intent);
                 }
                 if (semcon4.equals("false")) {
