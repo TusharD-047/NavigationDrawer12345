@@ -131,8 +131,7 @@ public class Openelective extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         pd = new ProgressDialog(this);
-        listDataHeader = new ArrayList<>();
-        listDataHeader1 = new ArrayList<>();
+
 
         DatabaseReference databaseReference1 = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
         databaseReference1.addValueEventListener(new ValueEventListener() {
@@ -143,9 +142,9 @@ public class Openelective extends AppCompatActivity {
                 databaseReference.addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                        listDataHeader = new ArrayList<>();
                         final String headertitile = dataSnapshot.getKey();
                         listDataHeader.add(headertitile);
-                        Toast.makeText(Openelective.this, String.valueOf(listDataHeader.size()),Toast.LENGTH_LONG).show();
 
                         final String[] divisions = new String[listDataHeader.size()];
 
@@ -153,13 +152,14 @@ public class Openelective extends AppCompatActivity {
                         for(int i=0; i<divisions.length;i++){
                             divisions[i] = listDataHeader.get(i);
                         }
+
                         sublength = divisions.length;
                         databaseReference2 = FirebaseDatabase.getInstance().getReference("Department Wise").child(dep);
                         databaseReference2.addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                                listDataHeader1 = new ArrayList<>();
                                 final String depsub = dataSnapshot.getKey();
-
                                 listDataHeader1.add(depsub);
                                 final String[] divsub = new String[listDataHeader1.size()];
                                 for(int i=0;i<divsub.length;i++){
