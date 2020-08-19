@@ -34,6 +34,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.protobuf.StringValue;
 import com.nopalyer.navigationdrawer.student.StudentsPage;
 
 import java.sql.Array;
@@ -132,6 +133,8 @@ public class Openelective extends AppCompatActivity {
         firebaseUser = firebaseAuth.getCurrentUser();
         pd = new ProgressDialog(this);
 
+        listDataHeader1 = new ArrayList<>();
+        listDataHeader = new ArrayList<>();
 
         DatabaseReference databaseReference1 = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
         databaseReference1.addValueEventListener(new ValueEventListener() {
@@ -142,40 +145,44 @@ public class Openelective extends AppCompatActivity {
                 databaseReference.addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                        listDataHeader = new ArrayList<>();
+
                         final String headertitile = dataSnapshot.getKey();
                         listDataHeader.add(headertitile);
 
-                        final String[] divisions = new String[listDataHeader.size()];
+//                        final String[] divisions = new String[listDataHeader.size()];
+//
+//                        //divisions[0] = "--1st Preference--";
+//                        for(int i=0; i<divisions.length;i++){
+//                            divisions[i] = listDataHeader.get(i);
+//                        }
 
-                        //divisions[0] = "--1st Preference--";
-                        for(int i=0; i<divisions.length;i++){
-                            divisions[i] = listDataHeader.get(i);
-                        }
-
-                        sublength = divisions.length;
+//                        sublength = divisions.length;
                         databaseReference2 = FirebaseDatabase.getInstance().getReference("Department Wise").child(dep);
                         databaseReference2.addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                                listDataHeader1 = new ArrayList<>();
+
                                 final String depsub = dataSnapshot.getKey();
                                 listDataHeader1.add(depsub);
-                                final String[] divsub = new String[listDataHeader1.size()];
-                                for(int i=0;i<divsub.length;i++){
-                                    divsub[i] = listDataHeader1.get(i);
-                                }
-                                deplength = divsub.length;
+//                                final String[] divsub = new String[listDataHeader1.size()];
+//                                for(int i=0;i<divsub.length;i++){
+//                                    divsub[i] = listDataHeader1.get(i);
+//                                }
+//                                deplength = divsub.length;
+//                                final ArrayList<String> divisions1 = new ArrayList<>();
+//                                for(int i=0;i<divisions.length;i++){
+//                                    for(int j=0;j<divsub.length;j++) {
+//
+//                                        if (!Arrays.asList(divisions[i]).contains(divsub[j])) {
+//                                            divisions1.add(divisions[i]);
+//                                        }
+//                                    }
+//                                }
                                 final ArrayList<String> divisions1 = new ArrayList<>();
-                                for(int i=0;i<divisions.length;i++){
-                                    for(int j=0;j<divsub.length;j++) {
-
-                                        if (!Arrays.asList(divisions[i]).contains(divsub[j])) {
-                                            divisions1.add(divisions[i]);
-                                        }
-                                    }
-                                }
-                                abc = sublength-deplength;
+                                divisions1.addAll(listDataHeader);
+                                divisions1.removeAll(listDataHeader1);
+                                abc = divisions1.size();
+                                Toast.makeText(Openelective.this, String.valueOf(abc),Toast.LENGTH_SHORT).show();
                                 if(abc==13){
                                     l13.setVisibility(View.VISIBLE);
                                     l14.setVisibility(View.GONE);
@@ -1401,7 +1408,7 @@ public class Openelective extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (abc!=selection.size()){
-                    Toast.makeText(Openelective.this,"Fill atleast 1st preference",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Openelective.this,"Fill atleast 1st preference",Toast.LENGTH_SHORT).show();
                 }else {
                     pd.setMessage("Registring....");
                     pd.setCancelable(false);
@@ -1435,7 +1442,7 @@ public class Openelective extends AppCompatActivity {
                                     ref4.child("Branch").setValue(dep);
 
                                     pd.dismiss();
-                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
+//                                    Toast.makeText(Openelective.this,"Done Registration",Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(Openelective.this, StudentsPage.class));
                                 }
 

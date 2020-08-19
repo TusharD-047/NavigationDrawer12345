@@ -41,12 +41,12 @@ public class Opencopy extends AppCompatActivity {
     DatabaseReference ref,ref2,ref3,ref4,ref5,ref6,ref7,ref8,ref9,ref10,ref11,ref12,ref13,databaseReference,databaseReference1,databaseReference2;
     ProgressDialog pd,pd2;
     Toolbar toolbar;
-    String dep = "";
+    public String dep = "";
     List<String> listDataHeader,listDataHeader1;
     int sublength,deplength;
-    int abc;
-    String[] divisions;
-    ArrayList<String> selection = new ArrayList<>();
+    public String[] divisions2,divisions;
+    ArrayList<String> selection = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +138,7 @@ public class Opencopy extends AppCompatActivity {
                 }
                 sublength = divisions.length;
                 final ArrayList<String> divisions1 = new ArrayList<>();
-                Toast.makeText(Opencopy.this, String.valueOf(sublength), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Opencopy.this, String.valueOf(listDataHeader.size()), Toast.LENGTH_SHORT).show();
 
 
             }
@@ -175,21 +175,35 @@ public class Opencopy extends AppCompatActivity {
                         final String depsub = dataSnapshot.getKey();
 
                         listDataHeader1.add(depsub);
-                        final String[] divsub = new String[listDataHeader1.size()];
-                        for(int i=0;i<divsub.length;i++){
-                            divsub[i] = listDataHeader1.get(i);
-                        }
-                        deplength = divsub.length;
+                       int k = listDataHeader1.size();
+                       for(int j=0;j<k;j++)
+                       {
+                           divisions2[j] = listDataHeader1.get(j);
+                       }
                         final ArrayList<String> divisions1 = new ArrayList<>();
-                        for(int i=0;i<divisions.length;i++){
-                            for(int j=0;j<divsub.length;j++) {
+                        for(int i=0;i<divisions.length;i++) {
+                            for (int j = 0; j < divisions2.length; j++) {
 
-                                if (!Arrays.asList(divisions[i]).contains(divsub[j])) {
+                                if (!Arrays.asList(divisions[i]).contains(divisions[j])) {
                                     divisions1.add(divisions[i]);
                                 }
                             }
                         }
-                        Toast.makeText(Opencopy.this,String.valueOf(divisions1),Toast.LENGTH_SHORT).show();
+//                        final String[] divsub = new String[listDataHeader1.size()];
+//                        for(int i=0;i<divsub.length;i++){
+//                            divsub[i] = listDataHeader1.get(i);
+//                        }
+//                        deplength = divsub.length;
+//                        final ArrayList<String> divisions1 = new ArrayList<>();
+//                        for(int i=0;i<divisions.length;i++){
+//                            for(int j=0;j<divsub.length;j++) {
+//
+//                                if (!Arrays.asList(divisions[i]).contains(divsub[j])) {
+//                                    divisions1.add(divisions[i]);
+//                                }
+//                            }
+//                        }
+                        Toast.makeText(Opencopy.this, String.valueOf(divisions),Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -211,6 +225,7 @@ public class Opencopy extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
+
                 });
             }
 
@@ -219,5 +234,6 @@ public class Opencopy extends AppCompatActivity {
 
             }
         });
-    }
+//        Toast.makeText(Opencopy.this, dep,Toast.LENGTH_SHORT).show();
+            }
 }
