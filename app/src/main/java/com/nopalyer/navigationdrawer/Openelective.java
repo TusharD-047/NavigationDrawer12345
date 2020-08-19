@@ -181,7 +181,7 @@ public class Openelective extends AppCompatActivity {
                                 divisions1.addAll(listDataHeader);
                                 divisions1.removeAll(listDataHeader1);
                                 abc = divisions1.size();
-                                Toast.makeText(Openelective.this, String.valueOf(abc),Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(Openelective.this, String.valueOf(abc),Toast.LENGTH_SHORT).show();
                                 if(abc==13){
                                     l13.setVisibility(View.VISIBLE);
                                     l14.setVisibility(View.GONE);
