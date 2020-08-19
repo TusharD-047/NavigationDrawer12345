@@ -46,7 +46,7 @@ public class Openelective extends AppCompatActivity {
     Spinner spin1,spin2,spin3,spin4,spin5,spin6,spin7,spin8,spin9,spin10,spin11,spin12,spin13,spin14,spin15,spin16,spin17,spin18,spin19,spin20,spin21,spin22,spin23;
     ImageView im16,im17,im18,im19,im20,im21,im22,im23;
     Button nxt;
-    LinearLayout l15,l16,l17,l18,l19,l20,l21,l22,l23,l24,l25;
+    LinearLayout l15,l16,l17,l18,l19,l20,l21,l22,l23,l14,l13;
     String first,sec,third,forth,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty,twentyone,twentytwo,twentythree;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
@@ -114,6 +114,8 @@ public class Openelective extends AppCompatActivity {
         im22 = findViewById(R.id.image_22);
         im23 = findViewById(R.id.image_23);
 
+        l13 = findViewById(R.id.l13);
+        l14 = findViewById(R.id.l14);
         l15 = findViewById(R.id.l15);
         l16 = findViewById(R.id.l16);
         l17 = findViewById(R.id.l17);
@@ -173,7 +175,34 @@ public class Openelective extends AppCompatActivity {
                                     }
                                 }
                                 abc = sublength-deplength;
+                                if(abc==13){
+                                    l14.setVisibility(View.GONE);
+                                    l15.setVisibility(View.GONE);
+                                    l16.setVisibility(View.GONE);
+                                    l17.setVisibility(View.GONE);
+                                    l18.setVisibility(View.GONE);
+                                    l19.setVisibility(View.GONE);
+                                    l20.setVisibility(View.GONE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+
+                                }
+                                if(abc==14){
+                                    l14.setVisibility(View.VISIBLE);
+                                    l15.setVisibility(View.GONE);
+                                    l16.setVisibility(View.GONE);
+                                    l17.setVisibility(View.GONE);
+                                    l18.setVisibility(View.GONE);
+                                    l19.setVisibility(View.GONE);
+                                    l20.setVisibility(View.GONE);
+                                    l21.setVisibility(View.GONE);
+                                    l22.setVisibility(View.GONE);
+                                    l23.setVisibility(View.GONE);
+
+                                }
                                 if(abc==15){
+                                    l15.setVisibility(View.VISIBLE);
                                     l16.setVisibility(View.GONE);
                                     l17.setVisibility(View.GONE);
                                     l18.setVisibility(View.GONE);
