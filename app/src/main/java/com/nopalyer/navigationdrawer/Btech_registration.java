@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -87,8 +88,8 @@ public class Btech_registration extends AppCompatActivity {
     private EditText labsum;
     private EditText creditsum,editroom;
     private TextView roomn,hostn;
-    RadioGroup rg;
-    RadioButton rb;
+    //RadioGroup rg;
+    RadioButton ra1,ra2;
     private EditText sg1,sg2,sg3,sg4,sg5,sg6,sg7,sg8,sg9,sg10,cg1,cg2,cg3,cg4,cg5,cg6,cg7,cg8,cg9,cg10,rep1,rep2,rep3,rep4,rep5,rep6,rep7,rep8,rep9,rep10;
     final Calendar myCalendar = Calendar.getInstance();
     private Spinner prog,dep,hostt,sem;
@@ -103,7 +104,7 @@ public class Btech_registration extends AppCompatActivity {
         setContentView(R.layout.activity_btech_registration);
 
         Button submit = (Button) findViewById(R.id.next);
-        rg = (RadioGroup) findViewById(R.id.radioGroup);
+        //rg = (RadioGroup) findViewById(R.id.radioGroup);
 
         prog = (Spinner) findViewById(R.id.regsem);
         dep = (Spinner) findViewById(R.id.regdep);
@@ -195,6 +196,9 @@ public class Btech_registration extends AppCompatActivity {
         editroom = (EditText) findViewById(R.id.editroom);
         roomn = (TextView) findViewById(R.id.roomn);
         hostn = (TextView) findViewById(R.id.hostn);
+        ra1 = (RadioButton) findViewById(R.id.ra1);
+        ra2 = (RadioButton) findViewById(R.id.ra2);
+
 
         final String[] programme = {"Choose Programme", "B.Tech", "B.Arch", "Dual Degree"};
         final String[] department1 = {"Choose Department", "CSE", "ECE", "Mechanical", "Civil", "Electrical", "Material Science", "Chemical"};
@@ -204,18 +208,7 @@ public class Btech_registration extends AppCompatActivity {
         final String[] semester2 = {"Choose Semester", "2nd sem", "3rd sem", "4th sem", "5th sem", "6th sem", "7th sem", "8th sem", "9th sem", "10th sem"};
         final String[] hostel = {"Choose Hostel", "Ambika Girls Hostel", "Kailash Boys Hostel", "Himadri Boys Hostel","Udaygiri Boys Hostel","Neelkanth Boys Hostel","Dhauladhar Boys Hostel","Vindhyachal Boys Hostel","Shivalik Boys Hostel","Parvati Girls Hostel","Mani-Mahesh Girls Hostel","Aravali Girls Hostel"};
 
-        if(rbclick()==1){
-            roomn.setVisibility(View.VISIBLE);
-            hostn.setVisibility(View.VISIBLE);
-            editroom.setVisibility(View.VISIBLE);
-            hostt.setVisibility(View.VISIBLE);
-        }
-        else if(rbclick()==0){
-            roomn.setVisibility(View.GONE);
-            hostn.setVisibility(View.GONE);
-            editroom.setVisibility(View.GONE);
-            hostt.setVisibility(View.GONE);
-        }
+
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
@@ -231,6 +224,31 @@ public class Btech_registration extends AppCompatActivity {
             }
 
         };
+
+        ra1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    editroom.setVisibility(View.VISIBLE);
+                    roomn.setVisibility(View.VISIBLE);
+                    hostn.setVisibility(View.VISIBLE);
+                    hostt.setVisibility(View.VISIBLE);
+                    ra2.setChecked(false);
+                }
+            }
+        });
+        ra2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    editroom.setVisibility(View.GONE);
+                    roomn.setVisibility(View.GONE);
+                    hostn.setVisibility(View.GONE);
+                    hostt.setVisibility(View.GONE);
+                    ra1.setChecked(false);
+                }
+            }
+        });
 
         adapter_programme = new ArrayAdapter<>(Btech_registration.this, R.layout.colourful_spinner_items2, programme);
         adapter_programme.setDropDownViewResource(R.layout.colourful_spinner_dropdown2);
@@ -611,7 +629,7 @@ public void onRegisterSuccess(){
         dob.setText(sdf.format(myCalendar.getTime()));
     }
 
-    public int rbclick() {
+    /*public int rbclick() {
         int radiobuttonid = rg.getCheckedRadioButtonId();
         int Hflag = 1;
         rb = (RadioButton) findViewById(radiobuttonid);
@@ -622,5 +640,5 @@ public void onRegisterSuccess(){
         else Hflag = 1;
 
         return Hflag;
-    }
+    }*/
 }
